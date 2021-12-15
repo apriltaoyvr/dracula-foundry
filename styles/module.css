@@ -1,0 +1,531 @@
+/* Global stylings */
+h1 {
+  border-bottom: 1px solid #bd93f935;
+}
+
+h2 {
+  border-bottom: 1px solid #bd93f935;
+}
+
+.sheet nav.sheet-tabs {
+	border-top: none;
+	border-bottom: none;
+}
+
+fieldset {
+  border: 1px solid #44475a86;
+}
+
+textarea {
+	background: #44475a86;
+	color: #e6e6e6eb;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 1px #999 inset;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: #ff79c6;
+}
+
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: #ff79c6 #ff79c6;
+}
+
+/* Forms and Inputs */
+button, form button, .dialog .dialog-buttons button, .dialog .dialog-buttons button.default {
+  color: #e6e6e6eb;
+  background: #44475a86;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0 0 5px #bd93f9;
+}
+
+.dnd5e button {
+  color: #e6e6e6eb;
+  border: 1px solid #44475a86;
+  border-radius: 5px;
+}
+
+table {
+  border-top: none;
+  border-bottom: none;
+  text-shadow: none;
+  font-size: 12px;
+}
+
+table thead {
+  background: #44475a86;
+  border-bottom: none;
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"], input[type="text"].color, input[type="color"][data-edit][data-edit], input[type="range"] + .range-value {
+  color: #e6e6e6e2;
+  background: #44475a86;
+  border: 1px solid #44475a86;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid transparent;
+  height: 12px;
+  width: 12px;
+  border-radius: 2px;
+  background: #ff79c6;
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+#module-management input[type="checkbox"] {
+  background: #44475a86;
+  color: #e6e6e6eb;
+}
+
+select {
+  color: #e6e6e6e2;
+  background: #44475a86;
+  border: 1px solid #44475a86;
+}
+
+form .notes, form .hint {
+  color: #e6e6e6eb;
+}
+
+/* General windows (Fuck my life) */
+.window-app .window-content, .window-app .window-content > * {
+  background: #282a3635;
+  color: white;
+}
+
+.window-app .window-header {
+  background: #282a3635;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.window-app .dialogue {
+  background: #282a3635;
+  border-radius: 3px;
+  border: none;
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+.dnd5e .window-content {
+  color: #e6e6e6eb;
+  background: #282a36;
+  border: 1px transparent;
+  border-radius: 5px;
+}
+
+/* Compedium */
+.compendium.directory .directory-list .directory-item {
+	border-top: none;
+	border-bottom: 1px solid transparent;
+}
+
+/* Sound */
+#playlists .sound-control[data-action="sound-stop"], #playlists .sound-control[data-action="playlist-stop"] {
+  color: #ff79c6;
+}
+
+/* Chat log */
+#chat-log {
+  background: linear-gradient(0deg, rgba(40, 42, 54, 0.5) 0%, rgba(68, 71, 90, 0) 100%);
+  backdrop-filter: blur(2px);
+}
+
+#chat-controls {
+  background: #44475aa6;
+}
+
+#chat-controls .roll-type-select {
+  color: white;
+  background: #44475aa6;
+}
+
+#chat-form textarea {
+  color: white;
+  background: #44475aa6;
+  border: none;
+}
+
+/* Chat Cards */
+.dnd5e.sheet .item-buttons {
+  padding: 0;
+  color: #e6e6e6eb;
+  border-radius: 5px;
+  border: 1px solid #44475a86;
+}
+
+.dnd5e.chat-card .card-header {
+  border: none;
+  padding: 0
+}
+
+/* Code referenced from Warhead
+Set item name header to regular font and be smaller + transition for .chat-message */
+.dnd5e.chat-card .card-header h3 {
+  color: #e6e6e6b2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dnd5e.chat-card .card-header img {
+  height: 36px;
+  width: 36px;
+  border: none;
+  border-radius: 6px;
+  padding: 0
+}
+
+.dnd5e.chat-card .card-footer {
+  color: #e6e6e6a2;
+  border: none;
+  padding: 0;
+}
+
+.dnd5e.chat-card .card-footer span {
+  border: none;
+}
+
+/* This will restyle most chat boxes */
+.chat-message,
+.chat-message.whisper,
+.chat-message.blind {
+  background: linear-gradient(0deg, rgba(40, 42, 54, 0.9) 0%, rgba(68, 71, 90, 0.5) 100%);
+  backdrop-filter: blur(2px);
+  color: #e6e6e6de;
+  border: 2px solid #282a36ce;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.chat-message .message-header .message-sender {
+  color: #e6e6e6de;
+}
+
+.chat-message .message-content {
+  color: #e6e6e6de;
+  border: none;
+  margin: 1px;
+}
+
+.chat-message .message-content .form-group.sheet.actor .items-header {
+  border: none;
+}
+
+.chat-message .message-content .form-group.sheet.actor .items-list {
+  color: #e6e6e6fe;
+  border: none;
+}
+
+.chat-message .message-metadata {
+  color: #e6e6e6de;
+  text-shadow: none;
+}
+
+.chat-message .dice-formula,
+.chat-message .dice-total {
+  border: 1px solid #44475a86;
+  box-shadow: none;
+  border-radius: 6px;
+  margin: 1px;
+}
+
+.chat-message .dice-result {
+  color: #f8f8f2c6;
+}
+
+.chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+  background: #28282bc6;
+  backdrop-filter: blur(6px);
+  border-radius: 6px;
+  border: 1px solid #44475a86;
+}
+
+.chat-message .dice-result .dice-tooltip .dice .part-header.flexrow .part-formula {
+  border: none;
+}
+
+.dice-roll .dice-total.success {
+  color: inherit;
+  background: #c7d0c0;
+  border: 1px solid #50fa7b;
+}
+.dice-roll .dice-total.failure {
+  color: inherit;
+  background: #ffdddd;
+  border: 1px solid #ff5555;
+}
+.dice-roll .dice-total.critical {
+  color: #50fa7bc5;
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+}
+.dice-roll .dice-total.fumble {
+  color: #ff5555c5;
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+/* Settings window */
+#client-settings section.content {
+  border-top: none;
+}
+
+#module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+  color: #e6e6e6cb;
+}
+
+#module-management .package-list {
+  border-top: none;
+  border-bottom: none;
+}
+
+#module-management .package-list .package {
+  border-bottom: 1px solid #bd93f935;
+}
+
+nav.list-filters a.filter.active {
+  border-bottom: 1px solid #bd93f935;
+}
+
+#client-settings section.content h2.module-header {
+  color: #e6e6e6eb;
+}
+
+#client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
+  color: #e6e6e65b;
+}
+
+/* Midi Specific or used by Midi */
+.chat-message .message-content .dice-tooltip .dice-rolls .roll {
+  color: #e6e6e6eb;
+  background: #28282bc6;
+  border: 1px solid #44475a86;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 25px;
+  margin-right: 5px
+}
+
+.dnd5e.chat-card .card-buttons span {
+  color: #e6e6e6eb;
+  border: 1px transparent;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.dice-tooltip .part-header .part-total {
+  border: 1px transparent;
+  background: transparent;
+  font-size: 12px;
+  line-height: 25px;
+  margin-right: 5px;
+}
+
+/* General midi setting */
+.midi-qol-nobox {
+  border: none;
+  padding: 0
+}
+
+/* Monk's Token Bar */
+#requestsavingthrow .request-grid div {
+  color: #e6e6e6e2;
+}
+
+#requestsavingthrow .request-header {
+  background: #44475a56;
+  border: 2px solid #282a362e;
+  box-shadow: none;
+}
+
+.monks-tokenbar.chat-card .flexrow {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
+  border: none;
+}
+
+.monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  border: none;
+}
+
+.monks-tokenbar.chat-card .card-header {
+  font-family: "Signika";
+  border: none;
+}
+
+.monks-tokenbar.chat-card .card-header h3 {
+  color: #e6e6e6f2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.monks-tokenbar.chat-card .card-footer {
+  border: none;
+}
+
+.monks-tokenbar.chat-card .card-footer button {
+  background: none;
+  border: none;
+  color: #e6e6e6f2;
+}
+
+.monks-tokenbar.chat-card .card-footer span {
+  border: none;
+}
+
+.monks-tokenbar.chat-card .message-content .items-header .item-name {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.monks-tokenbar .sheet .items-list .items-header {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  background: none;
+  border: none;
+}
+
+.monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
+  color: #e6e6e6e2;
+}
+
+#requestsavingthrow .request-grid>div.selected, #requestsavingthrow .request-grid>div:hover {
+  color: white;
+  background: #44475a26;
+  border: #bd93f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #bd93f9;
+}
+
+/* Advanced Macros Module */
+.macro-sheet .form-group.command .furnace-macro-command textarea,
+.macro-sheet .form-group.command .furnace-macro-command code {
+	color: white;
+	text-shadow: black;
+
+}
+
+/* GitHub Gist Replacement for Advanced Macros */
+.hljs {
+  background: #282a36;
+  color: #f8f8f2;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #6272a4;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #f1fa8c;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #d73a49;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #50fa7b;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #bd93f9;
+}
+
+.hljs-addition {
+  color: #50fa7b;
+  background-color: #282a36;
+}
+
+.hljs-deletion {
+  color: #ff5555;
+  background-color: #282a36;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.hljs-number {
+  color: #8be9fd;
+}
+
+.hljs-string {
+  color: #8be9fd;
+}
+
+
+/* Code Mirror + Custom CSS Module
+(I am too dumb to learn how to change to the prepackaged dracula theme for CM) */
+.CodeMirror {
+	cursor: text;
+  background: rgba(40, 42, 54, 0.8);
+  backdrop-filter: blur(16px);
+	color: #f8f8f2;
+}
+.CodeMirror-gutters {
+	border: none;
+    background-color: #282a36;
+}
+
+/* Changelogs */
+.chl-module-content {
+	color: #e6e6e6eb;
+}
+
+
+/* Tidy UI */
+#module-management .disable-all-modules {
+  background: #ff555594;
+}
+
+#module-management .enable-all-modules {
+  background: #50fa7b94
+}
