@@ -58,7 +58,7 @@ body .sheet nav.sheet-tabs {
 }
 
 body fieldset {
-  border: 1px solid #44475a86;
+  border: 1px solid var(--purpleLight);
 }
 
 body textarea {
@@ -70,7 +70,7 @@ body textarea {
 body .window-app .window-content,
 body .window-app .window-content>* {
   background: #282a3635;
-  color: white;
+  color: #e6e6e6eb;
 }
 
 body .window-app .window-header {
@@ -109,12 +109,12 @@ body ::-webkit-scrollbar {
 
 body ::-webkit-scrollbar-track {
   box-shadow: 0 0 1px #999 inset;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 body ::-webkit-scrollbar-thumb {
   outline: none;
-  border-radius: 3px;
+  border-radius: 0px;
   background: #ff79c6;
 }
 
@@ -136,7 +136,6 @@ body .dialog .dialog-buttons button.default {
 
 body button:hover,
 body button:focus {
-  opacity: 0.75;
   box-shadow: 0px 0px 4px var(--purple);
 }
 
@@ -144,6 +143,11 @@ body .dnd5e button {
   color: #e6e6e6eb;
   border: 1px solid var(--purpleLight);
   border-radius: 6px;
+}
+
+body .dnd5e button:hover,
+body .dnd5e button:focus {
+  box-shadow: 0px 0px 4px var(--purple);
 }
 
 /* Tables */
@@ -166,10 +170,10 @@ body input[type="password"],
 body input[type="date"],
 body input[type="time"],
 body input[type="text"].color,
-body input[type="color"][data-edit][data-edit],
+body input[type="color"][data-edit],
 body input[type="range"]+.range-value {
-  color: white;
-  background: linear-gradient(var(--gradientDegree), var(--purpleLight) 0%, var(--pinkLight) 100%);
+  color: hsl(60, 30%, 100%);
+  background: var(--purpleLight);
   border: 0.2rem solid transparent;
   transition: 0.3s ease-in-out all;
 }
@@ -211,7 +215,8 @@ body select:focus {
   border-color: var(--purple);
 }
 
-body form .notes, body form .hint {
+body form .notes,
+body form .hint {
   color: #e6e6e6eb;
 }
 
@@ -222,7 +227,8 @@ body .compendium.directory .directory-list .directory-item {
 }
 
 /* Sound */
-body #playlists .sound-control[data-action="sound-stop"], body #playlists .sound-control[data-action="playlist-stop"] {
+body #playlists .sound-control[data-action="sound-stop"],
+body #playlists .sound-control[data-action="playlist-stop"] {
   color: #ff79c6;
 }
 
@@ -239,14 +245,14 @@ body #chat-controls {
 }
 
 body #chat-controls .roll-type-select {
-  color: white;
+  color: hsl(60, 30%, 100%);
   background: none;
   border: 1px solid transparent;
   padding: 2px;
 }
 
 body #chat-form textarea {
-  color: white;
+  color: hsl(60, 30%, 100%);
   background: rgba(68, 71, 90, 0.5);
   border: 1px solid transparent;
 }
@@ -256,7 +262,7 @@ body .dnd5e.sheet .item-buttons {
   padding: 0;
   color: #e6e6e6eb;
   border-radius: 6px;
-  border: 1px solid #44475a86;
+  border: 1px solid var(--purpleLight);
 }
 
 body .dnd5e.chat-card .card-header {
@@ -276,9 +282,9 @@ body .dnd5e.chat-card .card-header h3 {
 body .dnd5e.chat-card .card-header img {
   height: 36px;
   width: 36px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 6px;
-  padding: 0
+  padding: 0;
 }
 
 body .dnd5e.chat-card .card-footer {
@@ -295,40 +301,25 @@ body .dnd5e.chat-card .card-footer span {
 body .chat-message,
 body .chat-message.whisper,
 body .chat-message.blind {
-  background: linear-gradient(var(--gradientDegree), var(--purpleLight) 0%, var(--pinkLight) 100%);
+  background: var(--purpleLight);
   backdrop-filter: blur(6px);
   color: #e6e6e6de;
-  border: 1px solid #44475a86;
+  border: 1px solid var(--purpleLight);
   border-radius: 6px;
   text-shadow: 0 0 10px rgba(0 0 0 / 90%);
   transition: max-height 0.3s ease-in-out;
 }
 
-body .chat-message .message-header {
-  color: #e6e6e6de;
-}
-
-body .chat-message .message-content {
-  color: #e6e6e6de;
-  border: none;
-  margin: 1px;
-}
-
-body .chat-message .message-content .form-group.sheet.actor .items-list {
-  color: #e6e6e6fe;
-  border: none;
-}
-
-.body chat-message .message-metadata {
+body .chat-message .message-header,
+body .chat-message .message-metadata {
   color: #e6e6e6de;
   text-shadow: none;
 }
 
-body .chat-message .dice-formula,
-body .chat-message .dice-total {
-  border: 1px solid #44475a86;
-  box-shadow: none;
-  border-radius: 6px;
+body .chat-message .message-content,
+body .chat-message .message-content .form-group.sheet.actor .items-list {
+  color: #e6e6e6de;
+  border: none;
   margin: 1px;
 }
 
@@ -337,10 +328,11 @@ body .chat-message .dice-result {
 }
 
 body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+  color: #f8f8f2c6;
   border-radius: 6px;
-  border: 1px solid #44475a86;
-	background: var(--purpleLight);
-	margin: 2px;
+  border: 1px solid var(--purpleLight);
+  background: var(--purpleLight);
+  margin: 2px;
   text-shadow: 0 0 10px rgba(0 0 0 / 90%);
 }
 
@@ -371,7 +363,11 @@ body #client-settings section.content {
   border-top: none;
 }
 
-body #module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+body #module-management .package-list .package-title,
+body #module-management .package-list .package-metadata,
+body #module-management .package-list .package-description,
+body #client-settings section.content h2.module-header,
+body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
   color: #e6e6e6cb;
 }
 
@@ -381,7 +377,7 @@ body #module-management .package-list {
 }
 
 body nav.list-filters a.filter.active {
-	border-bottom: 2px solid var(--purple);
+  border-bottom: 2px solid var(--purple);
 }
 
 body nav.list-filters a.filter {
@@ -392,28 +388,21 @@ body #module-management .package-list .package {
   border-bottom: 1px solid var(--purpleLight);
 }
 
-body #client-settings section.content h2.module-header {
-  color: #e6e6e6eb;
-}
-
-body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
-  color: #e6e6e65b;
-}
-
 body #settings h2 {
   border-bottom: none;
   border-top: none;
-  color: #f8f8f2c6;
+  color: hsl(60, 30%, 100%);
   background: none;
 }
 
 /* Midi Specific or useful for Midi */
-body .chat-message .message-content .form-group.sheet.actor .items-header,
-body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
-  color: #f8f8f2c6;
-  background: transparent;
-  border: 1px solid #44475a86;
-  border-radius: 6px;
+body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow,
+body .dice-tooltip .part-header {
+  color: inherit;
+  background: inherit;
+  border: 1px solid var(--purpleLight);
+  border-radius: 3px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
@@ -426,15 +415,34 @@ body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
   text-shadow: 0 0 10px rgba(0 0 0 / 90%);
 }
 
+body .dice-tooltip .part-header .part-flavor {
+  background: none;
+}
+
+/* Temporary fix for the part-formula text misalignment */
+body .dice-tooltip .part-header .part-formula {
+	margin-left: 6px;
+	margin-top: 1px;
+}
+
+body .dice-roll .dice-formula,
+body .dice-roll .dice-total {
+  color: inherit;
+  background: inherit;
+  border: 1px solid var(--purpleLight);
+  box-shadow: none;
+}
+
 body .dnd5e.chat-card .card-buttons span {
-  color: #e6e6e6eb;
-  border: 1px transparent;
+  border: 1px solid var(--purpleLight);
   font-size: 12px;
   line-height: 25px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 body .dice-tooltip .part-header .part-total {
   border: 1px transparent;
+  border-bottom: none;
   background: transparent;
   font-size: 12px;
   line-height: 25px;
@@ -473,16 +481,14 @@ body .monks-tokenbar.chat-card .card-footer span {
   border: none;
 }
 
-body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name,
-.monks-tokenbar .sheet .items-list .items-header h3 {
+body .monks-tokenbar.chat-card .card-header,
+body .monks-tokenbar .sheet .items-list .items-header h3,
+body .chat-message .message-content .form-group.sheet.actor .items-header,
+body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
   color: #e6e6e6e2;
-  font-family: "Signika";
+  background: none;
   border: none;
-}
-
-body .monks-tokenbar.chat-card .card-header {
   font-family: "Signika";
-  border: none;
 }
 
 body .monks-tokenbar.chat-card .card-header h3,
@@ -586,10 +592,7 @@ body .hljs-link {
   text-decoration: underline;
 }
 
-body .hljs-number {
-  color: #8be9fd;
-}
-
+body .hljs-number,
 body .hljs-string {
   color: #8be9fd;
 }
