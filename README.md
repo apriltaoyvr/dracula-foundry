@@ -5,7 +5,7 @@ I made this to fill in gaps between mods that leave menus untouched to give the 
 
 ## Screenshot(s)
 ![image](https://user-images.githubusercontent.com/95392008/146146871-efb58e86-5c47-43ca-b6ae-9e133509810d.png)
-![image](https://user-images.githubusercontent.com/95392008/146161349-1f5b225c-97fc-4018-ba8d-dc2fc8873070.png)
+![image](https://user-images.githubusercontent.com/95392008/146324880-452f8d40-f9b2-4704-97cc-f025ada0697e.png)
 
 ## Coverage
 ### Done
