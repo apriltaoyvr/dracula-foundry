@@ -24,10 +24,10 @@
     "/scripts/module.js"
   ],
   "scripts": [
-    "/scripts/lib/lib.js", "/scripts/lib/App.js"
+    "/scripts/lib/lib.js"
   ],
   "styles": [
-    "/styles/module.css", "/styles/dracula-ui.css"
+    "/styles/module.css"
   ],
   "languages": [
     {
