@@ -1,5 +1,5 @@
 # Dracula Theme
-Heavily inspired/taken from theripper93 and mouse0270's [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/) and the open theme [Dracula](https://draculatheme.com). Currently just css for the [Custom CSS module](https://github.com/cswendrowski/FoundryVTT-Custom-CSS).
+Heavily inspired/taken from theripper93 and mouse0270's [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/) plus the open theme [Dracula](https://draculatheme.com) and Dracula UI.
 
 I made this to fill in gaps between mods that leave menus untouched to give the UI visual consistency in my setup and sharing for anyone else who hates looking at light menus.
 
@@ -18,13 +18,13 @@ I made this to fill in gaps between mods that leave menus untouched to give the 
 6. Combat Carousel
 7. Monk's Token Bar
      - Roll requests (Chat cards and Window)
+8. Convert to proper module
 
 ### To-do
-- Double check for consistency
 - Fix grey text in filter/search bars
 - Monk's Token Bar (The Actual Token Bar)
 - Better css file for Combat Carousel
-- Convert to proper module?
+- Keep working at it until I'm satisfied with the look
 
 ### Extras
 - Argon Combat HUD Colour Scheme
