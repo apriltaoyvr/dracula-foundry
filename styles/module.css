@@ -1,0 +1,615 @@
+/* Dracula UI Colours Import
+In the process of replacing most of the hex colours with these */
+:root {
+  --black: hsl(230, 15%, 15%);
+  --blackSecondary: hsl(230, 15%, 30%);
+  --blackTernary: hsl(230, 15%, 70%);
+  --blackLight: hsla(230, 15%, 15%, 5%);
+  --white: hsl(60, 30%, 96%);
+  --whiteSecondary: hsl(60, 30%, 100%);
+  --whiteLight: hsla(60, 30%, 96%, 5%);
+  --cyan: hsl(170, 100%, 75%);
+  --cyanSecondary: hsl(170, 100%, 90%);
+  --cyanLight: hsla(170, 100%, 75%, 5%);
+  --green: hsl(115, 100%, 75%);
+  --greenSecondary: hsl(115, 100%, 90%);
+  --greenLight: hsla(115, 100%, 75%, 5%);
+  --orange: hsl(35, 100%, 75%);
+  --orangeSecondary: hsl(35, 100%, 90%);
+  --orangeLight: hsla(35, 100%, 75%, 5%);
+  --pink: hsl(330, 100%, 75%);
+  --pinkSecondary: hsl(330, 100%, 90%);
+  --pinkLight: hsla(330, 100%, 75%, 5%);
+  --purple: hsl(250, 100%, 75%);
+  --purpleSecondary: hsl(250, 100%, 90%);
+  --purpleLight: hsl(250, 100%, 75%, 5%);
+  --red: hsl(10, 100%, 75%);
+  --redSecondary: hsl(10, 100%, 90%);
+  --redLight: hsla(10, 100%, 75%, 5%);
+  --yellow: hsl(60, 100%, 75%);
+  --yellowSecondary: hsl(60, 100%, 90%);
+  --yellowLight: hsla(60, 100%, 75%, 5%);
+  --cyan-transparent: hsl(170, 100%, 75%, 0.1);
+  --green-transparent: hsl(115, 100%, 75%, 0.1);
+  --orange-transparent: hsl(35, 100%, 75%, 0.1);
+  --pink-transparent: hsl(330, 100%, 75%, 0.1);
+  --purple-transparent: hsl(250, 100%, 75%, 0.1);
+  --red-transparent: hsl(10, 100%, 75%, 0.1);
+  --yellow-transparent: hsl(60, 100%, 75%, 0.1);
+  --disabled: hsl(230, 15%, 50%);
+  --gradientDegree: 135deg;
+  --glowColor: rgba(255, 255, 255, 0.25);
+}
+
+/* Global stylings */
+body h1,
+body h2 {
+  border-bottom: 1px solid var(--purpleLight);
+}
+
+body hr {
+  border-top: 1 px solid #ff79c6a2;
+  border-bottom: 1 px solid #ff79c6a2;
+}
+
+body .sheet nav.sheet-tabs {
+  border-top: none;
+  border-bottom: none;
+}
+
+body fieldset {
+  border: 1px solid #44475a86;
+}
+
+body textarea {
+  background: #44475a86;
+  color: #e6e6e6eb;
+}
+
+/* General windows (Fuck my life) */
+body .window-app .window-content,
+body .window-app .window-content>* {
+  background: #282a3635;
+  color: white;
+}
+
+body .window-app .window-header {
+  background: #282a3635;
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+body .window-app .dialogue {
+  background: #282a3635;
+  border-radius: 6px;
+  border: none;
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+body .dnd5e .window-content {
+  color: #e6e6e6eb;
+  background: #282a3635;
+  border: 1px transparent;
+  border-radius: 6px;
+}
+
+/* Sidebar */
+body #sidebar {
+  background: linear-gradient(0deg, rgba(40, 42, 54, 0.6) 0%, rgba(68, 71, 90, 0.2) 50%, rgba(75, 85, 95, 0) 100%);
+  backdrop-filter: blur(12px);
+  border: 2px solid transparent;
+}
+
+/* Scrollbar */
+body ::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+body ::-webkit-scrollbar-track {
+  box-shadow: 0 0 1px #999 inset;
+  border-radius: 4px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: #ff79c6;
+}
+
+body :root {
+  scrollbar-width: thin;
+  scrollbar-color: #ff79c6 #ff79c6;
+}
+
+/* Forms and Inputs */
+body button,
+body form button,
+body .dialog .dialog-buttons button,
+body .dialog .dialog-buttons button.default {
+  color: #e6e6e6eb;
+  background: #282a3686;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+body button:hover,
+body button:focus {
+  box-shadow: 0 0 5px #bd93f9;
+}
+
+body .dnd5e button {
+  color: #e6e6e6eb;
+  border: 1px solid #44475a86;
+  border-radius: 6px;
+}
+
+body table {
+  border-top: none;
+  border-bottom: none;
+  text-shadow: none;
+  font-size: 12px;
+}
+
+body table thead {
+  background: #282a3686;
+  border-bottom: none;
+}
+
+/* Text Inputs */
+body input,
+body input[type="text"],
+body input[type="number"],
+body input[type="password"],
+body input[type="date"],
+body input[type="time"],
+body input[type="text"].color,
+body input[type="color"][data-edit][data-edit],
+body input[type="range"]+.range-value {
+  color: #e6e6e6e2;
+  background: #44475a46;
+  border: 1px solid #44475a86;
+}
+
+body input[type="text"]:focus,
+body input[type="number"]:focus,
+body input[type="password"]:focus,
+body input[type="date"]:focus,
+body input[type="time"]:focus {
+  box-shadow: 0 0 10px #bd93f9;
+}
+
+body input[type=range]::-webkit-slider-thumb {
+  border: 1px solid transparent;
+  height: 12px;
+  width: 12px;
+  border-radius: 3px;
+  background: #ff79c6;
+  cursor: pointer;
+}
+
+body input[type="checkbox"],
+body #module-management input[type="checkbox"] {
+  background: #44475a86;
+  color: #e6e6e6eb;
+}
+
+body select {
+  color: #e6e6e6e2;
+  background: #44475a86;
+  border: 1px solid #44475a86;
+}
+
+body form .notes, body form .hint {
+  color: #e6e6e6eb;
+}
+
+/* Compedium */
+body .compendium.directory .directory-list .directory-item {
+  border-top: none;
+  border-bottom: 1px solid transparent;
+}
+
+/* Sound */
+body #playlists .sound-control[data-action="sound-stop"], body #playlists .sound-control[data-action="playlist-stop"] {
+  color: #ff79c6;
+}
+
+/* Chat log */
+body #chat-log {
+  background: transparent;
+  backdrop-filter: blur(2px);
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+body #chat-controls {
+  background: none;
+}
+
+body #chat-controls .roll-type-select {
+  color: white;
+  background: none;
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+body #chat-form textarea {
+  color: white;
+  background: rgba(68, 71, 90, 0.5);
+  border: 1px solid transparent;
+}
+
+/* Chat Cards */
+body .dnd5e.sheet .item-buttons {
+  padding: 0;
+  color: #e6e6e6eb;
+  border-radius: 6px;
+  border: 1px solid #44475a86;
+}
+
+body .dnd5e.chat-card .card-header {
+  border: none;
+  padding: 0
+}
+
+/* Code referenced from Warhead
+Set item name header to regular font and be smaller + transition for .chat-message */
+body .dnd5e.chat-card .card-header h3 {
+  color: #e6e6e6b2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+body .dnd5e.chat-card .card-header img {
+  height: 36px;
+  width: 36px;
+  border: none;
+  border-radius: 6px;
+  padding: 0
+}
+
+body .dnd5e.chat-card .card-footer {
+  color: #e6e6e6a2;
+  border: none;
+  padding: 0;
+}
+
+body .dnd5e.chat-card .card-footer span {
+  border: none;
+}
+
+/* This will restyle most chat boxes */
+body .chat-message,
+body .chat-message.whisper,
+body .chat-message.blind {
+  background: linear-gradient(var(--gradientDegree), var(--purpleLight) 0%, var(--pinkLight) 100%);
+  backdrop-filter: blur(6px);
+  color: #e6e6e6de;
+  border: 1px solid #44475a86;
+  border-radius: 6px;
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+  transition: max-height 0.3s ease-in-out;
+}
+
+body .chat-message .message-header {
+  color: #e6e6e6de;
+}
+
+body .chat-message .message-content {
+  color: #e6e6e6de;
+  border: none;
+  margin: 1px;
+}
+
+body .chat-message .message-content .form-group.sheet.actor .items-list {
+  color: #e6e6e6fe;
+  border: none;
+}
+
+.body chat-message .message-metadata {
+  color: #e6e6e6de;
+  text-shadow: none;
+}
+
+body .chat-message .dice-formula,
+body .chat-message .dice-total {
+  border: 1px solid #44475a86;
+  box-shadow: none;
+  border-radius: 6px;
+  margin: 1px;
+}
+
+body .chat-message .dice-result {
+  color: #f8f8f2c6;
+}
+
+body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+  border-radius: 6px;
+  border: 1px solid #44475a86;
+	background: var(--purpleLight);
+	margin: 2px;
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+}
+
+body .dice-roll .dice-total.success {
+  color: inherit;
+  background: #c7d0c0;
+  border: 1px solid #50fa7b;
+}
+
+body .dice-roll .dice-total.failure {
+  color: inherit;
+  background: #ffdddd;
+  border: 1px solid #ff5555;
+}
+
+body .dice-roll .dice-total.critical {
+  color: #50fa7bc5;
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+}
+
+body .dice-roll .dice-total.fumble {
+  color: #ff5555c5;
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+/* Settings and Modules Windows */
+body #client-settings section.content {
+  border-top: none;
+}
+
+body #module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+  color: #e6e6e6cb;
+}
+
+body #module-management .package-list {
+  border-top: none;
+  border-bottom: none;
+}
+
+body #module-management .package-list .package {
+  border-bottom: 1px solid transparent;
+}
+
+nav.list-filters a.filter {
+  border-bottom: 2px solid #44475a35;
+}
+
+body nav.list-filters a.filter.active {
+  border-bottom: 2px solid #bd93f935;
+}
+
+body #client-settings section.content h2.module-header {
+  color: #e6e6e6eb;
+}
+
+body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
+  color: #e6e6e65b;
+}
+
+body #settings h2 {
+  border-bottom: none;
+  border-top: none;
+  color: #f8f8f2c6;
+  background: none;
+}
+
+/* Midi Specific or useful for Midi */
+body .chat-message .message-content .form-group.sheet.actor .items-header,
+body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+  color: #f8f8f2c6;
+  background: transparent;
+  border: 1px solid #44475a86;
+  border-radius: 6px;
+}
+
+body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
+  color: #f8f8f2c6;
+  background: linear-gradient(0deg, var(--purpleLight) 0%, var(--pinkLight) 100%);
+  border: 1px solid var(--purpleLight);
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 25px;
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+}
+
+body .dnd5e.chat-card .card-buttons span {
+  color: #e6e6e6eb;
+  border: 1px transparent;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+body .dice-tooltip .part-header .part-total {
+  border: 1px transparent;
+  background: transparent;
+  font-size: 12px;
+  line-height: 25px;
+  margin-right: 5px;
+}
+
+/* General midi setting */
+body .midi-qol-nobox {
+  border: none;
+  padding: 0
+}
+
+/* Monk's Token Bar */
+body #requestsavingthrow .request-grid div,
+body .monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
+  color: #e6e6e6e2;
+}
+
+body #requestsavingthrow .request-header {
+  background: #44475a56;
+  border: 2px solid #282a362e;
+  box-shadow: none;
+}
+
+body .monks-tokenbar.chat-card .flexrow {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow,
+body .monks-tokenbar .sheet .items-list .item,
+body .monks-tokenbar.chat-card .card-footer,
+body .monks-tokenbar.chat-card .card-footer span {
+  border: none;
+}
+
+body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name,
+.monks-tokenbar .sheet .items-list .items-header h3 {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  border: none;
+}
+
+body .monks-tokenbar.chat-card .card-header {
+  font-family: "Signika";
+  border: none;
+}
+
+body .monks-tokenbar.chat-card .card-header h3,
+body .monks-tokenbar.chat-card .message-content .items-header .item-name {
+  color: #e6e6e6f2;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+body .monks-tokenbar.chat-card .card-footer button {
+  color: #e6e6e6f2;
+  background: none;
+  border: none;
+}
+
+body .monks-tokenbar .sheet .items-list .items-header {
+  color: #e6e6e6e2;
+  font-family: "Signika";
+  background: none;
+  border: none;
+}
+
+body #requestsavingthrow .request-grid>div.selected,
+body #requestsavingthrow .request-grid>div:hover {
+  color: white;
+  background: #44475a26;
+  border: #bd93f9;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #bd93f9;
+}
+
+/* Advanced Macros Module */
+body .macro-sheet .form-group.command .furnace-macro-command textarea,
+body .macro-sheet .form-group.command .furnace-macro-command code {
+  color: white;
+  text-shadow: black;
+}
+
+/* GitHub Gist Replacement for Advanced Macros Module */
+body .hljs {
+  background: #282a36;
+  color: #f8f8f2;
+}
+
+body .hljs-comment,
+body .hljs-meta {
+  color: #6272a4;
+}
+
+body .hljs-variable,
+body .hljs-template-variable,
+body .hljs-strong,
+body .hljs-emphasis,
+body .hljs-quote {
+  color: #f1fa8c;
+}
+
+body .hljs-keyword,
+body .hljs-selector-tag,
+body .hljs-type {
+  color: #d73a49;
+}
+
+body .hljs-literal,
+body .hljs-symbol,
+body .hljs-bullet,
+body .hljs-attribute {
+  color: #0086b3;
+}
+
+body .hljs-section,
+body .hljs-name {
+  color: #50fa7b;
+}
+
+body .hljs-tag {
+  color: #333333;
+}
+
+body .hljs-title,
+body .hljs-attr,
+body .hljs-selector-id,
+body .hljs-selector-class,
+body .hljs-selector-attr,
+body .hljs-selector-pseudo {
+  color: #bd93f9;
+}
+
+body .hljs-addition {
+  color: #50fa7b;
+  background-color: #282a36;
+}
+
+body .hljs-deletion {
+  color: #ff5555;
+  background-color: #282a36;
+}
+
+body .hljs-link {
+  text-decoration: underline;
+}
+
+body .hljs-number {
+  color: #8be9fd;
+}
+
+body .hljs-string {
+  color: #8be9fd;
+}
+
+/* Code Mirror + Custom CSS Module
+(I am too dumb to learn how to change to the prepackaged dracula theme for CM) */
+body .CodeMirror {
+  cursor: text;
+  background: rgba(40, 42, 54, 0.8);
+  backdrop-filter: blur(16px);
+  color: #f8f8f2;
+}
+
+body .CodeMirror-gutters {
+  border: none;
+  background-color: #282a36;
+}
+
+/* Changelogs */
+body .chl-module-content {
+  color: #e6e6e6eb;
+}
+
+/* Tidy UI */
+body #module-management .disable-all-modules {
+  background: #ff555594;
+  border: none;
+}
+
+body #module-management .enable-all-modules {
+  background: #50fa7b94;
+  border: none;
+}
