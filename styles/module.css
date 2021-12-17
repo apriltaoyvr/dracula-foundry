@@ -69,8 +69,9 @@ body textarea {
 /* General windows (Fuck my life) */
 body .window-app .window-content,
 body .window-app .window-content>* {
-  background: #282a3635;
+  background: hsla(230, 15%, 15%, 75%);
   color: #e6e6e6eb;
+	backdrop-filter: blur(12px);
 }
 
 body .window-app .window-header {
@@ -98,10 +99,51 @@ body .dnd5e .form-group label {
   color: var(--whiteSecondary);
 }
 
+/* Sheets */
+/* Comes up often for DAE menus */
+body .dnd5e.sheet.item .effect-header {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+body .dnd5e.sheet .filter-list .filter-item.active {
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  box-shadow: none;
+  transition: all .2s ease-in-out;
+}
+
+body .dnd5e.sheet .filter-list .filter-item.active:hover {
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  box-shadow: 0px 0px 4px var(--purple);
+  transition: all .2s ease-in-out;
+}
+
+body .dnd5e.sheet .filter-list .filter-item {
+  color: var(--disabled);
+  box-shadow: 0px 0px 4px var(--disabled);
+}
+
+body dnd5e.sheet.actor.inventory-filters.flexrow {
+  border: none;
+}
+
+/* Textarea */
+body textarea {
+  border: 1px solid var(--cyan);
+}
+
+body textarea:focus {
+  border: 2px solid var(--cyan);
+	box-shadow: none;
+}
+
 /* Sidebar */
 body #sidebar {
-  background: linear-gradient(0deg, rgba(40, 42, 54, 0.6) 0%, rgba(68, 71, 90, 0.2) 50%, rgba(75, 85, 95, 0) 100%);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(0deg, hsla(230, 15%, 15%, 90%) 25%, hsla(230, 15%, 15%, 80%) 50%, hsla(230, 15%, 30%, 0%) 100%);
+  backdrop-filter: blur(24px);
   border: 2px solid transparent;
 }
 
@@ -132,10 +174,28 @@ body button,
 body form button,
 body .dialog .dialog-buttons button,
 body .dialog .dialog-buttons button.default {
-  color: #e6e6e6eb;
-  background: #282a36a5;
-  border: 1px solid var(--purpleLight);
-  border-radius: 6px;
+  --shadow-color: 246deg 23% 6%;
+  color: hsl(60, 30%, 100%);
+  background: transparent;
+  font-size: 14px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+  border-radius: 2px;
+  margin-left: 2px;
+  box-shadow:
+    0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+    0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+    0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+  text-shadow:
+    0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+    0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+    0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+    0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+    0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+    0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+    0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 body button:hover,
@@ -151,8 +211,14 @@ body input[type="number"]:focus,
 body input[type="password"]:focus,
 body input[type="date"]:focus,
 body input[type="time"]:focus {
-  border-color: var(--purple);
+  border-color: var(--cyan);
   box-shadow: none;
+}
+
+/* Select aka Dropdown Boxes */
+body .dnd5e.sheet select {
+	background: hsl(230, 15%, 15%);
+  border: 1px solid var(--cyan);
 }
 
 body .dnd5e select,
@@ -160,7 +226,7 @@ body .dnd5e .form-group .form-fields,
 body .dnd5e input[type="text"],
 body .dnd5e input[type="number"] {
   color: hsl(60, 30%, 96%);
-  border: 1px solid var(--purpleLight);
+  border: 1px solid var(--cyan);
 }
 
 body input[type="color"][data-edit][data-edit] {
@@ -175,14 +241,46 @@ body input[type="color"][data-edit][data-edit] {
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
-/* Attack + Damage buttons */
-body .dnd5e button {
-  color: #e6e6e6eb;
-  background: #282a368e;
+/* Document Links */
+body a.entity-link,
+body a.content-link,
+body a.inline-roll {
+  color: hsl(60, 30%, 100%);
+  background: transparent;
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
-  --shadow-color: 240deg 16% 8%;
+}
+
+body a.entity-link:hover,
+body a.content-link:hover,
+body a.inline-roll:hover {
+  box-shadow: 0px 0px 5px var(--purple);
+}
+
+body a.entity-link,
+body a.content-link,
+body a.inline-roll {
+  box-shadow:
+}
+
+body a.entity-link i,
+body a.content-link i,
+body a.inline-roll i {
+  color: var(--disabled);
+}
+
+
+
+
+/* Attack + Damage buttons */
+body .dnd5e button {
+  color: hsl(60, 30%, 100%);
+  background: #transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
+  --shadow-color: 246deg 23% 6%;
   box-shadow:
     0px 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
     0px 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
@@ -241,6 +339,15 @@ body input[type="range"]+.range-value {
   box-shadow: none;
 }
 
+/* Search */
+body .directory .directory-header .header-search input {
+  background: transparent;
+  color: hsl(60, 30%, 100%);
+  border: 1px solid ;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
 /* Sliders */
 body input[type=range]::-webkit-slider-thumb {
   height: 12px;
@@ -260,15 +367,18 @@ body #module-management input[type="checkbox"] {
 
 /* Select (Dropdown Box) */
 body select {
-  color: #e6e6e6e2;
+  color: hsl(60, 30%, 100%);
   background: #44475ab6;
-  border: 0.3rem solid transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 50%, var(--cyan) 100%);
   transition: 0.3s ease-in-out all;
   box-shadow: none;
 }
 
 body select:focus {
-  border-color: var(--purple);
+  border: 1px solid var(--cyan);
+  box-shadow: none;
 }
 
 body form .notes,
@@ -310,7 +420,7 @@ body #chat-controls .roll-type-select {
 body #chat-form textarea {
   color: hsl(60, 30%, 100%);
   background: transparent;
-  border: 1px solid var(--purpleLight);
+  border: 1px solid var(--cyan);
   backdrop-filter: blur(6px);
 }
 
@@ -398,11 +508,14 @@ body .dice-tooltip .part-header .part-formula {
 
 /* The result of the actual dice displayed */
 body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
-  --shadow-color: 21deg 64% 38%;
+  --shadow-color: 246deg 23% 6%;
   color: #f8f8f2c6;
-  background: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--orange) 100%);
-  border: none;
-  border-radius: 5px;
+  background: transparent;
+	font-size: 14px;
+  border: 1px solid;
+  border-image-slice: 1;
+border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+  border-radius: 2px;
   margin-left: 2px;
   box-shadow:
     0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
@@ -420,19 +533,19 @@ body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
 }
 
 body .chat-message .dice-result {
-  color: #f8f8f2c6;
+  color: hsl(60, 30%, 100%);
 }
 
 body .dice-roll .dice-total.success {
   color: inherit;
-  background: #c7d0c0;
+  background: inherit;
   border: 1px solid hsl(115, 100%, 75%);
 }
 
 body .dice-roll .dice-total.failure {
   color: inherit;
-  background: #ffdddd;
-  border: 1px solid #ff5555;
+  background: inherit;
+  border: 1px solid hsl(10, 100%, 75%);
 }
 
 body .dice-roll .dice-total.critical {
@@ -441,7 +554,7 @@ body .dice-roll .dice-total.critical {
 }
 
 body .dice-roll .dice-total.fumble {
-  color: #ff5555c5;
+  color: hsl(10, 100%, 75%);
   text-shadow: 0 0 10px rgba(0 0 0 / 50%);
 }
 
@@ -449,25 +562,24 @@ body .dice-roll .dice-total.fumble {
 body .chat-message,
 body .chat-message.whisper,
 body .chat-message.blind {
-  background: var(--purpleLight);
+  background: var(--purple-transparent);
   backdrop-filter: blur(2px);
   color: hsl(60, 30%, 100%);
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--pink) 100%);
-  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
   transition: max-height 0.3s ease-in-out;
 }
 
 body .chat-message .message-header,
 body .chat-message .message-metadata {
-  color: #e6e6e6de;
+  color: hsl(60, 30%, 100%);
   text-shadow: none;
 }
 
 body .chat-message .message-content,
 body .chat-message .message-content .form-group.sheet.actor .items-list {
-  color: #e6e6e6de;
+  color: hsl(60, 30%, 100%);
   border: none;
   margin: 1px;
 }
@@ -475,7 +587,7 @@ body .chat-message .message-content .form-group.sheet.actor .items-list {
 /* Code referenced from Warhead
 Set item name header to regular font and be smaller + transition for .chat-message */
 body .dnd5e.chat-card .card-header h3 {
-  color: #e6e6e6b2;
+  color: hsl(60, 30%, 96%);
   font-family: "Signika";
   font-weight: bold;
   font-size: 14px;
@@ -483,7 +595,7 @@ body .dnd5e.chat-card .card-header h3 {
 
 body .dnd5e.chat-card .card-header:hover h3 {
   color: hsl(60, 30%, 96%);
-  text-shadow: 0px 0px 4px var(--purple);
+  text-shadow: 0px 0px 8px var(--pink);
   font-family: "Signika";
   font-weight: bold;
   font-size: 14px;
@@ -492,8 +604,8 @@ body .dnd5e.chat-card .card-header:hover h3 {
 body .dnd5e.chat-card .card-header img {
   height: 36px;
   width: 36px;
-  border: 1px solid transparent;
-  border-radius: 6px;
+	border-radius: 0px;
+  border: 1px solid var(--purple);
   padding: 0;
 }
 
@@ -517,7 +629,7 @@ body #module-management .package-list .package-metadata,
 body #module-management .package-list .package-description,
 body #client-settings section.content h2.module-header,
 body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
-  color: #e6e6e6cb;
+  color: hsl(60, 30%, 100%);
 }
 
 body #module-management .package-list {
@@ -533,7 +645,7 @@ body nav.list-filters a.filter {
 }
 
 body nav.list-filters a.filter:hover {
-  color: white;
+  color: hsl(60, 30%, 96%);
   border-bottom: 1px solid var(--disabled);
   box-shadow: none;
   transition: color .2s ease-in-out;
@@ -589,23 +701,23 @@ body .midi-qol-box {
 }
 
 body .midi-qol-faint {
-  color: hsl(60, 30%, 100%)
+  color: hsl(60, 30%, 100%);
 }
 
 /* Monk's Token Bar */
 body #requestsavingthrow .request-grid div,
 body .monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
-  color: #e6e6e6e2;
+  color: hsl(60, 30%, 100%);
 }
 
 body #requestsavingthrow .request-header {
-  background: #44475a56;
-  border: 2px solid #282a362e;
+  background: var(--purple-transparent);
+  border: 2px solid var(--purple-transparent);
   box-shadow: none;
 }
 
 body .monks-tokenbar.chat-card .flexrow {
-  color: #e6e6e6e2;
+  color: hsl(60, 30%, 100%);
   font-family: "Signika";
   font-weight: bold;
   font-size: 16px;
@@ -622,7 +734,7 @@ body .monks-tokenbar.chat-card .card-header,
 body .monks-tokenbar .sheet .items-list .items-header h3,
 body .chat-message .message-content .form-group.sheet.actor .items-header,
 body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
-  color: #e6e6e6e2;
+  color: hsl(60, 30%, 100%);
   background: none;
   border: none;
   font-family: "Signika";
@@ -630,20 +742,20 @@ body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-lis
 
 body .monks-tokenbar.chat-card .card-header h3,
 body .monks-tokenbar.chat-card .message-content .items-header .item-name {
-  color: #e6e6e6f2;
+  color: hsl(60, 30%, 100%);
   font-family: "Signika";
   font-weight: bold;
   font-size: 14px;
 }
 
 body .monks-tokenbar.chat-card .card-footer button {
-  color: #e6e6e6f2;
+  color: hsl(60, 30%, 100%);
   background: none;
   border: none;
 }
 
 body .monks-tokenbar .sheet .items-list .items-header {
-  color: #e6e6e6e2;
+  color: hsl(60, 30%, 100%);
   font-family: "Signika";
   background: none;
   border: none;
@@ -662,13 +774,13 @@ body #requestsavingthrow .request-grid>div:hover {
 body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
  {
   background: transparent;
-  border: 1px var (--purpleLight);
+  border: 1px var(--purpleLight);
 }
 /* Advanced Macros Module */
 body .macro-sheet .form-group.command .furnace-macro-command textarea,
 body .macro-sheet .form-group.command .furnace-macro-command code {
-  color: white;
-  text-shadow: black;
+  color: hsl(60, 30%, 96%);
+  text-shadow:  hsl(230, 15%, 30%);
 }
 
 /* GitHub Gist Replacement for Advanced Macros Module */
