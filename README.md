@@ -4,8 +4,9 @@ Heavily inspired/taken from theripper93 and mouse0270's [Argon Combat Hud](https
 I made this to fill in gaps between mods that leave menus untouched to give the UI visual consistency in my setup and sharing for anyone else who hates looking at light menus.
 
 ## Screenshot(s)
-![image](https://user-images.githubusercontent.com/95392008/146146871-efb58e86-5c47-43ca-b6ae-9e133509810d.png)
-![image](https://user-images.githubusercontent.com/95392008/146324880-452f8d40-f9b2-4704-97cc-f025ada0697e.png)
+![image](https://user-images.githubusercontent.com/95392008/146494899-82185ed3-31cc-465f-aa91-525235fb5fa4.png)
+![image](https://user-images.githubusercontent.com/95392008/146494983-24836e68-30d8-41e6-ab0e-efb0223f54dd.png)
+
 
 ## Coverage
 ### Done
@@ -26,11 +27,12 @@ I made this to fill in gaps between mods that leave menus untouched to give the 
 - Better css file for Combat Carousel
 - Keep working at it until I'm satisfied with the look
 
-### Extras
-- Argon Combat HUD Colour Scheme
-
 ### Won't do
 - Changing the functions of the sidebar/UI (I am too weak to do this and there are much better people than me doing this already)
+
+### Recommended Modules
+- Argon Combat HUD (duh)
+- Minimal UI
 
 ## Credits
 Colour palette from [Dracula](https://draculatheme.com)
