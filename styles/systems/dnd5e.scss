@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 /* Sheets */
 /* Comes up often for DAE menus */
 
@@ -6,26 +8,26 @@ body .dnd5e {
     &.item .effect-header {
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
     }
 
     .filter-list .filter-item {
       &.active {
-        color: var(--purple);
-        border-bottom: 1px solid var(--purple);
+        color: $purple;
+        border-bottom: 1px solid $purple;
         box-shadow: none;
         transition: all .2s ease-in-out;
 
         &:hover {
-          color: var(--purple);
-          border-bottom: 1px solid var(--purple);
-          box-shadow: 0px 0px 4px var(--purple);
+          color: $purple;
+          border-bottom: 1px solid $purple;
+          box-shadow: 0px 0px 4px $purple;
           transition: all .2s ease-in-out;
         }
       }
 
-      color: var(--disabled);
-      box-shadow: 0px 0px 4px var(--disabled);
+      color: $disabled;
+      box-shadow: 0px 0px 4px $disabled;
     }
 
     &.actor.inventory-filters.flexrow {
@@ -35,20 +37,20 @@ body .dnd5e {
     /* Select aka Dropdown Boxes */
     select {
       background: hsl(230, 15%, 15%);
-      border: 1px solid var(--cyan);
+      border: 1px solid $cyan;
     }
   }
 
   /* Select aka Dropdown Boxes */
   select, .form-group .form-fields {
     color: hsl(60, 30%, 96%);
-    border: 1px solid var(--cyan);
+    border: 1px solid $cyan;
   }
 
   input {
     &[type="text"], &[type="number"] {
       color: hsl(60, 30%, 96%);
-      border: 1px solid var(--cyan);
+      border: 1px solid $cyan;
     }
   }
 
@@ -58,14 +60,14 @@ body .dnd5e {
     background: transparent;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
     --shadow-color:246deg 23% 6%;
     box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.25), 0px 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31), 0px 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
     text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.26), 0px 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31), -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36), -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
     margin: 2px;
 
     &:hover, &:focus {
-      box-shadow: 0px 0px 5px var(--purple);
+      box-shadow: 0px 0px 5px $purple;
       cursor: pointer;
     }
   }
@@ -74,7 +76,7 @@ body .dnd5e {
     padding: 0;
     color: #e6e6e6eb;
     border-radius: 6px;
-    border: 1px solid var(--purpleLight);
+    border: 1px solid $purpleLight;
   }
 
   /* Chat Cards */
@@ -105,7 +107,7 @@ body .dnd5e {
 
       &:hover h3 {
         color: hsl(60, 30%, 96%);
-        text-shadow: 0px 0px 8px var(--pink);
+        text-shadow: 0px 0px 8px $pink;
         font-family: "Signika";
         font-weight: bold;
         font-size: 14px;
@@ -115,7 +117,7 @@ body .dnd5e {
         height: 36px;
         width: 36px;
         border-radius: 0px;
-        border: 1px solid var(--purple);
+        border: 1px solid $purple;
         padding: 0;
       }
     }
@@ -135,7 +137,7 @@ body .dnd5e {
 /* Original grey
 body .dnd5e button {
   color: #e6e6e6eb;
-  border: 1px solid var(--purpleLight);
+  border: 1px solid $purpleLight;
   border-radius: 6px;
 } */
 

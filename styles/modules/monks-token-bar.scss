@@ -1,5 +1,6 @@
-/* Monk's Token Bar */
+@use '../variables' as *;
 
+/* Monk's Token Bar */
 body {
   .monks-tokenbar .sheet .items-list .item-list .item .item-name {
     color: hsl(60, 30%, 100%);
@@ -10,8 +11,8 @@ body {
   }
 
   #requestsavingthrow .request-header {
-    background: var(--purple-transparent);
-    border: 2px solid var(--purple-transparent);
+    background: $purple-transparent;
+    border: 2px solid $purple-transparent;
     box-shadow: none;
   }
 

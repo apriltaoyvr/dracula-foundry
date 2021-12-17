@@ -1,12 +1,14 @@
-// Internal
-@import 'variables';
-
 // Core
-@import 'core/foundry';
+@use 'core/foundry';
 
 // Systems
-@import 'systems/dnd5e';
+@use 'systems/dnd5e';
 
 // Modules
-@import 'modules/advanced-macros', 'modules/combat-carousel', 'modules/dice-so-nice', 'modules/lib-changelog',
- 'modules/midi-qol', 'modules/monks-token-bar', 'modules/tidy-ui';
+@use 'modules/advanced-macros';
+@use 'modules/combat-carousel';
+@use 'modules/dice-so-nice';
+@use 'modules/lib-changelog';
+@use 'modules/midi-qol';
+@use 'modules/monks-token-bar';
+@use 'modules/tidy-ui';

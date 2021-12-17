@@ -1,5 +1,6 @@
-/* General midi-qol settings */
+@use '../variables' as *;
 
+/* General midi-qol settings */
 body {
   .midi-qol-nobox {
     border: none;
@@ -9,7 +10,7 @@ body {
   .midi-qol-box {
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
   }
 
   .midi-qol-faint {
