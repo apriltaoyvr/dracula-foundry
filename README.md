@@ -12,22 +12,29 @@ This is a work in progress but most menus in Foundry have been skinned/touched b
 
 ## Coverage
 ### Done
-1. Windows
-2. Input forms
-3. Scrollbar
-4. Chat cards
+1. Convert to module
+2. Windows
+3. Input forms
+4. Scrollbar
+5. Chat cards
      - Core (as far as I'm aware)
      - MidiQOL
 6. Combat Carousel
 7. Monk's Token Bar
      - Roll requests (Chat cards and Window)
-8. Convert to proper module
 
 ### To-do
 - Fix grey text in filter/search bars
+- DAE menu tables
 - Monk's Token Bar (The Actual Token Bar)
 - Better css file for Combat Carousel
+- Potential for theme styling/changing colour values
 - Keep working at it until I'm satisfied with the look
+
+### Aesthetic Debates
+- Too much gradient?
+     - Too dull without more colour in early mockup
+     - Difficult to balance colour and greys 😔
 
 ### Won't do
 - Changing the functions of the sidebar/UI (I am too weak to do this and there are much better people than me doing this already)
