@@ -1,6 +1,6 @@
 {
-  "name": "darkula-foundry",
-  "description": "A dark mode theming module for Foundry VTT based on Darkula.",
+  "name": "dracula-foundry",
+  "description": "A dark mode theming module for Foundry VTT based on Dracula, Darkula, and Dracula UI.",
   "license": "MIT",
   "private": true,
   "type": "module",
