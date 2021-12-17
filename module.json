@@ -15,7 +15,7 @@
     }
   ],
   "esmodules": [
-    "/scripts/module.js"
+    "/src/init.js"
   ],
   "styles": [
     "/css/dracula-foundry.css"
