@@ -77,8 +77,7 @@ body {
   }
 
   #sidebar {
-    background: linear-gradient(0deg, hsla(230, 15%, 15%, 90%) 25%, hsla(230, 15%, 15%, 80%) 50%, hsla(230, 15%, 30%, 0%) 100%);
-    backdrop-filter: blur(24px);
+    background: $bg_window-content;
     border: 2px solid transparent;
   }
 
@@ -88,60 +87,87 @@ body {
   }
 
   ::-webkit-scrollbar-track {
-    box-shadow: 0 0 1px #999 inset;
+    box-shadow: 0 0 1px $purple-transparent inset;
     border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 0;
-    background: #ff79c6;
+    background: $pink;
   }
 
   :root {
     scrollbar-width: thin;
-    scrollbar-color: #ff79c6 #ff79c6;
+    scrollbar-color: $pink $pink;
   }
 
   button, form button {
     --shadow-color:246deg 23% 6%;
     color: $whiteSecondary;
-    background: transparent;
+    background: $blackLight;
     font-size: 14px;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
     border-radius: 2px;
     margin-left: 2px;
-    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+                0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+                0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+                0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+                0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+                0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+                0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+                0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
   }
 
   .dialog .dialog-buttons button {
     --shadow-color:246deg 23% 6%;
     color: $whiteSecondary;
-    background: transparent;
+    background: $blackLight;
     font-size: 14px;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
     border-radius: 2px;
     margin-left: 2px;
-    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+                0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow:  0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                  0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+                  0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+                  0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+                  0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+                  0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+                  0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+                  0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
     &.default {
       --shadow-color:246deg 23% 6%;
       color: $whiteSecondary;
-      background: transparent;
+      background: $blackLight;
       font-size: 14px;
       border: 1px solid;
       border-image-slice: 1;
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
       border-radius: 2px;
       margin-left: 2px;
-      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                  0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+                  0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow:  0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+                    0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+                    0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+                    0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+                    0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+                    0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+                    0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+                    0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
   }
 
@@ -175,16 +201,12 @@ body {
     &.entity-link, &.content-link, &.inline-roll {
       color: $whiteSecondary;
       background: transparent;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      border: 1px solid var(--red);
     }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
-      box-shadow: 0 0 5px $purple;
+      box-shadow: 0 0 5px $red;
     }
-
-    &.entity-link, &.content-link, &.inline-roll {}
 
     &.entity-link i, &.content-link i, &.inline-roll i {
       color: $disabled;
@@ -198,7 +220,7 @@ body {
     font-size: 12px;
 
     thead {
-      background: #282a3686;
+      background: $blackLight;
       border-bottom: none;
     }
   }
@@ -215,7 +237,6 @@ body {
     &[type="range"] + .range-value {
       color: $whiteSecondary;
       background: $purpleLight;
-      border: 0.2rem solid transparent;
       transition: 0.3s ease-in-out all;
       border: 1px solid $pink;
       box-shadow: none;
@@ -234,14 +255,14 @@ body {
     &[type=range]::-webkit-slider-thumb {
       height: 12px;
       width: 12px;
-      border: 1px solid transparent;
+      border: 1px solid $blackLight;
       background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       cursor: pointer;
       box-shadow: none;
     }
 
     &[type="checkbox"] {
-      background: #44475a86;
+      background: $blackLight;
       color: $purple;
     }
   }
@@ -253,7 +274,7 @@ body {
 
   select {
     color: $whiteSecondary;
-    background: #44475ab6;
+    background: $black;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
@@ -261,7 +282,7 @@ body {
     box-shadow: none;
 
     &:focus {
-      border: 1px solid $cyan;
+      border: 2px solid $cyan;
       box-shadow: none;
     }
   }
@@ -310,7 +331,7 @@ body {
 
   .dice-roll .dice-formula {
     color: inherit;
-    background: #282a368e;
+    background: $blackLight;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
@@ -325,7 +346,7 @@ body {
   }
 
   .dice-roll .dice-total {
-    background: #282a368e;
+    background: $blackLight;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
@@ -344,14 +365,14 @@ body {
 
   .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
     color: inherit;
-    border: 1px solid $purple;
+    border: 1px solid $pink;
     box-shadow: none;
     margin: 2px;
   }
 
   .dice-roll {
     .dice-formula:hover, .dice-total:hover {
-      box-shadow: 0 0 4px #bd93f9;
+      box-shadow: 0 0 4px $purpleLight;
     }
   }
 
@@ -368,8 +389,8 @@ body {
 
   .chat-message {
     .message-content .dice-tooltip .dice-rolls .roll {
-      --shadow-color:246deg 23% 6%;
-      color: #f8f8f2c6;
+      --shadow-color: 246deg 23% 6%;
+      color: hsl(60, 30%, 100%);
       background: transparent;
       font-size: 14px;
       border: 1px solid;
@@ -377,8 +398,19 @@ body {
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
       border-radius: 2px;
       margin-left: 2px;
-      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      box-shadow:
+        0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+        0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow:
+        0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+        0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+        0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+        0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+        0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+        0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+        0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
 
     .dice-result {
@@ -410,6 +442,7 @@ body {
     }
   }
 
+/* This will restyle most chat cards */
   .chat-message {
     background: $purple-transparent;
     backdrop-filter: blur(2px);
@@ -521,47 +554,3 @@ body {
     }
   }
 }
-
-/* General windows (Fuck my life) */
-
-/* Textarea */
-
-/* Sidebar */
-
-/* Scrollbar */
-
-/* Buttons */
-
-/* General inputs + Get rid of those fucking red shadows */
-
-/* Document Links */
-
-/* Tables */
-
-/* Text Inputs */
-
-/* Search */
-
-/* Sliders */
-
-/* Checkbox */
-
-/* Select (Dropdown Box) */
-
-/* Compedium */
-
-/* Sound */
-
-/* Chat log */
-
-/* Roll results + damage */
-
-/* Expanded roll information, formula, etc */
-
-/* Temporary fix for part-formula text misalignment */
-
-/* The result of the actual dice displayed */
-
-/* This will restyle most chat boxes */
-
-/* Settings and Modules Windows */
