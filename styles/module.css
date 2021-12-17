@@ -150,10 +150,29 @@ body input[type="text"]:focus,
 body input[type="number"]:focus,
 body input[type="password"]:focus,
 body input[type="date"]:focus,
-body input[type="time"]:focus,
-body input[type="color"][data-edit][data-edit] {
+body input[type="time"]:focus {
   border-color: var(--purple);
   box-shadow: none;
+}
+
+body .dnd5e select,
+body .dnd5e .form-group .form-fields,
+body .dnd5e input[type="text"],
+body .dnd5e input[type="number"] {
+  color: hsl(60, 30%, 96%);
+  border: 1px solid var(--purpleLight);
+}
+
+body input[type="color"][data-edit][data-edit] {
+  border: 1px solid var(--purpleLight);
+}
+
+body input[type="color"][data-edit][data-edit] {
+  border: 1px solid var(--purpleLight);
+  appearance: auto;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  color: -internal-light-dark(black, white);
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 /* Attack + Damage buttons */
