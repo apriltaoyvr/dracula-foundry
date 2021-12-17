@@ -1,65 +1,108 @@
 /* Monk's Token Bar */
-body #requestsavingthrow .request-grid div,
-body .monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
-  color: hsl(60, 30%, 100%);
-}
 
-body #requestsavingthrow .request-header {
-  background: var(--purple-transparent);
-  border: 2px solid var(--purple-transparent);
-  box-shadow: none;
-}
+body {
+  .monks-tokenbar .sheet .items-list .item-list .item .item-name {
+    color: hsl(60, 30%, 100%);
+  }
 
-body .monks-tokenbar.chat-card .flexrow {
-  color: hsl(60, 30%, 100%);
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 16px;
-}
+  #requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
+    color: hsl(60, 30%, 100%);
+  }
 
-body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow,
-body .monks-tokenbar .sheet .items-list .item,
-body .monks-tokenbar.chat-card .card-footer,
-body .monks-tokenbar.chat-card .card-footer span {
-  border: none;
-}
+  #requestsavingthrow .request-header {
+    background: var(--purple-transparent);
+    border: 2px solid var(--purple-transparent);
+    box-shadow: none;
+  }
 
-body .monks-tokenbar.chat-card .card-header,
-body .monks-tokenbar .sheet .items-list .items-header h3,
-body .chat-message .message-content .form-group.sheet.actor .items-header,
-body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
-  color: hsl(60, 30%, 100%);
-  background: none;
-  border: none;
-  font-family: "Signika";
-}
+  .monks-tokenbar {
+    &.chat-card {
+      .flexrow {
+        color: hsl(60, 30%, 100%);
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 16px;
+      }
 
-body .monks-tokenbar.chat-card .card-header h3,
-body .monks-tokenbar.chat-card .message-content .items-header .item-name {
-  color: hsl(60, 30%, 100%);
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 14px;
-}
+      .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
+        border: none;
+      }
+    }
 
-body .monks-tokenbar.chat-card .card-footer button {
-  color: hsl(60, 30%, 100%);
-  background: none;
-  border: none;
-}
+    .sheet .items-list .item {
+      border: none;
+    }
 
-body .monks-tokenbar .sheet .items-list .items-header {
-  color: hsl(60, 30%, 100%);
-  font-family: "Signika";
-  background: none;
-  border: none;
-}
+    &.chat-card {
+      .card-footer {
+        border: none;
 
-body #requestsavingthrow .request-grid>div.selected,
-body #requestsavingthrow .request-grid>div:hover {
-  color: white;
-  background: #44475a26;
-  border: #bd93f9;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #bd93f9;
+        span {
+          border: none;
+        }
+      }
+
+      .card-header {
+        color: hsl(60, 30%, 100%);
+        background: none;
+        border: none;
+        font-family: "Signika";
+      }
+    }
+
+    .sheet .items-list .items-header h3 {
+      color: hsl(60, 30%, 100%);
+      background: none;
+      border: none;
+      font-family: "Signika";
+    }
+  }
+
+  .chat-message .message-content .form-group.sheet.actor .items-header {
+    color: hsl(60, 30%, 100%);
+    background: none;
+    border: none;
+    font-family: "Signika";
+  }
+
+  .monks-tokenbar {
+    &.chat-card {
+      .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+        color: hsl(60, 30%, 100%);
+        background: none;
+        border: none;
+        font-family: "Signika";
+      }
+
+      .card-header h3, .message-content .items-header .item-name {
+        color: hsl(60, 30%, 100%);
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .card-footer button {
+        color: hsl(60, 30%, 100%);
+        background: none;
+        border: none;
+      }
+    }
+
+    .sheet .items-list .items-header {
+      color: hsl(60, 30%, 100%);
+      font-family: "Signika";
+      background: none;
+      border: none;
+    }
+  }
+
+  #requestsavingthrow .request-grid > div {
+    &.selected, &:hover {
+      color: white;
+      background: #44475a26;
+      border: #bd93f9;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #bd93f9;
+    }
+  }
 }

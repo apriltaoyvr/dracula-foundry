@@ -1,66 +1,135 @@
 /* Sheets */
 /* Comes up often for DAE menus */
-body .dnd5e.sheet.item .effect-header {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
-}
 
-body .dnd5e.sheet .filter-list .filter-item.active {
-  color: var(--purple);
-  border-bottom: 1px solid var(--purple);
-  box-shadow: none;
-  transition: all .2s ease-in-out;
-}
+body .dnd5e {
+  &.sheet {
+    &.item .effect-header {
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+    }
 
-body .dnd5e.sheet .filter-list .filter-item.active:hover {
-  color: var(--purple);
-  border-bottom: 1px solid var(--purple);
-  box-shadow: 0px 0px 4px var(--purple);
-  transition: all .2s ease-in-out;
-}
+    .filter-list .filter-item {
+      &.active {
+        color: var(--purple);
+        border-bottom: 1px solid var(--purple);
+        box-shadow: none;
+        transition: all .2s ease-in-out;
 
-body .dnd5e.sheet .filter-list .filter-item {
-  color: var(--disabled);
-  box-shadow: 0px 0px 4px var(--disabled);
-}
+        &:hover {
+          color: var(--purple);
+          border-bottom: 1px solid var(--purple);
+          box-shadow: 0px 0px 4px var(--purple);
+          transition: all .2s ease-in-out;
+        }
+      }
 
-body .dnd5e.sheet.actor.inventory-filters.flexrow {
-  border: none;
-}
+      color: var(--disabled);
+      box-shadow: 0px 0px 4px var(--disabled);
+    }
 
-/* Select aka Dropdown Boxes */
-body .dnd5e.sheet select {
-  background: hsl(230, 15%, 15%);
-  border: 1px solid var(--cyan);
-}
+    &.actor.inventory-filters.flexrow {
+      border: none;
+    }
 
-body .dnd5e select,
-body .dnd5e .form-group .form-fields,
-body .dnd5e input[type="text"],
-body .dnd5e input[type="number"] {
-  color: hsl(60, 30%, 96%);
-  border: 1px solid var(--cyan);
-}
+    /* Select aka Dropdown Boxes */
+    select {
+      background: hsl(230, 15%, 15%);
+      border: 1px solid var(--cyan);
+    }
+  }
 
-/* Attack + Damage buttons */
-body .dnd5e button {
-  color: hsl(60, 30%, 100%);
-  background: transparent;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
-  --shadow-color: 246deg 23% 6%;
-  box-shadow:
-          0px 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
-          0px 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
-          0px 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
-  text-shadow:
-          0px 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
-          0px 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
-          -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
-          -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
-  margin: 2px;
+  /* Select aka Dropdown Boxes */
+  select, .form-group .form-fields {
+    color: hsl(60, 30%, 96%);
+    border: 1px solid var(--cyan);
+  }
+
+  input {
+    &[type="text"], &[type="number"] {
+      color: hsl(60, 30%, 96%);
+      border: 1px solid var(--cyan);
+    }
+  }
+
+  /* Attack + Damage buttons */
+  button {
+    color: hsl(60, 30%, 100%);
+    background: transparent;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
+    --shadow-color:246deg 23% 6%;
+    box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.25), 0px 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31), 0px 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
+    text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.26), 0px 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31), -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36), -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
+    margin: 2px;
+
+    &:hover, &:focus {
+      box-shadow: 0px 0px 5px var(--purple);
+      cursor: pointer;
+    }
+  }
+
+  &.sheet .item-buttons {
+    padding: 0;
+    color: #e6e6e6eb;
+    border-radius: 6px;
+    border: 1px solid var(--purpleLight);
+  }
+
+  /* Chat Cards */
+  &.chat-card {
+    .card-header {
+      border: none;
+      padding: 0;
+    }
+
+    /* The segmented details in the expanded roll information */
+    .card-buttons span {
+      border: none;
+      font-size: 12px;
+      line-height: 25px;
+      background: inherit;
+      box-shadow: none;
+    }
+
+    .card-header {
+      /* Code referenced from Warhead
+      Set item name header to regular font and be smaller + transition for .chat-message */
+      h3 {
+        color: hsl(60, 30%, 96%);
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      &:hover h3 {
+        color: hsl(60, 30%, 96%);
+        text-shadow: 0px 0px 8px var(--pink);
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      img {
+        height: 36px;
+        width: 36px;
+        border-radius: 0px;
+        border: 1px solid var(--purple);
+        padding: 0;
+      }
+    }
+
+    .card-footer {
+      color: hsl(60, 30%, 100%);
+      border: none;
+      padding: 0;
+
+      span {
+        border: none;
+      }
+    }
+  }
 }
 
 /* Original grey
@@ -69,65 +138,9 @@ body .dnd5e button {
   border: 1px solid var(--purpleLight);
   border-radius: 6px;
 } */
-body .dnd5e button:hover,
-body .dnd5e button:focus {
-  box-shadow: 0px 0px 5px var(--purple);
-  cursor: pointer;
-}
 
-body .dnd5e.sheet .item-buttons {
-  padding: 0;
-  color: #e6e6e6eb;
-  border-radius: 6px;
-  border: 1px solid var(--purpleLight);
-}
 
-/* Chat Cards */
-body .dnd5e.chat-card .card-header {
-  border: none;
-  padding: 0
-}
 
-/* The segmented details in the expanded roll information */
-body .dnd5e.chat-card .card-buttons span {
-  border: none;
-  font-size: 12px;
-  line-height: 25px;
-  background: inherit;
-  box-shadow: none;
-}
 
-/* Code referenced from Warhead
-Set item name header to regular font and be smaller + transition for .chat-message */
-body .dnd5e.chat-card .card-header h3 {
-  color: hsl(60, 30%, 96%);
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 14px;
-}
 
-body .dnd5e.chat-card .card-header:hover h3 {
-  color: hsl(60, 30%, 96%);
-  text-shadow: 0px 0px 8px var(--pink);
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 14px;
-}
 
-body .dnd5e.chat-card .card-header img {
-  height: 36px;
-  width: 36px;
-  border-radius: 0px;
-  border: 1px solid var(--purple);
-  padding: 0;
-}
-
-body .dnd5e.chat-card .card-footer {
-  color: hsl(60, 30%, 100%);
-  border: none;
-  padding: 0;
-}
-
-body .dnd5e.chat-card .card-footer span {
-  border: none;
-}
