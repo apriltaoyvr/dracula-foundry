@@ -39,7 +39,7 @@
 
   .info-bar {
     background: transparent;
-    margin: 0px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     width: calc(100% * 0.8);
@@ -67,7 +67,7 @@
     display: flex;
     position: absolute;
     top: 50px;
-    right: 0px;
+    right: 0;
     color: white;
     background: rgba(0, 0, 0, 0.5);
     border: solid 1px black;
@@ -222,8 +222,8 @@ li[data-control="combat-carousel"] {
     display: none;
     flex-wrap: wrap;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 50px;
     height: 56px;
 
@@ -336,7 +336,7 @@ li[data-control="combat-carousel"] {
   .initiative {
     position: absolute;
     right: 0;
-    padding: 2px 0px;
+    padding: 2px 0;
     background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
     border-radius: 60%;
     z-index: 20;
@@ -625,7 +625,7 @@ li[data-control="combat-carousel"] {
   .name {
     &:hover .button-tray {
       display: flex;
-      padding: 0px 10px;
+      padding: 0 10px;
     }
 
     .button-tray {
@@ -679,11 +679,11 @@ li[data-control="combat-carousel"] {
   }
 
   .combat-controls .previous, .splide__arrow--prev {
-    left: 0px;
+    left: 0;
   }
 
   .combat-controls .next, .splide__arrow--next {
-    right: 0px;
+    right: 0;
   }
 
   .combat-controls a {
@@ -713,7 +713,7 @@ li[data-control="combat-carousel"] {
 
   .splide__slider {
     height: 100%;
-    padding: 0px 55px;
+    padding: 0 55px;
   }
 
   .splide__track {

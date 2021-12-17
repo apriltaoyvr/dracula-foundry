@@ -89,12 +89,12 @@ body {
 
   ::-webkit-scrollbar-track {
     box-shadow: 0 0 1px #999 inset;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb {
     outline: none;
-    border-radius: 0px;
+    border-radius: 0;
     background: #ff79c6;
   }
 
@@ -113,8 +113,8 @@ body {
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
     border-radius: 2px;
     margin-left: 2px;
-    box-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
   }
 
   .dialog .dialog-buttons button {
@@ -127,8 +127,8 @@ body {
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
     border-radius: 2px;
     margin-left: 2px;
-    box-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
     &.default {
       --shadow-color:246deg 23% 6%;
@@ -140,14 +140,14 @@ body {
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
       border-radius: 2px;
       margin-left: 2px;
-      box-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
   }
 
   button {
     &:hover, &:focus {
-      box-shadow: 0px 0px 4px $purple;
+      box-shadow: 0 0 4px $purple;
     }
   }
 
@@ -181,7 +181,7 @@ body {
     }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
-      box-shadow: 0px 0px 5px $purple;
+      box-shadow: 0 0 5px $purple;
     }
 
     &.entity-link, &.content-link, &.inline-roll {}
@@ -377,8 +377,8 @@ body {
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
       border-radius: 2px;
       margin-left: 2px;
-      box-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
 
     .dice-result {
