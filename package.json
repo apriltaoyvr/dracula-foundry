@@ -14,7 +14,7 @@
     "sass": "^1"
   },
   "scripts": {
-    "build-compress": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env cssnano -m -o ./css/dracula-foundry.css",
-    "build-dev": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env -m -o ./css/dracula-foundry.css"
+    "build-dev": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env -m -o ./css/dracula-foundry.css",
+    "build-release": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env cssnano -m -o ./css/dracula-foundry.css"
   }
 }
