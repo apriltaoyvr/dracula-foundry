@@ -1,10 +1,12 @@
+@use '../variables' as *;
+
 /* Advanced Macros Module */
 
 body {
   .macro-sheet .form-group.command .furnace-macro-command {
     textarea, code {
-      color: hsl(60, 30%, 96%);
-      text-shadow: hsl(230, 15%, 30%);
+      color: $white;
+      text-shadow: $blackSecondary;
     }
   }
 

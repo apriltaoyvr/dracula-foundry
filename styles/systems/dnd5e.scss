@@ -36,27 +36,27 @@ body .dnd5e {
 
     /* Select aka Dropdown Boxes */
     select {
-      background: hsl(230, 15%, 15%);
+      background: $black;
       border: 1px solid $cyan;
     }
   }
 
   /* Select aka Dropdown Boxes */
   select, .form-group .form-fields {
-    color: hsl(60, 30%, 96%);
+    color: $white;
     border: 1px solid $cyan;
   }
 
   input {
     &[type="text"], &[type="number"] {
-      color: hsl(60, 30%, 96%);
+      color: $white;
       border: 1px solid $cyan;
     }
   }
 
   /* Attack + Damage buttons */
   button {
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: transparent;
     border: 1px solid;
     border-image-slice: 1;
@@ -74,7 +74,7 @@ body .dnd5e {
 
   &.sheet .item-buttons {
     padding: 0;
-    color: #e6e6e6eb;
+    color: $text-color;
     border-radius: 6px;
     border: 1px solid $purpleLight;
   }
@@ -99,14 +99,14 @@ body .dnd5e {
       /* Code referenced from Warhead
       Set item name header to regular font and be smaller + transition for .chat-message */
       h3 {
-        color: hsl(60, 30%, 96%);
+        color: $white;
         font-family: "Signika";
         font-weight: bold;
         font-size: 14px;
       }
 
       &:hover h3 {
-        color: hsl(60, 30%, 96%);
+        color: $white;
         text-shadow: 0 0 8px $pink;
         font-family: "Signika";
         font-weight: bold;
@@ -123,7 +123,7 @@ body .dnd5e {
     }
 
     .card-footer {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       border: none;
       padding: 0;
 
@@ -136,7 +136,7 @@ body .dnd5e {
 
 /* Original grey
 body .dnd5e button {
-  color: #e6e6e6eb;
+  color: $text-color;
   border: 1px solid $purpleLight;
   border-radius: 6px;
 } */

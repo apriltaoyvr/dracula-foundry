@@ -22,32 +22,32 @@ body {
   }
 
   textarea {
-    background: #282a3635;
-    color: #e6e6e6eb;
+    background: $bg_content;
+    color: $text-color;
   }
 
   .window-app {
     .window-content {
-      background: hsla(230, 15%, 15%, 75%);
-      color: #e6e6e6eb;
+      background: $bg_window-content;
+      color: $text-color;
       backdrop-filter: blur(12px);
 
       > * {
-        background: hsla(230, 15%, 15%, 75%);
-        color: #e6e6e6eb;
+        background: $bg_window-content;
+        color: $text-color;
         backdrop-filter: blur(12px);
       }
     }
 
     .window-header {
-      background: #282a3635;
+      background: $bg_content;
       backdrop-filter: blur(10px);
       border-radius: 6px;
       border: 1px solid transparent;
     }
 
     .dialogue {
-      background: #282a3635;
+      background: $bg_content;
       border-radius: 6px;
       border: none;
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
@@ -56,8 +56,8 @@ body {
 
   .dnd5e {
     .window-content {
-      color: #e6e6e6eb;
-      background: #282a3635;
+      color: $text-color;
+      background: $bg_content;
       border: 1px solid $purpleLight;
       border-radius: 6px;
     }
@@ -105,7 +105,7 @@ body {
 
   button, form button {
     --shadow-color:246deg 23% 6%;
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: transparent;
     font-size: 14px;
     border: 1px solid;
@@ -119,7 +119,7 @@ body {
 
   .dialog .dialog-buttons button {
     --shadow-color:246deg 23% 6%;
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: transparent;
     font-size: 14px;
     border: 1px solid;
@@ -132,7 +132,7 @@ body {
 
     &.default {
       --shadow-color:246deg 23% 6%;
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       background: transparent;
       font-size: 14px;
       border: 1px solid;
@@ -173,7 +173,7 @@ body {
 
   a {
     &.entity-link, &.content-link, &.inline-roll {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       background: transparent;
       border: 1px solid;
       border-image-slice: 1;
@@ -205,7 +205,7 @@ body {
 
   input {
     &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       background: $purpleLight;
       border: 0.2rem solid transparent;
       transition: 0.3s ease-in-out all;
@@ -213,7 +213,7 @@ body {
     }
 
     &[type="range"] + .range-value {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       background: $purpleLight;
       border: 0.2rem solid transparent;
       transition: 0.3s ease-in-out all;
@@ -224,7 +224,7 @@ body {
 
   .directory .directory-header .header-search input {
     background: transparent;
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
@@ -252,7 +252,7 @@ body {
   }
 
   select {
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: #44475ab6;
     border: 1px solid;
     border-image-slice: 1;
@@ -268,7 +268,7 @@ body {
 
   form {
     .notes, .hint {
-      color: #e6e6e6eb;
+      color: $text-color;
     }
   }
 
@@ -294,7 +294,7 @@ body {
     background: none;
 
     .roll-type-select {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       background: none;
       border: 1px solid transparent;
       padding: 2px;
@@ -302,7 +302,7 @@ body {
   }
 
   #chat-form textarea {
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: transparent;
     border: 1px solid $cyan;
     backdrop-filter: blur(6px);
@@ -382,7 +382,7 @@ body {
     }
 
     .dice-result {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
     }
   }
 
@@ -390,22 +390,22 @@ body {
     &.success {
       color: inherit;
       background: inherit;
-      border: 1px solid hsl(115, 100%, 75%);
+      border: 1px solid $green;
     }
 
     &.failure {
       color: inherit;
       background: inherit;
-      border: 1px solid hsl(10, 100%, 75%);
+      border: 1px solid $red;
     }
 
     &.critical {
-      color: hsl(115, 100%, 75%);
+      color: $green;
       text-shadow: 0 0 10px rgba(0 0 0 / 90%);
     }
 
     &.fumble {
-      color: hsl(10, 100%, 75%);
+      color: $red;
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
     }
   }
@@ -413,7 +413,7 @@ body {
   .chat-message {
     background: $purple-transparent;
     backdrop-filter: blur(2px);
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
@@ -422,7 +422,7 @@ body {
     &.whisper, &.blind {
       background: $purple-transparent;
       backdrop-filter: blur(2px);
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
@@ -430,17 +430,17 @@ body {
     }
 
     .message-header, .message-metadata {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       text-shadow: none;
     }
 
     .message-content {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
       border: none;
       margin: 1px;
 
       .form-group.sheet.actor .items-list {
-        color: hsl(60, 30%, 100%);
+        color: $whiteSecondary;
         border: none;
         margin: 1px;
       }
@@ -453,13 +453,13 @@ body {
 
   #module-management .package-list {
     .package-title, .package-metadata, .package-description {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
     }
   }
 
   #client-settings {
     section.content h2.module-header, &.app.window-app.form #config-tabs .settings-list h2.module-header span {
-      color: hsl(60, 30%, 100%);
+      color: $whiteSecondary;
     }
   }
 
@@ -475,7 +475,7 @@ body {
     transition: all .2s ease-in-out;
 
     &:hover {
-      color: hsl(60, 30%, 96%);
+      color: $white;
       border-bottom: 1px solid $disabled;
       box-shadow: none;
       transition: color .2s ease-in-out;
@@ -496,16 +496,16 @@ body {
   #settings h2 {
     border-bottom: none;
     border-top: none;
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
     background: none;
   }
 
   #permissions-config .hint {
-    color: hsl(230, 15%, 50%);
+    color: $disabled;
   }
 
   p.hint {
-    color: hsl(60, 30%, 100%);
+    color: $whiteSecondary;
   }
 
   #permissions-config {
