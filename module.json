@@ -1,7 +1,7 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
+  "name": "dracula-foundry",
+  "title": "Dracula Theme",
+  "description": "A WIP Dracula and Argon inspired theme for Foundry menus",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
