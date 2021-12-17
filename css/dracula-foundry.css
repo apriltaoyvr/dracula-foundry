@@ -1,57 +1,11 @@
-/* Dracula UI Colours Import
-In the process of replacing most of the hex colours with these */
-:root {
-  --black: hsl(230, 15%, 15%);
-  --blackSecondary: hsl(230, 15%, 30%);
-  --blackTernary: hsl(230, 15%, 70%);
-  --blackLight: hsla(230, 15%, 15%, 5%);
-  --white: hsl(60, 30%, 96%);
-  --whiteSecondary: hsl(60, 30%, 100%);
-  --whiteLight: hsla(60, 30%, 96%, 5%);
-  --cyan: hsl(170, 100%, 75%);
-  --cyanSecondary: hsl(170, 100%, 90%);
-  --cyanLight: hsla(170, 100%, 75%, 5%);
-  --green: hsl(115, 100%, 75%);
-  --greenSecondary: hsl(115, 100%, 90%);
-  --greenLight: hsla(115, 100%, 75%, 5%);
-  --orange: hsl(35, 100%, 75%);
-  --orangeSecondary: hsl(35, 100%, 90%);
-  --orangeLight: hsla(35, 100%, 75%, 5%);
-  --pink: hsl(330, 100%, 75%);
-  --pinkSecondary: hsl(330, 100%, 90%);
-  --pinkLight: hsla(330, 100%, 75%, 5%);
-  --purple: hsl(250, 100%, 75%);
-  --purpleSecondary: hsl(250, 100%, 90%);
-  --purpleLight: hsl(250, 100%, 75%, 5%);
-  --red: hsl(10, 100%, 75%);
-  --redSecondary: hsl(10, 100%, 90%);
-  --redLight: hsla(10, 100%, 75%, 5%);
-  --yellow: hsl(60, 100%, 75%);
-  --yellowSecondary: hsl(60, 100%, 90%);
-  --yellowLight: hsla(60, 100%, 75%, 5%);
-  --cyan-transparent: hsl(170, 100%, 75%, 0.1);
-  --green-transparent: hsl(115, 100%, 75%, 0.1);
-  --orange-transparent: hsl(35, 100%, 75%, 0.1);
-  --pink-transparent: hsl(330, 100%, 75%, 0.1);
-  --purple-transparent: hsl(250, 100%, 75%, 0.1);
-  --red-transparent: hsl(10, 100%, 75%, 0.1);
-  --yellow-transparent: hsl(60, 100%, 75%, 0.1);
-  --disabled: hsl(230, 15%, 50%);
-  --gradientDegree: 135deg;
-  --glowColor: rgba(255, 255, 255, 0.25);
-}
-
 /* Global stylings */
 body h1,
 body h2 {
-  border-bottom: 1px solid hsl(250, 100%, 75%, 5%);
   border-bottom: 1px solid var(--purpleLight);
 }
 
 body hr {
-  border-top: 1 px solid hsl(330, 100%, 75%);
   border-top: 1 px solid var(--pink);
-  border-bottom: 1 px solid hsl(330, 100%, 75%);
   border-bottom: 1 px solid var(--pink);
 }
 
@@ -61,7 +15,6 @@ body .sheet nav.sheet-tabs {
 }
 
 body fieldset {
-  border: 1px solid hsl(250, 100%, 75%, 5%);
   border: 1px solid var(--purpleLight);
 }
 
@@ -97,63 +50,20 @@ body .window-app .dialogue {
 body .dnd5e .window-content {
   color: rgba(230,230,230,0.92157);
   background: rgba(40,42,54,0.20784);
-  border: 1px solid hsl(250, 100%, 75%, 5%);
   border: 1px solid var(--purpleLight);
   border-radius: 6px;
 }
 
 body .dnd5e .form-group label {
-  color: hsl(60, 30%, 100%);
   color: var(--whiteSecondary);
-}
-
-/* Sheets */
-/* Comes up often for DAE menus */
-body .dnd5e.sheet.item .effect-header {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(170, 100%, 75%) 100%);
-  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
-}
-
-body .dnd5e.sheet .filter-list .filter-item.active {
-  color: hsl(250, 100%, 75%);
-  color: var(--purple);
-  border-bottom: 1px solid hsl(250, 100%, 75%);
-  border-bottom: 1px solid var(--purple);
-  box-shadow: none;
-  transition: all 0.2s ease-in-out;
-}
-
-body .dnd5e.sheet .filter-list .filter-item.active:hover {
-  color: hsl(250, 100%, 75%);
-  color: var(--purple);
-  border-bottom: 1px solid hsl(250, 100%, 75%);
-  border-bottom: 1px solid var(--purple);
-  box-shadow: 0px 0px 4px hsl(250, 100%, 75%);
-  box-shadow: 0px 0px 4px var(--purple);
-  transition: all 0.2s ease-in-out;
-}
-
-body .dnd5e.sheet .filter-list .filter-item {
-  color: hsl(230, 15%, 50%);
-  color: var(--disabled);
-  box-shadow: 0px 0px 4px hsl(230, 15%, 50%);
-  box-shadow: 0px 0px 4px var(--disabled);
-}
-
-body dnd5e.sheet.actor.inventory-filters.flexrow {
-  border: none;
 }
 
 /* Textarea */
 body textarea {
-  border: 1px solid hsl(170, 100%, 75%);
   border: 1px solid var(--cyan);
 }
 
 body textarea:focus {
-  border: 2px solid hsl(170, 100%, 75%);
   border: 2px solid var(--cyan);
   box-shadow: none;
 }
@@ -199,7 +109,6 @@ body .dialog .dialog-buttons button.default {
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(170, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
   border-radius: 2px;
   margin-left: 2px;
@@ -209,7 +118,6 @@ body .dialog .dialog-buttons button.default {
 
 body button:hover,
 body button:focus {
-  box-shadow: 0px 0px 4px hsl(250, 100%, 75%);
   box-shadow: 0px 0px 4px var(--purple);
 }
 
@@ -221,34 +129,15 @@ body input[type=number]:focus,
 body input[type=password]:focus,
 body input[type=date]:focus,
 body input[type=time]:focus {
-  border-color: hsl(170, 100%, 75%);
   border-color: var(--cyan);
   box-shadow: none;
 }
 
-/* Select aka Dropdown Boxes */
-body .dnd5e.sheet select {
-  background: #21222c;
-  border: 1px solid hsl(170, 100%, 75%);
-  border: 1px solid var(--cyan);
-}
-
-body .dnd5e select,
-body .dnd5e .form-group .form-fields,
-body .dnd5e input[type=text],
-body .dnd5e input[type=number] {
-  color: #f8f8f2;
-  border: 1px solid hsl(170, 100%, 75%);
-  border: 1px solid var(--cyan);
-}
-
 body input[type=color][data-edit][data-edit] {
-  border: 1px solid hsl(250, 100%, 75%, 5%);
   border: 1px solid var(--purpleLight);
 }
 
 body input[type=color][data-edit][data-edit] {
-  border: 1px solid hsl(250, 100%, 75%, 5%);
   border: 1px solid var(--purpleLight);
   -webkit-appearance: auto;
      -moz-appearance: auto;
@@ -266,49 +155,19 @@ body a.inline-roll {
   background: transparent;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(10, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
 }
 
 body a.entity-link:hover,
 body a.content-link:hover,
 body a.inline-roll:hover {
-  box-shadow: 0px 0px 5px hsl(250, 100%, 75%);
   box-shadow: 0px 0px 5px var(--purple);
 }
 
 body a.entity-link i,
 body a.content-link i,
 body a.inline-roll i {
-  color: hsl(230, 15%, 50%);
   color: var(--disabled);
-}
-
-/* Attack + Damage buttons */
-body .dnd5e button {
-  color: white;
-  background: transparent;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(10, 100%, 75%) 100%);
-  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
-  --shadow-color: 246deg 23% 6%;
-  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.25), 0px 0.3px 0.4px -0.9px hsl(var(--shadow-color)/0.31), 0px 0.7px 0.9px -1.8px hsl(var(--shadow-color)/0.37);
-  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.26), 0px 0.6px 0.7px -0.6px hsl(var(--shadow-color)/0.31), -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color)/0.36), -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color)/0.4);
-  margin: 2px;
-}
-
-/* Original grey
-body .dnd5e button {
-  color: #e6e6e6eb;
-  border: 1px solid var(--purpleLight);
-  border-radius: 6px;
-} */
-body .dnd5e button:hover,
-body .dnd5e button:focus {
-  box-shadow: 0px 0px 5px hsl(250, 100%, 75%);
-  box-shadow: 0px 0px 5px var(--purple);
-  cursor: pointer;
 }
 
 /* Tables */
@@ -334,7 +193,6 @@ body input[type=text].color,
 body input[type=color][data-edit],
 body input[type=range] + .range-value {
   color: white;
-  background: hsl(250, 100%, 75%, 5%);
   background: var(--purpleLight);
   border: 0.2rem solid transparent;
   transition: 0.3s ease-in-out all;
@@ -342,7 +200,6 @@ body input[type=range] + .range-value {
 }
 
 body input[type=range] + .range-value {
-  border: 1px solid hsl(330, 100%, 75%);
   border: 1px solid var(--pink);
   box-shadow: none;
 }
@@ -353,7 +210,6 @@ body .directory .directory-header .header-search input {
   color: white;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(170, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
 }
 
@@ -362,7 +218,6 @@ body input[type=range]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
   border: 1px solid transparent;
-  background: linear-gradient(135deg, hsl(10, 100%, 75%) 0%, hsl(330, 100%, 75%) 100%);
   background: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
   cursor: pointer;
   box-shadow: none;
@@ -372,7 +227,6 @@ body input[type=range]::-webkit-slider-thumb {
 body input[type=checkbox],
 body #module-management input[type=checkbox] {
   background: rgba(68,71,90,0.52549);
-  color: hsl(250, 100%, 75%);
   color: var(--purple);
 }
 
@@ -382,14 +236,12 @@ body select {
   background: rgba(68,71,90,0.71373);
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 50%, hsl(170, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 50%, var(--cyan) 100%);
   transition: 0.3s ease-in-out all;
   box-shadow: none;
 }
 
 body select:focus {
-  border: 1px solid hsl(170, 100%, 75%);
   border: 1px solid var(--cyan);
   box-shadow: none;
 }
@@ -434,24 +286,9 @@ body #chat-controls .roll-type-select {
 body #chat-form textarea {
   color: white;
   background: transparent;
-  border: 1px solid hsl(170, 100%, 75%);
   border: 1px solid var(--cyan);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-}
-
-body .dnd5e.sheet .item-buttons {
-  padding: 0;
-  color: rgba(230,230,230,0.92157);
-  border-radius: 6px;
-  border: 1px solid hsl(250, 100%, 75%, 5%);
-  border: 1px solid var(--purpleLight);
-}
-
-/* Chat Cards */
-body .dnd5e.chat-card .card-header {
-  border: none;
-  padding: 0;
 }
 
 /* Roll results + damage */
@@ -460,7 +297,6 @@ body .dice-roll .dice-formula {
   background: rgba(40,42,54,0.55686);
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(10, 100%, 75%) 0%, hsl(330, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   box-shadow: none;
@@ -476,7 +312,6 @@ body .dice-roll .dice-total {
   background: rgba(40,42,54,0.55686);
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(10, 100%, 75%) 0%, hsl(330, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
   margin: 2px;
   box-shadow: none;
@@ -494,7 +329,6 @@ body .dice-tooltip .part-header .part-total {
 /* Expanded roll information, formula, etc */
 body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
   color: inherit;
-  border: 1px solid hsl(250, 100%, 75%);
   border: 1px solid var(--purple);
   box-shadow: none;
   margin: 2px;
@@ -503,15 +337,6 @@ body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
 body .dice-roll .dice-formula:hover,
 body .dice-roll .dice-total:hover {
   box-shadow: 0 0 4px #bd93f9;
-}
-
-/* The segmented details in the expanded roll information */
-body .dnd5e.chat-card .card-buttons span {
-  border: none;
-  font-size: 12px;
-  line-height: 25px;
-  background: inherit;
-  box-shadow: none;
 }
 
 body .dice-tooltip .part-header {
@@ -534,7 +359,6 @@ body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(170, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
   border-radius: 2px;
   margin-left: 2px;
@@ -572,14 +396,12 @@ body .dice-roll .dice-total.fumble {
 body .chat-message,
 body .chat-message.whisper,
 body .chat-message.blind {
-  background: hsl(250, 100%, 75%, 0.1);
   background: var(--purple-transparent);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(330, 100%, 75%) 100%);
   border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--pink) 100%);
   transition: max-height 0.3s ease-in-out;
 }
@@ -595,43 +417,6 @@ body .chat-message .message-content .form-group.sheet.actor .items-list {
   color: white;
   border: none;
   margin: 1px;
-}
-
-/* Code referenced from Warhead
-Set item name header to regular font and be smaller + transition for .chat-message */
-body .dnd5e.chat-card .card-header h3 {
-  color: #f8f8f2;
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 14px;
-}
-
-body .dnd5e.chat-card .card-header:hover h3 {
-  color: #f8f8f2;
-  text-shadow: 0px 0px 8px hsl(330, 100%, 75%);
-  text-shadow: 0px 0px 8px var(--pink);
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 14px;
-}
-
-body .dnd5e.chat-card .card-header img {
-  height: 36px;
-  width: 36px;
-  border-radius: 0px;
-  border: 1px solid hsl(250, 100%, 75%);
-  border: 1px solid var(--purple);
-  padding: 0;
-}
-
-body .dnd5e.chat-card .card-footer {
-  color: white;
-  border: none;
-  padding: 0;
-}
-
-body .dnd5e.chat-card .card-footer span {
-  border: none;
 }
 
 /* Settings and Modules Windows */
@@ -653,9 +438,7 @@ body #module-management .package-list {
 }
 
 body nav.list-filters a.filter {
-  color: hsl(230, 15%, 50%);
   color: var(--disabled);
-  border-bottom: 1px solid hsl(230, 15%, 50%);
   border-bottom: 1px solid var(--disabled);
   text-shadow: none;
   transition: all 0.2s ease-in-out;
@@ -663,23 +446,19 @@ body nav.list-filters a.filter {
 
 body nav.list-filters a.filter:hover {
   color: #f8f8f2;
-  border-bottom: 1px solid hsl(230, 15%, 50%);
   border-bottom: 1px solid var(--disabled);
   box-shadow: none;
   transition: color 0.2s ease-in-out;
 }
 
 body nav.list-filters a.filter.active {
-  color: hsl(250, 100%, 75%);
   color: var(--purple);
-  border-bottom: 1px solid hsl(250, 100%, 75%);
   border-bottom: 1px solid var(--purple);
   box-shadow: none;
   transition: all 0.2s ease-in-out;
 }
 
 body #module-management .package-list .package {
-  border-bottom: 1px solid hsl(250, 100%, 75%, 5%);
   border-bottom: 1px solid var(--purpleLight);
 }
 
@@ -700,107 +479,140 @@ body p.hint {
 
 body #permissions-config header.table-header {
   background: none;
-  border: 1px solid hsl(250, 100%, 75%, 5%);
   border: 1px solid var(--purpleLight);
   border-radius: 3px;
   padding-bottom: 4px;
 }
 
-#permissions-config li.permission {
-  border-bottom: 1px solid hsl(250, 100%, 75%, 5%);
+body #permissions-config li.permission {
   border-bottom: 1px solid var(--purpleLight);
 }
 
-/* General midi-qol settings */
-body .midi-qol-nobox {
+/* Sheets */
+/* Comes up often for DAE menus */
+body .dnd5e.sheet.item .effect-header {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+body .dnd5e.sheet .filter-list .filter-item.active {
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+body .dnd5e.sheet .filter-list .filter-item.active:hover {
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  box-shadow: 0px 0px 4px var(--purple);
+  transition: all 0.2s ease-in-out;
+}
+
+body .dnd5e.sheet .filter-list .filter-item {
+  color: var(--disabled);
+  box-shadow: 0px 0px 4px var(--disabled);
+}
+
+body .dnd5e.sheet.actor.inventory-filters.flexrow {
+  border: none;
+}
+
+/* Select aka Dropdown Boxes */
+body .dnd5e.sheet select {
+  background: #21222c;
+  border: 1px solid var(--cyan);
+}
+
+body .dnd5e select,
+body .dnd5e .form-group .form-fields,
+body .dnd5e input[type=text],
+body .dnd5e input[type=number] {
+  color: #f8f8f2;
+  border: 1px solid var(--cyan);
+}
+
+/* Attack + Damage buttons */
+body .dnd5e button {
+  color: white;
+  background: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
+  --shadow-color: 246deg 23% 6%;
+  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.25), 0px 0.3px 0.4px -0.9px hsl(var(--shadow-color)/0.31), 0px 0.7px 0.9px -1.8px hsl(var(--shadow-color)/0.37);
+  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.26), 0px 0.6px 0.7px -0.6px hsl(var(--shadow-color)/0.31), -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color)/0.36), -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color)/0.4);
+  margin: 2px;
+}
+
+/* Original grey
+body .dnd5e button {
+  color: #e6e6e6eb;
+  border: 1px solid var(--purpleLight);
+  border-radius: 6px;
+} */
+body .dnd5e button:hover,
+body .dnd5e button:focus {
+  box-shadow: 0px 0px 5px var(--purple);
+  cursor: pointer;
+}
+
+body .dnd5e.sheet .item-buttons {
+  padding: 0;
+  color: rgba(230,230,230,0.92157);
+  border-radius: 6px;
+  border: 1px solid var(--purpleLight);
+}
+
+/* Chat Cards */
+body .dnd5e.chat-card .card-header {
   border: none;
   padding: 0;
 }
 
-body .midi-qol-box {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, hsl(250, 100%, 75%) 0%, hsl(170, 100%, 75%) 100%);
-  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
-}
-
-body .midi-qol-faint {
-  color: white;
-}
-
-/* Monk's Token Bar */
-body #requestsavingthrow .request-grid div,
-body .monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
-  color: white;
-}
-
-body #requestsavingthrow .request-header {
-  background: hsl(250, 100%, 75%, 0.1);
-  background: var(--purple-transparent);
-  border: 2px solid hsl(250, 100%, 75%, 0.1);
-  border: 2px solid var(--purple-transparent);
+/* The segmented details in the expanded roll information */
+body .dnd5e.chat-card .card-buttons span {
+  border: none;
+  font-size: 12px;
+  line-height: 25px;
+  background: inherit;
   box-shadow: none;
 }
 
-body .monks-tokenbar.chat-card .flexrow {
-  color: white;
-  font-family: "Signika";
-  font-weight: bold;
-  font-size: 16px;
-}
-
-body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow,
-body .monks-tokenbar .sheet .items-list .item,
-body .monks-tokenbar.chat-card .card-footer,
-body .monks-tokenbar.chat-card .card-footer span {
-  border: none;
-}
-
-body .monks-tokenbar.chat-card .card-header,
-body .monks-tokenbar .sheet .items-list .items-header h3,
-body .chat-message .message-content .form-group.sheet.actor .items-header,
-body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
-  color: white;
-  background: none;
-  border: none;
-  font-family: "Signika";
-}
-
-body .monks-tokenbar.chat-card .card-header h3,
-body .monks-tokenbar.chat-card .message-content .items-header .item-name {
-  color: white;
+/* Code referenced from Warhead
+Set item name header to regular font and be smaller + transition for .chat-message */
+body .dnd5e.chat-card .card-header h3 {
+  color: #f8f8f2;
   font-family: "Signika";
   font-weight: bold;
   font-size: 14px;
 }
 
-body .monks-tokenbar.chat-card .card-footer button {
-  color: white;
-  background: none;
-  border: none;
-}
-
-body .monks-tokenbar .sheet .items-list .items-header {
-  color: white;
+body .dnd5e.chat-card .card-header:hover h3 {
+  color: #f8f8f2;
+  text-shadow: 0px 0px 8px var(--pink);
   font-family: "Signika";
-  background: none;
-  border: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-body #requestsavingthrow .request-grid > div.selected,
-body #requestsavingthrow .request-grid > div:hover {
+body .dnd5e.chat-card .card-header img {
+  height: 36px;
+  width: 36px;
+  border-radius: 0px;
+  border: 1px solid var(--purple);
+  padding: 0;
+}
+
+body .dnd5e.chat-card .card-footer {
   color: white;
-  background: rgba(68,71,90,0.14902);
-  border: #bd93f9;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #bd93f9;
+  border: none;
+  padding: 0;
 }
 
-/* Dice So Nice Settings Menu */
-body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-  background: transparent;
-  border: 1px hsl(250, 100%, 75%, 5%);
-  border: 1px var(--purpleLight);
+body .dnd5e.chat-card .card-footer span {
+  border: none;
 }
 
 /* Advanced Macros Module */
@@ -877,37 +689,6 @@ body .hljs-link {
 body .hljs-number,
 body .hljs-string {
   color: #8be9fd;
-}
-
-/* Code Mirror + Custom CSS Module
-(I am too dumb to learn how to change to the prepackaged dracula theme for CM) */
-body .CodeMirror {
-  cursor: text;
-  background: rgba(40, 42, 54, 0.8);
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-  color: #f8f8f2;
-}
-
-body .CodeMirror-gutters {
-  border: none;
-  background-color: #282a36;
-}
-
-/* Changelogs */
-body .chl-module-content {
-  color: rgba(230,230,230,0.92157);
-}
-
-/* Tidy UI */
-body #module-management .disable-all-modules {
-  background: rgba(255,85,85,0.58039);
-  border: none;
-}
-
-body #module-management .enable-all-modules {
-  background: rgba(80,250,123,0.58039);
-  border: none;
 }
 
 #combat-carousel.wrapper {
@@ -1712,6 +1493,110 @@ li[data-control=combat-carousel] i.collapse-indicator {
 
 #combat-carousel-about .patreon img {
   flex: 0 0 100px;
+}
+
+/* Dice So Nice Settings Menu */
+body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  background: transparent;
+  border: 1px var(--purpleLight);
+}
+
+/* Changelogs */
+body .chl-module-content {
+  color: rgba(230,230,230,0.92157);
+}
+
+/* General midi-qol settings */
+body .midi-qol-nobox {
+  border: none;
+  padding: 0;
+}
+
+body .midi-qol-box {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+body .midi-qol-faint {
+  color: white;
+}
+
+/* Monk's Token Bar */
+body #requestsavingthrow .request-grid div,
+body .monks-tokenbar .sheet .items-list .item-list .item, .monks-tokenbar .sheet .items-list .item-list .item .item-name {
+  color: white;
+}
+
+body #requestsavingthrow .request-header {
+  background: var(--purple-transparent);
+  border: 2px solid var(--purple-transparent);
+  box-shadow: none;
+}
+
+body .monks-tokenbar.chat-card .flexrow {
+  color: white;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow,
+body .monks-tokenbar .sheet .items-list .item,
+body .monks-tokenbar.chat-card .card-footer,
+body .monks-tokenbar.chat-card .card-footer span {
+  border: none;
+}
+
+body .monks-tokenbar.chat-card .card-header,
+body .monks-tokenbar .sheet .items-list .items-header h3,
+body .chat-message .message-content .form-group.sheet.actor .items-header,
+body .monks-tokenbar.chat-card .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+  color: white;
+  background: none;
+  border: none;
+  font-family: "Signika";
+}
+
+body .monks-tokenbar.chat-card .card-header h3,
+body .monks-tokenbar.chat-card .message-content .items-header .item-name {
+  color: white;
+  font-family: "Signika";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+body .monks-tokenbar.chat-card .card-footer button {
+  color: white;
+  background: none;
+  border: none;
+}
+
+body .monks-tokenbar .sheet .items-list .items-header {
+  color: white;
+  font-family: "Signika";
+  background: none;
+  border: none;
+}
+
+body #requestsavingthrow .request-grid > div.selected,
+body #requestsavingthrow .request-grid > div:hover {
+  color: white;
+  background: rgba(68,71,90,0.14902);
+  border: #bd93f9;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #bd93f9;
+}
+
+/* Tidy UI */
+body #module-management .disable-all-modules {
+  background: rgba(255,85,85,0.58039);
+  border: none;
+}
+
+body #module-management .enable-all-modules {
+  background: rgba(80,250,123,0.58039);
+  border: none;
 }
 
 /*# sourceMappingURL=dracula-foundry.css.map */

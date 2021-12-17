@@ -1,1 +1,12 @@
-@import 'global', 'modules/combat-carousel';
+// Internal
+@import 'variables';
+
+// Core
+@import 'core/foundry';
+
+// Systems
+@import 'systems/dnd5e';
+
+// Modules
+@import 'modules/advanced-macros', 'modules/combat-carousel', 'modules/dice-so-nice', 'modules/lib-changelog',
+ 'modules/midi-qol', 'modules/monks-token-bar', 'modules/tidy-ui';

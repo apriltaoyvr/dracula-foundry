@@ -1,0 +1,509 @@
+/* Global stylings */
+body h1,
+body h2 {
+  border-bottom: 1px solid var(--purpleLight);
+}
+
+body hr {
+  border-top: 1 px solid var(--pink);
+  border-bottom: 1 px solid var(--pink);
+}
+
+body .sheet nav.sheet-tabs {
+  border-top: none;
+  border-bottom: none;
+}
+
+body fieldset {
+  border: 1px solid var(--purpleLight);
+}
+
+body textarea {
+  background: #282a3635;
+  color: #e6e6e6eb;
+}
+
+/* General windows (Fuck my life) */
+body .window-app .window-content,
+body .window-app .window-content>* {
+  background: hsla(230, 15%, 15%, 75%);
+  color: #e6e6e6eb;
+  backdrop-filter: blur(12px);
+}
+
+body .window-app .window-header {
+  background: #282a3635;
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+body .window-app .dialogue {
+  background: #282a3635;
+  border-radius: 6px;
+  border: none;
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+body .dnd5e .window-content {
+  color: #e6e6e6eb;
+  background: #282a3635;
+  border: 1px solid var(--purpleLight);
+  border-radius: 6px;
+}
+
+body .dnd5e .form-group label {
+  color: var(--whiteSecondary);
+}
+
+/* Textarea */
+body textarea {
+  border: 1px solid var(--cyan);
+}
+
+body textarea:focus {
+  border: 2px solid var(--cyan);
+  box-shadow: none;
+}
+
+/* Sidebar */
+body #sidebar {
+  background: linear-gradient(0deg, hsla(230, 15%, 15%, 90%) 25%, hsla(230, 15%, 15%, 80%) 50%, hsla(230, 15%, 30%, 0%) 100%);
+  backdrop-filter: blur(24px);
+  border: 2px solid transparent;
+}
+
+/* Scrollbar */
+body ::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+body ::-webkit-scrollbar-track {
+  box-shadow: 0 0 1px #999 inset;
+  border-radius: 0px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 0px;
+  background: #ff79c6;
+}
+
+body :root {
+  scrollbar-width: thin;
+  scrollbar-color: #ff79c6 #ff79c6;
+}
+
+/* Buttons */
+body button,
+body form button,
+body .dialog .dialog-buttons button,
+body .dialog .dialog-buttons button.default {
+  --shadow-color: 246deg 23% 6%;
+  color: hsl(60, 30%, 100%);
+  background: transparent;
+  font-size: 14px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+  border-radius: 2px;
+  margin-left: 2px;
+  box-shadow:
+          0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+          0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+  text-shadow:
+          0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+          0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+          0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+          0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+          0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+          0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+          0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+body button:hover,
+body button:focus {
+  box-shadow: 0px 0px 4px var(--purple);
+}
+
+/* General inputs + Get rid of those fucking red shadows */
+body input:focus,
+body select:focus,
+body input[type="text"]:focus,
+body input[type="number"]:focus,
+body input[type="password"]:focus,
+body input[type="date"]:focus,
+body input[type="time"]:focus {
+  border-color: var(--cyan);
+  box-shadow: none;
+}
+
+body input[type="color"][data-edit][data-edit] {
+  border: 1px solid var(--purpleLight);
+}
+
+body input[type="color"][data-edit][data-edit] {
+  border: 1px solid var(--purpleLight);
+  appearance: auto;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  color: -internal-light-dark(black, white);
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
+/* Document Links */
+body a.entity-link,
+body a.content-link,
+body a.inline-roll {
+  color: hsl(60, 30%, 100%);
+  background: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--red) 100%);
+}
+
+body a.entity-link:hover,
+body a.content-link:hover,
+body a.inline-roll:hover {
+  box-shadow: 0px 0px 5px var(--purple);
+}
+
+body a.entity-link,
+body a.content-link,
+body a.inline-roll {
+
+}
+
+body a.entity-link i,
+body a.content-link i,
+body a.inline-roll i {
+  color: var(--disabled);
+}
+
+/* Tables */
+body table {
+  border-top: none;
+  border-bottom: none;
+  text-shadow: none;
+  font-size: 12px;
+}
+
+body table thead {
+  background: #282a3686;
+  border-bottom: none;
+}
+
+/* Text Inputs */
+body input[type="text"],
+body input[type="number"],
+body input[type="password"],
+body input[type="date"],
+body input[type="time"],
+body input[type="text"].color,
+body input[type="color"][data-edit],
+body input[type="range"]+.range-value {
+  color: hsl(60, 30%, 100%);
+  background: var(--purpleLight);
+  border: 0.2rem solid transparent;
+  transition: 0.3s ease-in-out all;
+  box-shadow: none;
+}
+
+body input[type="range"]+.range-value {
+  border: 1px solid var(--pink);
+  box-shadow: none;
+}
+
+/* Search */
+body .directory .directory-header .header-search input {
+  background: transparent;
+  color: hsl(60, 30%, 100%);
+  border: 1px solid ;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+/* Sliders */
+body input[type=range]::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/* Checkbox */
+body input[type="checkbox"],
+body #module-management input[type="checkbox"] {
+  background: #44475a86;
+  color: var(--purple);
+}
+
+/* Select (Dropdown Box) */
+body select {
+  color: hsl(60, 30%, 100%);
+  background: #44475ab6;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 50%, var(--cyan) 100%);
+  transition: 0.3s ease-in-out all;
+  box-shadow: none;
+}
+
+body select:focus {
+  border: 1px solid var(--cyan);
+  box-shadow: none;
+}
+
+body form .notes,
+body form .hint {
+  color: #e6e6e6eb;
+}
+
+/* Compedium */
+body .compendium.directory .directory-list .directory-item {
+  border-top: none;
+  border-bottom: 1px solid transparent;
+}
+
+/* Sound */
+body #playlists .sound-control[data-action="sound-stop"],
+body #playlists .sound-control[data-action="playlist-stop"] {
+  color: #ff79c6;
+}
+
+/* Chat log */
+body #chat-log {
+  background: transparent;
+  backdrop-filter: blur(2px);
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+body #chat-controls {
+  background: none;
+}
+
+body #chat-controls .roll-type-select {
+  color: hsl(60, 30%, 100%);
+  background: none;
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+body #chat-form textarea {
+  color: hsl(60, 30%, 100%);
+  background: transparent;
+  border: 1px solid var(--cyan);
+  backdrop-filter: blur(6px);
+}
+
+/* Roll results + damage */
+body .dice-roll .dice-formula {
+  color: inherit;
+  background: #282a368e;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+  box-shadow: none;
+  margin: 2px;
+}
+
+body .dice-tooltip .part-header .part-flavor {
+  color: inherit;
+  background: none;
+}
+
+body .dice-roll .dice-total {
+  background: #282a368e;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--red) 0%, var(--pink) 100%);
+  margin: 2px;
+  box-shadow: none;
+}
+
+body .dice-tooltip .part-header .part-total {
+  border: 1px transparent;
+  border-bottom: none;
+  background: transparent;
+  font-size: 12px;
+  line-height: 25px;
+  margin-right: 5px;
+}
+
+/* Expanded roll information, formula, etc */
+body .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+  color: inherit;
+  border: 1px solid var(--purple);
+  box-shadow: none;
+  margin: 2px;
+}
+
+body .dice-roll .dice-formula:hover,
+body .dice-roll .dice-total:hover {
+  box-shadow: 0 0 4px #bd93f9;
+}
+
+body .dice-tooltip .part-header {
+  color: inherit;
+  border: none;
+  box-shadow: none;
+}
+
+/* Temporary fix for part-formula text misalignment */
+body .dice-tooltip .part-header .part-formula {
+  margin-left: 6px;
+  margin-top: 1px;
+}
+
+/* The result of the actual dice displayed */
+body .chat-message .message-content .dice-tooltip .dice-rolls .roll {
+  --shadow-color: 246deg 23% 6%;
+  color: #f8f8f2c6;
+  background: transparent;
+  font-size: 14px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+  border-radius: 2px;
+  margin-left: 2px;
+  box-shadow:
+          0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+          0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+  text-shadow:
+          0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+          0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+          0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+          0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+          0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+          0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+          0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+body .chat-message .dice-result {
+  color: hsl(60, 30%, 100%);
+}
+
+body .dice-roll .dice-total.success {
+  color: inherit;
+  background: inherit;
+  border: 1px solid hsl(115, 100%, 75%);
+}
+
+body .dice-roll .dice-total.failure {
+  color: inherit;
+  background: inherit;
+  border: 1px solid hsl(10, 100%, 75%);
+}
+
+body .dice-roll .dice-total.critical {
+  color: hsl(115, 100%, 75%);
+  text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+}
+
+body .dice-roll .dice-total.fumble {
+  color: hsl(10, 100%, 75%);
+  text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+}
+
+/* This will restyle most chat boxes */
+body .chat-message,
+body .chat-message.whisper,
+body .chat-message.blind {
+  background: var(--purple-transparent);
+  backdrop-filter: blur(2px);
+  color: hsl(60, 30%, 100%);
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--pink) 100%);
+  transition: max-height 0.3s ease-in-out;
+}
+
+body .chat-message .message-header,
+body .chat-message .message-metadata {
+  color: hsl(60, 30%, 100%);
+  text-shadow: none;
+}
+
+body .chat-message .message-content,
+body .chat-message .message-content .form-group.sheet.actor .items-list {
+  color: hsl(60, 30%, 100%);
+  border: none;
+  margin: 1px;
+}
+
+/* Settings and Modules Windows */
+body #client-settings section.content {
+  border-top: none;
+}
+
+body #module-management .package-list .package-title,
+body #module-management .package-list .package-metadata,
+body #module-management .package-list .package-description,
+body #client-settings section.content h2.module-header,
+body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
+  color: hsl(60, 30%, 100%);
+}
+
+body #module-management .package-list {
+  border-top: none;
+  border-bottom: none;
+}
+
+body nav.list-filters a.filter {
+  color: var(--disabled);
+  border-bottom: 1px solid var(--disabled);
+  text-shadow: none;
+  transition: all .2s ease-in-out;
+}
+
+body nav.list-filters a.filter:hover {
+  color: hsl(60, 30%, 96%);
+  border-bottom: 1px solid var(--disabled);
+  box-shadow: none;
+  transition: color .2s ease-in-out;
+}
+
+body nav.list-filters a.filter.active {
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  box-shadow: none;
+  transition: all .2s ease-in-out;
+}
+
+body #module-management .package-list .package {
+  border-bottom: 1px solid var(--purpleLight);
+}
+
+body #settings h2 {
+  border-bottom: none;
+  border-top: none;
+  color: hsl(60, 30%, 100%);
+  background: none;
+}
+
+body #permissions-config .hint {
+  color: hsl(230, 15%, 50%);
+}
+
+body p.hint {
+  color: hsl(60, 30%, 100%);
+}
+
+body #permissions-config header.table-header {
+  background: none;
+  border: 1px solid var(--purpleLight);
+  border-radius: 3px;
+  padding-bottom: 4px;
+}
+
+body #permissions-config li.permission {
+  border-bottom: 1px solid var(--purpleLight);
+}

@@ -1,0 +1,15 @@
+/* General midi-qol settings */
+body .midi-qol-nobox {
+  border: none;
+  padding: 0
+}
+
+body .midi-qol-box {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+body .midi-qol-faint {
+  color: hsl(60, 30%, 100%);
+}
