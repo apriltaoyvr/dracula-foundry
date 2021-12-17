@@ -134,7 +134,7 @@ body .dialog .dialog-buttons button,
 body .dialog .dialog-buttons button.default {
   color: #e6e6e6eb;
   background: #282a36a5;
-  border: 1px solid transparent;
+  border: 1px solid var(--purpleLight);
   border-radius: 6px;
 }
 
@@ -498,7 +498,7 @@ body .dnd5e.chat-card .card-header img {
 }
 
 body .dnd5e.chat-card .card-footer {
-  color: #e6e6e6a2;
+  color: hsl(60, 30%, 100%);
   border: none;
   padding: 0;
 }
@@ -557,7 +557,7 @@ body #settings h2 {
   background: none;
 }
 
-#permissions-config .hint {
+body #permissions-config .hint {
   color: hsl(230, 15%, 50%);
 }
 
@@ -565,7 +565,7 @@ body p.hint {
   color: hsl(60, 30%, 100%);
 }
 
-#permissions-config header.table-header {
+body #permissions-config header.table-header {
   background: none;
   border: 1px solid var(--purpleLight);
   border-radius: 3px;
@@ -576,10 +576,20 @@ body p.hint {
   border-bottom: 1px solid var(--purpleLight);
 }
 
-/* General midi setting */
+/* General midi-qol settings */
 body .midi-qol-nobox {
   border: none;
   padding: 0
+}
+
+body .midi-qol-box {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--gradientDegree), var(--purple) 0%, var(--cyan) 100%);
+}
+
+body .midi-qol-faint {
+  color: hsl(60, 30%, 100%)
 }
 
 /* Monk's Token Bar */
@@ -648,6 +658,12 @@ body #requestsavingthrow .request-grid>div:hover {
   box-shadow: 0 0 10px #bd93f9;
 }
 
+/* Dice So Nice Settings Menu */
+body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+ {
+  background: transparent;
+  border: 1px var (--purpleLight);
+}
 /* Advanced Macros Module */
 body .macro-sheet .form-group.command .furnace-macro-command textarea,
 body .macro-sheet .form-group.command .furnace-macro-command code {
