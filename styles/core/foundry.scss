@@ -1,0 +1,567 @@
+@use '../variables' as *;
+
+/* Global stylings */
+
+body {
+  h1, h2 {
+    border-bottom: 1px solid $purpleLight;
+  }
+
+  hr {
+    border-top: 1 px solid $pink;
+    border-bottom: 1 px solid $pink;
+  }
+
+  .sheet nav.sheet-tabs {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  fieldset {
+    border: 1px solid $purpleLight;
+  }
+
+  textarea {
+    background: $bg_content;
+    color: $text-color;
+  }
+
+  .window-app {
+    .window-content {
+      background: $bg_window-content;
+      color: $text-color;
+      backdrop-filter: blur(12px);
+
+      > * {
+        background: $bg_window-content;
+        color: $text-color;
+        backdrop-filter: blur(12px);
+      }
+    }
+
+    .window-header {
+      background: $bg_content;
+      backdrop-filter: blur(10px);
+      border-radius: 6px;
+      border: 1px solid transparent;
+    }
+
+    .dialogue {
+      background: $bg_content;
+      border-radius: 6px;
+      border: none;
+      text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+    }
+  }
+
+  .dnd5e {
+    .window-content {
+      color: $text-color;
+      background: $bg_content;
+      border: 1px solid $purpleLight;
+      border-radius: 6px;
+    }
+
+    .form-group label {
+      color: $whiteSecondary;
+    }
+  }
+
+  textarea {
+    border: 1px solid $cyan;
+
+    &:focus {
+      border: 2px solid $cyan;
+      box-shadow: none;
+    }
+  }
+
+  #sidebar {
+    background: linear-gradient(0deg, hsla(230, 15%, 15%, 90%) 25%, hsla(230, 15%, 15%, 80%) 50%, hsla(230, 15%, 30%, 0%) 100%);
+    backdrop-filter: blur(24px);
+    border: 2px solid transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 1px #999 inset;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0;
+    background: #ff79c6;
+  }
+
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: #ff79c6 #ff79c6;
+  }
+
+  button, form button {
+    --shadow-color:246deg 23% 6%;
+    color: $whiteSecondary;
+    background: transparent;
+    font-size: 14px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-radius: 2px;
+    margin-left: 2px;
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+  }
+
+  .dialog .dialog-buttons button {
+    --shadow-color:246deg 23% 6%;
+    color: $whiteSecondary;
+    background: transparent;
+    font-size: 14px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-radius: 2px;
+    margin-left: 2px;
+    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+
+    &.default {
+      --shadow-color:246deg 23% 6%;
+      color: $whiteSecondary;
+      background: transparent;
+      font-size: 14px;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      border-radius: 2px;
+      margin-left: 2px;
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    }
+  }
+
+  button {
+    &:hover, &:focus {
+      box-shadow: 0 0 4px $purple;
+    }
+  }
+
+  input:focus, select:focus {
+    border-color: $cyan;
+    box-shadow: none;
+  }
+
+  input {
+    &[type="text"]:focus, &[type="number"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="time"]:focus {
+      border-color: $cyan;
+      box-shadow: none;
+    }
+
+    &[type="color"][data-edit][data-edit] {
+      border: 1px solid $purpleLight;
+      appearance: auto;
+      background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+      color: -internal-light-dark(black, white);
+      border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    }
+  }
+
+  a {
+    &.entity-link, &.content-link, &.inline-roll {
+      color: $whiteSecondary;
+      background: transparent;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+    }
+
+    &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
+      box-shadow: 0 0 5px $purple;
+    }
+
+    &.entity-link, &.content-link, &.inline-roll {}
+
+    &.entity-link i, &.content-link i, &.inline-roll i {
+      color: $disabled;
+    }
+  }
+
+  table {
+    border-top: none;
+    border-bottom: none;
+    text-shadow: none;
+    font-size: 12px;
+
+    thead {
+      background: #282a3686;
+      border-bottom: none;
+    }
+  }
+
+  input {
+    &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
+      color: $whiteSecondary;
+      background: $purpleLight;
+      border: 0.2rem solid transparent;
+      transition: 0.3s ease-in-out all;
+      box-shadow: none;
+    }
+
+    &[type="range"] + .range-value {
+      color: $whiteSecondary;
+      background: $purpleLight;
+      border: 0.2rem solid transparent;
+      transition: 0.3s ease-in-out all;
+      border: 1px solid $pink;
+      box-shadow: none;
+    }
+  }
+
+  .directory .directory-header .header-search input {
+    background: transparent;
+    color: $whiteSecondary;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+  }
+
+  input {
+    &[type=range]::-webkit-slider-thumb {
+      height: 12px;
+      width: 12px;
+      border: 1px solid transparent;
+      background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
+      cursor: pointer;
+      box-shadow: none;
+    }
+
+    &[type="checkbox"] {
+      background: #44475a86;
+      color: $purple;
+    }
+  }
+
+  #module-management input[type="checkbox"] {
+    background: #44475a86;
+    color: $purple;
+  }
+
+  select {
+    color: $whiteSecondary;
+    background: #44475ab6;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
+    transition: 0.3s ease-in-out all;
+    box-shadow: none;
+
+    &:focus {
+      border: 1px solid $cyan;
+      box-shadow: none;
+    }
+  }
+
+  form {
+    .notes, .hint {
+      color: $text-color;
+    }
+  }
+
+  .compendium.directory .directory-list .directory-item {
+    border-top: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  #playlists .sound-control {
+    &[data-action="sound-stop"], &[data-action="playlist-stop"] {
+      color: #ff79c6;
+    }
+  }
+
+  #chat-log {
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+
+  #chat-controls {
+    background: none;
+
+    .roll-type-select {
+      color: $whiteSecondary;
+      background: none;
+      border: 1px solid transparent;
+      padding: 2px;
+    }
+  }
+
+  #chat-form textarea {
+    color: $whiteSecondary;
+    background: transparent;
+    border: 1px solid $cyan;
+    backdrop-filter: blur(6px);
+  }
+
+  .dice-roll .dice-formula {
+    color: inherit;
+    background: #282a368e;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
+    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    box-shadow: none;
+    margin: 2px;
+  }
+
+  .dice-tooltip .part-header .part-flavor {
+    color: inherit;
+    background: none;
+  }
+
+  .dice-roll .dice-total {
+    background: #282a368e;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
+    margin: 2px;
+    box-shadow: none;
+  }
+
+  .dice-tooltip .part-header .part-total {
+    border: 1px transparent;
+    border-bottom: none;
+    background: transparent;
+    font-size: 12px;
+    line-height: 25px;
+    margin-right: 5px;
+  }
+
+  .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
+    color: inherit;
+    border: 1px solid $purple;
+    box-shadow: none;
+    margin: 2px;
+  }
+
+  .dice-roll {
+    .dice-formula:hover, .dice-total:hover {
+      box-shadow: 0 0 4px #bd93f9;
+    }
+  }
+
+  .dice-tooltip .part-header {
+    color: inherit;
+    border: none;
+    box-shadow: none;
+
+    .part-formula {
+      margin-left: 6px;
+      margin-top: 1px;
+    }
+  }
+
+  .chat-message {
+    .message-content .dice-tooltip .dice-rolls .roll {
+      --shadow-color:246deg 23% 6%;
+      color: #f8f8f2c6;
+      background: transparent;
+      font-size: 14px;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      border-radius: 2px;
+      margin-left: 2px;
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34), 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+    }
+
+    .dice-result {
+      color: $whiteSecondary;
+    }
+  }
+
+  .dice-roll .dice-total {
+    &.success {
+      color: inherit;
+      background: inherit;
+      border: 1px solid $green;
+    }
+
+    &.failure {
+      color: inherit;
+      background: inherit;
+      border: 1px solid $red;
+    }
+
+    &.critical {
+      color: $green;
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    }
+
+    &.fumble {
+      color: $red;
+      text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+    }
+  }
+
+  .chat-message {
+    background: $purple-transparent;
+    backdrop-filter: blur(2px);
+    color: $whiteSecondary;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
+    transition: max-height 0.3s ease-in-out;
+
+    &.whisper, &.blind {
+      background: $purple-transparent;
+      backdrop-filter: blur(2px);
+      color: $whiteSecondary;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .message-header, .message-metadata {
+      color: $whiteSecondary;
+      text-shadow: none;
+    }
+
+    .message-content {
+      color: $whiteSecondary;
+      border: none;
+      margin: 1px;
+
+      .form-group.sheet.actor .items-list {
+        color: $whiteSecondary;
+        border: none;
+        margin: 1px;
+      }
+    }
+  }
+
+  #client-settings section.content {
+    border-top: none;
+  }
+
+  #module-management .package-list {
+    .package-title, .package-metadata, .package-description {
+      color: $whiteSecondary;
+    }
+  }
+
+  #client-settings {
+    section.content h2.module-header, &.app.window-app.form #config-tabs .settings-list h2.module-header span {
+      color: $whiteSecondary;
+    }
+  }
+
+  #module-management .package-list {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  nav.list-filters a.filter {
+    color: $disabled;
+    border-bottom: 1px solid $disabled;
+    text-shadow: none;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $white;
+      border-bottom: 1px solid $disabled;
+      box-shadow: none;
+      transition: color .2s ease-in-out;
+    }
+
+    &.active {
+      color: $purple;
+      border-bottom: 1px solid $purple;
+      box-shadow: none;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  #module-management .package-list .package {
+    border-bottom: 1px solid $purpleLight;
+  }
+
+  #settings h2 {
+    border-bottom: none;
+    border-top: none;
+    color: $whiteSecondary;
+    background: none;
+  }
+
+  #permissions-config .hint {
+    color: $disabled;
+  }
+
+  p.hint {
+    color: $whiteSecondary;
+  }
+
+  #permissions-config {
+    header.table-header {
+      background: none;
+      border: 1px solid $purpleLight;
+      border-radius: 3px;
+      padding-bottom: 4px;
+    }
+
+    li.permission {
+      border-bottom: 1px solid $purpleLight;
+    }
+  }
+}
+
+/* General windows (Fuck my life) */
+
+/* Textarea */
+
+/* Sidebar */
+
+/* Scrollbar */
+
+/* Buttons */
+
+/* General inputs + Get rid of those fucking red shadows */
+
+/* Document Links */
+
+/* Tables */
+
+/* Text Inputs */
+
+/* Search */
+
+/* Sliders */
+
+/* Checkbox */
+
+/* Select (Dropdown Box) */
+
+/* Compedium */
+
+/* Sound */
+
+/* Chat log */
+
+/* Roll results + damage */
+
+/* Expanded roll information, formula, etc */
+
+/* Temporary fix for part-formula text misalignment */
+
+/* The result of the actual dice displayed */
+
+/* This will restyle most chat boxes */
+
+/* Settings and Modules Windows */

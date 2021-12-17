@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+/* General midi-qol settings */
+body {
+  .midi-qol-nobox {
+    border: none;
+    padding: 0;
+  }
+
+  .midi-qol-box {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+  }
+
+  .midi-qol-faint {
+    color: $whiteSecondary;
+  }
+}

@@ -2,32 +2,23 @@
   "name": "dracula-foundry",
   "title": "Dracula Theme",
   "description": "A WIP Dracula and Argon inspired theme for Foundry menus",
-  "version": "This is auto replaced",
+  "version": "0.0.0",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.8",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "9",
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "CasanovaSekova",
+      "url": "https://github.com/CasanovaSekova/",
+      "discord": "Casanova#0003"
     }
   ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
-  ],
   "esmodules": [
-    "/scripts/module.js"
-  ],
-  "scripts": [
-    "/scripts/lib/lib.js"
+    "/src/init.js"
   ],
   "styles": [
-    "/styles/module.css"
+    "/css/dracula-foundry.css"
   ],
   "languages": [
     {
@@ -36,13 +27,10 @@
       "path": "languages/en.json"
     }
   ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "url": "https://github.com/CasanovaSekova/dracula-foundry",
+  "readme": "https://github.com/CasanovaSekova/dracula-foundry#readme",
+  "bugs": "https://github.com/CasanovaSekova/dracula-foundry/issues",
+  "changelog": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/",
+  "manifest": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/download/module.json",
+  "download": "https://github.com/CasanovaSekova/dracula-foundry/releases/download/0.0.0/module.zip"
 }

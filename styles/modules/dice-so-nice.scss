@@ -1,0 +1,8 @@
+@use '../variables' as *;
+
+/* Dice So Nice Settings Menu */
+body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+{
+  background: transparent;
+  border: 1px $purpleLight;
+}

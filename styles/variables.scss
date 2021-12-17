@@ -1,0 +1,44 @@
+/* Dracula UI Colours Import
+In the process of replacing most of the hex colours with these */
+$black: hsl(230, 15%, 15%);
+$blackSecondary: hsl(230, 15%, 30%);
+$blackTernary: hsl(230, 15%, 70%);
+$blackLight: hsla(230, 15%, 15%, 5%);
+$white: hsl(60, 30%, 96%);
+$whiteSecondary: hsl(60, 30%, 100%);
+$whiteLight: hsla(60, 30%, 96%, 5%);
+$cyan: hsl(170, 100%, 75%);
+$cyanSecondary: hsl(170, 100%, 90%);
+$cyanLight: hsla(170, 100%, 75%, 5%);
+$green: hsl(115, 100%, 75%);
+$greenSecondary: hsl(115, 100%, 90%);
+$greenLight: hsla(115, 100%, 75%, 5%);
+$orange: hsl(35, 100%, 75%);
+$orangeSecondary: hsl(35, 100%, 90%);
+$orangeLight: hsla(35, 100%, 75%, 5%);
+$pink: hsl(330, 100%, 75%);
+$pinkSecondary: hsl(330, 100%, 90%);
+$pinkLight: hsla(330, 100%, 75%, 5%);
+$purple: hsl(250, 100%, 75%);
+$purpleSecondary: hsl(250, 100%, 90%);
+$purpleLight: hsl(250, 100%, 75%, 5%);
+$red: hsl(10, 100%, 75%);
+$redSecondary: hsl(10, 100%, 90%);
+$redLight: hsla(10, 100%, 75%, 5%);
+$yellow: hsl(60, 100%, 75%);
+$yellowSecondary: hsl(60, 100%, 90%);
+$yellowLight: hsla(60, 100%, 75%, 5%);
+$cyan-transparent: hsl(170, 100%, 75%, 0.1);
+$green-transparent: hsl(115, 100%, 75%, 0.1);
+$orange-transparent: hsl(35, 100%, 75%, 0.1);
+$pink-transparent: hsl(330, 100%, 75%, 0.1);
+$purple-transparent: hsl(250, 100%, 75%, 0.1);
+$red-transparent: hsl(10, 100%, 75%, 0.1);
+$yellow-transparent: hsl(60, 100%, 75%, 0.1);
+$disabled: hsl(230, 15%, 50%);
+$gradientDegree: 135deg;
+$glowColor: rgba(255, 255, 255, 0.25);
+
+$bg_window-content: hsla(230, 15%, 15%, 75%);
+$bg_content: #282a3635;
+$text-color: #e6e6e6eb;

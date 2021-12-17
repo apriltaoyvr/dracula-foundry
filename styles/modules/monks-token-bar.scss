@@ -1,0 +1,109 @@
+@use '../variables' as *;
+
+/* Monk's Token Bar */
+body {
+  .monks-tokenbar .sheet .items-list .item-list .item .item-name {
+    color: $whiteSecondary;
+  }
+
+  #requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
+    color: $whiteSecondary;
+  }
+
+  #requestsavingthrow .request-header {
+    background: $purple-transparent;
+    border: 2px solid $purple-transparent;
+    box-shadow: none;
+  }
+
+  .monks-tokenbar {
+    &.chat-card {
+      .flexrow {
+        color: $whiteSecondary;
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
+        border: none;
+      }
+    }
+
+    .sheet .items-list .item {
+      border: none;
+    }
+
+    &.chat-card {
+      .card-footer {
+        border: none;
+
+        span {
+          border: none;
+        }
+      }
+
+      .card-header {
+        color: $whiteSecondary;
+        background: none;
+        border: none;
+        font-family: "Signika";
+      }
+    }
+
+    .sheet .items-list .items-header h3 {
+      color: $whiteSecondary;
+      background: none;
+      border: none;
+      font-family: "Signika";
+    }
+  }
+
+  .chat-message .message-content .form-group.sheet.actor .items-header {
+    color: $whiteSecondary;
+    background: none;
+    border: none;
+    font-family: "Signika";
+  }
+
+  .monks-tokenbar {
+    &.chat-card {
+      .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+        color: $whiteSecondary;
+        background: none;
+        border: none;
+        font-family: "Signika";
+      }
+
+      .card-header h3, .message-content .items-header .item-name {
+        color: $whiteSecondary;
+        font-family: "Signika";
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .card-footer button {
+        color: $whiteSecondary;
+        background: none;
+        border: none;
+      }
+    }
+
+    .sheet .items-list .items-header {
+      color: $whiteSecondary;
+      font-family: "Signika";
+      background: none;
+      border: none;
+    }
+  }
+
+  #requestsavingthrow .request-grid > div {
+    &.selected, &:hover {
+      color: white;
+      background: #44475a26;
+      border: #bd93f9;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #bd93f9;
+    }
+  }
+}

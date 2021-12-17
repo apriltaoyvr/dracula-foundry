@@ -1,0 +1,817 @@
+#combat-carousel {
+  &.wrapper {
+    position: fixed;
+    font-family: "Roboto";
+
+    /* top: 0;
+    left: 120px; */
+    min-width: 210px;
+
+    /* max-width: fit-content; */
+    min-height: 170px;
+    margin: 0;
+    padding: unset;
+    box-shadow: none;
+    border: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    height: 10px;
+
+    h2 {
+      display: none;
+    }
+  }
+
+  &:hover {
+    header h2 {
+      display: inherit;
+    }
+
+    background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
+    backdrop-filter: blur(6px);
+    border-radius: 5px;
+    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    z-index: 0;
+  }
+
+  .info-bar {
+    background: transparent;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: calc(100% * 0.8);
+    height: 25px;
+  }
+
+  .scene-control {
+    &[data-control="combat-carousel"] {
+      display: flex;
+      height: 36px;
+      width: 36px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img.carousel-icon {
+      height: 32px;
+      width: 32px;
+      margin: 2px;
+      border: none;
+    }
+  }
+
+  .carousel-icon {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 1px black;
+    border-radius: 2px;
+    height: 38px;
+    width: 38px;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resize-handle {
+    width: 18px;
+    height: 18px;
+    color: white;
+    background: transparent;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    padding: 2px;
+  }
+
+  .carousel-icon .encounter {
+    position: absolute;
+    background: transparent;
+    font-size: 9px;
+    top: 1px;
+    left: 1px;
+  }
+}
+
+li[data-control="combat-carousel"] {
+  div.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  i.collapse-indicator {
+    position: absolute;
+    font-size: 9px;
+    top: 1px;
+    right: 1px;
+    transform: translateY(-3px);
+  }
+}
+
+#combat-carousel {
+  .carousel-icon {
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      box-shadow: #1d1e23e6;
+    }
+  }
+
+  .encounter-info {
+    display: none;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: white;
+    background: transparent;
+
+    .icon {
+      text-align: center;
+      flex: 0 0 30%;
+    }
+
+    &.visible {
+      display: block;
+      background: transparent;
+      border: 1px solid transparent;
+    }
+  }
+
+  .encounter-controls {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* right: 0;
+    top: 25%; */
+    width: 50px;
+    height: 65px;
+    text-align: center;
+    color: white;
+
+    /* backdrop-filter: blur(6px);
+    background: transparent; */
+    padding: 2px;
+  }
+
+  &:hover .encounter-controls {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .encounter-controls .encounter-control {
+    flex: 0 0 40%;
+    margin: 2px;
+  }
+
+  .encounter-info {
+    a.encounter-control {
+      display: none;
+      text-align: center;
+      flex: 0;
+    }
+
+    &:hover .encounter-control {
+      display: flex;
+    }
+  }
+
+  a.encounter-control.create-remove {
+    display: flex;
+    margin-left: 5px;
+  }
+
+  .encounter-info {
+    .flexrow {
+      align-items: center;
+      min-width: 50px;
+    }
+
+    .round {
+      /* padding-left: 5.25px; */
+    }
+
+    span {
+      /* max-width: fit-content; */
+    }
+
+    i.fas {
+      flex: 0;
+      text-align: center;
+    }
+
+    .counter {
+      text-align: center;
+    }
+  }
+
+  .initiative-control {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 56px;
+
+    /* padding: 0px 4px; */
+    color: #f0f0f0;
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  &:hover .initiative-control {
+    display: flex;
+  }
+
+  .initiative-control a {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 2px;
+  }
+
+  .overlay {
+    /* display: none; */
+  }
+
+  .drag-handle {
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 35%;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+  }
+
+  &:hover .drag-handle {
+    display: block;
+  }
+
+  .overlay.active {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .overlay-hud {
+    position: absolute;
+    z-index: 20;
+
+    .tracker-indicators {
+      backdrop-filter: blur(6px);
+      background: transparent;
+    }
+  }
+
+  .overlay-properties {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
+    background: #1d1e23e6;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
+    .value {
+      text-overflow: ellipsis;
+    }
+  }
+
+  .container {
+    position: relative;
+    height: 85%;
+  }
+
+  .avatar {
+    display: flex;
+
+    /* background: transparent; */
+    border: 1px solid transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+    vertical-align: middle;
+    overflow: hidden;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  img.overlay-effect {
+    position: absolute;
+    left: 10px;
+    opacity: 0.7;
+    height: 80px;
+    width: 80px;
+  }
+
+  .initiative {
+    position: absolute;
+    right: 0;
+    padding: 2px 0;
+    background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
+    border-radius: 60%;
+    z-index: 20;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .initiative {
+    .fa-2x {
+      font-size: 1em;
+    }
+
+    .fa-stack-1x {
+      text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+    }
+
+    input {
+      &.fa-stack-1x {
+        background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 50%, rgba(75, 85, 95, 0) 100%);
+        height: 100%;
+        text-align: center;
+        color: #f0f0e0;
+        text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+      }
+
+      &[type="text"]:disabled.fa-stack-1x {
+        pointer-events: none;
+        background: none;
+        border: none;
+      }
+    }
+  }
+
+  .fa-dice-d20 {
+    color: #44475aff;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+  }
+
+  .effects {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-flow: wrap-reverse;
+  }
+
+  .effect {
+    backdrop-filter: blur(6px);
+    background: #1d1e23e6;
+
+    img {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .card {
+    border: 1px solid #44475aff;
+    border-radius: 3px;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(0deg, rgba(40, 42, 54, 0.9) 0%, rgba(68, 71, 90, 0.4) 50%, rgba(75, 85, 95, 0) 100%);
+
+    /* background: #1d1e23e6; */
+    box-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    padding: 2px;
+    color: #f0f0e0;
+  }
+
+  .fly {
+    animation: fly-in 500ms both;
+  }
+
+  .card .active-combatant-wrapper {
+    display: none;
+  }
+
+  .is-active-combatant.card {
+    .active-combatant-wrapper {
+      /* display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 99%;
+      height: 6%; */
+      backdrop-filter: blur(6px);
+      background: #282a36d8;
+    }
+
+    .active-combatant {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      background: #1d1e23e6;
+      border: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+
+      /* border: 1px silver; */
+      /* bottom: 1px;
+      left: 0px; */
+      /* clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 50%, 0 100%); */
+      /* clip-path: polygon(0% 0%, 100% 0, 100% 50%, 50% 100%, 0 50%); */
+      /* clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 0 100%, 0 50%); */
+      /* clip-path: polygon(10% 0%, 90% 0, 50% 75%); */
+    }
+  }
+
+  img {
+    border: none;
+  }
+
+  .bar1 {
+    text-align: center;
+    height: 10%;
+  }
+
+  meter {
+    --background:#282a36ff;
+    --optimum:#00ffaaff;
+    --sub-optimum:#ffb86cff;
+    --sub-sub-optimum:#ff5555ff;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+
+    /* display: block; */
+    /* The gray background in Firefox */
+    width: 98%;
+    height: 1.2em;
+    text-align: center;
+
+    &::-moz-meter-bar {
+      height: 25%;
+      margin-top: 0.25em;
+      background: var(--background);
+      border: 1px solid transparent;
+
+      /* box-shadow: 0 2px 2px -2px #333 inset; */
+    }
+
+    &:-moz-meter-optimum::-moz-meter-bar {
+      background: var(--optimum);
+    }
+
+    &:-moz-meter-sub-optimum::-moz-meter-bar {
+      background: var(--sub-optimum);
+    }
+
+    &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+      background: var(--sub-sub-optimum);
+    }
+
+    &::-webkit-meter-bar {
+      background: var(--background);
+      border: 1px solid transparent;
+
+      /* Was border-top: 1px solid transparent; */
+      height: 100%;
+    }
+
+    &::-webkit-meter-optimum-value {
+      background: var(--optimum);
+    }
+
+    &::-webkit-meter-suboptimum-value {
+      background: var(--sub-optimum);
+    }
+  }
+
+  .combat-round .description {
+    display: none;
+    flex-grow: 0;
+    text-align: center;
+  }
+
+  .round-marker-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .round-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #44475aff;
+    border-radius: 50%;
+    background: #1d1e23e6;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  .splide__slide:hover {
+    .round-marker {
+      border-color: red;
+    }
+
+    .description, .round-number {
+      display: block;
+    }
+
+    meter::after {
+      position: relative;
+      content: attr(value) "/" attr(max);
+      top: -15px;
+      background: transparent;
+      text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+    }
+  }
+}
+
+/* #combat-carousel .card:hover .initiative {
+    display: block;
+} */
+
+@keyframes fly-in {
+  from {
+    transform: skew(-10deg, -10deg) rotateX(90deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  #combat-carousel meter {
+    background: var(--background);
+  }
+}
+
+/* #combat-carousel meter[value="0"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(0,0,0,0.9);
+} */
+
+/* #combat-carousel .splide__slide:hover meter[value="0"]::after {
+    position: inherit;
+    content: attr(value) "/" attr(max);
+    top: -15px;
+} */
+
+#combat-carousel-config img.icon {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  flex-grow: 0;
+  margin: 3px;
+}
+
+#combat-carousel {
+  .splide__slide {
+    &.token-hover-neutral, &.token-hover-friendly {
+      border: 1px solid #7b6eb1ff;
+    }
+
+    &.token-hover-hostile {
+      border: 1px solid #ff5555ff;
+    }
+
+    &:hover {
+      &:not(.combat-round) {
+        margin: 39px 10px 15px 10px;
+        transform: scale(1.2);
+        height: 168px;
+      }
+
+      &.name {
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: -21px;
+        left: -1px;
+        width: inherit;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 20px;
+        background: #1d1e23e6;
+        border: 1px solid transparent;
+        z-index: 100;
+      }
+    }
+  }
+
+  .name {
+    &:hover .button-tray {
+      display: flex;
+      padding: 0 10px;
+    }
+
+    .button-tray {
+      display: none;
+      margin: 2px;
+      text-align: center;
+    }
+  }
+
+  .splide__slide:hover .fa-dice-d20 {
+    color: #84d3e4e6;
+  }
+
+  a.combatant-control {
+    color: #f0f0e0;
+    border-radius: 3px;
+
+    &.active {
+      color: #f0f0e0;
+    }
+  }
+
+  .splide__slide:hover footer {
+    display: flex;
+  }
+
+  .is-active-combatant.card {
+    /* clip-path: polygon(0px -21px, 100% -21px, 100% 95%, 50% 100%, 0px 95%); */
+    backdrop-filter: blur(6px);
+    border-radius: 3px;
+    border: 1px solid #84d3e4e6;
+    border-bottom: 1px solid #84d3e4e6;
+
+    /* height: 83% !important; */
+
+    .container {
+      /* height: 80%; */
+    }
+  }
+
+  .fa-dice-d20:hover {
+    animation: spin 0.3s linear;
+  }
+
+  .combat-controls {
+    display: none;
+  }
+
+  &:hover .combat-controls {
+    display: block;
+  }
+
+  .combat-controls .previous, .splide__arrow--prev {
+    left: 0;
+  }
+
+  .combat-controls .next, .splide__arrow--next {
+    right: 0;
+  }
+
+  .combat-controls a {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid transparent;
+    background: transparent;
+    font-size: large;
+    color: white;
+
+    &.round {
+      top: calc(50% + 50px);
+    }
+
+    &.turn {
+      top: calc(50% + 15px);
+    }
+  }
+
+  .splide {
+    height: 95%;
+  }
+
+  .splide__slider {
+    height: 100%;
+    padding: 0 55px;
+  }
+
+  .splide__track {
+    height: 100%;
+    padding-top: 5px;
+  }
+
+  .splide__list {
+    height: 100%;
+  }
+
+  .splide__arrow {
+    top: calc(50% + 30px);
+    border-radius: 2%;
+    background-color: transparent;
+
+    svg {
+      fill: #f0f0e0;
+    }
+  }
+
+  .combat-carousel-pagination {
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* SPLIDE */
+
+/* ABOUT APP */
+
+#combat-carousel-about {
+  img {
+    border: none;
+  }
+
+  .logo {
+    width: 600px;
+  }
+
+  .version {
+    flex-grow: 0;
+  }
+
+  div.patrons {
+    width: 100%;
+  }
+
+  .patrons {
+    ol {
+      height: 175px;
+      border: 1px inset white;
+      list-style: none;
+      overflow: hidden scroll;
+      text-align: center;
+      padding: 2px;
+    }
+
+    li {
+      &:nth-child(odd) {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      font-size: x-large;
+    }
+  }
+
+  footer div {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .death-save {
+    flex: 0 0 120px;
+  }
+
+  .heart {
+    color: tomato;
+  }
+
+  .patreon img {
+    flex: 0 0 100px;
+  }
+}
