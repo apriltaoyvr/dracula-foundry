@@ -6,8 +6,11 @@ The module is for creating a dark mode variant for Foundry's default light theme
 It is a work in progress but most menus in Foundry have been skinned/touched by the module so far. If you see something off, let me know and I'll see what I can do. I've been working on it for v9 so there may be strange issues in 8.9. 
 
 ## Screenshot(s)
-![image](https://user-images.githubusercontent.com/95392008/146630033-aa524010-e6f5-45a8-b0b9-47c4a50064ed.png)
 ![image](https://user-images.githubusercontent.com/95392008/146494983-24836e68-30d8-41e6-ab0e-efb0223f54dd.png)
+![image](https://user-images.githubusercontent.com/95392008/146630033-aa524010-e6f5-45a8-b0b9-47c4a50064ed.png)
+
+# Planned Features
+- Theme selection
 
 ## Recommended Modules
 - Argon Combat HUD
