@@ -482,14 +482,32 @@ body {
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
     transition: max-height 0.3s ease-in-out;
 
-    &.whisper, &.blind {
+    &.whisper {
       background: $bg_content;
       color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $yellow 100%);
       transition: max-height 0.3s ease-in-out;
     }
+
+     &.blind {
+       background: $bg_content;
+       color: $whiteSecondary;
+       border: 1px solid;
+       border-image-slice: 1;
+       border-image-source: linear-gradient($gradientDegree, $purple 0%, $green 100%);
+       transition: max-height 0.3s ease-in-out;
+     }
+
+      &.blind {
+        background: $bg_content;
+        color: $whiteSecondary;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+        transition: max-height 0.3s ease-in-out;
+      }
 
     .message-header, .message-metadata {
       color: $whiteSecondary;
