@@ -372,8 +372,8 @@ body {
 
   .chat-message {
     .table-draw .table-description {
-      border-top: 1px solid $blackLight;
-      color: $whiteSecondary;
+      border-top: 1px solid $whiteLight;
+      color: $disabled;
     }
     .dice-result .dice-tooltip .dice .part-header.flexrow {
       color: inherit;
