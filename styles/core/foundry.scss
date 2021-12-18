@@ -67,10 +67,10 @@ body {
   textarea {
     border: 1px solid $cyan;
 
-    &:focus {
-      border: 2px solid $cyan;
-      box-shadow: none;
-    }
+      &:focus {
+        border-width: 2px;
+        box-shadow: none;
+      }
   }
 
   #sidebar {
@@ -252,14 +252,19 @@ body {
     &[type=range]::-webkit-slider-thumb {
       height: 12px;
       width: 12px;
-      border: 1px solid $blackLight;
+      border: 1px solid $blackSecondary;
       background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       cursor: pointer;
       box-shadow: none;
     }
 
     &[type="checkbox"] {
-      background: $blackLight;
+      background: $blackSecondary;
+      color: $purple;
+    }
+
+    &[type="radio"] {
+      background: $blackSecondary;
       color: $purple;
     }
   }
@@ -322,6 +327,10 @@ body {
     color: $whiteSecondary;
     background: transparent;
     border: 1px solid $cyan;
+  }
+
+  &:focus {
+    color:
   }
 
   .dice-roll .dice-formula {
