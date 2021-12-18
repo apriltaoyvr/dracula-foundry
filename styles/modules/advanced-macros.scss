@@ -6,6 +6,7 @@ body {
   .macro-sheet .form-group.command .furnace-macro-command {
     textarea, code {
       color: $white;
+      border: 1px solid $purple;
       text-shadow: $blackSecondary;
     }
   }

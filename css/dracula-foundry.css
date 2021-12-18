@@ -18,7 +18,7 @@ body fieldset {
   border: 1px solid rgba(149, 128, 255, 0.05);
 }
 body textarea {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   color: white;
 }
 body .window-app .window-content {
@@ -35,14 +35,14 @@ body .window-app .window-header {
   border: 1px solid transparent;
 }
 body .window-app .dialogue {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   border-radius: 6px;
   border: none;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 body .dnd5e .window-content {
   color: white;
-  background: rgba(33, 34, 44, 0.75);
+  background: rgba(33, 34, 44, 0.9);
   border: 1px solid rgba(149, 128, 255, 0.05);
   border-radius: 6px;
 }
@@ -54,7 +54,7 @@ body textarea:focus {
   box-shadow: none;
 }
 body #sidebar {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   border: 2px solid transparent;
 }
 body ::-webkit-scrollbar {
@@ -77,7 +77,7 @@ body :root {
 body button, body form button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -90,7 +90,7 @@ body button, body form button {
 body .dialog .dialog-buttons button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -103,7 +103,7 @@ body .dialog .dialog-buttons button {
 body .dialog .dialog-buttons button.default {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -183,7 +183,7 @@ body .directory .directory-header .header-search input {
 body input[type=range]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
-  border: 2px solid #414558;
+  border: 1px solid #414558;
   border-radius: 0px;
   background: linear-gradient(135deg, #ff9580 0%, #ff80bf 100%);
   cursor: pointer;
@@ -198,7 +198,7 @@ body input[type=radio] {
   color: #9580ff;
 }
 body #module-management input[type=checkbox] {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   color: #9580ff;
 }
 body select {
@@ -339,7 +339,7 @@ body .dice-roll .dice-total.fumble {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 body .chat-message {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -347,7 +347,7 @@ body .chat-message {
   transition: max-height 0.3s ease-in-out;
 }
 body .chat-message.whisper, body .chat-message.blind {
-  background: rgba(33, 34, 44, 0.5);
+  background: rgba(33, 34, 44, 0.75);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -562,6 +562,7 @@ body {
 }
 body .macro-sheet .form-group.command .furnace-macro-command textarea, body .macro-sheet .form-group.command .furnace-macro-command code {
   color: #f8f8f2;
+  border: 1px solid #9580ff;
   text-shadow: #414558;
 }
 body .hljs {
