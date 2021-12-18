@@ -183,16 +183,21 @@ body {
 
   input {
     &[type="text"]:focus, &[type="number"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="time"]:focus {
+      background: $bg_content;
       border-width: 2px;
       box-shadow: none;
     }
-
     &[type="color"][data-edit][data-edit] {
       appearance: auto;
       background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
       color: -internal-light-dark(black, white);
       border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     }
+    &:placeholder {
+      color: $disabled;
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    }
+
   }
 
   a {
@@ -245,7 +250,7 @@ body {
   }
 
   .directory .directory-header .header-search input {
-    background: transparent;
+    background: $bg_content;
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
