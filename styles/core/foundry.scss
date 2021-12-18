@@ -76,7 +76,7 @@ body {
   }
 
   #sidebar {
-    background: linear-gradient(0deg, $bg_window-content 0%, hsla(230, 15%, 15%, 50%) 75%, hsla(230, 15%, 15%, 5%) 0%);
+    background: linear-gradient(0deg, $bg_window-content 0%, hsla(230, 15%, 15%, 50%) 75%, hsla(230, 15%, 15%, 5%) 100%);
     border: 2px solid transparent;
   }
 
@@ -287,8 +287,9 @@ body {
   select {
     color: $whiteSecondary;
     background: $black;
-    border: 1px solid $red;
-    border-radius: 2px;    transition: 0.3s ease-in-out all;
+    border: 1px solid $purple;
+    border-radius: 2px;
+    transition: 0.3s ease-in-out all;
     box-shadow: none;
 
     &:focus {
@@ -447,7 +448,7 @@ body {
     &.failure {
       color: inherit;
       background: inherit;
-      border: 1px solid $red;
+      border: 1px solid $orange;
     }
 
     &.critical {
@@ -456,7 +457,7 @@ body {
     }
 
     &.fumble {
-      color: $red;
+      color: $orange;
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
     }
   }
