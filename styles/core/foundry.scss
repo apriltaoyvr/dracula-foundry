@@ -125,7 +125,7 @@ body {
   .dialog .dialog-buttons button {
     --shadow-color:246deg 23% 6%;
     color: $whiteSecondary;
-    background: $blackLight;
+    background: $bg_content;
     font-size: 14px;
     border: 1px solid;
     border-image-slice: 1;
@@ -147,7 +147,7 @@ body {
     &.default {
       --shadow-color:246deg 23% 6%;
       color: $whiteSecondary;
-      background: $blackLight;
+      background: $bg_content;
       font-size: 14px;
       border: 1px solid;
       border-image-slice: 1;
@@ -170,7 +170,8 @@ body {
 
   button {
     &:hover, &:focus {
-      box-shadow: 0 0 4px $purple;
+      border-width: 2px;
+      box-shadow: none;
     }
   }
 
@@ -202,7 +203,8 @@ body {
     }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
-      box-shadow: 0 0 5px $red;
+      border-width: 2px;
+      box-shadow: none;
     }
 
     &.entity-link i, &.content-link i, &.inline-roll i {
@@ -270,7 +272,7 @@ body {
   }
 
   #module-management input[type="checkbox"] {
-    background: #44475a86;
+    background: $bg_content;
     color: $purple;
   }
 
@@ -302,7 +304,7 @@ body {
 
   #playlists .sound-control {
     &[data-action="sound-stop"], &[data-action="playlist-stop"] {
-      color: #ff79c6;
+      color: $pink;
     }
   }
 
