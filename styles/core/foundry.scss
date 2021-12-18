@@ -54,7 +54,7 @@ body {
   .dnd5e {
     .window-content {
       color: $text-color;
-      background: $bg_content;
+      background: $bg_window-content;
       border: 1px solid $purpleLight;
       border-radius: 6px;
     }
@@ -98,7 +98,7 @@ body {
   button, form button {
     --shadow-color:246deg 23% 6%;
     color: $whiteSecondary;
-    background: $blackLight;
+    background: $bg_content;
     font-size: 14px;
     border: 1px solid;
     border-image-slice: 1;
@@ -460,7 +460,7 @@ body {
 
 /* This will restyle most chat cards */
   .chat-message {
-    background: $purple-transparent;
+    background: $bg_content;
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
@@ -468,7 +468,7 @@ body {
     transition: max-height 0.3s ease-in-out;
 
     &.whisper, &.blind {
-      background: $purple-transparent;
+      background: $bg_content;
       color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;

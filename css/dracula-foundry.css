@@ -42,7 +42,7 @@ body .window-app .dialogue {
 }
 body .dnd5e .window-content {
   color: white;
-  background: #414558;
+  background: rgba(33, 34, 44, 0.75);
   border: 1px solid rgba(149, 128, 255, 0.05);
   border-radius: 6px;
 }
@@ -77,7 +77,7 @@ body :root {
 body button, body form button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.05);
+  background: #414558;
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -339,7 +339,7 @@ body .dice-roll .dice-total.fumble {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 body .chat-message {
-  background: rgba(149, 128, 255, 0.1);
+  background: #414558;
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -347,7 +347,7 @@ body .chat-message {
   transition: max-height 0.3s ease-in-out;
 }
 body .chat-message.whisper, body .chat-message.blind {
-  background: rgba(149, 128, 255, 0.1);
+  background: #414558;
   color: white;
   border: 1px solid;
   border-image-slice: 1;
