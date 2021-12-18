@@ -99,11 +99,11 @@ body {
 
   #requestsavingthrow .request-grid > div {
     &.selected, &:hover {
-      color: white;
-      background: #44475a26;
-      border: #bd93f9;
+      color: $white;
+      background: $black;
+      border: $purple;
       border-radius: 6px;
-      box-shadow: 0 0 10px #bd93f9;
+      box-shadow: 0 0 10px $purple;
     }
   }
 }

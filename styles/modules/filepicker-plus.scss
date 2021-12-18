@@ -1,0 +1,11 @@
+@use '../variables' as *;
+
+.filepicker-plus-tooltip {
+    background: $black;
+    border: 1px solid $blackLight;
+    animation: fadein 0.5s;
+}
+
+.filepicker .directory > li:last-child {
+  border-bottom: 1px solid $blackSecondary;
+}
