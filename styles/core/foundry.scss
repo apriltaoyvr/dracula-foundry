@@ -30,21 +30,24 @@ body {
     .window-content {
       background: $bg_window-content;
       color: $text-color;
+      backdrop-filter: blur(12px);
 
       > * {
         background: $bg_window-content;
         color: $text-color;
+        backdrop-filter: blur(12px);
       }
     }
 
     .window-header {
       background: $black;
+      backdrop-filter: blur(10px);
       border-radius: 6px;
       border: 1px solid transparent;
     }
 
     .dialogue {
-      background: $black;
+      background: $bg_content;
       border-radius: 6px;
       border: none;
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
@@ -303,6 +306,7 @@ body {
 
   #chat-log {
     background: transparent;
+    backdrop-filter: blur(2px);
     border: 1px solid transparent;
     border-radius: 2px;
   }
@@ -322,6 +326,7 @@ body {
     color: $whiteSecondary;
     background: transparent;
     border: 1px solid $cyan;
+    backdrop-filter: blur(6px);
   }
 
   .dice-roll .dice-formula {
@@ -440,6 +445,7 @@ body {
 /* This will restyle most chat cards */
   .chat-message {
     background: $purple-transparent;
+    backdrop-filter: blur(2px);
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
@@ -448,6 +454,7 @@ body {
 
     &.whisper, &.blind {
       background: $purple-transparent;
+      backdrop-filter: blur(2px);
       color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;
