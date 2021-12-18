@@ -261,18 +261,18 @@ body {
     }
 
     &[type="checkbox"] {
-      background: $blackSecondary;
+      background: $purpleLight;
       color: $purple;
     }
 
     &[type="radio"] {
-      background: $blackSecondary;
+      background: $purpleLight;
       color: $purple;
     }
   }
 
   #module-management input[type="checkbox"] {
-    background: $bg_content;
+    background: $purpleLight;
     color: $purple;
   }
 
