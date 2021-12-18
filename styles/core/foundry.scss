@@ -480,19 +480,16 @@ body {
     }
   }
 
-  #client-settings section.content {
-    border-top: none;
-  }
-
   #module-management .package-list {
     .package-title, .package-metadata, .package-description {
-      color: $whiteSecondary;
+      color: hsla(60, 30%, 100%, 80%);
     }
   }
 
   #client-settings {
     section.content h2.module-header, &.app.window-app.form #config-tabs .settings-list h2.module-header span {
-      color: $whiteSecondary;
+      color: hsla(60, 30%, 100%, 80%);
+      border-bottom: none;
     }
   }
 
