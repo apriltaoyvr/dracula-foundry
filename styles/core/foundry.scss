@@ -221,17 +221,21 @@ body {
     &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
       color: $whiteSecondary;
       background: $blackLight;
-      border: 1px solid $pink;
-      transition: 0.3s ease-in-out all;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
       box-shadow: none;
+      transition: 0.3s ease-in-out all;
     }
 
     &[type="range"] + .range-value {
       color: $whiteSecondary;
       background: $purpleLight;
-      transition: 0.3s ease-in-out all;
-      border: 1px solid $pink;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
       box-shadow: none;
+      transition: 0.3s ease-in-out all;
     }
   }
 
@@ -240,7 +244,9 @@ body {
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
+    box-shadow: none;
+    transition: 0.3s ease-in-out all;
   }
 
   input {

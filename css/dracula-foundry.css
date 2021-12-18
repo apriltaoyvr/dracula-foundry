@@ -156,23 +156,29 @@ body table thead {
 body input[type=text], body input[type=number], body input[type=password], body input[type=date], body input[type=time], body input[type=text].color, body input[type=color][data-edit] {
   color: white;
   background: rgba(33, 34, 44, 0.05);
-  border: 1px solid #ff80bf;
-  transition: 0.3s ease-in-out all;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9580ff 0%, #ff80bf 100%);
   box-shadow: none;
+  transition: 0.3s ease-in-out all;
 }
 body input[type=range] + .range-value {
   color: white;
   background: rgba(149, 128, 255, 0.05);
-  transition: 0.3s ease-in-out all;
-  border: 1px solid #ff80bf;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9580ff 0%, #ff80bf 100%);
   box-shadow: none;
+  transition: 0.3s ease-in-out all;
 }
 body .directory .directory-header .header-search input {
   background: transparent;
   color: white;
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, #9580ff 0%, #80ffea 100%);
+  border-image-source: linear-gradient(135deg, #9580ff 0%, #ff80bf 100%);
+  box-shadow: none;
+  transition: 0.3s ease-in-out all;
 }
 body input[type=range]::-webkit-slider-thumb {
   height: 12px;
