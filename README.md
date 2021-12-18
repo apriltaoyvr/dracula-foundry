@@ -17,6 +17,6 @@ It is a work in progress but most menus in Foundry have been skinned/touched by 
 ## Credits
 Colour palette from [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui)
 
-Substantial help by @typhonrt with advice, refracting, and the change from css to scss
+Substantial help by @typhonrt with advice, refactoring, and a whole list of things I would not be able to write down in a day
 
 Inspired heavily by [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/) by theripper93 and mouse0270 with some help by Ripper
