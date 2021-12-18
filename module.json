@@ -2,7 +2,7 @@
   "name": "dracula-foundry",
   "title": "Dracula Theme",
   "description": "A WIP Dracula and Argon inspired theme for Foundry menus",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
   "minimumCoreVersion": "0.8.6",
