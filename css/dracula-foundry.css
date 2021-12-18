@@ -18,7 +18,7 @@ body fieldset {
   border: 1px solid rgba(149, 128, 255, 0.05);
 }
 body textarea {
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   color: white;
 }
 body .window-app .window-content {
@@ -35,7 +35,7 @@ body .window-app .window-header {
   border: 1px solid transparent;
 }
 body .window-app .dialogue {
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   border-radius: 6px;
   border: none;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -77,7 +77,7 @@ body :root {
 body button, body form button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -90,7 +90,7 @@ body button, body form button {
 body .dialog .dialog-buttons button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -103,7 +103,7 @@ body .dialog .dialog-buttons button {
 body .dialog .dialog-buttons button.default {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -198,7 +198,7 @@ body input[type=radio] {
   color: #9580ff;
 }
 body #module-management input[type=checkbox] {
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   color: #9580ff;
 }
 body select {
@@ -339,7 +339,7 @@ body .dice-roll .dice-total.fumble {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 body .chat-message {
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -347,7 +347,7 @@ body .chat-message {
   transition: max-height 0.3s ease-in-out;
 }
 body .chat-message.whisper, body .chat-message.blind {
-  background: #414558;
+  background: rgba(33, 34, 44, 0.5);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
