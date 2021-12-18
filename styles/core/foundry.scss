@@ -12,18 +12,24 @@ body {
     border-bottom: 1 px solid $pink;
   }
 
-  .sheet nav.sheet-tabs {
-    border-top: none;
-    border-bottom: none;
+  .sheet {
+    nav.sheet-tabs {
+      border-top: none;
+      border-bottom: none;
+    }
+    header.sheet-header img {
+      border: none;
+    }
   }
-
   fieldset {
     border: 1px solid $purpleLight;
   }
 
   textarea {
     background: $bg_content;
+    border: 1px solid $purpleLight;
     color: $text-color;
+    margin-bottom: 1px;
   }
 
   .window-app {
@@ -70,7 +76,7 @@ body {
   }
 
   #sidebar {
-    background: $bg_content;
+    background: linear-gradient(0deg, $bg_window-content 0%, hsla(230, 15%, 15%, 50%) 75%, hsla(230, 15%, 15%, 5%) 0%);
     border: 2px solid transparent;
   }
 
@@ -281,7 +287,7 @@ body {
   select {
     color: $whiteSecondary;
     background: $black;
-    border: 1px solid $purpleLight;
+    border: 1px solid $red;
     border-radius: 2px;    transition: 0.3s ease-in-out all;
     box-shadow: none;
 
@@ -530,8 +536,8 @@ body {
     }
 
     &.active {
-      color: $pink;
-      border-bottom: 1px solid $pink;
+      color: $red;
+      border-bottom: 1px solid $red;
       box-shadow: none;
       transition: all .2s ease-in-out;
     }
