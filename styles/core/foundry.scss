@@ -495,7 +495,13 @@ body {
       color: hsla(60, 30%, 100%, 80%);
       border-bottom: none;
     }
+
+    &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+
+    }
   }
+
+
 
   #module-management .package-list {
     border-top: none;
