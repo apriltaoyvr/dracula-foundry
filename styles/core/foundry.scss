@@ -101,7 +101,8 @@ body {
     background: $bg_content;
     font-size: 14px;
     border: 1px solid $purple;
-    border-radius: 2px;    margin-left: 2px;
+    border-radius: 2px;
+    margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
                 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -123,8 +124,10 @@ body {
     color: $whiteSecondary;
     background: $bg_content;
     font-size: 14px;
-    border: 1px solid $purple;
-    border-radius: 2px;    margin-left: 2px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+    margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
                 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -142,8 +145,9 @@ body {
       color: $whiteSecondary;
       background: $bg_content;
       font-size: 14px;
-      border: 1px solid $purple;
-      border-radius: 2px;      border-radius: 2px;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
       margin-left: 2px;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                   0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
@@ -218,15 +222,17 @@ body {
     &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
       color: $whiteSecondary;
       background: $blackLight;
-      border: 1px solid $purple;
-      border-radius: 2px;      box-shadow: none;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
 
     &[type="range"] + .range-value {
       color: $whiteSecondary;
       background: $purpleLight;
-      border: 1px solid $purple 0%;
+      border: 1px solid $purpleLight;
       border-radius: 2px;      box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
@@ -235,9 +241,14 @@ body {
   .directory .directory-header .header-search input {
     background: transparent;
     color: $whiteSecondary;
-    border: 1px solid $purple 0%;
-    border-radius: 2px;    box-shadow: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    box-shadow: none;
     transition: 0.3s ease-in-out all;
+      &:focus {
+        border-width: 2px;
+      }
   }
 
   input {
@@ -270,7 +281,7 @@ body {
   select {
     color: $whiteSecondary;
     background: $black;
-    border: 1px solid $purple;
+    border: 1px solid $purpleLight;
     border-radius: 2px;    transition: 0.3s ease-in-out all;
     box-shadow: none;
 
@@ -285,7 +296,7 @@ body {
       color: $text-color;
     }
     .form-group .form-fields {
-      border: 1px solid $purple;
+      border: 1px solid $purpleLight;
       border-radius: 2px;    }
     &:focus {
       border-width: 2px;
@@ -322,7 +333,7 @@ body {
   #chat-form textarea {
     color: $whiteSecondary;
     background: transparent;
-    border: 1px solid $purple;
+    border: 1px solid $purpleLight;
     border-radius: 2px;  }
 
   &:focus {
@@ -487,8 +498,10 @@ body {
     }
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-      border: 1px solid $pink;
-      border-radius: 2px;        &:focus {
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      &:focus {
           border-width: 2px;
           box-shadow: none;
         }

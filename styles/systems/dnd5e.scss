@@ -12,7 +12,7 @@ body .dnd5e {
     }
 
     &.item .effect-header {
-      border: 1px solid $purple;
+      border: 1px solid $purpleLight;
       border-radius: 2px;    }
 
     .sheet-navigation {
@@ -27,13 +27,13 @@ body .dnd5e {
     .filter-list .filter-item {
       &.active {
         color: $purple;
-        border-bottom: 1px solid $purple;
+        border-bottom: 1px solid $purpleLight;
         box-shadow: none;
         transition: all .2s ease-in-out;
 
         &:hover {
           color: $purple;
-          border-bottom: 1px solid $purple;
+          border-bottom: 1px solid $purpleLight;
           box-shadow: 0 0 4px $purple;
           transition: all .2s ease-in-out;
         }
