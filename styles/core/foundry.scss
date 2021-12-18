@@ -100,11 +100,8 @@ body {
     color: $whiteSecondary;
     background: $bg_content;
     font-size: 14px;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-    border-radius: 2px;
-    margin-left: 2px;
+    border: 1px solid $purple;
+    border-radius: 2px;    margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
                 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -116,6 +113,9 @@ body {
                 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
                 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
                 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      &:hover, &focus {
+        border-width: 2px;
+      }
   }
 
   .dialog .dialog-buttons button {
@@ -123,11 +123,8 @@ body {
     color: $whiteSecondary;
     background: $bg_content;
     font-size: 14px;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-    border-radius: 2px;
-    margin-left: 2px;
+    border: 1px solid $purple;
+    border-radius: 2px;    margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                 0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
                 0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -145,10 +142,8 @@ body {
       color: $whiteSecondary;
       background: $bg_content;
       font-size: 14px;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-      border-radius: 2px;
+      border: 1px solid $purple;
+      border-radius: 2px;      border-radius: 2px;
       margin-left: 2px;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
                   0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
@@ -172,12 +167,13 @@ body {
   }
 
   input:focus, select:focus {
+    border-width: 2px;
     box-shadow: none;
   }
 
   input {
     &[type="text"]:focus, &[type="number"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="time"]:focus {
-      border-width: 1px;
+      border-width: 2px;
       box-shadow: none;
     }
 
@@ -193,10 +189,11 @@ body {
     &.entity-link, &.content-link, &.inline-roll {
       color: $whiteSecondary;
       background: transparent;
-      border: 1px solid var(--red);
-    }
+      border: 1px solid $red;
+      border-radius: 2px;    }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
+      color: $red;
       box-shadow: none;
     }
 
@@ -221,20 +218,16 @@ body {
     &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
       color: $whiteSecondary;
       background: $blackLight;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
-      box-shadow: none;
+      border: 1px solid $purple;
+      border-radius: 2px;      box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
 
     &[type="range"] + .range-value {
       color: $whiteSecondary;
       background: $purpleLight;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
-      box-shadow: none;
+      border: 1px solid $purple 0%;
+      border-radius: 2px;      box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
   }
@@ -242,10 +235,8 @@ body {
   .directory .directory-header .header-search input {
     background: transparent;
     color: $whiteSecondary;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
-    box-shadow: none;
+    border: 1px solid $purple 0%;
+    border-radius: 2px;    box-shadow: none;
     transition: 0.3s ease-in-out all;
   }
 
@@ -253,7 +244,7 @@ body {
     &[type=range]::-webkit-slider-thumb {
       height: 12px;
       width: 12px;
-      border: 1px solid $blackSecondary;
+      border: 1px solid $blackLight;
       border-radius: 0px;
       background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       cursor: pointer;
@@ -279,10 +270,8 @@ body {
   select {
     color: $whiteSecondary;
     background: $black;
-    border-width: 1px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
-    transition: 0.3s ease-in-out all;
+    border: 1px solid $purple;
+    border-radius: 2px;    transition: 0.3s ease-in-out all;
     box-shadow: none;
 
     &:focus {
@@ -296,10 +285,8 @@ body {
       color: $text-color;
     }
     .form-group .form-fields {
-      border-width: 1px;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
-    }
+      border: 1px solid $purple;
+      border-radius: 2px;    }
     &:focus {
       border-width: 2px;
     }
@@ -319,8 +306,7 @@ body {
   #chat-log {
     background: transparent;
     border: 1px solid transparent;
-    border-radius: 2px;
-  }
+    border-radius: 2px;  }
 
   #chat-controls {
     background: none;
@@ -329,17 +315,15 @@ body {
       color: $whiteSecondary;
       background: $black;
       border: 1px solid transparent;
-      padding: 2px;
+      border-radius: 2px;      padding: 2px;
     }
   }
 
   #chat-form textarea {
     color: $whiteSecondary;
     background: transparent;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $cyan 0%, $pink 100%);
-  }
+    border: 1px solid $purple;
+    border-radius: 2px;  }
 
   &:focus {
     border-width: 2px;
@@ -348,10 +332,8 @@ body {
   .dice-roll .dice-formula {
     color: inherit;
     background: $blackLight;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
-    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    border: 1px solid $pink;
+    border-radius: 2px;    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
     box-shadow: none;
     margin: 2px;
   }
@@ -363,10 +345,8 @@ body {
 
   .dice-roll .dice-total {
     background: $blackLight;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
-    margin: 2px;
+    border: 1px solid $pink;
+    border-radius: 2px;    margin: 2px;
     box-shadow: none;
   }
 
@@ -382,7 +362,7 @@ body {
   .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
     color: inherit;
     border: 1px solid $pink;
-    box-shadow: none;
+    border-radius: 2px;    box-shadow: none;
     margin: 2px;
   }
 
@@ -464,7 +444,7 @@ body {
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
+    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
     transition: max-height 0.3s ease-in-out;
 
     &.whisper, &.blind {
@@ -472,7 +452,7 @@ body {
       color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $pink 100%);
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
       transition: max-height 0.3s ease-in-out;
     }
 
@@ -508,7 +488,7 @@ body {
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
       border: 1px solid $pink;
-        &:focus {
+      border-radius: 2px;        &:focus {
           border-width: 2px;
           box-shadow: none;
         }
@@ -567,8 +547,7 @@ body {
     header.table-header {
       background: none;
       border: 1px solid $purpleLight;
-      border-radius: 3px;
-      padding-bottom: 4px;
+      border-radius: 2px;      padding-bottom: 4px;
     }
 
     li.permission {

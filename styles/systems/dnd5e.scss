@@ -8,14 +8,12 @@ body .dnd5e {
     &.window.content {
       background: $black;
       border: 1px solid transparent;
-      color: $text-color;
+      border-radius: 2px;      color: $text-color;
     }
 
     &.item .effect-header {
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-    }
+      border: 1px solid $purple;
+      border-radius: 2px;    }
 
     .sheet-navigation {
       color: $text-color;
@@ -52,31 +50,29 @@ body .dnd5e {
     /* Select aka Dropdown Boxes */
     select {
       background: $black;
-      border: 1px solid $cyan;
-    }
+      border: 1px solid $red;
+      border-radius: 2px;    }
   }
 
   /* Select aka Dropdown Boxes */
   select, .form-group .form-fields {
     color: $white;
-    border: 1px solid $cyan;
-  }
+    border: 1px solid $red;
+    border-radius: 2px;  }
 
   input {
     &[type="text"], &[type="number"] {
       color: $white;
-      border: 1px solid $cyan;
-    }
+      border: 1px solid $red;
+      border-radius: 2px;    }
   }
 
   /* Attack + Damage buttons */
   button {
     color: $whiteSecondary;
-    background: $black;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
-    --shadow-color:246deg 23% 6%;
+    background: $bg_content;
+    border: 1px solid $purple;
+    border-radius: 2px;    --shadow-color:246deg 23% 6%;
     box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
                 0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
                 0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
@@ -87,7 +83,8 @@ body .dnd5e {
     margin: 2px;
 
     &:hover, &:focus {
-      box-shadow: 0 0 5px $glowColor;
+      border-width: 2px;
+      box-shadow: none;
       cursor: pointer;
     }
   }
@@ -97,7 +94,7 @@ body .dnd5e {
     color: $text-color;
     border-radius: 6px;
     border: 1px solid $purpleLight;
-  }
+    border-radius: 2px;  }
 
   /* Chat Cards */
   &.chat-card {
@@ -138,6 +135,7 @@ body .dnd5e {
         width: 36px;
         border-radius: 12px;
         border: 1px solid $black;
+        border-radius: 6px;
         padding: 0;
       }
     }
