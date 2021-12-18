@@ -370,12 +370,18 @@ body {
     margin-right: 5px;
   }
 
-  .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
-    color: inherit;
-    border: 1px solid $red;
-    box-shadow: none;
-    margin: 2px;
-    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+  .chat-message {
+    .table-draw .table-description {
+      border-top: 1px solid $blackLight;
+      color: $whiteSecondary;
+    }
+    .dice-result .dice-tooltip .dice .part-header.flexrow {
+      color: inherit;
+      border: 1px solid $red;
+      box-shadow: none;
+      margin: 2px;
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    }
   }
 
   .dice-roll {
@@ -520,6 +526,18 @@ body {
         }
       }
 
+  }
+
+  .roll-table-config ol.table-results {
+    .table-header {
+      border: none;
+    }
+    .table-result .result-controls .lock-result {
+      color: $whiteSecondary;
+    }
+    .table-result.drawn .lock-result {
+      color: $disabled;
+    }
   }
 
 

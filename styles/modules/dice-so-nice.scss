@@ -1,8 +1,16 @@
 @use '../variables' as *;
 
 /* Dice So Nice Settings Menu */
-body .dice-so-nice .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
-{
-  background: transparent;
-  border: 1px $purpleLight;
+body .dice-so-nice {
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background: transparent;
+    border: 1px solid $purpleLight;
+  }
+  .dice-so-nice .sfxs-list .sfx {
+      border-bottom: 1px solid $purpleLight;
+  }
+  .sfx-data .sfx-flex-5 select {
+      background: $blackSecondary;
+      color: $text-color;
+  }
 }
