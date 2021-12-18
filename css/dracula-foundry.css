@@ -22,11 +22,11 @@ body textarea {
   color: white;
 }
 body .window-app .window-content {
-  background: rgba(33, 34, 44, 0.75);
+  background: #21222c;
   color: white;
 }
 body .window-app .window-content > * {
-  background: rgba(33, 34, 44, 0.75);
+  background: transparent;
   color: white;
 }
 body .window-app .window-header {
@@ -155,8 +155,8 @@ body table thead {
 }
 body input[type=text], body input[type=number], body input[type=password], body input[type=date], body input[type=time], body input[type=text].color, body input[type=color][data-edit] {
   color: white;
-  background: rgba(149, 128, 255, 0.05);
-  border: 0.2rem solid transparent;
+  background: rgba(33, 34, 44, 0.05);
+  border: 1px solid #ff80bf;
   transition: 0.3s ease-in-out all;
   box-shadow: none;
 }
@@ -177,7 +177,8 @@ body .directory .directory-header .header-search input {
 body input[type=range]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
-  border: 1px solid #414558;
+  border: 2px solid #414558;
+  border-radius: 0px;
   background: linear-gradient(135deg, #ff9580 0%, #ff80bf 100%);
   cursor: pointer;
   box-shadow: none;
@@ -392,8 +393,8 @@ body nav.list-filters a.filter:hover {
   transition: color 0.2s ease-in-out;
 }
 body nav.list-filters a.filter.active {
-  color: #9580ff;
-  border-bottom: 1px solid #9580ff;
+  color: #ff80bf;
+  border-bottom: 1px solid #ff80bf;
   box-shadow: none;
   transition: all 0.2s ease-in-out;
 }

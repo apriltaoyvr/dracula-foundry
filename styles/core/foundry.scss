@@ -28,11 +28,11 @@ body {
 
   .window-app {
     .window-content {
-      background: $bg_window-content;
+      background: $black;
       color: $text-color;
 
       > * {
-        background: $bg_window-content;
+        background: transparent;
         color: $text-color;
       }
     }
@@ -220,8 +220,8 @@ body {
   input {
     &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
       color: $whiteSecondary;
-      background: $purpleLight;
-      border: 0.2rem solid transparent;
+      background: $blackLight;
+      border: 1px solid $pink;
       transition: 0.3s ease-in-out all;
       box-shadow: none;
     }
@@ -247,7 +247,8 @@ body {
     &[type=range]::-webkit-slider-thumb {
       height: 12px;
       width: 12px;
-      border: 1px solid $blackSecondary;
+      border: 2px solid $blackSecondary;
+      border-radius: 0px;
       background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       cursor: pointer;
       box-shadow: none;
@@ -530,8 +531,8 @@ body {
     }
 
     &.active {
-      color: $purple;
-      border-bottom: 1px solid $purple;
+      color: $pink;
+      border-bottom: 1px solid $pink;
       box-shadow: none;
       transition: all .2s ease-in-out;
     }
