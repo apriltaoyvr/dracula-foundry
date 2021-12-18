@@ -57,7 +57,7 @@ body .dnd5e {
   /* Attack + Damage buttons */
   button {
     color: $whiteSecondary;
-    background: $blackLight;
+    background: $black;
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
