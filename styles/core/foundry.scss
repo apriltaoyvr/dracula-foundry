@@ -496,7 +496,7 @@ body {
        color: $whiteSecondary;
        border: 1px solid;
        border-image-slice: 1;
-       border-image-source: linear-gradient($gradientDegree, $purple 0%, $green 100%);
+       border-image-source: linear-gradient($gradientDegree, $cyan 0%, $green 100%);
        transition: max-height 0.3s ease-in-out;
      }
 
@@ -611,5 +611,8 @@ body {
     li.permission {
       border-bottom: 1px solid $purpleLight;
     }
+  }
+    .tinymce .mce-content-body {
+    color: $whiteSecondary;
   }
 }
