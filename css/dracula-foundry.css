@@ -54,7 +54,7 @@ body textarea:focus {
   box-shadow: none;
 }
 body #sidebar {
-  background: rgba(33, 34, 44, 0.75);
+  background: rgba(33, 34, 44, 0.5);
   border: 2px solid transparent;
 }
 body ::-webkit-scrollbar {
