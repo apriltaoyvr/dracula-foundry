@@ -82,7 +82,8 @@ body {
         font-size: 14px;
           &:hover {
             color: $whiteSecondary;
-            box-shadow: 0 0 4px $red;
+            text-shadow: 0 0 4px $red;
+            box-shadow: none;
           }
       }
 
