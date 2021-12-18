@@ -19,24 +19,18 @@ body fieldset {
 }
 body textarea {
   background: #414558;
-  color: rgba(248, 248, 242, 0.8);
+  color: white;
 }
 body .window-app .window-content {
   background: rgba(33, 34, 44, 0.75);
-  color: rgba(248, 248, 242, 0.8);
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
+  color: white;
 }
 body .window-app .window-content > * {
   background: rgba(33, 34, 44, 0.75);
-  color: rgba(248, 248, 242, 0.8);
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
+  color: white;
 }
 body .window-app .window-header {
   background: #21222c;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   border-radius: 6px;
   border: 1px solid transparent;
 }
@@ -47,7 +41,7 @@ body .window-app .dialogue {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 body .dnd5e .window-content {
-  color: rgba(248, 248, 242, 0.8);
+  color: white;
   background: #414558;
   border: 1px solid rgba(149, 128, 255, 0.05);
   border-radius: 6px;
@@ -55,11 +49,8 @@ body .dnd5e .window-content {
 body .dnd5e .form-group label {
   color: white;
 }
-body textarea {
-  border: 1px solid #80ffea;
-}
 body textarea:focus {
-  border: 2px solid #80ffea;
+  border-width: 2px;
   box-shadow: none;
 }
 body #sidebar {
@@ -99,7 +90,7 @@ body button, body form button {
 body .dialog .dialog-buttons button {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.05);
+  background: #414558;
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -112,7 +103,7 @@ body .dialog .dialog-buttons button {
 body .dialog .dialog-buttons button.default {
   --shadow-color:246deg 23% 6%;
   color: white;
-  background: rgba(33, 34, 44, 0.05);
+  background: #414558;
   font-size: 14px;
   border: 1px solid;
   border-image-slice: 1;
@@ -123,18 +114,17 @@ body .dialog .dialog-buttons button.default {
   text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color)/0.34), 0 0.9px 1px -0.4px hsl(var(--shadow-color)/0.34), 0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color)/0.34), 0.1px 2.7px 3px -1.1px hsl(var(--shadow-color)/0.34), 0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color)/0.34), 0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color)/0.34), 0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color)/0.34), 0.7px 15px 16.9px -2.5px hsl(var(--shadow-color)/0.34);
 }
 body button:hover, body button:focus {
-  box-shadow: 0 0 4px #9580ff;
+  border-width: 2px;
+  box-shadow: none;
 }
 body input:focus, body select:focus {
-  border-color: #80ffea;
   box-shadow: none;
 }
 body input[type=text]:focus, body input[type=number]:focus, body input[type=password]:focus, body input[type=date]:focus, body input[type=time]:focus {
-  border-color: #80ffea;
+  border-width: 1px;
   box-shadow: none;
 }
 body input[type=color][data-edit][data-edit] {
-  border: 1px solid rgba(149, 128, 255, 0.05);
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
@@ -148,7 +138,7 @@ body a.entity-link, body a.content-link, body a.inline-roll {
   border: 1px solid var(--red);
 }
 body a.entity-link:hover, body a.content-link:hover, body a.inline-roll:hover {
-  box-shadow: 0 0 5px #ff9580;
+  box-shadow: none;
 }
 body a.entity-link i, body a.content-link i, body a.inline-roll i {
   color: #6c7393;
@@ -187,46 +177,56 @@ body .directory .directory-header .header-search input {
 body input[type=range]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
-  border: 1px solid rgba(33, 34, 44, 0.05);
+  border: 1px solid #414558;
   background: linear-gradient(135deg, #ff9580 0%, #ff80bf 100%);
   cursor: pointer;
   box-shadow: none;
 }
 body input[type=checkbox] {
-  background: rgba(33, 34, 44, 0.05);
+  background: #414558;
+  color: #9580ff;
+}
+body input[type=radio] {
+  background: #414558;
   color: #9580ff;
 }
 body #module-management input[type=checkbox] {
-  background: rgba(68,71,90,0.52549);
+  background: #414558;
   color: #9580ff;
 }
 body select {
   color: white;
   background: #21222c;
-  border: 1px solid;
+  border-width: 1px;
   border-image-slice: 1;
   border-image-source: linear-gradient(135deg, #9580ff 50%, #80ffea 100%);
   transition: 0.3s ease-in-out all;
   box-shadow: none;
 }
 body select:focus {
-  border: 2px solid #80ffea;
+  border-width: 2px;
   box-shadow: none;
 }
 body form .notes, body form .hint {
-  color: rgba(248, 248, 242, 0.8);
+  color: white;
+}
+body form .form-group .form-fields {
+  border-width: 1px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9580ff 50%, #80ffea 100%);
+}
+body form:focus {
+  border-width: 2px;
 }
 body .compendium.directory .directory-list .directory-item {
   border-top: none;
   border-bottom: 1px solid transparent;
 }
 body #playlists .sound-control[data-action=sound-stop], body #playlists .sound-control[data-action=playlist-stop] {
-  color: #ff79c6;
+  color: #ff80bf;
 }
 body #chat-log {
   background: transparent;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   border: 1px solid transparent;
   border-radius: 2px;
 }
@@ -235,16 +235,19 @@ body #chat-controls {
 }
 body #chat-controls .roll-type-select {
   color: white;
-  background: none;
+  background: #21222c;
   border: 1px solid transparent;
   padding: 2px;
 }
 body #chat-form textarea {
   color: white;
   background: transparent;
-  border: 1px solid #80ffea;
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #80ffea 0%, #ff80bf 100%);
+}
+body:focus {
+  border-width: 2px;
 }
 body .dice-roll .dice-formula {
   color: inherit;
@@ -330,8 +333,6 @@ body .dice-roll .dice-total.fumble {
 }
 body .chat-message {
   background: rgba(149, 128, 255, 0.1);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -340,8 +341,6 @@ body .chat-message {
 }
 body .chat-message.whisper, body .chat-message.blind {
   background: rgba(149, 128, 255, 0.1);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   color: white;
   border: 1px solid;
   border-image-slice: 1;
@@ -368,6 +367,13 @@ body #module-management .package-list .package-title, body #module-management .p
 body #client-settings section.content h2.module-header, body #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: none;
+}
+body #client-settings#config-tabs div.tab[data-tab=modules] #searchField #searchInput {
+  border: 1px solid #ff80bf;
+}
+body #client-settings#config-tabs div.tab[data-tab=modules] #searchField #searchInput:focus {
+  border-width: 2px;
+  box-shadow: none;
 }
 body #module-management .package-list {
   border-top: none;
@@ -426,10 +432,23 @@ body .dnd5e {
 body .dnd5e.sheet {
   /* Select aka Dropdown Boxes */
 }
+body .dnd5e.sheet.window.content {
+  background: #21222c;
+  border: 1px solid transparent;
+  color: white;
+}
 body .dnd5e.sheet.item .effect-header {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(135deg, #9580ff 0%, #80ffea 100%);
+}
+body .dnd5e.sheet .sheet-navigation {
+  color: white;
+  font-family: "Signika";
+  font-size: 16px;
+}
+body .dnd5e.sheet .sheet-navigation .item.active {
+  border-bottom: 2px solid #9580ff;
 }
 body .dnd5e.sheet .filter-list .filter-item {
   color: #6c7393;
@@ -464,7 +483,7 @@ body .dnd5e input[type=text], body .dnd5e input[type=number] {
 }
 body .dnd5e button {
   color: white;
-  background: rgba(33, 34, 44, 0.05);
+  background: #21222c;
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(135deg, #9580ff 0%, #ff9580 100%);
@@ -479,7 +498,7 @@ body .dnd5e button:hover, body .dnd5e button:focus {
 }
 body .dnd5e.sheet .item-buttons {
   padding: 0;
-  color: rgba(248, 248, 242, 0.8);
+  color: white;
   border-radius: 6px;
   border: 1px solid rgba(149, 128, 255, 0.05);
 }
@@ -1279,7 +1298,7 @@ body .dice-so-nice .select2-container--default .select2-selection--multiple .sel
 
 /* Changelogs */
 body .chl-module-content {
-  color: rgba(248, 248, 242, 0.8);
+  color: white;
 }
 
 /* General midi-qol settings */
@@ -1383,6 +1402,23 @@ body #module-management .disable-all-modules {
 body #module-management .enable-all-modules {
   background: rgba(80,250,123,0.58039);
   border: none;
+}
+body #client-settings .sheet-footer button[name=reset],
+body #client-settings .sheet-footer button[name=submit] {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9580ff 0%, #80ffea 100%);
+}
+body #client-settings .sheet-footer:focus {
+  border-width: 2px;
+}
+body #config-tabs div.tab[data-tab=modules] #searchField #searchInput {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #9580ff 0%, #80ffea 100%);
+}
+body #config-tabs div.tab[data-tab=modules] #searchField #searchInput:focus {
+  border-width: 2px;
 }
 
 /*# sourceMappingURL=dracula-foundry.css.map */

@@ -64,13 +64,9 @@ body {
     }
   }
 
-  textarea {
-    border: 1px solid $cyan;
-
-      &:focus {
+  textarea:focus {
         border-width: 2px;
         box-shadow: none;
-      }
   }
 
   #sidebar {
@@ -176,18 +172,16 @@ body {
   }
 
   input:focus, select:focus {
-    border-color: $cyan;
     box-shadow: none;
   }
 
   input {
     &[type="text"]:focus, &[type="number"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="time"]:focus {
-      border-color: $cyan;
+      border-width: 1px;
       box-shadow: none;
     }
 
     &[type="color"][data-edit][data-edit] {
-      border: 1px solid $purpleLight;
       appearance: auto;
       background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
       color: -internal-light-dark(black, white);
@@ -203,7 +197,6 @@ body {
     }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
-      border-width: 2px;
       box-shadow: none;
     }
 
@@ -279,14 +272,14 @@ body {
   select {
     color: $whiteSecondary;
     background: $black;
-    border: 1px solid;
+    border-width: 1px;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
     transition: 0.3s ease-in-out all;
     box-shadow: none;
 
     &:focus {
-      border: 2px solid $cyan;
+      border-width: 2px;
       box-shadow: none;
     }
   }
@@ -294,6 +287,14 @@ body {
   form {
     .notes, .hint {
       color: $text-color;
+    }
+    .form-group .form-fields {
+      border-width: 1px;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 50%, $cyan 100%);
+    }
+    &:focus {
+      border-width: 2px;
     }
   }
 
@@ -328,11 +329,13 @@ body {
   #chat-form textarea {
     color: $whiteSecondary;
     background: transparent;
-    border: 1px solid $cyan;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $cyan 0%, $pink 100%);
   }
 
   &:focus {
-    color:
+    border-width: 2px;
   }
 
   .dice-roll .dice-formula {
@@ -497,8 +500,13 @@ body {
     }
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+      border: 1px solid $pink;
+        &:focus {
+          border-width: 2px;
+          box-shadow: none;
+        }
+      }
 
-    }
   }
 
 

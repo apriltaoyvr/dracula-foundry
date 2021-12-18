@@ -5,10 +5,25 @@
 
 body .dnd5e {
   &.sheet {
+    &.window.content {
+      background: $black;
+      border: 1px solid transparent;
+      color: $text-color;
+    }
+    
     &.item .effect-header {
       border: 1px solid;
       border-image-slice: 1;
       border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    }
+
+    .sheet-navigation {
+      color: $text-color;
+      font-family: "Signika";
+      font-size: 16px;
+      .item.active {
+        border-bottom: 2px solid $purple;
+      }
     }
 
     .filter-list .filter-item {
