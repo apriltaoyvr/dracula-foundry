@@ -346,15 +346,6 @@ body {
     border-width: 2px;
   }
 
-  .dice-roll .dice-formula {
-    color: inherit;
-    background: $blackLight;
-    border: 1px solid $pink;
-    border-radius: 2px;    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
-    box-shadow: none;
-    margin: 2px;
-  }
-
   .dice-tooltip .part-header .part-flavor {
     color: inherit;
     background: none;
@@ -362,7 +353,9 @@ body {
 
   .dice-roll .dice-total {
     background: $blackLight;
-    border: 1px solid $pink;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient($gradientDegree, $red 0%, $purple 100%);
     border-radius: 2px;    margin: 2px;
     box-shadow: none;
   }
@@ -378,14 +371,27 @@ body {
 
   .chat-message .dice-result .dice-tooltip .dice .part-header.flexrow {
     color: inherit;
-    border: 1px solid $pink;
-    border-radius: 2px;    box-shadow: none;
+    border: 1px solid $red;
+    box-shadow: none;
     margin: 2px;
+    text-shadow: 0 0 10px rgba(0 0 0 / 90%);
   }
 
   .dice-roll {
+    .dice-formula {
+      color: inherit;
+      background: $blackLight;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      box-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      margin: 2px;
+    }
     .dice-formula:hover, .dice-total:hover {
+      border-width: 2px;
       box-shadow: 0 0 4px $purpleLight;
+      cursor: pointer;
     }
   }
 
@@ -408,7 +414,7 @@ body {
       font-size: 14px;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       border-radius: 2px;
       margin-left: 2px;
       box-shadow:
