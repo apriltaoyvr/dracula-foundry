@@ -17,7 +17,7 @@ Hooks.once('init', () => {
 	root.style.setProperty('--color-text-light-heading', hsl(60, 30 % , 96 % ));
 	root.style.setProperty('--color-text-light-primary', hsl(60, 30 % , 100 % ));
 	root.style.setProperty('--color-text-dark-primary', hsl(230, 15 % , 15 % ));
-	root.style.setProperty('--color-text-dark-secondary', hsl(230, 15 % , 30 % ));
+	root.style.setProperty('--color-text-dark-secondary', hsl(230, 15 % , 70 % ));
 	root.style.setProperty('--color-text-dark-header', hsl(230, 15 % , 15 % ));
 	root.style.setProperty('--color-text-dark-inactive', hsl(230, 15 % , 50 % ));
 
