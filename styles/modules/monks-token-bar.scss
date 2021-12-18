@@ -80,6 +80,10 @@ body {
         font-family: "Signika";
         font-weight: bold;
         font-size: 14px;
+          &:hover {
+            color: $whiteSecondary;
+            box-shadow: 0 0 4px $red;
+          }
       }
 
       .card-footer button {

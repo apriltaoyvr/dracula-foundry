@@ -26,15 +26,14 @@ body {
         border-width: 2px;
       }
     }
-  }
 
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-
-    &:focus {
-      border-width: 2px;
+      &:focus {
+        border-width: 2px;
+      }
     }
   }
 }
