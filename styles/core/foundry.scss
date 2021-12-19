@@ -4,7 +4,11 @@
 
 body {
   h1, h2 {
-    border-bottom: 1px solid $purpleLight;
+    border-bottom: 1px solid $purple;
+  }
+
+  h4 {
+    color: $text-color;
   }
 
   hr {
@@ -21,6 +25,7 @@ body {
       border: none;
     }
   }
+
   fieldset {
     border: 1px solid $purpleLight;
   }
@@ -30,6 +35,16 @@ body {
     border: 1px solid $purpleLight;
     color: $text-color;
     margin-bottom: 1px;
+  }
+
+  .picker_wrapper {
+    background: $bg_window-content;
+    color: $text-color;
+    .button {
+      background: $bg_window-content;
+      border: 1px solid $blackSecondary;
+      color: $text-color;
+    }
   }
 
   .window-app {
@@ -54,19 +69,6 @@ body {
       border-radius: 6px;
       border: none;
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
-    }
-  }
-
-  .dnd5e {
-    .window-content {
-      color: $text-color;
-      background: $bg_window-content;
-      border: 1px solid $purpleLight;
-      border-radius: 6px;
-    }
-
-    .form-group label {
-      color: $whiteSecondary;
     }
   }
 
@@ -208,7 +210,7 @@ body {
       border-radius: 2px;    }
 
     &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
-      color: $red;
+      text-shadow: 0 0 4px $red;
       box-shadow: none;
     }
 

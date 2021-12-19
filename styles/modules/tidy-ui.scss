@@ -2,6 +2,14 @@
 
 body {
   #module-management {
+    #importExportModal {
+      #modalIO {
+        color: $text-color;
+        background: $bg_window-content;
+      }
+    }
+
+//The top two buttons in module management for TidyUI
     .disable-all-modules {
       background: #ff555594;
       border: none;

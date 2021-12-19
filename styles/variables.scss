@@ -24,7 +24,7 @@ $purpleLight: hsl(250, 100%, 75%, 5%);
 $red: hsl(10, 100%, 75%);
 $redSecondary: hsl(10, 100%, 90%);
 $redLight: hsla(10, 100%, 75%, 5%);
-$yellow: hsl(60, 100%, 75%);
+$yellow: hsla(16, 100%, 75%, 1);
 $yellowSecondary: hsl(60, 100%, 90%);
 $yellowLight: hsla(60, 100%, 75%, 5%);
 $cyan-transparent: hsl(170, 100%, 75%, 0.1);
@@ -37,7 +37,7 @@ $yellow-transparent: hsl(60, 100%, 75%, 0.1);
 $disabled: hsl(230, 15%, 50%);
 $gradientDegree: 135deg;
 
-$text-color: hsl(60, 30%, 100%);
+$text-color: hsla(60, 30%, 100%, 90%);
 $glowColor: rgba(255, 255, 255, 0.25);
 
 $bg_content: hsla(230, 15%, 15%, 75%);
