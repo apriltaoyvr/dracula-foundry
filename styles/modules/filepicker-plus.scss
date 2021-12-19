@@ -6,6 +6,13 @@
     animation: fadein 0.5s;
 }
 
-.filepicker .directory > li:last-child {
-  border-bottom: 1px solid $blackSecondary;
+.filepicker input[type="text"]
+
+.filepicker {
+  .directory > li:last-child {
+    border-bottom: 1px solid $blackSecondary;
+  }
+  input[type="text"] {
+    color: $blackTernary;
+  }
 }

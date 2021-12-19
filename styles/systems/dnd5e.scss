@@ -1,8 +1,6 @@
 @use '../variables' as *;
-
 /* Sheets */
 /* Comes up often in DAE menus */
-
 body {
   .dnd5e {
     .window-content {
@@ -21,6 +19,18 @@ body {
       color: $whiteSecondary;
     }
 
+    input {
+      &[type="text"],
+      &[type="number"] {
+        color: $white;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        &:focus {
+          box-shadow: 0 0 4px $purple;
+        }
+      }
+    }
+
     &.sheet {
       .window-content {
         color: $text-color;
@@ -30,6 +40,7 @@ body {
       }
 
       .sheet-header {
+        border-bottom: 1px solid $whiteLight;
         .summary {
           border-top: 1px solid $whiteLight;
         }
@@ -39,13 +50,16 @@ body {
         color: $text-color;
         font-family: "Signika";
         font-size: 16px;
+
         .item {
-          color: $disabled;
-          border-bottom: 2px solid $disabled;
+          color: $blackTernary;
+          border-bottom: 2px solid $blackTernary;
+
           &.active {
             color: $purple;
             border-bottom: 2px solid $purple;
           }
+
           &:hover {
             text-shadow: 0 0 4px $purple;
           }
@@ -57,7 +71,8 @@ body {
           }
           // DAE Item: Window
           .dae-effect-list {
-            .effect-label, .effect-name {
+            .effect-label,
+            .effect-name {
               border-left: 1px solid $whiteLight;
               border-right: 1px solid $whiteLight;
             }
@@ -67,8 +82,8 @@ body {
 
       .items-list {
         .items-header {
-          color: $purpleSecondary;
-          border: 1px solid $purpleSecondary;
+          color: $blackSecondary;
+          border: 1px solid $blackSecondary;
         }
 
         .item-name {
@@ -80,8 +95,10 @@ body {
 
         .item {
           border-bottom: 1px solid $whiteLight;
+
           .item-name {
             color: $text-color;
+
             .item-image {
               margin: 2px;
               border: 2px solid $whiteLight;
@@ -94,29 +111,35 @@ body {
       .filter-list .filter-item {
         color: $disabled;
         border-bottom: 3px solid $disabled;
+
         &.active {
           color: $purple;
           border-bottom: 3px solid $purple;
           text-shadow: none;
-          transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             color: $purple;
             border-bottom: 1px solid $blackLight;
             text-shadow: 0 0 4px $purple;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
           }
         }
       }
 
       &.actor {
         h4.box-title {
-          border-bottom: 1px solid $purpleSecondary;
-          color: $purpleSecondary;
+          border-bottom: 1px solid $blackSecondary;
+          color: $blackSecondary;
         }
 
         ul.skills-list {
           border: 2px solid $blackSecondary;
+          li.skill {
+            .skill-passive {
+              color: $disabled;
+            }
+          }
         }
 
         ul.attributes li.attribute {
@@ -126,151 +149,199 @@ body {
         .sheet-header {
           .summary {
             border-bottom: 1px solid $whiteLight;
+            li {
+              border-right: 1px solid $blackSecondary;
+            }
+          }
+          .attributes {
+            .attribute {
+              border-right: 1px solid $blackSecondary;
+            }
           }
         }
+
         .proficient {
           color: $disabled;
+
           .proficiency-toggle {
             color: $purple;
           }
         }
 
-        .ability-scores {
-          border: 1px solid $blackSecondary;
-          .ability {
-            .ability.modififiers {
-              border-right: 1px solid $blackSecondary;
-              border-top: 1px solid $blackSecondary;
-            }
-          }
-
         .counters {
           border-bottom: 1px solid $blackLight;
-        }
-      }
-
-      &.character {
-        .sheet-header {
-          img.profile {
-            border: 1px solid $blackSecondary;
-            border-radius: 3px;
-            margin: 5px;
+          .counter h4 {
+            color: $blackSecondary;
           }
         }
-      }
 
-      &.item .effect-header {
-        border: 1px solid $blackLight;
-        border-radius: 2px;
-      }
+        .ability-scores {
+          border-top: 1px solid $blackSecondary;
+          border-left: 1px solid $blackSecondary;
+          border-right: 1px solid $blackSecondary;
+          border-bottom: 1px solid $blackSecondary;
+          .ability {
+            .ability.modifiers {
+              border-right: 1px solid $blackSecondary;
+              border-top: 1px solid $blackSecondary;
+              border-bottom: 1px solid $blackSecondary;
+              span.ability-save,
+              span.ability-mod {
+                border-right: 2px solid $blackSecondary;
+              }
+              span.ability-mod {
+                border-right: 2px solid $blackSecondary;
+              }
+              span.ability-save {
+                border-left: 2px solid $blackSecondary;
+              }
+            }
+          }
+        }
 
+        .spell-slots,
+        .spell-school,
+        .spell-action,
+        .spell-target {
+          border-right: 1px solid $blackSecondary;
+        }
 
-      &.inventory-filters.flexrow element.style {
-        border: none;
+        &.character {
+          .sheet-header {
+            img.profile {
+              border: 1px solid $blackSecondary;
+              border-radius: 3px;
+              margin: 5px;
+            }
+          }
+          .resource {
+            .attribute-value {
+              label.recharge {
+                color: $blackSecondary;
+              }
+            }
+          }
+          .inventory-list {
+            .item.detail {
+              border-right: 1px solid transparent;
+            }
+          }
+        }
+
+        &.item .effect-header {
+          border: 1px solid $blackLight;
+          border-radius: 2px;
+        }
+
+        &.inventory-filters.flexrow element.style {
+          border: none;
+        }
+        select {
+          background: $black;
+          border: 1px solid $purple;
+          border-radius: 2px;
+        }
       }
 
       /* Select aka Dropdown Boxes */
+      .form-group .form-fields,
       select {
-        background: $black;
+        color: $white;
         border: 1px solid $purple;
         border-radius: 2px;
       }
-    }
 
-    /* Select aka Dropdown Boxes */
-    select, .form-group .form-fields {
-      color: $white;
-      border: 1px solid $purple;
-      border-radius: 2px;  }
-
-    input {
-      &[type="text"], &[type="number"] {
-        color: $white;
-        border: 1px solid $whiteLight;
-        border-radius: 2px;    }
-    }
-
-    /* Attack + Damage buttons */
-    button {
-      color: $whiteSecondary;
-      background: $bg_content;
-      border: 1px solid $purple;
-      border-radius: 2px;
-      --shadow-color: 246deg 23% 6%;
-      box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
-                  0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
-                  0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
-      text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
-                  0 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
-                  -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
-                  -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
-      margin: 2px;
-
-      &:hover, &:focus {
-        border-width: 2px;
-        box-shadow: none;
-        cursor: pointer;
+      input {
+        &[type="text"],
+        &[type="number"] {
+          color: $white;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          &:focus {
+            box-shadow: 0 0 4px $purple;
+          }
+        }
       }
-    }
+      /* Attack + Damage buttons */
+      button {
+        color: $whiteSecondary;
+        background: $bg_content;
+        border: 1px solid $purple;
+        border-radius: 2px;
+        --shadow-color: 246deg 23% 6%;
+        box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
+          0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
+          0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
+        text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
+          0 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
+          -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
+          -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
 
-    &.sheet .item-buttons {
-      padding: 0;
-      color: $text-color;
-      border-radius: 6px;
-      border: 1px solid $blackLight;
-      border-radius: 2px;  }
+        &:focus,
+        &:hover {
+          border-width: 2px;
+          box-shadow: none;
+          cursor: pointer;
+        }
+      }
 
-    /* Chat Cards */
-    &.chat-card {
-      .card-header {
-        border: none;
+      &.sheet .item-buttons {
         padding: 0;
+        color: $text-color;
+        border-radius: 6px;
+        border: 1px solid $blackLight;
+        border-radius: 2px;
       }
-
-      /* The segmented details in the expanded roll information */
-      .card-buttons span {
-        border: none;
-        font-size: 12px;
-        line-height: 25px;
-        background: inherit;
-        box-shadow: none;
-      }
-
-      .card-header {
-        /* Code referenced from Warhead
-        Sets item name header to regular font and be smaller + transition for .chat-message */
-        h3 {
-          color: $white;
-          font-family: "Signika";
-          font-weight: bold;
-          font-size: 14px;
-        }
-
-        &:hover h3 {
-          color: $white;
-          text-shadow: 0 0 8px $purple;
-          font-family: "Signika";
-          font-weight: bold;
-          font-size: 14px;
-        }
-
-        img {
-          height: 36px;
-          width: 36px;
-          border-radius: 12px;
-          border: 1px solid $black;
-          border-radius: 6px;
+      /* Chat Cards */
+      &.chat-card {
+        .card-header {
+          border: none;
           padding: 0;
         }
-      }
-
-      .card-footer {
-        color: $whiteSecondary;
-        border: none;
-        padding: 0;
-
-        span {
+        /* The segmented details in the expanded roll information */
+        .card-buttons span {
           border: none;
+          font-size: 12px;
+          line-height: 25px;
+          background: inherit;
+          box-shadow: none;
+        }
+
+        .card-header {
+          /* Code referenced from Warhead
+        Sets item name header to regular font and be smaller + transition for .chat-message */
+          h3 {
+            color: $white;
+            font-family: "Signika";
+            font-weight: bold;
+            font-size: 14px;
+          }
+
+          &:hover h3 {
+            color: $white;
+            text-shadow: 0 0 8px $purple;
+            font-family: "Signika";
+            font-weight: bold;
+            font-size: 14px;
+          }
+
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 12px;
+            border: 1px solid $black;
+            border-radius: 6px;
+            padding: 0;
+          }
+        }
+
+        .card-footer {
+          color: $whiteSecondary;
+          border: none;
+          padding: 0;
+
+          span {
+            border: none;
           }
         }
       }

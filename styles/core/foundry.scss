@@ -1,9 +1,8 @@
 @use '../variables' as *;
-
 /* Global stylings */
-
 body {
-  h1, h2 {
+  h1,
+  h2 {
     border-bottom: 1px solid $purple;
   }
 
@@ -21,6 +20,7 @@ body {
       border-top: none;
       border-bottom: none;
     }
+
     header.sheet-header img {
       border: none;
     }
@@ -40,6 +40,7 @@ body {
   .picker_wrapper {
     background: $bg_window-content;
     color: $text-color;
+
     .button {
       background: $bg_window-content;
       border: 1px solid $blackSecondary;
@@ -73,29 +74,35 @@ body {
   }
 
   textarea:focus {
-        border-width: 2px;
-        box-shadow: none;
+    border-width: 2px;
+    box-shadow: none;
   }
 
   #sidebar {
-    background: linear-gradient(0deg, $bg_window-content 0%, hsla(230, 15%, 15%, 50%) 75%, hsla(230, 15%, 15%, 5%) 100%);
+    background: linear-gradient(
+      0deg,
+      $bg_window-content 0%,
+      hsla(230, 15%, 15%, 50%) 75%,
+      hsla(230, 15%, 15%, 5%) 100%
+    );
     border: 2px solid transparent;
   }
 
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
     height: 6px;
   }
 
   ::-webkit-scrollbar-track {
     box-shadow: 0 0 1px $purple-transparent inset;
-    border-radius: 0;
+    border-radius: 4;
   }
 
   ::-webkit-scrollbar-thumb {
     outline: none;
-    border-radius: 0;
+    border-radius: 3px;
     background: $pink;
+    border: 1px solid transparent;
   }
 
   :root {
@@ -103,8 +110,9 @@ body {
     scrollbar-color: $pink $pink;
   }
 
-  button, form button {
-    --shadow-color:246deg 23% 6%;
+  button,
+  form button {
+    --shadow-color: 246deg 23% 6%;
     color: $whiteSecondary;
     background: $bg_content;
     font-size: 14px;
@@ -112,109 +120,139 @@ body {
     border-radius: 2px;
     margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-                0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+      0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
     text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-                0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-                0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-                0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-                0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-                0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-                0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
-      &:hover, &focus {
-        border-width: 2px;
-      }
+      0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+      0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+      0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+      0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+      0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+      0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+      0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+
+    &:hover,
+    &focus {
+      border-width: 2px;
+    }
   }
 
   .dialog .dialog-buttons button {
-    --shadow-color:246deg 23% 6%;
+    --shadow-color: 246deg 23% 6%;
     color: $whiteSecondary;
     background: $bg_content;
     font-size: 14px;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+    border-image-source: linear-gradient(
+      $gradientDegree,
+      $purple 0%,
+      $red 100%
+    );
     margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-                0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow:  0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                  0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-                  0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-                  0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-                  0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-                  0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-                  0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-                  0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+      0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+      0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+      0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+      0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+      0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+      0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+      0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+      0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
     &.default {
-      --shadow-color:246deg 23% 6%;
+      --shadow-color: 246deg 23% 6%;
       color: $whiteSecondary;
       background: $bg_content;
       font-size: 14px;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $purple 0%,
+        $red 100%
+      );
       margin-left: 2px;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                  0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-                  0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow:  0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-                    0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-                    0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-                    0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-                    0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-                    0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-                    0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-                    0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+        0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+        0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+        0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+        0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+        0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+        0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+        0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+        0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
   }
 
   button {
-    &:hover, &:focus {
+    &:focus,
+    &:hover {
       border-width: 2px;
       box-shadow: none;
     }
   }
 
-  input:focus, select:focus {
+  input:focus,
+  select:focus {
     border-width: 2px;
     box-shadow: none;
   }
 
   input {
-    &[type="text"]:focus, &[type="number"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="time"]:focus {
+    &[type="text"]:focus,
+    &[type="number"]:focus,
+    &[type="password"]:focus,
+    &[type="date"]:focus,
+    &[type="time"]:focus {
       background: $bg_content;
       border-width: 2px;
       box-shadow: none;
     }
+
     &[type="color"][data-edit][data-edit] {
       appearance: auto;
-      background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+      background-color: -internal-light-dark(
+        rgb(239, 239, 239),
+        rgb(59, 59, 59)
+      );
       color: -internal-light-dark(black, white);
-      border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+      border-color: -internal-light-dark(
+        rgb(118, 118, 118),
+        rgb(133, 133, 133)
+      );
     }
+
     &:placeholder {
       color: $disabled;
       text-shadow: 0 0 10px rgba(0 0 0 / 90%);
     }
-
   }
 
   a {
-    &.entity-link, &.content-link, &.inline-roll {
+    &.content-link,
+    &.entity-link,
+    &.inline-roll {
       color: $whiteSecondary;
       background: transparent;
       border: 1px solid $red;
-      border-radius: 2px;    }
+      border-radius: 2px;
+    }
 
-    &.entity-link:hover, &.content-link:hover, &.inline-roll:hover {
+    &.content-link:hover,
+    &.entity-link:hover,
+    &.inline-roll:hover {
       text-shadow: 0 0 4px $red;
       box-shadow: none;
     }
 
-    &.entity-link i, &.content-link i, &.inline-roll i {
+    &.content-link i,
+    &.entity-link i,
+    &.inline-roll i {
       color: $disabled;
     }
   }
@@ -232,12 +270,22 @@ body {
   }
 
   input {
-    &[type="text"], &[type="number"], &[type="password"], &[type="date"], &[type="time"], &[type="text"].color, &[type="color"][data-edit] {
+    &[type="text"],
+    &[type="number"],
+    &[type="password"],
+    &[type="date"],
+    &[type="time"],
+    &[type="text"].color,
+    &[type="color"][data-edit] {
       color: $whiteSecondary;
       background: $blackLight;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $purple 0%,
+        $red 100%
+      );
       box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
@@ -246,7 +294,8 @@ body {
       color: $whiteSecondary;
       background: $purpleLight;
       border: 1px solid $purpleLight;
-      border-radius: 2px;      box-shadow: none;
+      border-radius: 2px;
+      box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
   }
@@ -256,20 +305,25 @@ body {
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-image-source: linear-gradient(
+      $gradientDegree,
+      $purple 0%,
+      $cyan 100%
+    );
     box-shadow: none;
     transition: 0.3s ease-in-out all;
-      &:focus {
-        border-width: 2px;
-      }
+
+    &:focus {
+      border-width: 2px;
+    }
   }
 
   input {
-    &[type=range]::-webkit-slider-thumb {
+    &[type="range"]::-webkit-slider-thumb {
       height: 12px;
       width: 12px;
       border: 1px solid $blackLight;
-      border-radius: 0px;
+      border-radius: 0;
       background: linear-gradient($gradientDegree, $red 0%, $pink 100%);
       cursor: pointer;
       box-shadow: none;
@@ -306,12 +360,16 @@ body {
   }
 
   form {
-    .notes, .hint {
+    .hint,
+    .notes {
       color: $text-color;
     }
+
     .form-group .form-fields {
       border: 1px solid $purpleLight;
-      border-radius: 2px;    }
+      border-radius: 2px;
+    }
+
     &:focus {
       border-width: 2px;
     }
@@ -323,7 +381,8 @@ body {
   }
 
   #playlists .sound-control {
-    &[data-action="sound-stop"], &[data-action="playlist-stop"] {
+    &[data-action="sound-stop"],
+    &[data-action="playlist-stop"] {
       color: $pink;
     }
   }
@@ -331,7 +390,8 @@ body {
   #chat-log {
     background: transparent;
     border: 1px solid transparent;
-    border-radius: 2px;  }
+    border-radius: 2px;
+  }
 
   #chat-controls {
     background: none;
@@ -340,7 +400,8 @@ body {
       color: $whiteSecondary;
       background: $black;
       border: 1px solid transparent;
-      border-radius: 2px;      padding: 2px;
+      border-radius: 2px;
+      padding: 2px;
     }
   }
 
@@ -348,7 +409,8 @@ body {
     color: $whiteSecondary;
     background: transparent;
     border: 1px solid $purpleLight;
-    border-radius: 2px;  }
+    border-radius: 2px;
+  }
 
   &:focus {
     border-width: 2px;
@@ -363,8 +425,13 @@ body {
     background: $blackLight;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $red 0%, $purple 100%);
-    border-radius: 2px;    margin: 2px;
+    border-image-source: linear-gradient(
+      $gradientDegree,
+      $red 0%,
+      $purple 100%
+    );
+    border-radius: 2px;
+    margin: 2px;
     box-shadow: none;
   }
 
@@ -382,6 +449,7 @@ body {
       border-top: 1px solid $whiteLight;
       color: $disabled;
     }
+
     .dice-result .dice-tooltip .dice .part-header.flexrow {
       color: inherit;
       border: 1px solid $red;
@@ -397,12 +465,18 @@ body {
       background: $blackLight;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $purple 0%,
+        $red 100%
+      );
       text-shadow: 0 0 10px rgba(0 0 0 / 90%);
       box-shadow: 0 0 10px rgba(0 0 0 / 90%);
       margin: 2px;
     }
-    .dice-formula:hover, .dice-total:hover {
+
+    .dice-formula:hover,
+    .dice-total:hover {
       border-width: 2px;
       box-shadow: 0 0 4px $purpleLight;
       cursor: pointer;
@@ -428,16 +502,18 @@ body {
       font-size: 14px;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $red 0%, $pink 100%);
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $red 0%,
+        $pink 100%
+      );
       border-radius: 2px;
       margin-left: 2px;
-      box-shadow:
-        0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0px 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-        0px 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow:
-        0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0px 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+        0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
         0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
         0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
         0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
@@ -474,35 +550,47 @@ body {
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
     }
   }
-
-/* This will restyle most chat cards */
+  /* This will restyle most chat cards */
   .chat-message {
     background: $bg_content;
     color: $whiteSecondary;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $red 100%);
+    border-image-source: linear-gradient(
+      $gradientDegree,
+      $purple 0%,
+      $red 100%
+    );
     transition: max-height 0.3s ease-in-out;
 
-      &.whisper {
+    &.whisper {
       background: $bg_content;
       color: $whiteSecondary;
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $purple 0%,
+        $cyan 100%
+      );
       transition: max-height 0.3s ease-in-out;
-      }
+    }
 
-     &.blind {
-       background: $bg_content;
-       color: $whiteSecondary;
-       border: 1px solid;
-       border-image-slice: 1;
-       border-image-source: linear-gradient($gradientDegree, $cyan 0%, $green 100%);
-       transition: max-height 0.3s ease-in-out;
-     }
+    &.blind {
+      background: $bg_content;
+      color: $whiteSecondary;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $cyan 0%,
+        $green 100%
+      );
+      transition: max-height 0.3s ease-in-out;
+    }
 
-    .message-header, .message-metadata {
+    .message-header,
+    .message-metadata {
       color: $whiteSecondary;
       text-shadow: none;
     }
@@ -521,42 +609,55 @@ body {
   }
 
   #module-management .package-list {
-    .package-title, .package-metadata, .package-description {
+    .package-description,
+    .package-metadata,
+    .package-title {
       color: hsla(60, 30%, 100%, 80%);
     }
   }
 
   #client-settings {
-    section.content h2.module-header, &.app.window-app.form #config-tabs .settings-list h2.module-header span {
+    &.app.window-app.form #config-tabs .settings-list h2.module-header span,
+    section.content h2.module-header {
       color: hsla(60, 30%, 100%, 80%);
       border-bottom: none;
+    }
+    nav.tabs {
+      border-bottom: 1px solid $whiteSecondary;
+      &:focus {
+        text-shadow: 0 0 4px $red;
+      }
     }
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
       border: 1px solid;
       border-image-slice: 1;
-      border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
-      &:focus {
-          border-width: 2px;
-          box-shadow: none;
-        }
-      }
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $purple 0%,
+        $cyan 100%
+      );
 
+      &:focus {
+        border-width: 2px;
+        box-shadow: none;
+      }
+    }
   }
 
   .roll-table-config ol.table-results {
     .table-header {
       border: none;
     }
+
     .table-result .result-controls .lock-result {
       color: $whiteSecondary;
     }
+
     .table-result.drawn .lock-result {
       color: $disabled;
     }
   }
-
-
 
   #module-management .package-list {
     border-top: none;
@@ -567,20 +668,20 @@ body {
     color: $disabled;
     border-bottom: 1px solid $disabled;
     text-shadow: none;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: $white;
       border-bottom: 1px solid $disabled;
       box-shadow: none;
-      transition: color .2s ease-in-out;
+      transition: color 0.2s ease-in-out;
     }
 
     &.active {
       color: $red;
       border-bottom: 1px solid $red;
       box-shadow: none;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -607,14 +708,16 @@ body {
     header.table-header {
       background: none;
       border: 1px solid $purpleLight;
-      border-radius: 2px;      padding-bottom: 4px;
+      border-radius: 2px;
+      padding-bottom: 4px;
     }
 
     li.permission {
       border-bottom: 1px solid $purpleLight;
     }
   }
-    .tinymce .mce-content-body {
+
+  .tinymce .mce-content-body {
     color: $whiteSecondary;
   }
 }
