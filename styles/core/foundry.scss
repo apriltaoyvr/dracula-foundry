@@ -159,6 +159,7 @@ body {
     }
   }
 
+// Global button styling
   button,
   form button {
     @include thinBorder($accent);
@@ -226,11 +227,7 @@ body {
         0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
         0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
-  }
 
-  button {
-    background: $bg_content;
-    margin: 2px;
     &:focus,
     &:hover {
       border-width: 2px;
@@ -238,16 +235,9 @@ body {
     }
   }
 
-  input:focus,
-  select:focus {
-    border-width: 2px;
-    box-shadow: none;
-  }
-
   input {
     margin: 2px;
-    input:focus,
-    select:focus {
+    &:focus {
       border-width: 2px;
       box-shadow: none;
     }
