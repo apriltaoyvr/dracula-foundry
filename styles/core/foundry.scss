@@ -64,7 +64,7 @@ body {
     border: 1px solid $border-color-secondary;
     background: $bg_content;
     color: $text-color;
-    margin: 4px;
+    margin: 2px;
     &:focus {
       border-width: 2px;
       box-shadow: none;
@@ -165,7 +165,7 @@ body {
     @include lightToDark($bg_content);
     border-radius: 2px;
     font-size: 14px;
-    margin: 4px;
+    margin: 2px;
 
     --shadow-color: 246deg 23% 6%;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
@@ -230,7 +230,7 @@ body {
 
   button {
     background: $bg_content;
-    margin: 4px;
+    margin: 2px;
     &:focus,
     &:hover {
       border-width: 2px;
@@ -245,7 +245,7 @@ body {
   }
 
   input {
-    margin: 4px;
+    margin: 2px;
     input:focus,
     select:focus {
       border-width: 2px;
@@ -256,7 +256,7 @@ body {
     &[type="password"]:focus,
     &[type="date"]:focus,
     &[type="time"]:focus {
-      background: $bg_content;
+      background: $blackLight;
       border-width: 2px;
       box-shadow: none;
     }
@@ -327,11 +327,11 @@ body {
 
     &[type="range"] + .range-value {
       color: $text-color-secondary;
-      background: $border-color-secondary;
+      background: transparent;
       border: 1px solid $border-color-secondary;
       border-radius: 2px;
       box-shadow: none;
-      margin: 4px;
+      margin: 2px;
       transition: 0.3s ease-in-out all;
     }
   }
@@ -341,7 +341,7 @@ body {
     background: $bg_content;
     color: $text-color-secondary;
     box-shadow: none;
-    margin: 4px;
+    margin: 2px;
     transition: 0.3s ease-in-out all;
 
     &:focus {
@@ -359,7 +359,7 @@ body {
     }
 
     &[type="checkbox"] {
-      background: $border-color-secondary;
+      background: transparent;;
       color: $accent;
     }
 
@@ -380,7 +380,7 @@ body {
     border: 1px solid $accent;
     border-radius: 2px;
     box-shadow: none;
-    margin: 4px;
+    margin: 2px;
     transition: 0.3s ease-in-out all;
     &:focus {
       border-width: 2px;
@@ -389,17 +389,15 @@ body {
   }
 
   form {
-    margin: 4px;
-
     .hint,
     .notes {
       color: $text-color;
     }
 
     .form-group .form-fields {
-      border: 1px solid $accent;
+      border: 1px solid transparent;
       border-radius: 2px;
-      background: $bg_window_content;
+      background: transparent;
       color: $text-color-secondary;
     }
 
@@ -440,7 +438,7 @@ body {
     @include gradientBorder($accent, $highlight);
     color: $text-color-secondary;
     background: transparent;
-    margin: 4px;
+    margin: 2px;
     &:focus {
       border-width: 2px;
     }
@@ -470,11 +468,12 @@ body {
       @include thinBorder($accentSecondary);
       color: inherit;
       box-shadow: none;
-      margin: 4px;
+      margin: 2px;
       text-shadow: 0 0 10px $shadowColor;
     }
   }
 
+  // Most values related to dice result boxes
   .dice-roll {
     .dice-formula {
       @include gradientBorder($accent, $accentSecondary);
@@ -482,7 +481,7 @@ body {
       background: $blackLight;
       text-shadow: 0 0 10px $shadowColor;
       box-shadow: 0 0 10px $shadowColor;
-      margin: 4px;
+      margin: 2px;
       &:hover {
         border-width: 2px;
         box-shadow: 0 0 4px $border-color-secondary;
@@ -493,9 +492,14 @@ body {
       @include gradientBorder($accentSecondary, $accent);
       background: $blackLight;
       border-radius: 2px;
-      margin: 4px;
       box-shadow: none;
       text-shadow: 0 0 10px $shadowColor;
+      margin: 2px;
+      &:hover {
+        border-width: 2px;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
     }
     &.success {
       color: linear-gradient(
@@ -505,16 +509,13 @@ body {
       );
     }
     &.failure {
-      color: linear-gradient(
-        $gradientDegree,
-        $failure 0%,
-        $red 100%);
-        &:hover {
-          border-width: 2px;
-          box-shadow: 0 0 4px $border-color-secondary;
-          cursor: pointer;
-        }
+      color: linear-gradient($gradientDegree, $failure 0%, $red 100%);
+      &:hover {
+        border-width: 2px;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
       }
+    }
   }
 
   .dice-tooltip .part-header {
@@ -559,7 +560,7 @@ body {
     .message-content {
       color: $text-color-secondary;
       border: none;
-      margin: 4px;
+      margin: 2px;
       //The small boxes for each dice roll result
       .dice-tooltip .dice-rolls .roll {
         --shadow-color: 246deg 23% 6%;
@@ -629,7 +630,7 @@ body {
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
       @include gradientBorder($accent, $highlight);
-      margin: 4px;
+      margin: 2px;
 
       &:focus {
         border-width: 2px;

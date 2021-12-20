@@ -1,4 +1,6 @@
 .DS_Store
+.sass-lint.yml
+.eslintrc.json
 .idea/
 .vscode/
 node_modules/
