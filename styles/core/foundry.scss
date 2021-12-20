@@ -24,6 +24,15 @@ body {
     color: $text-color-secondary;
   }
 
+  .editor {
+    &-edit {
+      color: $text-color;
+      background: $bg_window_content;
+      border: 1px solid $border-color;
+      box-shadow: $glowColor;
+    }
+  }
+
   .sheet {
     nav.sheet-tabs {
       border-top: none;
@@ -89,9 +98,9 @@ body {
   #sidebar {
     background: linear-gradient(
       0deg,
-      hsla(230, 15%, 15%, 80%) 0%,
-      hsla(230, 15%, 15%, 50%) 75%,
-      hsla(230, 15%, 15%, 20%) 100%
+      hsla(230, 15%, 15%, 90%) 0%,
+      hsla(230, 15%, 15%, 75%) 75%,
+      hsla(230, 15%, 15%, 50%) 100%
     );
     border: 2px solid transparent;
   }
@@ -123,7 +132,11 @@ body {
     &-thumb {
       outline: none;
       border-radius: 0px;
-      background: $accentTertiary;
+      background: linear-gradient(
+        0deg,
+        $accentSecondary 0%,
+        $accentTertiary 100%
+      );
       border: 1px solid transparent;
     }
   }
@@ -452,21 +465,6 @@ body {
       margin-right: 5px;
     }
   }
-
-  .dice-roll .dice-total {
-    background: $blackLight;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      $gradientDegree,
-      $accentSecondary 0%,
-      $accent 100%
-    );
-    border-radius: 2px;
-    margin: 2px;
-    box-shadow: none;
-  }
-
   .chat-message {
     .table-draw .table-description {
       border-top: 1px solid $whiteLight;
@@ -496,13 +494,36 @@ body {
       text-shadow: 0 0 10px rgba(0 0 0 / 90%);
       box-shadow: 0 0 10px rgba(0 0 0 / 90%);
       margin: 2px;
+      &:hover {
+        border-width: 2px;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
     }
-
-    .dice-formula:hover,
-    .dice-total:hover {
-      border-width: 2px;
-      box-shadow: 0 0 4px $border-color-secondary;
-      cursor: pointer;
+    .dice-total {
+      background: $blackLight;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(
+        $gradientDegree,
+        $accentSecondary 0%,
+        $accent 100%
+      );
+      border-radius: 2px;
+      margin: 2px;
+      box-shadow: none;
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+    }
+    &.success {
+      color: linear-gradient($gradientDegree, $success 0%, $green 100%);
+    }
+    &.failure {
+      color: linear-gradient($gradientDegree, $failure 0%, $red 100%);
+      &:hover {
+        border-width: 2px;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
     }
   }
 
@@ -517,95 +538,6 @@ body {
     }
   }
 
-  .chat-message {
-    .message-content .dice-tooltip .dice-rolls .roll {
-      --shadow-color: 246deg 23% 6%;
-      color: hsl(60, 30%, 100%);
-      background: transparent;
-      font-size: 14px;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accentSecondary 0%,
-        $accentTertiary 100%
-      );
-      border-radius: 2px;
-      margin-left: 2px;
-      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-        0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-        0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-        0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-        0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-        0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-        0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-        0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
-      &.min,
-      &.failure {
-        color: inherit;
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(
-          $gradientDegree,
-          $failure 0%,
-          $red 100%
-        );
-      }
-
-      &.max,
-      &.success {
-        color: inherit;
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(
-          $gradientDegree,
-          $success 0%,
-          $green 100%
-        );
-      }
-
-      .dice-result {
-        color: $text-color-secondary;
-      }
-    }
-  }
-
-  .dice-roll .dice-total {
-    &.success {
-      color: inherit;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $success 0%,
-        $green 100%
-      );
-    }
-
-    &.failure {
-      color: inherit;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $failure 0%,
-        $red 100%
-      );
-    }
-
-    &.critical {
-      color: $success;
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
-    }
-
-    &.fumble {
-      color: $failure;
-      text-shadow: 0 0 10px rgba(0 0 0 / 50%);
-    }
-  }
   /* This will restyle most chat cards */
   .chat-message {
     background: $bg_content;
@@ -651,11 +583,68 @@ body {
       text-shadow: none;
     }
 
+    //Roll result display
     .message-content {
       color: $text-color-secondary;
       border: none;
       margin: 1px;
+      //The small boxes for each dice roll result
+      .dice-tooltip .dice-rolls .roll {
+        --shadow-color: 246deg 23% 6%;
+        color: hsl(60, 30%, 100%);
+        background: transparent;
+        font-size: 14px;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(
+          $gradientDegree,
+          $accentSecondary 0%,
+          $highlight 100%
+        );
+        border-radius: 2px;
+        margin-left: 2px;
+        box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+          0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+        text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+          0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+          0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+          0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+          0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+          0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+          0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+          0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
+        &.min,
+        &.failure {
+          color: inherit;
+          border: 1px solid;
+          border-image-slice: 1;
+          border-image-source: linear-gradient(
+            $gradientDegree,
+            $failure 0%,
+            $red 100%
+          );
+          filter: none;
+        }
+
+        &.max,
+        &.success {
+          color: inherit;
+          border: 1px solid;
+          border-image-slice: 1;
+          border-image-source: linear-gradient(
+            $gradientDegree,
+            $success 0%,
+            $green 100%
+          );
+          filter: none;
+        }
+
+        .dice-result {
+          color: $text-color-secondary;
+        }
+      }
       .form-group.sheet.actor .items-list {
         color: $text-color-secondary;
         border: none;
