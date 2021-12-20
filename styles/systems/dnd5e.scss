@@ -60,7 +60,7 @@ body {
     button {
       color: $whiteSecondary;
       background: $bg_content;
-      border: 1px solid $accent;
+      border: 2px solid $accent;
       border-radius: 2px;
       --shadow-color: 246deg 23% 6%;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
