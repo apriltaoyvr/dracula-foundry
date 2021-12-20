@@ -449,8 +449,14 @@ body {
   #chat-form textarea {
     color: $text-color-secondary;
     background: transparent;
-    border: 1px solid $accent;
+    border: 1px solid;
     border-radius: 2px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      $gradientDegree,
+      $accent 0%,
+      $highlight 100%,
+    );
   }
 
   &:focus {
