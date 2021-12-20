@@ -50,16 +50,28 @@ $text-color-secondary: $whiteSecondary;
 $text-color-dark: $blackSecondary;
 $border-color: $blackLight;
 $border-color-secondary: $purpleLight;
-$glowColor: 0 0 4px rgba(255, 255, 255, 0.25);
+$glowColor: rgba(255, 255, 255, 0.25);
+$shadowColor: rgba(0 0 0 / 90%);
 
 $bg_content: $black;
 $bg_window_content: $blackSecondary;
 
-@mixin hideBorder {
-  border-color: 1px solid transparent;
+
+@mixin gradientBorder($firstColor, $secondColor) {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    $gradientDegree,
+    $firstColor 0%,
+    $secondColor 100%
+  );
 }
 
-@mixin lightToDark {
+@mixin lightToDark($bg) {
   color: $text-color-secondary;
   background: transparent;
+}
+
+@mixin thinBorder ($thinColor) {
+  border: 1px solid $color;
 }

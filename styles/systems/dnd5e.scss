@@ -4,42 +4,22 @@
 body {
   .dice-roll {
     .dice-total {
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      text-shadow: 0 0 10px $shadowColor;
       &.success {
+        @include gradientBorder($success, $successSecondary);
         color: inherit;
         background: $bg_content;
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(
-          0deg,
-          $success 0%,
-          $greenSecondary 100%
-        );
       }
       &.failure {
+        @include gradientBorder($red, $failure);
         color: inherit;
         background: $bg_content;
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(
-          0deg,
-          $red 0%,
-          $failure 100%
-        );
       }
       &.critical {
-        color: linear-gradient(
-          0deg,
-          $success 0%,
-          $greenSecondary 100%
-        );
+        color: linear-gradient(0deg, $success 0%, $greenSecondary 100%);
       }
       &.fumble {
-        color: linear-gradient(
-          0deg,
-          $red 0%,
-          $failure 100%
-        );
+        color: linear-gradient(0deg, $red 0%, $failure 100%);
       }
     }
   }
@@ -94,6 +74,7 @@ body {
         0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
         0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
         0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+      margin: 2px;
       &:focus,
       &:hover {
         border-width: 2px;

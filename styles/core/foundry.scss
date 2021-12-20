@@ -3,6 +3,17 @@
 /* Global stylings */
 body {
   :root {
+    // Link color values with init.js
+    --color-dracula-accent: $accent;
+    --color-dracula-secondary: $accentSecondary;
+    --color-dracula-tertiary: $accentTertiary;
+
+    --color-dracula-text-primary: $text-color;
+    --color-dracula-text-secondary: $text-color-secondary;
+    --color-dracula-text-tertiary: $disabled;
+    --color-dracula-text-inactive: $disabled;
+
+    // Scrollbar
     scrollbar-width: thin;
     scrollbar-color: $accentTertiary $accentTertiary;
   }
@@ -30,7 +41,7 @@ body {
       color: $text-color;
       background: $bg_window_content;
       border: 1px solid $border-color;
-      box-shadow: $glowColor;
+      box-shadow: 0 0 4px $glowColor;
     }
   }
 
@@ -46,14 +57,14 @@ body {
   }
 
   fieldset {
-    border: 1px solid $border-color-secondary;
+    border: 1px solid transparent;
   }
 
   textarea {
-    background: $bg_content;
     border: 1px solid $border-color-secondary;
+    background: $bg_content;
     color: $text-color;
-    margin-bottom: 1px;
+    margin: 2px;
     &:focus {
       border-width: 2px;
       box-shadow: none;
@@ -73,7 +84,7 @@ body {
 
   .window-app {
     .window-content {
-      background: $black;
+      background: $bg_content;
       color: $text-color;
 
       > * {
@@ -83,7 +94,7 @@ body {
     }
 
     .window-header {
-      background: $black;
+      background: $bg_content;
       border-radius: 6px;
       border: 1px solid transparent;
     }
@@ -108,21 +119,21 @@ body {
 
   #navigation {
     .nav-item {
-      border: 1px solid $accent;
+      border: 1px solid transparent;
     }
     #nav-toggle {
       &:hover {
-        text-shadow: $glowColor;
+        text-shadow: 0 0 4px $glowColor;
       }
     }
     #scene-list {
       .scene.gm {
+        @include thinBorder($accent);
         background: transparent;
-        border: 1px solid $black;
       }
       .scene.view,
       .scene-context {
-        border: 1px solid $accent;
+        border: 1px solid transparent;
         background: transparent;
       }
     }
@@ -132,7 +143,7 @@ body {
     width: 6px;
     height: 6px;
     &-track {
-      box-shadow: 0 0 1px $blackLight inset;
+      box-shadow: 0 0 1px $glowColor inset;
       border-radius: 4;
     }
     &-thumb {
@@ -143,19 +154,18 @@ body {
         $accentSecondary 0%,
         $accentTertiary 100%
       );
-      border: 1px solid transparent;
+      @include thinBorder(transparent);
     }
   }
 
   button,
   form button {
+    @include thinBorder($accent);
+    @include lightToDark($bg_content);
     --shadow-color: 246deg 23% 6%;
-    color: $text-color-secondary;
-    background: $bg_content;
     font-size: 14px;
-    border: 1px solid $accent;
     border-radius: 2px;
-    margin-left: 2px;
+    margin: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
       0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
       0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -175,17 +185,11 @@ body {
   }
 
   .dialog .dialog-buttons button {
+    @include gradientBorder($accent, $accentSecondary);
     --shadow-color: 246deg 23% 6%;
     color: $text-color-secondary;
     background: $bg_content;
     font-size: 14px;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      $gradientDegree,
-      $accent 0%,
-      $accentSecondary 100%
-    );
     margin-left: 2px;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
       0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
@@ -200,17 +204,12 @@ body {
       0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
     &.default {
+      @include gradientBorder($accent, $accentSecondary);
       --shadow-color: 246deg 23% 6%;
       color: $text-color-secondary;
       background: $bg_content;
       font-size: 14px;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $accentSecondary 100%
-      );
+
       margin-left: 2px;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
         0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
@@ -227,6 +226,7 @@ body {
   }
 
   button {
+    margin: 2px;
     &:focus,
     &:hover {
       border-width: 2px;
@@ -241,6 +241,12 @@ body {
   }
 
   input {
+    margin: 2px;
+    input:focus,
+    select:focus {
+      border-width: 2px;
+      box-shadow: none;
+    }
     &[type="text"]:focus,
     &[type="number"]:focus,
     &[type="password"]:focus,
@@ -253,20 +259,14 @@ body {
 
     &[type="color"][data-edit][data-edit] {
       appearance: auto;
-      background-color: -internal-light-dark(
-        rgb(239, 239, 239),
-        rgb(59, 59, 59)
-      );
-      color: -internal-light-dark(black, white);
-      border-color: -internal-light-dark(
-        rgb(118, 118, 118),
-        rgb(133, 133, 133)
-      );
+      background-color: $bg_window_content;
+      color: $text-color;
+      border-color: $bg_window_content;
     }
 
     &:placeholder {
       color: $disabled;
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      text-shadow: 0 0 10px $glowColor;
     }
   }
 
@@ -314,15 +314,9 @@ body {
     &[type="time"],
     &[type="text"].color,
     &[type="color"][data-edit] {
+      @include gradientBorder($accent, $accentSecondary);
       color: $text-color-secondary;
       background: $blackLight;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $accentSecondary 100%
-      );
       box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
@@ -333,21 +327,17 @@ body {
       border: 1px solid $border-color-secondary;
       border-radius: 2px;
       box-shadow: none;
+      margin: 2px;
       transition: 0.3s ease-in-out all;
     }
   }
 
   .directory .directory-header .header-search input {
+    @include gradientBorder($accent, $highlight);
     background: $bg_content;
     color: $text-color-secondary;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      $gradientDegree,
-      $accent 0%,
-      $highlight 100%
-    );
     box-shadow: none;
+    margin: 2px;
     transition: 0.3s ease-in-out all;
 
     &:focus {
@@ -357,15 +347,9 @@ body {
 
   input {
     &[type="range"]::-webkit-slider-thumb {
+      @include gradientBorder($accentSecondary, $accentTertiary);
       height: 12px;
       width: 12px;
-      border: 1px solid $blackLight;
-      border-radius: 0;
-      background: linear-gradient(
-        $gradientDegree,
-        $accentSecondary 0%,
-        $accentTertiary 100%
-      );
       cursor: pointer;
       box-shadow: none;
     }
@@ -391,9 +375,9 @@ body {
     background: $black;
     border: 1px solid $accent;
     border-radius: 2px;
-    transition: 0.3s ease-in-out all;
     box-shadow: none;
-
+    margin: 2px;
+    transition: 0.3s ease-in-out all;
     &:focus {
       border-width: 2px;
       box-shadow: none;
@@ -401,6 +385,8 @@ body {
   }
 
   form {
+    margin: 2px;
+
     .hint,
     .notes {
       color: $text-color;
@@ -436,31 +422,22 @@ body {
 
   #chat-controls {
     background: none;
-
     .roll-type-select {
-      color: $text-color-secondary;
-      background: $black;
-      border: 1px solid transparent;
+      @include lightToDark($bg_content);
+      @include thinBorder(transparent);
       border-radius: 2px;
       padding: 2px;
     }
   }
 
   #chat-form textarea {
+    @include gradientBorder($accent, $highlight);
     color: $text-color-secondary;
     background: transparent;
-    border: 1px solid;
-    border-radius: 2px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      $gradientDegree,
-      $accent 0%,
-      $highlight 100%,
-    );
-  }
-
-  &:focus {
-    border-width: 2px;
+    margin: 2px;
+    &:focus {
+      border-width: 2px;
+    }
   }
 
   .dice-tooltip .part-header {
@@ -469,7 +446,7 @@ body {
       background: none;
     }
     .part-total {
-      border: 1px transparent;
+      @include thinBorder(transparent);
       border-bottom: none;
       background: transparent;
       font-size: 12px;
@@ -484,27 +461,21 @@ body {
     }
 
     .dice-result .dice-tooltip .dice .part-header.flexrow {
+      @include thinBorder($accentSecondary);
       color: inherit;
-      border: 1px solid $accentSecondary;
       box-shadow: none;
       margin: 2px;
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      text-shadow: 0 0 10px $shadowColor;
     }
   }
 
   .dice-roll {
     .dice-formula {
+      @include gradientBorder($accent, $accentSecondary);
       color: inherit;
       background: $blackLight;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $accentSecondary 100%
-      );
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
-      box-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      text-shadow: 0 0 10px $shadowColor;
+      box-shadow: 0 0 10px $shadowColor;
       margin: 2px;
       &:hover {
         border-width: 2px;
@@ -513,30 +484,31 @@ body {
       }
     }
     .dice-total {
+      @include gradientBorder($accentSecondary, $accent);
       background: $blackLight;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accentSecondary 0%,
-        $accent 100%
-      );
       border-radius: 2px;
       margin: 2px;
       box-shadow: none;
-      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      text-shadow: 0 0 10px $shadowColor;
     }
     &.success {
-      color: linear-gradient($gradientDegree, $success 0%, $greenSecondary 100%);
+      color: linear-gradient(
+        $gradientDegree,
+        $success 0%,
+        $greenSecondary 100%
+      );
     }
     &.failure {
-      color: linear-gradient($gradientDegree, $failure 0%, $red 100%);
-      &:hover {
-        border-width: 2px;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
+      color: linear-gradient(
+        $gradientDegree,
+        $failure 0%,
+        $red 100%);
+        &:hover {
+          border-width: 2px;
+          box-shadow: 0 0 4px $border-color-secondary;
+          cursor: pointer;
+        }
       }
-    }
   }
 
   .dice-tooltip .part-header {
@@ -552,40 +524,22 @@ body {
 
   /* This will restyle most chat cards */
   .chat-message {
+    @include gradientBorder($accent, $accentSecondary);
     background: $bg_content;
     color: $text-color-secondary;
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      $gradientDegree,
-      $accent 0%,
-      $accentSecondary 100%
-    );
     transition: max-height 0.3s ease-in-out;
 
     &.whisper {
+      @include gradientBorder($accent, $highlight);
       background: $bg_content;
       color: $text-color-secondary;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $highlight 100%
-      );
       transition: max-height 0.3s ease-in-out;
     }
 
     &.blind {
+      @include gradientBorder($accent, $accentTertiary);
       background: $bg_content;
       color: $text-color-secondary;
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $accentTertiary 100%
-      );
       transition: max-height 0.3s ease-in-out;
     }
 
@@ -599,7 +553,7 @@ body {
     .message-content {
       color: $text-color-secondary;
       border: none;
-      margin: 1px;
+      margin: 2px;
       //The small boxes for each dice roll result
       .dice-tooltip .dice-rolls .roll {
         --shadow-color: 246deg 23% 6%;
@@ -623,27 +577,14 @@ body {
 
         &.min,
         &.failure {
+          @include gradientBorder($failure, $red);
           color: inherit;
-          border: 1px solid;
-          border-image-slice: 1;
-          border-image-source: linear-gradient(
-            0deg,
-            $red 0%,
-            $failure 100%
-          );
           filter: none;
         }
 
         &.max,
         &.success {
-          color: inherit;
-          border: 1px solid;
-          border-image-slice: 1;
-          border-image-source: linear-gradient(
-            0deg,
-            $greenSecondary 0%,
-            $success 100%
-          );
+          @include gradientBorder($success, $green);
           filter: none;
         }
 
@@ -681,13 +622,8 @@ body {
     }
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-      border: 1px solid;
-      border-image-slice: 1;
-      border-image-source: linear-gradient(
-        $gradientDegree,
-        $accent 0%,
-        $highlight 100%
-      );
+      @include gradientBorder($accent, $highlight);
+      margin: 2px;
 
       &:focus {
         border-width: 2px;
