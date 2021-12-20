@@ -600,13 +600,7 @@ body {
         color: $text-color;
         background: transparent;
         font-size: 14px;
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(
-          0deg,
-          $accentTertiary 0%,
-          $highlight 100%
-        );
+        border: 1px solid $accentTertiary;
         border-radius: 2px;
         margin-left: 2px;
         box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
