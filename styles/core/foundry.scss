@@ -66,22 +66,12 @@ body {
     color: $text-color;
     margin: 2px;
     &:focus {
-      border-width: 2px;
+      border-width: 2px
       box-shadow: none;
     }
   }
 
-  .picker_wrapper {
-    background: $bg_content;
-    color: $text-color;
-
-    .button {
-      background: $bg_content;
-      border: 1px solid $blackSecondary;
-      color: $text-color;
-    }
-  }
-
+// Main window wrappers
   .window-app {
     .window-content {
       background: $bg_content;
@@ -107,38 +97,20 @@ body {
     }
   }
 
+// The sidebar itself
   #sidebar {
     background: linear-gradient(
       0deg,
       hsla(230, 15%, 15%, 90%) 0%,
       hsla(230, 15%, 15%, 75%) 75%,
-      hsla(230, 15%, 15%, 50%) 100%
+      hsla(230, 15%, 15%, 70%) 100%
     );
-    border: 2px solid transparent;
+    border: 2px solid $bg_content;
+    backdrop-filter: blur(12px)
   }
 
-  #navigation {
-    .nav-item {
-      border: 1px solid transparent;
-    }
-    #nav-toggle {
-      &:hover {
-        text-shadow: 0 0 4px $glowColor;
-      }
-    }
-    #scene-list {
-      .scene.gm {
-        @include thinBorder($accent);
-        background: transparent;
-      }
-      .scene.view,
-      .scene-context {
-        border: 1px solid transparent;
-        background: transparent;
-      }
-    }
-  }
 
+// Scrollbar
   ::-webkit-scrollbar {
     @include thinBorder(transparent);
     background: transparent;
@@ -159,78 +131,38 @@ body {
     }
   }
 
-  // Global button styling
+  // Global  styling
   button,
   form button {
     @include thinBorder($accent);
     @include lightToDark($bg_content);
+    @include heavyShadow;
     border-radius: 2px;
     font-size: 14px;
     margin: 2px;
-
-    --shadow-color: 246deg 23% 6%;
-    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-      0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-      0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-      0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-      0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-      0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-      0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-      0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-      0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-      0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
-
-    &:hover,
-    &focus {
-      border-width: 2px;
+    &:hover {
+      @include hoverRaise;
     }
   }
 
+// Separate from the above if I want pop-ups to have different colours
   .dialog .dialog-buttons button {
-    @include gradientBorder($accent, $accentSecondary);
-    color: $text-color-secondary;
-    background: $bg_content;
+    @include thinBorder($accent);
+    @include lightToDark($bg_content);
+    @include heavyShadow;
     font-size: 14px;
     margin: 2px;
-
-    --shadow-color: 246deg 23% 6%;
-    box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-      0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-      0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-    text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-      0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-      0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-      0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-      0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-      0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-      0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-      0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
-
     &.default {
-      @include gradientBorder($accent, $accentSecondary);
-      color: $text-color-secondary;
-      background: $bg_content;
+      @include thinBorder($accent);
+      @include lightToDark($bg_content);
+      @include heavyShadow;
       font-size: 14px;
       margin: 2px;
-
-      --shadow-color: 246deg 23% 6%;
-      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
-        0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
-      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
-        0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
-        0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
-        0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
-        0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
-        0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
-        0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
-        0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
     }
 
     &:focus,
     &:hover {
-      border-width: 2px;
+      @include hoverRaise;
       box-shadow: none;
     }
   }
@@ -238,16 +170,16 @@ body {
   input {
     margin: 2px;
     &:focus {
-      border-width: 2px;
       box-shadow: none;
     }
+
     &[type="text"]:focus,
     &[type="number"]:focus,
     &[type="password"]:focus,
     &[type="date"]:focus,
     &[type="time"]:focus {
-      background: $blackLight;
-      border-width: 2px;
+      @include hoverRaise;
+      background: $border-color;
       box-shadow: none;
     }
 
@@ -288,17 +220,6 @@ body {
     }
   }
 
-  table {
-    border-top: none;
-    border-bottom: none;
-    text-shadow: none;
-    font-size: 12px;
-
-    thead {
-      background: $blackLight;
-      border-bottom: none;
-    }
-  }
 
   input {
     &[type="text"],
@@ -308,66 +229,53 @@ body {
     &[type="time"],
     &[type="text"].color,
     &[type="color"][data-edit] {
-      @include gradientBorder($accent, $accentSecondary);
+      @include thinBorder($accent);
       color: $text-color-secondary;
-      background: $blackLight;
+      background: $border-color;
       box-shadow: none;
       transition: 0.3s ease-in-out all;
     }
 
     &[type="range"] + .range-value {
+      @include thinBorder($accent);
       color: $text-color-secondary;
-      background: transparent;
-      @include gradientBorder($accent, $accentSecondary);
-      box-shadow: none;
-      margin: 2px;
-      transition: 0.3s ease-in-out all;
-    }
-  }
-
-  .directory {
-    .action-buttons button {
-      background: $bg_content;
-    }
-    .directory-header .header-search input {
-      @include gradientBorder($accent, $highlight);
-      background: $bg_content;
-      color: $text-color-secondary;
+      background: $border-color;
       box-shadow: none;
       margin: 2px;
       transition: 0.3s ease-in-out all;
 
-      &:focus {
-        border-width: 2px;
+      &[type="range"]::-webkit-slider-thumb {
+        @include gradientBorder($accentSecondary, $accentTertiary);
+        height: 12px;
+        width: 12px;
+        cursor: pointer;
+        box-shadow: none;
+      }
+
+      &[type="checkbox"] {
+        background: transparent;
+        color: $accent;
+      }
+
+      &[type="radio"] {
+        background: $border-color-secondary;
+        color: $accent;
       }
     }
   }
 
-  input {
-    &[type="range"]::-webkit-slider-thumb {
-      @include gradientBorder($accentSecondary, $accentTertiary);
-      height: 12px;
-      width: 12px;
-      cursor: pointer;
-      box-shadow: none;
-    }
+  table {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    text-shadow: none;
+    font-size: 12px;
 
-    &[type="checkbox"] {
-      background: transparent;
-      color: $accent;
-    }
-
-    &[type="radio"] {
-      background: $border-color-secondary;
-      color: $accent;
+    thead {
+      background: $border-color;
+      border-bottom: none;
     }
   }
-
-  #module-management input[type="checkbox"] {
-    background: $border-color-secondary;
-    color: $accent;
-  }
-
+// Select aka drop-down boxes
   select {
     color: $text-color-secondary;
     background: $black;
@@ -400,11 +308,54 @@ body {
     }
   }
 
+  // For color pickers
+    .picker_wrapper {
+      background: $bg_content;
+      color: $text-color;
+
+      .button {
+        background: $bg_content;
+        border: 1px solid $blackSecondary;
+        color: $text-color;
+      }
+    }
+
+// Default text editor for journals
+    .tinymce .mce-content-body {
+      color: $text-color-secondary;
+    }
+
+  .directory {
+    .action-buttons button {
+      background: $bg_content;
+    }
+    .directory-header .header-search input {
+      @include thinBorder($accent);
+      background: $bg_content;
+      color: $text-color-secondary;
+      box-shadow: none;
+      margin: 2px;
+      transition: 0.3s ease-in-out all;
+
+      &:focus {
+        border-width: 2px;
+      }
+    }
+  }
+
+// WIP doesn't seem to affect anything
+  #module-management input[type="checkbox"] {
+    background: $border-color-secondary;
+    color: $accent;
+  }
+
+// Compedium Menu
   .compendium.directory .directory-list .directory-item {
     border-top: none;
     border-bottom: 1px solid transparent;
   }
 
+// Sound Menu
   #playlists .sound-control {
     &[data-action="sound-stop"],
     &[data-action="playlist-stop"] {
@@ -412,6 +363,7 @@ body {
     }
   }
 
+// Chat Menu
   #chat-log {
     @include thinBorder(transparent);
     background: transparent;
@@ -429,98 +381,12 @@ body {
   }
 
   #chat-form textarea {
-    @include gradientBorder($accent, $highlight);
+    @include thinBorder($accent);
     color: $text-color-secondary;
     background: transparent;
     margin: 2px;
     &:focus {
       border-width: 2px;
-    }
-  }
-
-  .dice-tooltip .part-header {
-    .part-flavor {
-      color: inherit;
-      background: none;
-    }
-    .part-total {
-      @include thinBorder(transparent);
-      border-bottom: none;
-      background: transparent;
-      font-size: 12px;
-      line-height: 25px;
-      margin-right: 5px;
-    }
-  }
-  .chat-message {
-    .table-draw .table-description {
-      border-top: 1px solid $whiteLight;
-      color: $disabled;
-    }
-
-    .dice-result .dice-tooltip .dice .part-header.flexrow {
-      @include thinBorder($accentSecondary);
-      color: inherit;
-      box-shadow: none;
-      margin: 2px;
-      text-shadow: 0 0 10px $shadowColor;
-    }
-  }
-
-  // Most values related to dice result boxes
-  .dice-roll {
-    .dice-formula {
-      @include gradientBorder($accent, $accentSecondary);
-      color: inherit;
-      background: $blackLight;
-      text-shadow: 0 0 10px $shadowColor;
-      box-shadow: 0 0 10px $shadowColor;
-      margin: 2px;
-      &:hover {
-        border-width: 2px;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-    .dice-total {
-      @include gradientBorder($accentSecondary, $accent);
-      background: $blackLight;
-      border-radius: 2px;
-      box-shadow: none;
-      text-shadow: 0 0 10px $shadowColor;
-      margin: 2px;
-      &:hover {
-        border-width: 2px;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-    &.success {
-      color: $success;
-      &:hover {
-        border-width: 2px;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-    &.failure {
-      color: $failure;
-      &:hover {
-        border-width: 2px;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .dice-tooltip .part-header {
-    color: inherit;
-    border: none;
-    box-shadow: none;
-
-    .part-formula {
-      margin-left: 6px;
-      margin-top: 1px;
     }
   }
 
@@ -551,12 +417,102 @@ body {
       text-shadow: none;
     }
 
-  //Roll result display
+
+  // Most values related to dice result boxes
+  .dice-roll {
+    .dice-formula {
+      @include gradientBorder($accent, $accentSecondary);
+      color: inherit;
+      background: $border-color;
+      text-shadow: 0 0 10px $shadowColor;
+      box-shadow: 0 0 10px $shadowColor;
+      margin: 2px;
+      &:hover {
+        @include hoverRaise;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
+    }
+    .dice-total {
+      @include gradientBorder($accent, $accentSecondary);
+      background: $border-color;
+      border-radius: 2px;
+      box-shadow: none;
+      text-shadow: 0 0 10px $shadowColor;
+      margin: 2px;
+      &:hover {
+        @include hoverRaise;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
+    }
+    &.success {
+      color: $success;
+      &:hover {
+        @include hoverRaise;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
+    }
+    &.failure {
+      color: $failure;
+      &:hover {
+        @include hoverRaise;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dice-tooltip .part-header {
+    color: inherit;
+    border: none;
+    box-shadow: none;
+
+    .part-formula {
+      margin-left: 6px;
+      margin-top: 1px;
+    }
+  }
+
+
+  // Removing borders from the detailed dice results
+    .dice-tooltip .part-header {
+      .part-flavor {
+        color: inherit;
+        background: none;
+      }
+      .part-total {
+        @include thinBorder(transparent);
+        border-bottom: none;
+        background: transparent;
+        font-size: 12px;
+        line-height: 25px;
+        margin-right: 5px;
+      }
+    }
+    .chat-message {
+      .table-draw .table-description {
+        border-top: 1px solid $whiteLight;
+        color: $disabled;
+      }
+
+      .dice-result .dice-tooltip .dice .part-header.flexrow {
+        @include thinBorder($accentSecondary);
+        color: inherit;
+        box-shadow: none;
+        margin: 2px;
+        text-shadow: 0 0 10px $shadowColor;
+      }
+    }
+
+
+    //Roll result display
     .message-content {
       color: $text-color-secondary;
       border: none;
       margin: 2px;
-      //The small boxes for individual dice roll results
+      // Per die roll result
       .dice-tooltip .dice-rolls .roll {
         @include gradientBorder($purple, $disabled);
         color: $text-color;
@@ -593,7 +549,6 @@ body {
         .dice-result {
           color: $text-color-secondary;
         }
-
       }
       .form-group.sheet.actor .items-list {
         color: $text-color-secondary;
@@ -603,6 +558,7 @@ body {
     }
   }
 
+// Module management menus
   #module-management .package-list {
     .package-description,
     .package-metadata,
@@ -629,49 +585,9 @@ body {
       margin: 2px;
 
       &:focus {
-        border-width: 2px;
+        @border-width: 2px;
         box-shadow: none;
       }
-    }
-  }
-
-  .roll-table-config ol.table-results {
-    .table-header {
-      border: none;
-    }
-
-    .table-result .result-controls .lock-result {
-      color: $text-color-secondary;
-    }
-
-    .table-result.drawn .lock-result {
-      color: $disabled;
-    }
-  }
-
-  #module-management .package-list {
-    border-top: none;
-    border-bottom: none;
-  }
-
-  nav.list-filters a.filter {
-    color: $disabled;
-    border-bottom: 1px solid $disabled;
-    text-shadow: none;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      color: $white;
-      border-bottom: 1px solid $disabled;
-      box-shadow: none;
-      transition: color 0.2s ease-in-out;
-    }
-
-    &.active {
-      color: $accentSecondary;
-      border-bottom: 1px solid $accentSecondary;
-      box-shadow: none;
-      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -707,7 +623,68 @@ body {
     }
   }
 
-  .tinymce .mce-content-body {
-    color: $text-color-secondary;
+// Roll tables
+  .roll-table-config ol.table-results {
+    .table-header {
+      border: none;
+    }
+
+    .table-result .result-controls .lock-result {
+      color: $text-color-secondary;
+    }
+
+    .table-result.drawn .lock-result {
+      color: $disabled;
+    }
   }
+
+  #module-management .package-list {
+    border-top: none;
+    border-bottom: none;
+  }
+
+// Navigation
+  #navigation {
+    .nav-item {
+      border: 1px solid transparent;
+    }
+    #nav-toggle {
+      &:hover {
+        text-shadow: 0 0 4px $glowColor;
+      }
+    }
+    #scene-list {
+      .scene.gm {
+        @include thinBorder($highlight);
+        background: $bg_content;
+      }
+      .scene.view,
+      .scene-context {
+        @include thinBorder($accent);
+        background: $bg_content;
+      }
+    }
+  }
+
+  nav.list-filters a.filter {
+    color: $disabled;
+    border-bottom: 1px solid $disabled;
+    text-shadow: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $white;
+      border-bottom: 1px solid $disabled;
+      box-shadow: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    &.active {
+      color: $accentSecondary;
+      border-bottom: 1px solid $accentSecondary;
+      box-shadow: none;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
 }

@@ -1,32 +1,32 @@
 /* Dracula UI Colours Import */
-$black: hsla(230, 15%, 15%, 80%);
-$blackSecondary: hsla(230, 15%, 30%, 80%);
+$black: hsla(230, 15%, 15%, 80);
+$blackSecondary: hsla(230, 15%, 30%, 80);
 $blackTernary: hsl(230, 15%, 70%);
-$blackLight: hsla(230, 15%, 15%, 5%);
-$white: hsla(60, 30%, 96%, 90%);
-$whiteSecondary: hsla(60, 30%, 100%, 80%);
-$whiteLight: hsla(60, 30%, 96%, 5%);
+$blackLight: hsla(230, 15%, 15%, 5);
+$white: hsla(60, 30%, 96%, 90);
+$whiteSecondary: hsla(60, 30%, 100%, 80);
+$whiteLight: hsla(60, 30%, 96%, 5);
 $cyan: hsl(170, 100%, 75%);
 $cyanSecondary: hsl(170, 100%, 90%);
-$cyanLight: hsla(170, 100%, 75%, 5%);
+$cyanLight: hsla(170, 100%, 75%, 5);
 $green: hsl(115, 100%, 75%);
 $greenSecondary: hsl(115, 100%, 90%);
-$greenLight: hsla(115, 100%, 75%, 5%);
+$greenLight: hsla(115, 100%, 75%, 5);
 $orange: hsl(35, 100%, 75%);
 $orangeSecondary: hsl(35, 100%, 90%);
-$orangeLight: hsla(35, 100%, 75%, 5%);
+$orangeLight: hsla(35, 100%, 75%, 5);
 $pink: hsl(330, 100%, 75%);
 $pinkSecondary: hsl(330, 100%, 90%);
-$pinkLight: hsla(330, 100%, 75%, 5%);
-$purple: hsla(249, 31%, 59%, 1);
-$purpleSecondary: hsl(250, 100%, 90%);
-$purpleLight: hsl(250, 100%, 75%, 5%);
-$red: hsl(10, 100%, 75%);
-$redSecondary: hsl(10, 100%, 90%);
-$redLight: hsla(10, 100%, 75%, 5%);
+$pinkLight: hsla(330, 100%, 75%, 5);
+$purple: hsla(249, 31%, 59%, 80);
+$purpleSecondary: hsla(250, 100%, 90%, 80);
+$purpleLight: hsla(250, 100%, 75%, 5);
+$red: hsla(10, 100%, 75%, 80);
+$redSecondary: hsla(10, 100%, 90%, 80);
+$redLight: hsla(10, 100%, 75%, 5);
 $yellow: hsla(16, 100%, 75%, 1);
 $yellowSecondary: hsl(60, 100%, 90%);
-$yellowLight: hsla(60, 100%, 75%, 5%);
+$yellowLight: hsla(60, 100%, 75%, 5);
 $cyan-transparent: hsl(170, 100%, 75%, 0.1);
 $green-transparent: hsl(115, 100%, 75%, 0.1);
 $orange-transparent: hsl(35, 100%, 75%, 0.1);
@@ -49,13 +49,12 @@ $text-color: $white;
 $text-color-secondary: $whiteSecondary;
 $text-color-dark: $blackSecondary;
 $border-color: $blackLight;
-$border-color-secondary: $purpleLight;
+$border-color-secondary: $purpleLight
 $glowColor: rgba(255, 255, 255, 0.25);
 $shadowColor: rgba(0 0 0 / 90%);
 
 $bg_content: $black;
 $bg_window_content: $blackSecondary;
-
 
 @mixin gradientBorder($firstColor, $secondColor) {
   border: 1px solid;
@@ -67,6 +66,28 @@ $bg_window_content: $blackSecondary;
   );
 }
 
+@mixin heavyShadow {
+  --shadow-color: 246deg 23% 6%;
+  box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+    0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+    0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+  text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+    0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+    0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+    0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+    0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+    0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+    0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+// Use for buttons and the like on hover
+// For other forms, border-width: 2px is preferred
+@mixin hoverRaise {
+    box-shadow: 0 0.5em 0.5em -0.4em $accent;
+    transform: translateY(-0.25em);
+}
+
 @mixin lightToDark($bg) {
   color: $text-color-secondary;
   background: $bg;
@@ -74,4 +95,5 @@ $bg_window_content: $blackSecondary;
 
 @mixin thinBorder ($thinColor) {
   border: 1px solid $thinColor;
+  border-radius: 2px;
 }
