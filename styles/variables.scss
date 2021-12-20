@@ -73,5 +73,5 @@ $bg_window_content: $blackSecondary;
 }
 
 @mixin thinBorder ($thinColor) {
-  border: 1px solid $color;
+  border: 1px solid $thinColor;
 }

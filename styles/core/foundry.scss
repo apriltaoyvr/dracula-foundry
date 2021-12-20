@@ -417,7 +417,7 @@ body {
   }
 
   #chat-log {
-    @include hideBorder;
+    @include thinBorder(transparent);
     background: transparent;
     border-radius: 2px;
   }

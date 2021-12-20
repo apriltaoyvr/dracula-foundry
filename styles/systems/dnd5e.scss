@@ -6,7 +6,7 @@ body {
     .dice-total {
       text-shadow: 0 0 10px $shadowColor;
       &.success {
-        @include gradientBorder($success, $successSecondary);
+        @include gradientBorder($success, $greenSecondary);
         color: inherit;
         background: $bg_content;
       }
