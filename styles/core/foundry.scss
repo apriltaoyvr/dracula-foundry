@@ -64,7 +64,7 @@ body {
     border: 1px solid $border-color-secondary;
     background: $bg_content;
     color: $text-color;
-    margin: 2px;
+    margin: 4px;
     &:focus {
       border-width: 2px;
       box-shadow: none;
@@ -140,6 +140,8 @@ body {
   }
 
   ::-webkit-scrollbar {
+    @include thinBorder(transparent);
+    background: transparent;
     width: 6px;
     height: 6px;
     &-track {
@@ -151,10 +153,9 @@ body {
       border-radius: 0px;
       background: linear-gradient(
         0deg,
-        $accentSecondary 0%,
-        $accentTertiary 100%
+        $accentTertiary 0%,
+        $accentSecondary 100%
       );
-      @include thinBorder(transparent);
     }
   }
 
@@ -164,7 +165,7 @@ body {
     @include lightToDark($bg_content);
     border-radius: 2px;
     font-size: 14px;
-    margin: 2px;
+    margin: 4px;
 
     --shadow-color: 246deg 23% 6%;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
@@ -187,11 +188,12 @@ body {
 
   .dialog .dialog-buttons button {
     @include gradientBorder($accent, $accentSecondary);
-    --shadow-color: 246deg 23% 6%;
     color: $text-color-secondary;
     background: $bg_content;
     font-size: 14px;
-    margin-left: 2px;
+    margin: 2px;
+
+    --shadow-color: 246deg 23% 6%;
     box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
       0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
       0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -206,12 +208,12 @@ body {
 
     &.default {
       @include gradientBorder($accent, $accentSecondary);
-      --shadow-color: 246deg 23% 6%;
       color: $text-color-secondary;
       background: $bg_content;
       font-size: 14px;
+      margin: 2px;
 
-      margin-left: 2px;
+      --shadow-color: 246deg 23% 6%;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
         0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
         0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
@@ -228,7 +230,7 @@ body {
 
   button {
     background: $bg_content;
-    margin: 2px;
+    margin: 4px;
     &:focus,
     &:hover {
       border-width: 2px;
@@ -243,7 +245,7 @@ body {
   }
 
   input {
-    margin: 2px;
+    margin: 4px;
     input:focus,
     select:focus {
       border-width: 2px;
@@ -329,7 +331,7 @@ body {
       border: 1px solid $border-color-secondary;
       border-radius: 2px;
       box-shadow: none;
-      margin: 2px;
+      margin: 4px;
       transition: 0.3s ease-in-out all;
     }
   }
@@ -339,7 +341,7 @@ body {
     background: $bg_content;
     color: $text-color-secondary;
     box-shadow: none;
-    margin: 2px;
+    margin: 4px;
     transition: 0.3s ease-in-out all;
 
     &:focus {
@@ -378,7 +380,7 @@ body {
     border: 1px solid $accent;
     border-radius: 2px;
     box-shadow: none;
-    margin: 2px;
+    margin: 4px;
     transition: 0.3s ease-in-out all;
     &:focus {
       border-width: 2px;
@@ -387,7 +389,7 @@ body {
   }
 
   form {
-    margin: 2px;
+    margin: 4px;
 
     .hint,
     .notes {
@@ -438,7 +440,7 @@ body {
     @include gradientBorder($accent, $highlight);
     color: $text-color-secondary;
     background: transparent;
-    margin: 2px;
+    margin: 4px;
     &:focus {
       border-width: 2px;
     }
@@ -468,7 +470,7 @@ body {
       @include thinBorder($accentSecondary);
       color: inherit;
       box-shadow: none;
-      margin: 2px;
+      margin: 4px;
       text-shadow: 0 0 10px $shadowColor;
     }
   }
@@ -480,7 +482,7 @@ body {
       background: $blackLight;
       text-shadow: 0 0 10px $shadowColor;
       box-shadow: 0 0 10px $shadowColor;
-      margin: 2px;
+      margin: 4px;
       &:hover {
         border-width: 2px;
         box-shadow: 0 0 4px $border-color-secondary;
@@ -491,7 +493,7 @@ body {
       @include gradientBorder($accentSecondary, $accent);
       background: $blackLight;
       border-radius: 2px;
-      margin: 2px;
+      margin: 4px;
       box-shadow: none;
       text-shadow: 0 0 10px $shadowColor;
     }
@@ -557,7 +559,7 @@ body {
     .message-content {
       color: $text-color-secondary;
       border: none;
-      margin: 2px;
+      margin: 4px;
       //The small boxes for each dice roll result
       .dice-tooltip .dice-rolls .roll {
         --shadow-color: 246deg 23% 6%;
@@ -627,7 +629,7 @@ body {
 
     &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
       @include gradientBorder($accent, $highlight);
-      margin: 2px;
+      margin: 4px;
 
       &:focus {
         border-width: 2px;

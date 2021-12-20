@@ -25,20 +25,17 @@ body {
     .sheet-footer {
       button[name="reset"],
       button[name="submit"] {
-        border: 1px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
-      }
-
-      &:focus {
-        border-width: 2px;
+        @include gradientBorder($accent, $highlight);
+        margin: 2px;
+        &:focus {
+          border-width: 2px;
+        }
       }
     }
 
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
+    @include gradientBorder($accent, $highlight);
+    margin: 2px;
       &:focus {
         border-width: 2px;
       }

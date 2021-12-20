@@ -4,17 +4,18 @@ body {
   .dice-tray {
     button {
       border: 1px solid $blackLight;
-      box-shadow: $glowColor;
+      box-shadow: 0 0 4px $accent;
       .dice-tray__flag {
         background-color: $accent;
       }
       &:hover {
-        box-shadow: $glowColor;
+        color: $accent;
+        box-shadow: 0 0 12px $accent;
       }
     }
     input[type="text"] {
       border: 1px solid transparent;
-      box-shadow: $glowColor;
+      box-shadow: 0 0 4px $accent;
     }
   }
   .dice-calculator {
@@ -22,7 +23,7 @@ body {
     .dice-calculator--button {
       border: 1px solid transparent;
       &:hover {
-        box-shadow: $glowColor;
+        box-shadow: 0 0 4px $accent;
       }
     }
     &__rolls {

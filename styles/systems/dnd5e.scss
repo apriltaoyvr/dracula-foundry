@@ -60,7 +60,7 @@ body {
     button {
       color: $whiteSecondary;
       background: $bg_content;
-      border: 2px solid $accent;
+      border: 1px solid $accent;
       border-radius: 2px;
       --shadow-color: 246deg 23% 6%;
       box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
@@ -74,7 +74,7 @@ body {
         0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
         0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
         0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
-      margin: 2px;
+      margin: 4px;
       &:focus,
       &:hover {
         border-width: 2px;
@@ -196,7 +196,7 @@ body {
             color: $text-color;
 
             .item-image {
-              margin: 2px;
+              margin: 4px;
               border: 2px solid $border-color;
               border-radius: 6px;
             }
