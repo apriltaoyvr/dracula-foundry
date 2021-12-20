@@ -579,7 +579,7 @@ body {
 
     .message-header,
     .message-metadata {
-      color: $border-color;
+      color: $text-color-secondary;
       text-shadow: none;
     }
 
@@ -598,8 +598,8 @@ body {
         border-image-slice: 1;
         border-image-source: linear-gradient(
           $gradientDegree,
-          $accentSecondary 0%,
-          $highlight 100%
+          $accentTertiary 0%,
+          $accent 100%
         );
         border-radius: 2px;
         margin-left: 2px;
