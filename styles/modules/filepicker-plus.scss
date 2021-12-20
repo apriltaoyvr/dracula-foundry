@@ -1,6 +1,9 @@
 @use '../variables' as *;
 
 body {
+  :root {
+    --filepickerplus-text-color: $text-color-secondary;
+  }
   .filepicker-plus-tooltip {
       background: $bg_content;
       border: 1px solid $border-color;
@@ -9,7 +12,7 @@ body {
 
   .filepicker {
     .directory > li:last-child {
-      border-bottom: 1px solid $text-color-dark;
+      border-bottom: 1px solid $border-color;
     }
     input[type="text"] {
       color: $text-color-dark;
