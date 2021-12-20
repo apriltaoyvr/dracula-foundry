@@ -1,6 +1,6 @@
 /* Dracula UI Colours Import */
-$black: hsl(230, 15%, 15%);
-$blackSecondary: hsl(230, 15%, 30%);
+$black: hsla(230, 15%, 15%, 80%);
+$blackSecondary: hsla(230, 15%, 30%, 80%);
 $blackTernary: hsl(230, 15%, 70%);
 $blackLight: hsla(230, 15%, 15%, 5%);
 $white: hsla(60, 30%, 96%, 90%);
@@ -34,11 +34,23 @@ $pink-transparent: hsl(330, 100%, 75%, 0.1);
 $purple-transparent: hsl(250, 100%, 75%, 0.1);
 $red-transparent: hsl(10, 100%, 75%, 0.1);
 $yellow-transparent: hsl(60, 100%, 75%, 0.1);
-$disabled: hsl(230, 15%, 50%);
+
 $gradientDegree: 135deg;
 
-$text-color: hsl(0, 0%, 96%);
-$glowColor: rgba(255, 255, 255, 0.25);
+$accent: $purple;
+$accentSecondary: $red;
+$accentTertiary: $pink;
+$highlight: $cyan;
+$disabled: hsl(230, 15%, 50%);
+$success: hsl(135, 94%, 65%);
+$failure: hsl(0, 100%, 67%);
 
-$bg_content: hsla(230, 15%, 15%, 75%);
-$bg_window-content: hsla(230, 15%, 15%, 80%);
+$text-color: $white;
+$text-color-secondary: $whiteSecondary;
+$text-color-dark: $blackSecondary;
+$border-color: $blackLight;
+$border-color-secondary: $purpleLight;
+$glowColor: 0 0 4px $accent;
+
+$bg_content: $black;
+$bg_window_content: $blackSecondary;

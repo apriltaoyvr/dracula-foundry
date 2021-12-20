@@ -10,10 +10,10 @@ body {
   .midi-qol-box {
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
   }
 
   .midi-qol-faint {
-    color: $whiteSecondary;
+    color: $text-color-secondary;
   }
 }

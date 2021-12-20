@@ -1,16 +1,18 @@
 @use '../variables' as *;
 
-.filepicker-plus-tooltip {
-    background: $black;
-    border: 1px solid $blackLight;
-    animation: fadein 0.5s;
-}
-
-.filepicker {
-  .directory > li:last-child {
-    border-bottom: 1px solid $blackSecondary;
+body {
+  .filepicker-plus-tooltip {
+      background: $bg_content;
+      border: 1px solid $border-color;
+      animation: fadein 0.5s;
   }
-  input[type="text"] {
-    color: $blackTernary;
+
+  .filepicker {
+    .directory > li:last-child {
+      border-bottom: 1px solid $text-color-dark;
+    }
+    input[type="text"] {
+      color: $text-color-dark;
+    }
   }
 }

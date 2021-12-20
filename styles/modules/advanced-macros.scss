@@ -6,7 +6,7 @@ body {
     code,
     textarea {
       color: $white;
-      border: 1px solid $purple;
+      border: 1px solid $accent;
       text-shadow: $blackSecondary;
     }
   }
@@ -26,13 +26,13 @@ body {
   .hljs-strong,
   .hljs-template-variable,
   .hljs-variable {
-    color: #f1fa8c;
+    color: $yellow;
   }
 
   .hljs-keyword,
   .hljs-selector-tag,
   .hljs-type {
-    color: #d73a49;
+    color: $red;
   }
 
   .hljs-attribute,
@@ -44,7 +44,7 @@ body {
 
   .hljs-name,
   .hljs-section {
-    color: #50fa7b;
+    color: $green;
   }
 
   .hljs-tag {
@@ -61,12 +61,12 @@ body {
   }
 
   .hljs-addition {
-    color: #50fa7b;
+    color: $green;
     background-color: #282a36;
   }
 
   .hljs-deletion {
-    color: #ff5555;
+    color: $red;
     background-color: #282a36;
   }
 

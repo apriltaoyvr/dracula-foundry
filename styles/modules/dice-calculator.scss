@@ -4,14 +4,17 @@ body {
   .dice-tray {
     button {
       border: 1px solid $blackLight;
-      box-shadow: 0 0 2px $purple;
+      box-shadow: $glowColor;
       .dice-tray__flag {
-        background-color: $purple;
+        background-color: $accent;
+      }
+      &:hover {
+        box-shadow: $glowColor;
       }
     }
     input[type="text"] {
       border: 1px solid transparent;
-      box-shadow: 0 0 2px $purple;
+      box-shadow: $glowColor;
     }
   }
   .dice-calculator {
@@ -19,7 +22,7 @@ body {
     .dice-calculator--button {
       border: 1px solid transparent;
       &:hover {
-        box-shadow: 0 0 5px $purple;
+        box-shadow: $glowColor;
       }
     }
     &__rolls {
@@ -54,6 +57,6 @@ body {
 
 // This is safe to replace
   #chat-controls .dice-calculator-toggle:hover {
-    color: $purple;
+    color: $accent;
   }
 }

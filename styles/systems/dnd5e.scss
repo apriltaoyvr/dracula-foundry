@@ -5,14 +5,14 @@ body {
   .dnd5e {
     .window-content {
       color: $text-color;
-      background: $bg_window-content;
-      border: 1px solid $blackLight;
+      background: $bg_content;
+      border: 1px solid $border-color;
       border-radius: 6px;
     }
 
     .form-header {
-      border-top: 1px solid $blackLight;
-      border-bottom: 1px solid $blackLight;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
     }
 
     .form-group label {
@@ -22,327 +22,320 @@ body {
     input {
       &[type="text"],
       &[type="number"] {
-        color: $white;
+        color: $text-color;
         border: 1px solid transparent;
         border-radius: 2px;
         &:focus {
-          box-shadow: 0 0 4px $purple;
+          box-shadow: $glowColor;
         }
       }
     }
 
-    &.sheet {
-      .window-content {
-        color: $text-color;
-        background: $bg_window-content;
-        border: 1px solid $purpleLight;
-        border-radius: 6px;
+    //Attack + Damage Buttons
+    button {
+      color: $whiteSecondary;
+      background: $bg_content;
+      border: 1px solid $accent;
+      border-radius: 2px;
+      --shadow-color: 246deg 23% 6%;
+      box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
+        0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
+        0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
+      text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
+        0 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
+        -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
+        -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
+
+      &:focus,
+      &:hover {
+        border-width: 2px;
+        box-shadow: none;
+        cursor: pointer;
       }
+    }
 
-      .sheet-header {
-        border-bottom: 1px solid $whiteLight;
-        .summary {
-          border-top: 1px solid $whiteLight;
+    &.chat-card {
+      .card-header {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        h3 {
+          color: $text-color;
+          font-family: "Signika";
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        &:hover h3 {
+          color: $text-color;
+          text-shadow: 0 0 8px $accent;
+          font-family: "Signika";
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        img {
+          height: 36px;
+          width: 36px;
+          border-radius: 12px;
+          border: 1px solid $black;
+          border-radius: 6px;
+          padding: 0;
         }
       }
-
-      .sheet-navigation {
-        color: $text-color;
-        font-family: "Signika";
-        font-size: 16px;
-
-        .item {
-          color: $blackTernary;
-          border-bottom: 2px solid $blackTernary;
-
-          &.active {
-            color: $purple;
-            border-bottom: 2px solid $purple;
-          }
-
-          &:hover {
-            text-shadow: 0 0 4px $purple;
-          }
-        }
-
-        &.item {
-          .effect-header {
-            border: 1px solid $whiteLight;
-          }
-          // DAE Item: Window
-          .dae-effect-list {
-            .effect-label,
-            .effect-name {
-              border-left: 1px solid $whiteLight;
-              border-right: 1px solid $whiteLight;
-            }
-          }
+      
+      .card-footer {
+        color: $whiteSecondary;
+        border: 1px solid transparent;
+        padding: 0;
+        span {
+          border-right: 1px solid transparent;
         }
       }
-
-      .items-list {
-        .items-header {
-          color: $blackSecondary;
-          border: 1px solid $blackSecondary;
-        }
-
-        .item-name {
-          &:hover {
-            color: $purple;
-            text-shadow: 0 0 4px $purple;
-          }
-        }
-
-        .item {
-          border-bottom: 1px solid $whiteLight;
-
-          .item-name {
-            color: $text-color;
-
-            .item-image {
-              margin: 2px;
-              border: 2px solid $whiteLight;
-              border-radius: 6px;
-            }
-          }
+      .card-buttons {
+        span {
+          border: 1px solid transparent;
         }
       }
 
-      .filter-list .filter-item {
-        color: $disabled;
-        border-bottom: 3px solid $disabled;
-
-        &.active {
-          color: $purple;
-          border-bottom: 3px solid $purple;
-          text-shadow: none;
-          transition: all 0.2s ease-in-out;
-
-          &:hover {
-            color: $purple;
-            border-bottom: 1px solid $blackLight;
-            text-shadow: 0 0 4px $purple;
-            transition: all 0.2s ease-in-out;
-          }
-        }
-      }
-
-      &.actor {
-        h4.box-title {
-          border-bottom: 1px solid $blackSecondary;
-          color: $blackSecondary;
-        }
-
-        ul.skills-list {
-          border: 2px solid $blackSecondary;
-          li.skill {
-            .skill-passive {
-              color: $disabled;
-            }
-          }
-        }
-
-        ul.attributes li.attribute {
-          border: 1px solid $disabled;
+      &.sheet {
+        .window-content {
+          color: $text-color;
+          background: $bg_content;
+          border: 1px solid $border-color-secondary;
+          border-radius: 6px;
         }
 
         .sheet-header {
+          border-bottom: 1px solid $border-color;
           .summary {
-            border-bottom: 1px solid $whiteLight;
-            li {
-              border-right: 1px solid $blackSecondary;
+            border-top: 1px solid $border-color;
+          }
+        }
+
+        .sheet-navigation {
+          color: $text-color;
+          font-family: "Signika";
+          font-size: 16px;
+
+          .item {
+            color: $text-color-secondary;
+            border-bottom: 2px solid $text-color-secondary;
+
+            &.active {
+              color: $accent;
+              border-bottom: 2px solid $accent;
+            }
+
+            &:hover {
+              text-shadow: $glowColor;
             }
           }
-          .attributes {
-            .attribute {
-              border-right: 1px solid $blackSecondary;
+
+          &.item {
+            .effect-header {
+              border: 1px solid $border-color;
+            }
+            // DAE Item: Window
+            .dae-effect-list {
+              .effect-label,
+              .effect-name {
+                border-left: 1px solid $border-color;
+                border-right: 1px solid $border-color;
+              }
             }
           }
         }
 
-        .proficient {
+        .items-list {
+          .items-header {
+            color: $blackSecondary;
+            border: 1px solid $blackSecondary;
+          }
+
+          .item-name {
+            &:hover {
+              color: $purple;
+              text-shadow: $glowColor;
+            }
+          }
+
+          .item {
+            border-bottom: 1px solid $border-color;
+
+            .item-name {
+              color: $text-color;
+
+              .item-image {
+                margin: 2px;
+                border: 2px solid $border-color;
+                border-radius: 6px;
+              }
+            }
+          }
+        }
+
+        .filter-list .filter-item {
           color: $disabled;
+          border-bottom: 3px solid $disabled;
 
-          .proficiency-toggle {
-            color: $purple;
+          &.active {
+            color: $accent;
+            border-bottom: 3px solid $accent;
+            text-shadow: none;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              color: $accent;
+              border-bottom: 1px solid $border-color;
+              text-shadow: $glowColor;
+              transition: all 0.2s ease-in-out;
+            }
           }
         }
 
-        .counters {
-          border-bottom: 1px solid $blackLight;
-          .counter h4 {
+        &.actor {
+          h4.box-title {
+            border-bottom: 1px solid $blackSecondary;
             color: $blackSecondary;
           }
-        }
 
-        .ability-scores {
-          border-top: 1px solid $blackSecondary;
-          border-left: 1px solid $blackSecondary;
-          border-right: 1px solid $blackSecondary;
-          border-bottom: 1px solid $blackSecondary;
-          .ability {
-            .ability.modifiers {
-              border-right: 1px solid $blackSecondary;
-              border-top: 1px solid $blackSecondary;
-              border-bottom: 1px solid $blackSecondary;
-              span.ability-save,
-              span.ability-mod {
-                border-right: 2px solid $blackSecondary;
-              }
-              span.ability-mod {
-                border-right: 2px solid $blackSecondary;
-              }
-              span.ability-save {
-                border-left: 2px solid $blackSecondary;
+          ul.skills-list {
+            border: 2px solid $blackSecondary;
+            li.skill {
+              .skill-passive {
+                color: $disabled;
               }
             }
           }
-        }
 
-        .spell-slots,
-        .spell-school,
-        .spell-action,
-        .spell-target {
-          border-right: 1px solid $blackSecondary;
-        }
+          ul.attributes li.attribute {
+            border: 1px solid $disabled;
+          }
 
-        &.character {
           .sheet-header {
-            img.profile {
-              border: 1px solid $blackSecondary;
-              border-radius: 3px;
-              margin: 5px;
+            .summary {
+              border-bottom: 1px solid $border-color;
+              li {
+                border-right: 1px solid $blackSecondary;
+              }
             }
-          }
-          .resource {
-            .attribute-value {
-              label.recharge {
-                color: $blackSecondary;
+            .attributes {
+              .attribute {
+                border-right: 1px solid $blackSecondary;
               }
             }
           }
-          .inventory-list {
-            .item.detail {
-              border-right: 1px solid transparent;
+
+          .proficient {
+            color: $disabled;
+
+            .proficiency-toggle {
+              color: $accent;
             }
           }
-        }
 
-        &.item .effect-header {
-          border: 1px solid $blackLight;
-          border-radius: 2px;
-        }
-
-        &.inventory-filters.flexrow element.style {
-          border: none;
-        }
-        select {
-          background: $black;
-          border: 1px solid $purple;
-          border-radius: 2px;
-        }
-      }
-
-      /* Select aka Dropdown Boxes */
-      .form-group .form-fields,
-      select {
-        color: $white;
-        border: 1px solid $purple;
-        border-radius: 2px;
-      }
-
-      input {
-        &[type="text"],
-        &[type="number"] {
-          color: $white;
-          border: 1px solid transparent;
-          border-radius: 2px;
-          &:focus {
-            box-shadow: 0 0 4px $purple;
-          }
-        }
-      }
-      /* Attack + Damage buttons */
-      button {
-        color: $whiteSecondary;
-        background: $bg_content;
-        border: 1px solid $purple;
-        border-radius: 2px;
-        --shadow-color: 246deg 23% 6%;
-        box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
-          0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
-          0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
-        text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
-          0 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
-          -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
-          -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
-
-        &:focus,
-        &:hover {
-          border-width: 2px;
-          box-shadow: none;
-          cursor: pointer;
-        }
-      }
-
-      &.sheet .item-buttons {
-        padding: 0;
-        color: $text-color;
-        border-radius: 6px;
-        border: 1px solid $blackLight;
-        border-radius: 2px;
-      }
-      /* Chat Cards */
-      &.chat-card {
-        .card-header {
-          border: none;
-          padding: 0;
-        }
-        /* The segmented details in the expanded roll information */
-        .card-buttons span {
-          border: none;
-          font-size: 12px;
-          line-height: 25px;
-          background: inherit;
-          box-shadow: none;
-        }
-
-        .card-header {
-          /* Code referenced from Warhead
-        Sets item name header to regular font and be smaller + transition for .chat-message */
-          h3 {
-            color: $white;
-            font-family: "Signika";
-            font-weight: bold;
-            font-size: 14px;
+          .counters {
+            border-bottom: 1px solid $border-color;
+            .counter h4 {
+              color: $blackSecondary;
+            }
           }
 
-          &:hover h3 {
-            color: $white;
-            text-shadow: 0 0 8px $purple;
-            font-family: "Signika";
-            font-weight: bold;
-            font-size: 14px;
+          .ability-scores {
+            border-top: 1px solid $blackSecondary;
+            border-left: 1px solid $blackSecondary;
+            border-right: 1px solid $blackSecondary;
+            border-bottom: 1px solid $blackSecondary;
+            .ability {
+              border-bottom: 1px solid $blackSecondary;
+              .ability.modifiers {
+                border-right: 1px solid transparent;
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                span.ability-save,
+                span.ability-mod {
+                  border-right: 2px solid $blackSecondary;
+                }
+                span.ability-mod {
+                  border-right: 2px solid $blackSecondary;
+                }
+                span.ability-save {
+                  border-left: 2px solid $blackSecondary;
+                }
+              }
+            }
           }
 
-          img {
-            height: 36px;
-            width: 36px;
-            border-radius: 12px;
-            border: 1px solid $black;
-            border-radius: 6px;
-            padding: 0;
+          .spell-slots,
+          .spell-school,
+          .spell-action,
+          .spell-target {
+            border-right: 1px solid $blackSecondary;
           }
-        }
 
-        .card-footer {
-          color: $whiteSecondary;
-          border: none;
-          padding: 0;
+          &.character {
+            .sheet-header {
+              img.profile {
+                border: 1px solid $blackSecondary;
+                border-radius: 3px;
+                margin: 5px;
+              }
+            }
+            .resource {
+              .attribute-value {
+                label.recharge {
+                  color: $blackSecondary;
+                }
+              }
+            }
+            .inventory-list {
+              .item.detail {
+                border-right: 1px solid transparent;
+              }
+            }
+          }
 
-          span {
+          &.item .effect-header {
+            border: 1px solid $border-color;
+            border-radius: 2px;
+          }
+
+          &.inventory-filters.flexrow element.style {
             border: none;
           }
+          select {
+            background: $black;
+            border: 1px solid $accent;
+            border-radius: 2px;
+          }
+        }
+
+        /* Select aka Dropdown Boxes */
+        .form-group .form-fields,
+        select {
+          color: $text-color;
+          border: 1px solid $accent;
+          border-radius: 2px;
+        }
+
+        input {
+          &[type="text"],
+          &[type="number"] {
+            color: $text-color;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            &:focus {
+              box-shadow: $glowColor;
+            }
+          }
+        }
+
+        &.sheet .item-buttons {
+          padding: 0;
+          color: $text-color;
+          border-radius: 6px;
+          border: 1px solid $border-color;
+          border-radius: 2px;
         }
       }
     }

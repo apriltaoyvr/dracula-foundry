@@ -11,12 +11,12 @@ body {
 
 //The top two buttons in module management for TidyUI
     .disable-all-modules {
-      background: #ff555594;
+      background: $failure;
       border: none;
     }
 
     .enable-all-modules {
-      background: #50fa7b94;
+      background: $success;
       border: none;
     }
   }
@@ -27,7 +27,7 @@ body {
       button[name="submit"] {
         border: 1px solid;
         border-image-slice: 1;
-        border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+        border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
       }
 
       &:focus {
@@ -38,7 +38,7 @@ body {
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $purple 0%, $cyan 100%);
+    border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
       &:focus {
         border-width: 2px;
       }
