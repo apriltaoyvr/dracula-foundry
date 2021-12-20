@@ -393,8 +393,10 @@ body {
     }
 
     .form-group .form-fields {
-      border: 1px solid $border-color-secondary;
+      border: 1px solid $accent;
       border-radius: 2px;
+      background: $bg_window_content;
+      color: $text-color-secondary;
     }
 
     &:focus {

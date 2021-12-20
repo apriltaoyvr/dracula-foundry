@@ -344,6 +344,7 @@ body {
       .form-group .form-fields,
       select {
         color: $text-color;
+        background: $bg_window_content;
         border: 1px solid $accent;
         border-radius: 2px;
       }
