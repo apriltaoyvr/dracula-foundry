@@ -2,6 +2,47 @@
 /* Sheets */
 /* Comes up often in DAE menus */
 body {
+  .dice-roll {
+    .dice-total {
+      text-shadow: 0 0 10px rgba(0 0 0 / 90%);
+      &.success {
+        color: inherit;
+        background: $bg_content;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(
+          $gradientDegree,
+          $success 0%,
+          $green 100%
+        );
+      }
+      &.failure {
+        color: inherit;
+        background: $bg_content;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(
+          $gradientDegree,
+          $failure 0%,
+          $red 100%
+        );
+      }
+      &.critical {
+        color: linear-gradient(
+          $gradientDegree,
+          $success 0%,
+          $green 100%
+        );
+      }
+      &.fumble {
+        color: linear-gradient(
+          $gradientDegree,
+          $failure 0%,
+          $red 100%
+        );
+      }
+    }
+  }
   .dnd5e {
     .window-content {
       color: $text-color;
@@ -17,6 +58,10 @@ body {
 
     .form-group label {
       color: $whiteSecondary;
+    }
+
+    .tag {
+      border: 1px solid $accent;
     }
 
     input {
@@ -38,14 +83,17 @@ body {
       border: 1px solid $accent;
       border-radius: 2px;
       --shadow-color: 246deg 23% 6%;
-      box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.25),
-        0 0.3px 0.4px -0.9px hsl(var(--shadow-color) / 0.31),
-        0 0.7px 0.9px -1.8px hsl(var(--shadow-color) / 0.37);
-      text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
-        0 0.6px 0.7px -0.6px hsl(var(--shadow-color) / 0.31),
-        -0.1px 1.5px 1.8px -1.2px hsl(var(--shadow-color) / 0.36),
-        -0.2px 3.4px 4.2px -1.8px hsl(var(--shadow-color) / 0.4);
-
+      box-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0 0.2px 0.2px -1.2px hsl(var(--shadow-color) / 0.34),
+        0 0.6px 0.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      text-shadow: 0 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+        0 0.9px 1px -0.4px hsl(var(--shadow-color) / 0.34),
+        0.1px 1.6px 1.8px -0.7px hsl(var(--shadow-color) / 0.34),
+        0.1px 2.7px 3px -1.1px hsl(var(--shadow-color) / 0.34),
+        0.2px 4.3px 4.8px -1.4px hsl(var(--shadow-color) / 0.34),
+        0.3px 6.7px 7.5px -1.8px hsl(var(--shadow-color) / 0.34),
+        0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
+        0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
       &:focus,
       &:hover {
         border-width: 2px;
@@ -82,7 +130,7 @@ body {
           padding: 0;
         }
       }
-      
+
       .card-footer {
         color: $whiteSecondary;
         border: 1px solid transparent;
@@ -96,247 +144,247 @@ body {
           border: 1px solid transparent;
         }
       }
+    }
+    &.sheet {
+      .window-content {
+        color: $text-color;
+        background: $bg_content;
+        border: 1px solid $border-color-secondary;
+        border-radius: 6px;
+      }
 
-      &.sheet {
-        .window-content {
-          color: $text-color;
-          background: $bg_content;
-          border: 1px solid $border-color-secondary;
-          border-radius: 6px;
+      .sheet-header {
+        border-bottom: 1px solid $border-color;
+        .summary {
+          border-top: 1px solid $border-color;
         }
+      }
 
-        .sheet-header {
-          border-bottom: 1px solid $border-color;
-          .summary {
-            border-top: 1px solid $border-color;
-          }
-        }
+      .sheet-navigation {
+        color: $text-color;
+        font-family: "Signika";
+        font-size: 16px;
 
-        .sheet-navigation {
-          color: $text-color;
-          font-family: "Signika";
-          font-size: 16px;
-
-          .item {
-            color: $text-color-secondary;
-            border-bottom: 2px solid $text-color-secondary;
-
-            &.active {
-              color: $accent;
-              border-bottom: 2px solid $accent;
-            }
-
-            &:hover {
-              text-shadow: $glowColor;
-            }
-          }
-
-          &.item {
-            .effect-header {
-              border: 1px solid $border-color;
-            }
-            // DAE Item: Window
-            .dae-effect-list {
-              .effect-label,
-              .effect-name {
-                border-left: 1px solid $border-color;
-                border-right: 1px solid $border-color;
-              }
-            }
-          }
-        }
-
-        .items-list {
-          .items-header {
-            color: $blackSecondary;
-            border: 1px solid $blackSecondary;
-          }
-
-          .item-name {
-            &:hover {
-              color: $purple;
-              text-shadow: $glowColor;
-            }
-          }
-
-          .item {
-            border-bottom: 1px solid $border-color;
-
-            .item-name {
-              color: $text-color;
-
-              .item-image {
-                margin: 2px;
-                border: 2px solid $border-color;
-                border-radius: 6px;
-              }
-            }
-          }
-        }
-
-        .filter-list .filter-item {
-          color: $disabled;
-          border-bottom: 3px solid $disabled;
+        .item {
+          color: $text-color-secondary;
+          border-bottom: 2px solid $text-color-secondary;
 
           &.active {
             color: $accent;
-            border-bottom: 3px solid $accent;
-            text-shadow: none;
-            transition: all 0.2s ease-in-out;
+            border-bottom: 2px solid $accent;
+          }
 
-            &:hover {
-              color: $accent;
-              border-bottom: 1px solid $border-color;
-              text-shadow: $glowColor;
-              transition: all 0.2s ease-in-out;
+          &:hover {
+            text-shadow: $glowColor;
+          }
+        }
+
+        &.item {
+          .effect-header {
+            border: 1px solid $border-color;
+          }
+          // DAE Item: Window
+          .dae-effect-list {
+            .effect-label,
+            .effect-name,
+            .effect-mode {
+              border-left: 1px solid $border-color;
+              border-right: 1px solid $border-color;
+            }
+          }
+        }
+      }
+
+      .items-list {
+        .items-header {
+          color: $blackSecondary;
+          border: 1px solid $blackSecondary;
+        }
+
+        .item-name {
+          &:hover {
+            color: $purple;
+            text-shadow: $glowColor;
+          }
+        }
+
+        .item {
+          border-bottom: 1px solid $border-color;
+
+          .item-name {
+            color: $text-color;
+
+            .item-image {
+              margin: 2px;
+              border: 2px solid $border-color;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+
+      .filter-list .filter-item {
+        color: $disabled;
+        border-bottom: 3px solid $disabled;
+
+        &.active {
+          color: $accent;
+          border-bottom: 3px solid $accent;
+          text-shadow: none;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $accent;
+            border-bottom: 1px solid $border-color;
+            text-shadow: $glowColor;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+
+      &.actor {
+        h4.box-title {
+          border-bottom: 1px solid $blackSecondary;
+          color: $blackSecondary;
+        }
+
+        ul.skills-list {
+          border: 2px solid $blackSecondary;
+          li.skill {
+            .skill-passive {
+              color: $disabled;
             }
           }
         }
 
-        &.actor {
-          h4.box-title {
+        ul.attributes li.attribute {
+          border: 1px solid $disabled;
+        }
+
+        .ability-scores {
+          border-top: 1px solid $blackSecondary;
+          border-left: 1px solid $blackSecondary;
+          border-right: 1px solid $blackSecondary;
+          border-bottom: 1px solid $blackSecondary;
+          .ability {
             border-bottom: 1px solid $blackSecondary;
+            .ability.modifiers {
+              border-right: 1px solid transparent;
+              border-top: 1px solid transparent;
+              border-bottom: 1px solid transparent;
+              span.ability-save,
+              span.ability-mod {
+                border-right: 2px solid $blackSecondary;
+              }
+              span.ability-mod {
+                border-right: 2px solid $blackSecondary;
+              }
+              span.ability-save {
+                border-left: 2px solid $blackSecondary;
+              }
+            }
+          }
+        }
+
+        .sheet-header {
+          .summary {
+            border-bottom: 1px solid $border-color;
+            li {
+              border-right: 1px solid $blackSecondary;
+            }
+          }
+          .attributes {
+            .attribute {
+              border-right: 1px solid $blackSecondary;
+            }
+          }
+        }
+
+        .proficient {
+          color: $disabled;
+
+          .proficiency-toggle {
+            color: $accent;
+          }
+        }
+
+        .counters {
+          border-bottom: 1px solid $border-color;
+          .counter h4 {
             color: $blackSecondary;
           }
+        }
 
-          ul.skills-list {
-            border: 2px solid $blackSecondary;
-            li.skill {
-              .skill-passive {
-                color: $disabled;
-              }
-            }
-          }
+        .spell-slots,
+        .spell-school,
+        .spell-action,
+        .spell-target {
+          border-right: 1px solid $blackSecondary;
+        }
 
-          ul.attributes li.attribute {
-            border: 1px solid $disabled;
-          }
-
+        &.character {
           .sheet-header {
-            .summary {
-              border-bottom: 1px solid $border-color;
-              li {
-                border-right: 1px solid $blackSecondary;
-              }
-            }
-            .attributes {
-              .attribute {
-                border-right: 1px solid $blackSecondary;
-              }
+            img.profile {
+              border: 1px solid $blackSecondary;
+              border-radius: 3px;
+              margin: 5px;
             }
           }
-
-          .proficient {
-            color: $disabled;
-
-            .proficiency-toggle {
-              color: $accent;
-            }
-          }
-
-          .counters {
-            border-bottom: 1px solid $border-color;
-            .counter h4 {
-              color: $blackSecondary;
-            }
-          }
-
-          .ability-scores {
-            border-top: 1px solid $blackSecondary;
-            border-left: 1px solid $blackSecondary;
-            border-right: 1px solid $blackSecondary;
-            border-bottom: 1px solid $blackSecondary;
-            .ability {
-              border-bottom: 1px solid $blackSecondary;
-              .ability.modifiers {
-                border-right: 1px solid transparent;
-                border-top: 1px solid transparent;
-                border-bottom: 1px solid transparent;
-                span.ability-save,
-                span.ability-mod {
-                  border-right: 2px solid $blackSecondary;
-                }
-                span.ability-mod {
-                  border-right: 2px solid $blackSecondary;
-                }
-                span.ability-save {
-                  border-left: 2px solid $blackSecondary;
-                }
+          .resource {
+            .attribute-value {
+              label.recharge {
+                color: $blackSecondary;
               }
             }
           }
-
-          .spell-slots,
-          .spell-school,
-          .spell-action,
-          .spell-target {
-            border-right: 1px solid $blackSecondary;
-          }
-
-          &.character {
-            .sheet-header {
-              img.profile {
-                border: 1px solid $blackSecondary;
-                border-radius: 3px;
-                margin: 5px;
-              }
-            }
-            .resource {
-              .attribute-value {
-                label.recharge {
-                  color: $blackSecondary;
-                }
-              }
-            }
-            .inventory-list {
-              .item.detail {
-                border-right: 1px solid transparent;
-              }
-            }
-          }
-
-          &.item .effect-header {
-            border: 1px solid $border-color;
-            border-radius: 2px;
-          }
-
-          &.inventory-filters.flexrow element.style {
-            border: none;
-          }
-          select {
-            background: $black;
-            border: 1px solid $accent;
-            border-radius: 2px;
-          }
-        }
-
-        /* Select aka Dropdown Boxes */
-        .form-group .form-fields,
-        select {
-          color: $text-color;
-          border: 1px solid $accent;
-          border-radius: 2px;
-        }
-
-        input {
-          &[type="text"],
-          &[type="number"] {
-            color: $text-color;
-            border: 1px solid transparent;
-            border-radius: 2px;
-            &:focus {
-              box-shadow: $glowColor;
+          .inventory-list {
+            .item.detail {
+              border-right: 1px solid transparent;
             }
           }
         }
 
-        &.sheet .item-buttons {
-          padding: 0;
-          color: $text-color;
-          border-radius: 6px;
+        &.item .effect-header {
           border: 1px solid $border-color;
           border-radius: 2px;
         }
+
+        &.inventory-filters.flexrow element.style {
+          border: none;
+        }
+        select {
+          background: $black;
+          border: 1px solid $accent;
+          border-radius: 2px;
+        }
+      }
+
+      /* Select aka Dropdown Boxes */
+      .form-group .form-fields,
+      select {
+        color: $text-color;
+        border: 1px solid $accent;
+        border-radius: 2px;
+      }
+
+      input {
+        &[type="text"],
+        &[type="number"] {
+          color: $text-color;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          &:focus {
+            box-shadow: $glowColor;
+          }
+        }
+      }
+
+      &.sheet .item-buttons {
+        padding: 0;
+        color: $text-color;
+        border-radius: 6px;
+        border: 1px solid $border-color;
+        border-radius: 2px;
       }
     }
   }
