@@ -1,6 +1,11 @@
 @use '../variables' as *;
 /* Global stylings */
 body {
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: $accentTertiary $accentTertiary;
+  }
+
   h1,
   h2 {
     border-bottom: 1px solid $accent;
@@ -13,15 +18,6 @@ body {
   hr {
     border-top: 1px solid $accent;
     border-bottom: 1px solid transparent;
-  }
-
-  .tabs {
-    .item {
-      &.active {
-        color: $accent;
-        text-shadow: $accent;
-      }
-    }
   }
 
   .app {
@@ -48,6 +44,10 @@ body {
     border: 1px solid $border-color-secondary;
     color: $text-color;
     margin-bottom: 1px;
+    &:focus {
+      border-width: 2px;
+      box-shadow: none;
+    }
   }
 
   .picker_wrapper {
@@ -86,11 +86,6 @@ body {
     }
   }
 
-  textarea:focus {
-    border-width: 2px;
-    box-shadow: none;
-  }
-
   #sidebar {
     background: linear-gradient(
       0deg,
@@ -101,26 +96,36 @@ body {
     border: 2px solid transparent;
   }
 
+  #navigation {
+    .nav-item {
+      border: 1px solid $accent;
+    }
+    #nav-toggle {
+      &:hover {
+      text-shadow: $glowColor;
+      }
+    }
+    #scene-list {
+      .scene.gm {
+        background: $highlight;
+        border: 1px solid $accent;
+      }
+    }
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    box-shadow: 0 0 1px $blackLight inset;
-    border-radius: 4;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: $accentTertiary;
-    border: 1px solid transparent;
-  }
-
-  :root {
-    scrollbar-width: thin;
-    scrollbar-color: $accentTertiary $accentTertiary;
+    &-track {
+      box-shadow: 0 0 1px $blackLight inset;
+      border-radius: 4;
+    }
+    &-thumb {
+      outline: none;
+      border-radius: 3px;
+      background: $accentTertiary;
+      border: 1px solid transparent;
+    }
   }
 
   button,
@@ -337,7 +342,11 @@ body {
       width: 12px;
       border: 1px solid $blackLight;
       border-radius: 0;
-      background: linear-gradient($gradientDegree, $accentSecondary 0%, $accentTertiary 100%);
+      background: linear-gradient(
+        $gradientDegree,
+        $accentSecondary 0%,
+        $accentTertiary 100%
+      );
       cursor: pointer;
       box-shadow: none;
     }
