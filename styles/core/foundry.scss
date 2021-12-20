@@ -15,6 +15,15 @@ body {
     border-bottom: 1px solid transparent;
   }
 
+  .tabs {
+    .item {
+      &.active {
+        color: $accent;
+        text-shadow: $accent;
+      }
+    }
+  }
+
   .app {
     color: $text-color-secondary;
   }
@@ -87,7 +96,7 @@ body {
       0deg,
       hsla(230, 15%, 15%, 80%) 0%,
       hsla(230, 15%, 15%, 50%) 75%,
-      hsla(230, 15%, 15%, 0%) 100%
+      hsla(230, 15%, 15%, 20%) 100%
     );
     border: 2px solid transparent;
   }
@@ -659,10 +668,10 @@ body {
     &.app.window-app.form #config-tabs .settings-list h2.module-header span,
     section.content h2.module-header {
       color: hsla(60, 30%, 100%, 80%);
-      border-bottom: none;
+      border-bottom: 1px solid transparent;
     }
     nav.tabs {
-      border-bottom: 1px solid $text-color-secondary;
+      border-bottom: 1px solid $border-color;
       &:focus {
         text-shadow: 0 0 4px $accentSecondary;
       }
