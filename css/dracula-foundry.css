@@ -55,7 +55,7 @@ body textarea:focus {
   box-shadow: none;
 }
 body .picker_wrapper {
-  background: rgba(65, 69, 88, 0.8);
+  background: rgba(33, 34, 44, 0.8);
   color: rgba(248, 248, 242, 0.9);
 }
 body .picker_wrapper .button {
@@ -122,7 +122,7 @@ body button,
 body form button {
   border: 1px solid #8076b7;
   color: rgba(255, 255, 255, 0.8);
-  background: transparent;
+  background: rgba(33, 34, 44, 0.8);
   border-radius: 2px;
   font-size: 14px;
   margin: 2px;
@@ -179,7 +179,7 @@ body input[type=color][data-edit][data-edit] {
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
-  background-color: rgba(65, 69, 88, 0.8);
+  background-color: transparent;
   color: rgba(248, 248, 242, 0.9);
   border-color: rgba(65, 69, 88, 0.8);
 }
@@ -222,8 +222,9 @@ body input[type=text], body input[type=number], body input[type=password], body 
 body input[type=range] + .range-value {
   color: rgba(255, 255, 255, 0.8);
   background: transparent;
-  border: 1px solid rgba(149, 128, 255, 0.05);
-  border-radius: 2px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #8076b7 0%, #ff9580 100%);
   box-shadow: none;
   margin: 2px;
   transition: 0.3s ease-in-out all;
@@ -308,7 +309,7 @@ body #chat-controls {
 }
 body #chat-controls .roll-type-select {
   color: rgba(255, 255, 255, 0.8);
-  background: transparent;
+  background: rgba(33, 34, 44, 0.8);
   border: 1px solid transparent;
   border-radius: 2px;
   padding: 2px;
