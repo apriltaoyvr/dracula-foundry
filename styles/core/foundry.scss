@@ -159,7 +159,7 @@ body {
     }
   }
 
-// Global button styling
+  // Global button styling
   button,
   form button {
     @include thinBorder($accent);
@@ -349,7 +349,7 @@ body {
     }
 
     &[type="checkbox"] {
-      background: transparent;;
+      background: transparent;
       color: $accent;
     }
 
@@ -492,14 +492,15 @@ body {
       }
     }
     &.success {
-      color: linear-gradient(
-        $gradientDegree,
-        $success 0%,
-        $greenSecondary 100%
-      );
+      color: $success;
+      &:hover {
+        border-width: 2px;
+        box-shadow: 0 0 4px $border-color-secondary;
+        cursor: pointer;
+      }
     }
     &.failure {
-      color: linear-gradient($gradientDegree, $failure 0%, $red 100%);
+      color: $failure;
       &:hover {
         border-width: 2px;
         box-shadow: 0 0 4px $border-color-secondary;

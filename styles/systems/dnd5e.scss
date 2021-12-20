@@ -17,10 +17,10 @@ body {
         background: $bg_content;
       }
       &.critical {
-        color: linear-gradient(0deg, $success 0%, $greenSecondary 100%);
+        color: $green;
       }
       &.fumble {
-        color: linear-gradient(0deg, $red 0%, $failure 100%);
+        color: $failure;
       }
     }
   }
