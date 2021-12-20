@@ -50,7 +50,7 @@ $text-color-secondary: $whiteSecondary;
 $text-color-dark: $blackSecondary;
 $border-color: $blackLight;
 $border-color-secondary: $purpleLight;
-$glowColor: 0 0 4px $accent;
+$glowColor: 0 0 4px rgba(255, 255, 255, 0.25);
 
 $bg_content: $black;
 $bg_window_content: $blackSecondary;
