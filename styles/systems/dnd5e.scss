@@ -11,9 +11,9 @@ body {
         border: 1px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(
-          $gradientDegree,
+          0deg,
           $success 0%,
-          $green 100%
+          $greenSecondary 100%
         );
       }
       &.failure {
@@ -22,23 +22,23 @@ body {
         border: 1px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(
-          $gradientDegree,
-          $failure 0%,
-          $red 100%
+          0deg,
+          $red 0%,
+          $failure 100%
         );
       }
       &.critical {
         color: linear-gradient(
-          $gradientDegree,
+          0deg,
           $success 0%,
-          $green 100%
+          $greenSecondary 100%
         );
       }
       &.fumble {
         color: linear-gradient(
-          $gradientDegree,
-          $failure 0%,
-          $red 100%
+          0deg,
+          $red 0%,
+          $failure 100%
         );
       }
     }

@@ -54,3 +54,12 @@ $glowColor: 0 0 4px rgba(255, 255, 255, 0.25);
 
 $bg_content: $black;
 $bg_window_content: $blackSecondary;
+
+@mixin hideBorder {
+  border-color: 1px solid transparent;
+}
+
+@mixin lightToDark {
+  color: $text-color-secondary;
+  background: transparent;
+}

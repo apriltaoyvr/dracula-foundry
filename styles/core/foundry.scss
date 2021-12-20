@@ -1,4 +1,5 @@
 @use '../variables' as *;
+
 /* Global stylings */
 body {
   :root {
@@ -116,8 +117,13 @@ body {
     }
     #scene-list {
       .scene.gm {
-        background: $highlight;
+        background: transparent;
+        border: 1px solid $black;
+      }
+      .scene.view,
+      .scene-context {
         border: 1px solid $accent;
+        background: transparent;
       }
     }
   }
@@ -423,8 +429,8 @@ body {
   }
 
   #chat-log {
+    @include hideBorder;
     background: transparent;
-    border: 1px solid transparent;
     border-radius: 2px;
   }
 
@@ -515,7 +521,7 @@ body {
       text-shadow: 0 0 10px rgba(0 0 0 / 90%);
     }
     &.success {
-      color: linear-gradient($gradientDegree, $success 0%, $green 100%);
+      color: linear-gradient($gradientDegree, $success 0%, $greenSecondary 100%);
     }
     &.failure {
       color: linear-gradient($gradientDegree, $failure 0%, $red 100%);
@@ -571,7 +577,7 @@ body {
       border-image-slice: 1;
       border-image-source: linear-gradient(
         $gradientDegree,
-        $highlight 0%,
+        $accent 0%,
         $accentTertiary 100%
       );
       transition: max-height 0.3s ease-in-out;
@@ -591,15 +597,15 @@ body {
       //The small boxes for each dice roll result
       .dice-tooltip .dice-rolls .roll {
         --shadow-color: 246deg 23% 6%;
-        color: hsl(60, 30%, 100%);
+        color: $text-color;
         background: transparent;
         font-size: 14px;
         border: 1px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(
-          $gradientDegree,
+          0deg,
           $accentTertiary 0%,
-          $accent 100%
+          $highlight 100%
         );
         border-radius: 2px;
         margin-left: 2px;
@@ -621,9 +627,9 @@ body {
           border: 1px solid;
           border-image-slice: 1;
           border-image-source: linear-gradient(
-            $gradientDegree,
-            $failure 0%,
-            $red 100%
+            0deg,
+            $red 0%,
+            $failure 100%
           );
           filter: none;
         }
@@ -634,9 +640,9 @@ body {
           border: 1px solid;
           border-image-slice: 1;
           border-image-source: linear-gradient(
-            $gradientDegree,
-            $success 0%,
-            $green 100%
+            0deg,
+            $greenSecondary 0%,
+            $success 100%
           );
           filter: none;
         }
