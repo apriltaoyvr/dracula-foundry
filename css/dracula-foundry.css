@@ -1,9 +1,9 @@
 /* Error: expected ";".
  *    ,
- * 70 |       box-shadow: none;
- *    |                 ^
+ * 67 |       border-width  :2px box-shadow: none;
+ *    |                                    ^
  *    '
- *   styles\core\foundry.scss 70:17  @use
+ *   styles\core\foundry.scss 67:36  @use
  *   styles\init.scss 2:1            root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 70 \2502        box-shadow: none;\d\a    \2502                  ^\a    \2575 \a   styles\\core\\foundry.scss 70:17  @use\a   styles\\init.scss 2:1            root stylesheet';
+  content: 'Error: expected ";".\a    \2577 \a 67 \2502        border-width  :2px box-shadow: none;\d\a    \2502                                     ^\a    \2575 \a   styles\\core\\foundry.scss 67:36  @use\a   styles\\init.scss 2:1            root stylesheet';
 }

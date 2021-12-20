@@ -7,12 +7,10 @@ body {
     --color-dracula-accent: $accent;
     --color-dracula-secondary: $accentSecondary;
     --color-dracula-tertiary: $accentTertiary;
-
     --color-dracula-text-primary: $text-color;
     --color-dracula-text-secondary: $text-color-secondary;
     --color-dracula-text-tertiary: $disabled;
     --color-dracula-text-inactive: $disabled;
-
     // Scrollbar
     scrollbar-width: thin;
     scrollbar-color: $accentTertiary $accentTertiary;
@@ -65,13 +63,13 @@ body {
     background: $bg_content;
     color: $text-color;
     margin: 2px;
+
     &:focus {
-      border-width: 2px
+      border-width: 2px;
       box-shadow: none;
     }
   }
-
-// Main window wrappers
+  // Main window wrappers
   .window-app {
     .window-content {
       background: $bg_content;
@@ -96,8 +94,7 @@ body {
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
     }
   }
-
-// The sidebar itself
+  // The sidebar itself
   #sidebar {
     background: linear-gradient(
       0deg,
@@ -106,23 +103,23 @@ body {
       hsla(230, 15%, 15%, 70%) 100%
     );
     border: 2px solid $bg_content;
-    backdrop-filter: blur(12px)
+    backdrop-filter: blur(12px);
   }
-
-
-// Scrollbar
+  // Scrollbar
   ::-webkit-scrollbar {
     @include thinBorder(transparent);
     background: transparent;
     width: 6px;
     height: 6px;
+
     &-track {
       box-shadow: 0 0 1px $glowColor inset;
       border-radius: 4;
     }
+
     &-thumb {
       outline: none;
-      border-radius: 0px;
+      border-radius: 0;
       background: linear-gradient(
         0deg,
         $accentTertiary 0%,
@@ -130,7 +127,6 @@ body {
       );
     }
   }
-
   // Global  styling
   button,
   form button {
@@ -140,18 +136,19 @@ body {
     border-radius: 2px;
     font-size: 14px;
     margin: 2px;
+
     &:hover {
       @include hoverRaise;
     }
   }
-
-// Separate from the above if I want pop-ups to have different colours
+  // Separate from the above if I want pop-ups to have different colours
   .dialog .dialog-buttons button {
     @include thinBorder($accent);
     @include lightToDark($bg_content);
     @include heavyShadow;
     font-size: 14px;
     margin: 2px;
+
     &.default {
       @include thinBorder($accent);
       @include lightToDark($bg_content);
@@ -169,6 +166,7 @@ body {
 
   input {
     margin: 2px;
+
     &:focus {
       box-shadow: none;
     }
@@ -219,7 +217,6 @@ body {
       color: $disabled;
     }
   }
-
 
   input {
     &[type="text"],
@@ -275,7 +272,8 @@ body {
       border-bottom: none;
     }
   }
-// Select aka drop-down boxes
+  // Select aka drop-down boxes
+
   select {
     color: $text-color-secondary;
     background: $black;
@@ -284,6 +282,7 @@ body {
     box-shadow: none;
     margin: 2px;
     transition: 0.3s ease-in-out all;
+
     &:focus {
       border-width: 2px;
       box-shadow: none;
@@ -307,28 +306,27 @@ body {
       border-width: 2px;
     }
   }
-
   // For color pickers
-    .picker_wrapper {
+  .picker_wrapper {
+    background: $bg_content;
+    color: $text-color;
+
+    .button {
       background: $bg_content;
+      border: 1px solid $blackSecondary;
       color: $text-color;
-
-      .button {
-        background: $bg_content;
-        border: 1px solid $blackSecondary;
-        color: $text-color;
-      }
     }
-
-// Default text editor for journals
-    .tinymce .mce-content-body {
-      color: $text-color-secondary;
-    }
+  }
+  // Default text editor for journals
+  .tinymce .mce-content-body {
+    color: $text-color-secondary;
+  }
 
   .directory {
     .action-buttons button {
       background: $bg_content;
     }
+
     .directory-header .header-search input {
       @include thinBorder($accent);
       background: $bg_content;
@@ -342,28 +340,24 @@ body {
       }
     }
   }
-
-// WIP doesn't seem to affect anything
+  // WIP doesn't seem to affect anything
   #module-management input[type="checkbox"] {
     background: $border-color-secondary;
     color: $accent;
   }
-
-// Compedium Menu
+  // Compedium Menu
   .compendium.directory .directory-list .directory-item {
     border-top: none;
     border-bottom: 1px solid transparent;
   }
-
-// Sound Menu
+  // Sound Menu
   #playlists .sound-control {
     &[data-action="sound-stop"],
     &[data-action="playlist-stop"] {
       color: $accentTertiary;
     }
   }
-
-// Chat Menu
+  // Chat Menu
   #chat-log {
     @include thinBorder(transparent);
     background: transparent;
@@ -372,6 +366,7 @@ body {
 
   #chat-controls {
     background: none;
+
     .roll-type-select {
       @include lightToDark($bg_content);
       @include thinBorder(transparent);
@@ -385,11 +380,11 @@ body {
     color: $text-color-secondary;
     background: transparent;
     margin: 2px;
+
     &:focus {
       border-width: 2px;
     }
   }
-
   /* This will restyle most chat cards */
   .chat-message {
     @include gradientBorder($accent, $accentSecondary);
@@ -416,72 +411,63 @@ body {
       color: $text-color-secondary;
       text-shadow: none;
     }
+    // Most values related to dice result boxes
+    .dice-roll {
+      .dice-formula {
+        @include gradientBorder($accent, $accentSecondary);
+        @include heavyShadow;
+        color: inherit;
+        background: $border-color;
+        margin: 2px;
 
+        &:hover {
+          @include hoverRaise;
+          cursor: pointer;
+        }
+      }
 
-  // Most values related to dice result boxes
-  .dice-roll {
-    .dice-formula {
-      @include gradientBorder($accent, $accentSecondary);
+      .dice-total {
+        @include gradientBorder($accent, $accentSecondary);
+        @include heavyShadow;
+        background: $border-color;
+        margin: 2px;
+
+        &:hover {
+          @include hoverRaise;
+          cursor: pointer;
+        }
+      }
+
+      &.critical {
+        background: linear-gradient(0deg, $success 0%, $greenSecondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &.fumble {
+        background: linear-gradient(0deg, $red 0%, $failure 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .dice-tooltip .part-header {
       color: inherit;
-      background: $border-color;
-      text-shadow: 0 0 10px $shadowColor;
-      box-shadow: 0 0 10px $shadowColor;
-      margin: 2px;
-      &:hover {
-        @include hoverRaise;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-    .dice-total {
-      @include gradientBorder($accent, $accentSecondary);
-      background: $border-color;
-      border-radius: 2px;
+      border: none;
       box-shadow: none;
-      text-shadow: 0 0 10px $shadowColor;
-      margin: 2px;
-      &:hover {
-        @include hoverRaise;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
+
+      .part-formula {
+        margin-left: 6px;
+        margin-top: 1px;
       }
     }
-    &.success {
-      color: $success;
-      &:hover {
-        @include hoverRaise;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-    &.failure {
-      color: $failure;
-      &:hover {
-        @include hoverRaise;
-        box-shadow: 0 0 4px $border-color-secondary;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .dice-tooltip .part-header {
-    color: inherit;
-    border: none;
-    box-shadow: none;
-
-    .part-formula {
-      margin-left: 6px;
-      margin-top: 1px;
-    }
-  }
-
-
-  // Removing borders from the detailed dice results
+    // Removing borders from the detailed dice results
     .dice-tooltip .part-header {
       .part-flavor {
         color: inherit;
         background: none;
       }
+
       .part-total {
         @include thinBorder(transparent);
         border-bottom: none;
@@ -491,6 +477,7 @@ body {
         margin-right: 5px;
       }
     }
+
     .chat-message {
       .table-draw .table-description {
         border-top: 1px solid $whiteLight;
@@ -505,8 +492,6 @@ body {
         text-shadow: 0 0 10px $shadowColor;
       }
     }
-
-
     //Roll result display
     .message-content {
       color: $text-color-secondary;
@@ -532,8 +517,8 @@ body {
           0.5px 10.2px 11.5px -2.1px hsl(var(--shadow-color) / 0.34),
           0.7px 15px 16.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
-        &.min,
-        &.failure {
+        &.failure,
+        &.min {
           @include gradientBorder($failure, $red);
           color: inherit;
           filter: none;
@@ -550,6 +535,7 @@ body {
           color: $text-color-secondary;
         }
       }
+
       .form-group.sheet.actor .items-list {
         color: $text-color-secondary;
         border: none;
@@ -557,8 +543,7 @@ body {
       }
     }
   }
-
-// Module management menus
+  // Module management menus
   #module-management .package-list {
     .package-description,
     .package-metadata,
@@ -573,8 +558,10 @@ body {
       color: hsla(60, 30%, 100%, 80%);
       border-bottom: 1px solid transparent;
     }
+
     nav.tabs {
       border-bottom: 1px solid $border-color;
+
       &:focus {
         text-shadow: 0 0 4px $accentSecondary;
       }
@@ -622,8 +609,7 @@ body {
       border-bottom: 1px solid $border-color-secondary;
     }
   }
-
-// Roll tables
+  // Roll tables
   .roll-table-config ol.table-results {
     .table-header {
       border: none;
@@ -642,24 +628,26 @@ body {
     border-top: none;
     border-bottom: none;
   }
-
-// Navigation
+  // Navigation
   #navigation {
     .nav-item {
       border: 1px solid transparent;
     }
+
     #nav-toggle {
       &:hover {
         text-shadow: 0 0 4px $glowColor;
       }
     }
+
     #scene-list {
       .scene.gm {
         @include thinBorder($highlight);
         background: $bg_content;
       }
-      .scene.view,
-      .scene-context {
+
+      .scene-context,
+      .scene.view {
         @include thinBorder($accent);
         background: $bg_content;
       }
@@ -686,5 +674,4 @@ body {
       transition: all 0.2s ease-in-out;
     }
   }
-
 }
