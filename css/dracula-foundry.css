@@ -66,7 +66,6 @@ body .picker_wrapper .button {
 body .window-app .window-content {
   background: rgba(33, 34, 44, 0.8);
   color: rgba(248, 248, 242, 0.9);
-  filter: blur(6px);
 }
 body .window-app .window-content > * {
   background: transparent;
