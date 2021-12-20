@@ -85,7 +85,6 @@ body .window-app .dialogue {
 body #sidebar {
   background: linear-gradient(0deg, rgba(33, 34, 44, 0.9) 0%, rgba(33, 34, 44, 0.75) 75%, rgba(33, 34, 44, 0.5) 100%);
   border: 2px solid transparent;
-  filter: blur(6px);
 }
 body #navigation .nav-item {
   border: 1px solid transparent;
