@@ -86,7 +86,6 @@ body {
     .window-content {
       background: $bg_content;
       color: $text-color;
-      filter: blur(6px);
 
       > * {
         background: transparent;
