@@ -225,6 +225,9 @@ body input[type=range] + .range-value {
   margin: 2px;
   transition: 0.3s ease-in-out all;
 }
+body .directory .action-buttons button {
+  background: rgba(33, 34, 44, 0.8);
+}
 body .directory .directory-header .header-search input {
   border: 1px solid;
   border-image-slice: 1;

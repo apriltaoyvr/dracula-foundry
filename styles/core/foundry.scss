@@ -326,16 +326,21 @@ body {
     }
   }
 
-  .directory .directory-header .header-search input {
-    @include gradientBorder($accent, $highlight);
-    background: $bg_content;
-    color: $text-color-secondary;
-    box-shadow: none;
-    margin: 2px;
-    transition: 0.3s ease-in-out all;
+  .directory {
+    .action-buttons button {
+      background: $bg_content;
+    }
+    .directory-header .header-search input {
+      @include gradientBorder($accent, $highlight);
+      background: $bg_content;
+      color: $text-color-secondary;
+      box-shadow: none;
+      margin: 2px;
+      transition: 0.3s ease-in-out all;
 
-    &:focus {
-      border-width: 2px;
+      &:focus {
+        border-width: 2px;
+      }
     }
   }
 
