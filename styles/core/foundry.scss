@@ -72,7 +72,7 @@ body {
   }
 
   .picker_wrapper {
-    background: $bg_window_content;
+    background: $bg_content;
     color: $text-color;
 
     .button {
@@ -86,6 +86,7 @@ body {
     .window-content {
       background: $bg_content;
       color: $text-color;
+      filter: blur(6px);
 
       > * {
         background: transparent;
@@ -115,6 +116,7 @@ body {
       hsla(230, 15%, 15%, 50%) 100%
     );
     border: 2px solid transparent;
+    filter: blur(6px);
   }
 
   #navigation {
@@ -253,7 +255,7 @@ body {
 
     &[type="color"][data-edit][data-edit] {
       appearance: auto;
-      background-color: $bg_window_content;
+      background-color: transparent;
       color: $text-color;
       border-color: $bg_window_content;
     }
@@ -318,8 +320,7 @@ body {
     &[type="range"] + .range-value {
       color: $text-color-secondary;
       background: transparent;
-      border: 1px solid $border-color-secondary;
-      border-radius: 2px;
+      @include gradientBorder($accent, $accentSecondary);
       box-shadow: none;
       margin: 2px;
       transition: 0.3s ease-in-out all;

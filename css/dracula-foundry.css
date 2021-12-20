@@ -1,3 +1,4 @@
+/* Dracula UI Colours Import */
 /* Global stylings */
 body {
   /* This will restyle most chat cards */
@@ -65,6 +66,7 @@ body .picker_wrapper .button {
 body .window-app .window-content {
   background: rgba(33, 34, 44, 0.8);
   color: rgba(248, 248, 242, 0.9);
+  filter: blur(6px);
 }
 body .window-app .window-content > * {
   background: transparent;
@@ -84,6 +86,7 @@ body .window-app .dialogue {
 body #sidebar {
   background: linear-gradient(0deg, rgba(33, 34, 44, 0.9) 0%, rgba(33, 34, 44, 0.75) 75%, rgba(33, 34, 44, 0.5) 100%);
   border: 2px solid transparent;
+  filter: blur(6px);
 }
 body #navigation .nav-item {
   border: 1px solid transparent;
@@ -570,10 +573,10 @@ body .dice-roll .dice-total.failure {
   background: rgba(33, 34, 44, 0.8);
 }
 body .dice-roll .dice-total.critical {
-  color: #8aff80;
+  color: linear-gradient(0deg, #52fa7c 0%, #d0ffcc 100%);
 }
 body .dice-roll .dice-total.fumble {
-  color: #ff5757;
+  color: linear-gradient(0deg, #ff9580 0%, #ff5757 100%);
 }
 body .dnd5e .window-content {
   color: rgba(248, 248, 242, 0.9);
