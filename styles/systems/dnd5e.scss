@@ -28,10 +28,7 @@ body {
         -webkit-text-fill-color: transparent;
       }
       &:hover {
-        @include hoverRaise {
-          box-shadow: 0 0.5em 0.5em -0.4em $accent;
-          transform: translateY(-0.25em);
-        }
+        @include hoverRaise
       }
     }
   }
