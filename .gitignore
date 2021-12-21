@@ -1,5 +1,6 @@
 .DS_Store
 .eslintrc.cjs
+.prettierrc
 .idea/
 .vscode/
 node_modules/

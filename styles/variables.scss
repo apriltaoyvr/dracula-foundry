@@ -1,32 +1,32 @@
 /* Dracula UI Colours Import */
-$black: hsla(230, 15%, 15%, 80);
-$blackSecondary: hsla(230, 15%, 30%, 80);
+$black: hsla(235, 14%, 15%, 0.8);
+$blackSecondary: hsla(230, 15%, 30%, 0.8);
 $blackTernary: hsl(230, 15%, 70%);
-$blackLight: hsla(230, 15%, 15%, 5);
-$white: hsla(60, 30%, 96%, 90);
-$whiteSecondary: hsla(60, 30%, 100%, 80);
-$whiteLight: hsla(60, 30%, 96%, 5);
+$blackLight: hsla(235, 14%, 15%, 0.05);
+$white: hsla(60, 30%, 96%, 0.9);
+$whiteSecondary: hsla(0, 0%, 100%, 0.8);
+$whiteLight: hsla(60, 30%, 96%, 0.05);
 $cyan: hsl(170, 100%, 75%);
 $cyanSecondary: hsl(170, 100%, 90%);
-$cyanLight: hsla(170, 100%, 75%, 5);
+$cyanLight: hsla(170, 100%, 75%, 0.05);
 $green: hsl(115, 100%, 75%);
 $greenSecondary: hsl(115, 100%, 90%);
-$greenLight: hsla(115, 100%, 75%, 5);
+$greenLight: hsla(115, 100%, 75%, 0.05);
 $orange: hsl(35, 100%, 75%);
 $orangeSecondary: hsl(35, 100%, 90%);
-$orangeLight: hsla(35, 100%, 75%, 5);
+$orangeLight: hsla(35, 100%, 75%, 0.05);
 $pink: hsl(330, 100%, 75%);
 $pinkSecondary: hsl(330, 100%, 90%);
-$pinkLight: hsla(330, 100%, 75%, 5);
-$purple: hsla(249, 31%, 59%, 80);
-$purpleSecondary: hsla(250, 100%, 90%, 80);
-$purpleLight: hsla(250, 100%, 75%, 5);
-$red: hsla(10, 100%, 75%, 80);
-$redSecondary: hsla(10, 100%, 90%, 80);
-$redLight: hsla(10, 100%, 75%, 5);
-$yellow: hsla(16, 100%, 75%, 1);
+$pinkLight: hsla(330, 100%, 75%, 0.05);
+$purple: hsla(249, 31%, 59%, 0.8);
+$purpleSecondary: hsla(251, 100%, 90%, 0.8);
+$purpleLight: hsla(250, 100%, 75%, 0.05);
+$red: hsla(10, 100%, 75%, 0.8);
+$redSecondary: hsla(11, 100%, 90%, 0.8);
+$redLight: hsla(10, 100%, 75%, 0.05);
+$yellow: hsla(16, 100%, 75%, 0.012);
 $yellowSecondary: hsl(60, 100%, 90%);
-$yellowLight: hsla(60, 100%, 75%, 5);
+$yellowLight: hsla(60, 100%, 75%, 0.05);
 $cyan-transparent: hsla(170, 100%, 75%, 0.1);
 $green-transparent: hsla(115, 100%, 75%, 0.1);
 $orange-transparent: hsla(35, 100%, 75%, 0.1);
@@ -51,7 +51,7 @@ $text-color-dark: $blackSecondary;
 $border-color: $blackLight;
 $border-color-secondary: $purpleLight;
 $glowColor: rgba(255, 255, 255, 0.25);
-$shadowColor: rgba(0 0 0 / 90%);
+$shadowColor: hsla(0, 0%, 0%, 0.9);
 
 $bg_content: $black;
 $bg_window_content: $blackSecondary;
@@ -59,15 +59,19 @@ $bg_window_content: $blackSecondary;
 @mixin gradientBorder($firstColor, $secondColor) {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient($gradientDegree,
-      $firstColor 0%,
-      $secondColor 100%);
+  border-image-source: linear-gradient(
+    $gradientDegree,
+    $firstColor 0%,
+    $secondColor 100%
+  );
 }
 
 @mixin gradientText($firstColor, $secondColor) {
-  background: linear-gradient($gradientDegree,
-      $firstColor 0%,
-      $secondColor 100%);
+  background: linear-gradient(
+    $gradientDegree,
+    $firstColor 0%,
+    $secondColor 100%
+  );
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -76,12 +80,10 @@ $bg_window_content: $blackSecondary;
 
 @mixin heavyShadow {
   --shadow-color: 232deg 22% 2%;
-  box-shadow:
-    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
+  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
     0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
     0px 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
-  text-shadow:
-    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
+  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
     0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
     0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33),
     0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
@@ -103,7 +105,7 @@ $bg_window_content: $blackSecondary;
   background: $bg;
 }
 
-@mixin thinBorder ($thinColor) {
+@mixin thinBorder($thinColor) {
   border: 1px solid $thinColor;
   border-radius: 2px;
 }
