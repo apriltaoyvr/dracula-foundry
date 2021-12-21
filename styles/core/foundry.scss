@@ -245,6 +245,7 @@ body {
     @include lightToDark($bg_content);
     @include heavyShadow;
     font-size: 14px;
+		margin: 2px;
 
     &:hover {
       @include hoverRaise;
@@ -328,7 +329,8 @@ body {
       color: $text-color;
     }
 
-    &[type="color"][data-edit][data-edit] {
+    &[type="color"][data-edit][data-edit],
+		&[type="color" i]{
       appearance: auto;
       background-color: transparent;
       color: $text-color;
@@ -549,6 +551,13 @@ body {
       color: $text-color-secondary;
       transition: max-height 0.3s ease-in-out;
     }
+
+		&.emote {
+      @include gradientBorder($accent, $yellow);
+			background: $bg_content;
+      color: $text-color-secondary;
+      transition: max-height 0.3s ease-in-out;
+		}
 
     .message-header,
     .message-metadata {
