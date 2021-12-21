@@ -3,7 +3,7 @@ My take on the open theme [Dracula](https://draculatheme.com) and [Dracula UI](h
 
 The module is for creating a dark mode variant for Foundry's default light theme. The goal is to recolour most of the light elements.
 
-It is a work in progress but most menus in Foundry have been skinned/touched by the module so far. If you see something off, let me know and I'll see what I can do. I've been working on it for v9 so there may be strange issues in 8.9. 
+It is a work in progress but most menus in Foundry have been skinned/touched by the module so far. If you see something off, let me know and I'll see what I can do.
 
 ## Screenshot(s)
 ![image](https://user-images.githubusercontent.com/95392008/146748697-44dc5b4f-49c7-4dac-bcae-71dade2799fa.png)
