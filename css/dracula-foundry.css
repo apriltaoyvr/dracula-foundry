@@ -1,10 +1,14 @@
-/* Error: expected ";".
- *    ,
- * 67 |       border-width  :2px box-shadow: none;
- *    |                                    ^
+/* Error: Mixin doesn't accept a content block.
+ *    ,--> styles\systems\dnd5e.scss
+ * 31 |         @include hoverRaise {
+ *    |         ^^^^^^^^^^^^^^^^^^^ invocation
  *    '
- *   styles\core\foundry.scss 67:36  @use
- *   styles\init.scss 2:1            root stylesheet */
+ *    ,--> styles\variables.scss
+ * 96 | @mixin hoverRaise {
+ *    |        ========== declaration
+ *    '
+ *   styles\systems\dnd5e.scss 31:9  @use
+ *   styles\init.scss 5:1            root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +18,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 67 \2502        border-width  :2px box-shadow: none;\d\a    \2502                                     ^\a    \2575 \a   styles\\core\\foundry.scss 67:36  @use\a   styles\\init.scss 2:1            root stylesheet';
+  content: "Error: Mixin doesn't accept a content block.\a    \250c \2500 \2500 > styles\\systems\\dnd5e.scss\a 31 \2502          @include hoverRaise {\d\a    \2502          ^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > styles\\variables.scss\a 96 \2502  @mixin hoverRaise {\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   styles\\systems\\dnd5e.scss 31:9  @use\a   styles\\init.scss 5:1            root stylesheet";
 }

@@ -49,7 +49,7 @@ $text-color: $white;
 $text-color-secondary: $whiteSecondary;
 $text-color-dark: $blackSecondary;
 $border-color: $blackLight;
-$border-color-secondary: $purpleLight
+$border-color-secondary: $purpleLight;
 $glowColor: rgba(255, 255, 255, 0.25);
 $shadowColor: rgba(0 0 0 / 90%);
 
@@ -64,6 +64,16 @@ $bg_window_content: $blackSecondary;
     $firstColor 0%,
     $secondColor 100%
   );
+}
+
+@mixin gradientText($firstColor, $secondColor) {
+  background: linear-gradient(
+    $gradientDegree,
+    $firstColor 0%,
+    $secondColor 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @mixin heavyShadow {
@@ -84,8 +94,8 @@ $bg_window_content: $blackSecondary;
 // Use for buttons and the like on hover
 // For other forms, border-width: 2px is preferred
 @mixin hoverRaise {
-    box-shadow: 0 0.5em 0.5em -0.4em $accent;
-    transform: translateY(-0.25em);
+  box-shadow: 0 0.5em 0.5em -0.4em $accent;
+  transform: translateY(-0.25em);
 }
 
 @mixin lightToDark($bg) {
