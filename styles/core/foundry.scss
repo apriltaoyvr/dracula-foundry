@@ -140,7 +140,7 @@ body {
     @include lightToDark($bg_content);
     @include heavyShadow;
     font-size: 14px;
-    margin: 2px;
+    margin: 4px;
 
     &:hover {
       @include hoverRaise;
@@ -452,6 +452,7 @@ body {
         @include heavyShadow;
         @include gradientBorder($accent, $border-color-secondary);
         background: $border-color;
+        font-size: 14px;
         &:hover {
           @include hoverRaise;
           cursor: pointer;
@@ -480,17 +481,23 @@ body {
               font-size: 12px;
               line-height: 25px;
               margin-right: 5px;
+              margin-top: 1px;
             }
 
             .part-formula {
               margin-left: 6px;
-              margin-top: 1px;
             }
 
             .part-flavor {
               color: inherit;
               background: none;
+              border: 1px solid transparent;
+              line-height: 25px;
             }
+          }
+
+          &-rolls {
+            padding-top: 2px;
           }
 
           .roll {
@@ -499,7 +506,7 @@ body {
             color: $text-color;
             background: transparent;
             font-size: 14px;
-            padding-top: 2px;
+            margin: 2px;
 
             &:hover {
               @include hoverRaise;
@@ -508,7 +515,6 @@ body {
             &.failure,
             &.min {
               @include gradientBorder($failure, $red);
-              //color: inherit;
               @include gradientText($failure, $red);
               filter: none;
             }
@@ -516,7 +522,6 @@ body {
             &.max,
             &.success {
               @include gradientBorder($success, $green);
-              //color: inherit;
               @include gradientText($success, $green);
               filter: none;
             }

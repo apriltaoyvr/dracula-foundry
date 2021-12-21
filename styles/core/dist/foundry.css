@@ -104,7 +104,7 @@ body form button {
   box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color)/0.35), 0px 0.7px 0.8px -2.2px hsl(var(--shadow-color)/0.38);
   text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color)/0.32), 0px 2px 2.3px -0.6px hsl(var(--shadow-color)/0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color)/0.35), -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color)/0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color)/0.37), -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color)/0.38), -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color)/0.39);
   font-size: 14px;
-  margin: 2px;
+  margin: 4px;
 }
 body button:hover,
 body form button:hover {
@@ -361,6 +361,7 @@ body .chat-message .dice-roll .dice-total {
   border-image-slice: 1;
   border-image-source: linear-gradient(135deg, #8076b7 0%, #9580ff 100%);
   background: #21222c;
+  font-size: 14px;
 }
 body .chat-message .dice-roll .dice-total:hover {
   box-shadow: 0 0.5em 0.5em -0.4em #8076b7;
@@ -394,14 +395,19 @@ body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flex
   font-size: 12px;
   line-height: 25px;
   margin-right: 5px;
+  margin-top: 1px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow .part-formula {
   margin-left: 6px;
-  margin-top: 1px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow .part-flavor {
   color: inherit;
   background: none;
+  border: 1px solid transparent;
+  line-height: 25px;
+}
+body .chat-message .dice-roll .dice-result .dice-tooltip .dice-rolls {
+  padding-top: 2px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll {
   border: 1px solid;
@@ -413,7 +419,7 @@ body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll {
   color: #f8f8f2;
   background: transparent;
   font-size: 14px;
-  padding-top: 2px;
+  margin: 2px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll:hover {
   box-shadow: 0 0.5em 0.5em -0.4em #8076b7;

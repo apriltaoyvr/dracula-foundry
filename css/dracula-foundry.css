@@ -398,14 +398,19 @@ body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flex
   font-size: 12px;
   line-height: 25px;
   margin-right: 5px;
+  margin-top: 1px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow .part-formula {
   margin-left: 6px;
-  margin-top: 1px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow .part-flavor {
   color: inherit;
   background: none;
+  border: 1px solid transparent;
+  line-height: 25px;
+}
+body .chat-message .dice-roll .dice-result .dice-tooltip .dice-rolls {
+  padding-top: 2px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll {
   border: 1px solid;
@@ -417,7 +422,7 @@ body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll {
   color: #f8f8f2;
   background: transparent;
   font-size: 14px;
-  padding-top: 2px;
+  margin: 2px;
 }
 body .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll:hover {
   box-shadow: 0 0.5em 0.5em -0.4em #8076b7;
