@@ -172,6 +172,19 @@ body {
       }
     }
   }
+  // Bottom left players list
+  #players {
+    border: 1px solid $accent;
+    h3 {
+      border-bottom: 1px solid $border-color;
+    }
+    background: radial-gradient(
+      0deg,
+      hsla(235, 14%, 15%, 0.9) 0%,
+      hsla(230, 15%, 15%, 75%) 50%
+    );
+		// backdrop-filter: blur(6px);
+  }
 
   // The right sidebar itself
   #sidebar {
@@ -181,8 +194,17 @@ body {
       hsla(230, 15%, 15%, 75%) 75%,
       hsla(230, 15%, 15%, 70%) 100%
     );
-    border: none;
-    backdrop-filter: blur(6px);
+    //	backdrop-filter: blur(6px);
+    border: 1px solid transparent;
+    --shadow-color: 232deg 22% 2%;
+    box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
+      -0.9px 0.1px 1px -0.3px hsl(var(--shadow-color) / 0.14),
+      -1.8px 0.1px 2.1px -0.7px hsl(var(--shadow-color) / 0.15),
+      -2.9px 0.2px 3.4px -1px hsl(var(--shadow-color) / 0.15),
+      -4.6px 0.3px 5.3px -1.3px hsl(var(--shadow-color) / 0.15),
+      -7.1px 0.4px 8.2px -1.6px hsl(var(--shadow-color) / 0.16),
+      -10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
+      -15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
 
     &-tabs {
       border: none;
@@ -245,7 +267,7 @@ body {
     @include lightToDark($bg_content);
     @include heavyShadow;
     font-size: 14px;
-		margin: 2px;
+    margin: 2px;
 
     &:hover {
       @include hoverRaise;
@@ -330,7 +352,7 @@ body {
     }
 
     &[type="color"][data-edit][data-edit],
-		&[type="color" i]{
+    &[type="color" i] {
       appearance: auto;
       background-color: transparent;
       color: $text-color;
@@ -552,12 +574,12 @@ body {
       transition: max-height 0.3s ease-in-out;
     }
 
-		&.emote {
+    &.emote {
       @include gradientBorder($accent, $yellow);
-			background: $bg_content;
+      background: $bg_content;
       color: $text-color-secondary;
       transition: max-height 0.3s ease-in-out;
-		}
+    }
 
     .message-header,
     .message-metadata {
