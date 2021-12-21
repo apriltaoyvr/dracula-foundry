@@ -188,9 +188,9 @@ body {
 			text-shadow: 0 0 0 4px $accent;
 			border-bottom: 2px solid $accent;
 			&:hover {
-				color: $accent;
+				color: $text-color;
 				border-bottom: 2px solid $accent;
-				text-shadow: 0 0 4px $glowColor;
+				text-shadow: 0 0 8px $glowColor;
 			}
 		}
 
@@ -389,15 +389,22 @@ body {
 			color: $text-color;
 		}
 
-		.form-group .form-fields {
-			border: 1px solid transparent;
-			border-radius: 2px;
-			background: transparent;
-			color: $text-color-secondary;
-		}
-
-		&:focus {
-			border-width: 2px;
+		&-group {
+			.form-fields {
+				border: 1px solid $border-color;
+				border-radius: 2px;
+				background: $bg_window_content;
+				color: $text-color-secondary;
+				&:focus {
+					border-width: 2px;
+				}
+			}
+			.form-fields > *:last-child {
+				border: 1px solid $border-color;
+				border-radius: 2px;
+				background: $bg_window_content;
+				color: $text-color-secondary;
+			}
 		}
 	}
 
