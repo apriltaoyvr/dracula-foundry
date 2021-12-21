@@ -57,43 +57,56 @@ $bg_content: $black;
 $bg_window_content: $blackSecondary;
 
 @mixin gradientBorder($firstColor, $secondColor) {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
+	border: 1px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
 }
 
 @mixin gradientText($firstColor, $secondColor) {
-  background: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin heavyShadow {
-  --shadow-color: 232deg 22% 2%;
-  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
-    0px 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
-  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
-    0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
-    -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color) / 0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color) / 0.37),
-    -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color) / 0.38),
-    -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color) / 0.39);
+	--shadow-color: 232deg 22% 2%;
+	box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
+		0px 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
+	text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
+		0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
+		-0.1px 5.1px 6px -1.3px hsl(var(--shadow-color) / 0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color) / 0.37),
+		-0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color) / 0.38),
+		-0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color) / 0.39);
+}
+
+@mixin toolsShadow {
+	--shadow-color: 0deg 0% 48%;
+	box-shadow: 0px 0.1px 0.2px hsl(var(--shadow-color) / 0), 0px 0.6px 0.9px hsl(var(--shadow-color) / 0.08),
+		0px 1.1px 1.7px hsl(var(--shadow-color) / 0.16), 0px 1.6px 2.4px hsl(var(--shadow-color) / 0.24),
+		0px 2.2px 3.3px hsl(var(--shadow-color) / 0.33), 0px 2.8px 4.2px hsl(var(--shadow-color) / 0.41),
+		0px 3.7px 5.6px hsl(var(--shadow-color) / 0.49), 0px 4.7px 7.1px hsl(var(--shadow-color) / 0.57),
+		0px 6.1px 9.1px hsl(var(--shadow-color) / 0.65), 0.1px 7.8px 11.7px hsl(var(--shadow-color) / 0.73);
+
+	text-shadow: 0px 0.1px 0.2px hsl(var(--shadow-color) / 0), 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.18),
+		0px 0.4px 0.6px hsl(var(--shadow-color) / 0.35), 0px 0.8px 1.2px hsl(var(--shadow-color) / 0.52),
+		0px 1.3px 2px hsl(var(--shadow-color) / 0.7);
 }
 
 // Use for buttons and the like on hover
 // For other forms, border-width: 2px is preferred
 @mixin hoverRaise {
-  box-shadow: 0 0.5em 0.5em -0.4em $accent;
-  transform: translateY(-0.25em);
+	box-shadow: 0 0.5em 0.5em -0.4em $accent;
+	transform: translateY(-0.25em);
 }
 
 @mixin lightToDark($bg) {
-  color: $text-color-secondary;
-  background: $bg;
+	color: $text-color-secondary;
+	background: $bg;
 }
 
 @mixin thinBorder($thinColor) {
-  border: 1px solid $thinColor;
-  border-radius: 2px;
+	border: 1px solid $thinColor;
+	border-radius: 2px;
 }
