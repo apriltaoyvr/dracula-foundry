@@ -76,8 +76,8 @@ body {
       margin: 2px;
       &:focus,
       &:hover {
-        @include: hoverRaise;
-        cursor: pointer;
+        box-shadow: 0 0.5em 0.5em -0.4em $accent;
+        transform: translateY(-0.25em);
       }
     }
 
