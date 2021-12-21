@@ -18,14 +18,10 @@ body {
         background: $bg_content;
       }
       &.critical {
-        background: linear-gradient(0deg, $success 0%, $greenSecondary 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradientText($success, $greenSecondary);
       }
       &.fumble {
-        background: linear-gradient(0deg, $red 0%, $failure 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradientText($failure, $redSecondary);
       }
       &:hover {
         @include hoverRaise
@@ -90,11 +86,11 @@ body {
         }
 
         &:hover h3 {
-          color: inherit;
+          color: $text-color;
+          font-family: "Signika";
+          font-weight: bold;
+          font-size: 14px;
           text-shadow: 0 0 8px $accent;
-          font-family: inherit;
-          font-weight: inherit;
-          font-size: inherit;
         }
 
         img {

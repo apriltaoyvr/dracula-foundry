@@ -1,4 +1,4 @@
-@use '../variables' as *;
+@use '../variables'as *;
 
 /* Global stylings */
 body {
@@ -69,15 +69,17 @@ body {
       box-shadow: none;
     }
   }
+
   // Main window wrappers
   .window-app {
     backdrop-filter: blur(6px);
+
     .window-content {
       @extend .window-app;
       background: $bg_content;
       color: $text-color;
 
-      > * {
+      >* {
         @extend .window-app;
         background: transparent;
         color: $text-color;
@@ -99,17 +101,17 @@ body {
       text-shadow: 0 0 10px rgba(0 0 0 / 50%);
     }
   }
+
   // The sidebar itself
   #sidebar {
-    background: linear-gradient(
-      0deg,
-      hsla(230, 15%, 15%, 90%) 0%,
-      hsla(230, 15%, 15%, 75%) 75%,
-      hsla(230, 15%, 15%, 70%) 100%
-    );
+    background: linear-gradient(0deg,
+        hsla(230, 15%, 15%, 90%) 0%,
+        hsla(230, 15%, 15%, 75%) 75%,
+        hsla(230, 15%, 15%, 70%) 100%);
     border: 2px solid $bg_content;
     backdrop-filter: blur(6px);
   }
+
   // Scrollbar
   ::-webkit-scrollbar {
     @include thinBorder(transparent);
@@ -125,20 +127,18 @@ body {
     &-thumb {
       outline: none;
       border-radius: 0;
-      background: linear-gradient(
-        0deg,
-        $accentTertiary 0%,
-        $accentSecondary 100%
-      );
+      background: linear-gradient(0deg,
+          $accentTertiary 0%,
+          $accentSecondary 100%);
     }
   }
+
   // Global  styling
   button,
   form button {
     @include thinBorder($accent);
     @include lightToDark($bg_content);
     @include heavyShadow;
-    border-radius: 2px;
     font-size: 14px;
     margin: 2px;
 
@@ -146,6 +146,7 @@ body {
       @include hoverRaise;
     }
   }
+
   // Separate from the above if I want pop-ups to have different colours
   .dialog .dialog-buttons button {
     @include thinBorder($accent);
@@ -200,13 +201,13 @@ body {
   }
 
   a {
+
     &.content-link,
     &.entity-link,
     &.inline-roll {
       color: $text-color-secondary;
       background: transparent;
       border: 1px solid $accentSecondary;
-      border-radius: 2px;
     }
 
     &.content-link:hover,
@@ -224,6 +225,7 @@ body {
   }
 
   input {
+
     &[type="text"],
     &[type="number"],
     &[type="password"],
@@ -238,7 +240,7 @@ body {
       transition: 0.3s ease-in-out all;
     }
 
-    &[type="range"] + .range-value {
+    &[type="range"]+.range-value {
       @include thinBorder($accent);
       color: $text-color-secondary;
       background: $border-color;
@@ -277,6 +279,7 @@ body {
       border-bottom: none;
     }
   }
+
   // Select aka drop-down boxes
 
   select {
@@ -295,6 +298,7 @@ body {
   }
 
   form {
+
     .hint,
     .notes {
       color: $text-color;
@@ -311,6 +315,7 @@ body {
       border-width: 2px;
     }
   }
+
   // For color pickers
   .picker_wrapper {
     background: $bg_content;
@@ -322,6 +327,7 @@ body {
       color: $text-color;
     }
   }
+
   // Default text editor for journals
   .tinymce .mce-content-body {
     color: $text-color-secondary;
@@ -345,23 +351,28 @@ body {
       }
     }
   }
+
   // WIP doesn't seem to affect anything
   #module-management input[type="checkbox"] {
     background: $border-color-secondary;
     color: $accent;
   }
+
   // Compedium Menu
   .compendium.directory .directory-list .directory-item {
     border-top: none;
     border-bottom: 1px solid transparent;
   }
+
   // Sound Menu
   #playlists .sound-control {
+
     &[data-action="sound-stop"],
     &[data-action="playlist-stop"] {
       color: $accentTertiary;
     }
   }
+
   // Chat Menu
   #chat-log {
     @include thinBorder(transparent);
@@ -390,7 +401,8 @@ body {
       border-width: 2px;
     }
   }
-  /* This will restyle most chat cards */
+
+  // Restyles most chat cards
   .chat-message {
     @include gradientBorder($accent, $accentSecondary);
     background: $bg_content;
@@ -416,14 +428,19 @@ body {
       color: $text-color-secondary;
       text-shadow: none;
     }
+
+    .table-draw .table-description {
+      border-top: 1px solid $whiteLight;
+      color: $disabled;
+    }
+
     // Most values related to dice result boxes
     .dice-roll {
       .dice-formula {
-        @include gradientBorder($accent, $accentSecondary);
         @include heavyShadow;
-        color: inherit;
         background: $border-color;
-        margin: 2px;
+        border: 1px solid $accent;
+        border-radius: 1px;
 
         &:hover {
           @include hoverRaise;
@@ -432,103 +449,90 @@ body {
       }
 
       .dice-total {
-        @include gradientBorder($accent, $accentSecondary);
         @include heavyShadow;
+        @include gradientBorder($accent, $border-color-secondary);
         background: $border-color;
-        margin: 2px;
-
         &:hover {
           @include hoverRaise;
           cursor: pointer;
         }
+
+        &.critical {
+          @include gradientText($success, $greenSecondary);
+        }
+
+        &.fumble {
+          @include gradientText($red, $failure);
+        }
       }
 
-      &.critical {
-        background: linear-gradient(0deg, $success 0%, $greenSecondary 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+      // Detailed attack formula + damage buttons
+      .dice-result {
+        .dice-tooltip .dice {
+          .part-header.flexrow {
+            @include gradientBorder($accent, $border-color-secondary);
+            background: $border-color;
+            margin: 2px;
 
-      &.fumble {
-        background: linear-gradient(0deg, $red 0%, $failure 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+            .part-total {
+              border: none;
+              background: transparent;
+              font-size: 12px;
+              line-height: 25px;
+              margin-right: 5px;
+            }
+
+            .part-formula {
+              margin-left: 6px;
+              margin-top: 1px;
+            }
+
+            .part-flavor {
+              color: inherit;
+              background: none;
+            }
+          }
+
+          .roll {
+            @include gradientBorder($purple, $disabled);
+            @include heavyShadow;
+            color: $text-color;
+            background: transparent;
+            font-size: 14px;
+            padding-top: 2px;
+
+            &:hover {
+              @include hoverRaise;
+            }
+
+            &.failure,
+            &.min {
+              @include gradientBorder($failure, $red);
+              //color: inherit;
+              @include gradientText($failure, $red);
+              filter: none;
+            }
+
+            &.max,
+            &.success {
+              @include gradientBorder($success, $green);
+              //color: inherit;
+              @include gradientText($success, $green);
+              filter: none;
+            }
+
+            .dice-result {
+              color: $text-color-secondary;
+            }
+          }
+        }
       }
     }
 
-    .dice-tooltip .part-header {
-      color: inherit;
-      border: none;
-      box-shadow: none;
-
-      .part-formula {
-        margin-left: 6px;
-        margin-top: 1px;
-      }
-    }
-    // Removing borders from the detailed dice results
-    .dice-tooltip .part-header {
-      .part-flavor {
-        color: inherit;
-        background: none;
-      }
-
-      .part-total {
-        @include thinBorder(transparent);
-        border-bottom: none;
-        background: transparent;
-        font-size: 12px;
-        line-height: 25px;
-        margin-right: 5px;
-      }
-    }
-
-    .chat-message {
-      .table-draw .table-description {
-        border-top: 1px solid $whiteLight;
-        color: $disabled;
-      }
-
-      .dice-result .dice-tooltip .dice .part-header.flexrow {
-        @include thinBorder($accentSecondary);
-        color: inherit;
-        box-shadow: none;
-        margin: 2px;
-        text-shadow: 0 0 10px $shadowColor;
-      }
-    }
-    //Roll result display
     .message-content {
       color: $text-color-secondary;
       border: none;
       margin: 2px;
-      // Per die roll result
-      .dice-tooltip .dice-rolls .roll {
-        @include gradientBorder($purple, $disabled);
-        @include heavyShadow;
-        color: $text-color;
-        background: transparent;
-        font-size: 14px;
-        margin: 2px;
-
-        &.failure,
-        &.min {
-          @include gradientBorder($failure, $red);
-          color: inherit;
-          filter: none;
-        }
-
-        &.max,
-        &.success {
-          @include gradientBorder($success, $green);
-          color: inherit;
-          filter: none;
-        }
-
-        .dice-result {
-          color: $text-color-secondary;
-        }
-      }
 
       .form-group.sheet.actor .items-list {
         color: $text-color-secondary;
@@ -537,8 +541,10 @@ body {
       }
     }
   }
+
   // Module management menus
   #module-management .package-list {
+
     .package-description,
     .package-metadata,
     .package-title {
@@ -547,6 +553,7 @@ body {
   }
 
   #client-settings {
+
     &.app.window-app.form #config-tabs .settings-list h2.module-header span,
     section.content h2.module-header {
       color: hsla(60, 30%, 100%, 80%);
@@ -566,7 +573,7 @@ body {
       margin: 2px;
 
       &:focus {
-        @border-width: 2px;
+        border-width: 2px;
         box-shadow: none;
       }
     }
@@ -603,6 +610,7 @@ body {
       border-bottom: 1px solid $border-color-secondary;
     }
   }
+
   // Roll tables
   .roll-table-config ol.table-results {
     .table-header {
@@ -622,6 +630,7 @@ body {
     border-top: none;
     border-bottom: none;
   }
+
   // Navigation
   #navigation {
     .nav-item {
