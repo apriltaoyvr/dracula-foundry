@@ -128,17 +128,19 @@ body {
         backdrop-filter: blur(6px);
 
         &-tabs {
-            border-bottom: 1px solid $disabled;
+            border-bottom: 2px solid $disabled;
         }
 
         &-tabs > .item.active {
-            color: $highlight;
+            color: $accent;
             background: transparent;
             backdrop-filter: none;
             box-shadow: none;
-            border-bottom: 2px solid $highlight;
+            border-bottom: 2px solid $accent;
             &:hover {
-                color: $highlight;
+                color: $accentTertiary;
+                border-bottom: 2px solid $accentTertiary;
+                text-shadow: 0 0 2px $glowColor;
             }
         }
 
@@ -148,9 +150,9 @@ body {
             backdrop-filter: none;
             text-shadow: 0 0 4px $disabled;
             &:hover {
-                color: $highlight;
-                text-shadow: 0 0 4px $highlight;
-                border-bottom: 2px solid $highlight;
+                color: $accentTertiary;
+                border-bottom: 2px solid $accentTertiary;
+                text-shadow: 0 0 2px $glowColor;
             }
         }
     }
@@ -180,7 +182,6 @@ body {
         @include lightToDark($bg_content);
         @include heavyShadow;
         font-size: 14px;
-        margin: 4px;
 
         &:hover {
             @include hoverRaise;
@@ -193,7 +194,6 @@ body {
         @include lightToDark($bg_content);
         @include heavyShadow;
         font-size: 14px;
-        margin: 2px;
 
         &.default {
             @include thinBorder($accent);

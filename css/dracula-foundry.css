@@ -99,18 +99,20 @@ body #sidebar {
           backdrop-filter: blur(6px);
 }
 body #sidebar-tabs {
-  border-bottom: 1px solid #6c7393;
+  border-bottom: 2px solid #6c7393;
 }
 body #sidebar-tabs > .item.active {
-  color: #80ffea;
+  color: rgba(128, 118, 183, 0.8);
   background: transparent;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
   box-shadow: none;
-  border-bottom: 2px solid #80ffea;
+  border-bottom: 2px solid rgba(128, 118, 183, 0.8);
 }
 body #sidebar-tabs > .item.active:hover {
-  color: #80ffea;
+  color: #ff80bf;
+  border-bottom: 2px solid #ff80bf;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
 }
 body #sidebar-tabs > .item {
   color: #6c7393;
@@ -120,9 +122,9 @@ body #sidebar-tabs > .item {
   text-shadow: 0 0 4px #6c7393;
 }
 body #sidebar-tabs > .item:hover {
-  color: #80ffea;
-  text-shadow: 0 0 4px #80ffea;
-  border-bottom: 2px solid #80ffea;
+  color: #ff80bf;
+  border-bottom: 2px solid #ff80bf;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
 }
 body ::-webkit-scrollbar {
   border: 1px solid transparent;
@@ -150,7 +152,6 @@ body form button {
   box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color)/0.35), 0px 0.7px 0.8px -2.2px hsl(var(--shadow-color)/0.38);
   text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color)/0.32), 0px 2px 2.3px -0.6px hsl(var(--shadow-color)/0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color)/0.35), -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color)/0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color)/0.37), -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color)/0.38), -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color)/0.39);
   font-size: 14px;
-  margin: 4px;
 }
 body button:hover,
 body form button:hover {
@@ -166,7 +167,6 @@ body .dialog .dialog-buttons button {
   box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color)/0.35), 0px 0.7px 0.8px -2.2px hsl(var(--shadow-color)/0.38);
   text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color)/0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color)/0.32), 0px 2px 2.3px -0.6px hsl(var(--shadow-color)/0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color)/0.35), -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color)/0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color)/0.37), -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color)/0.38), -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color)/0.39);
   font-size: 14px;
-  margin: 2px;
 }
 body .dialog .dialog-buttons button.default {
   border: 1px solid rgba(128, 118, 183, 0.8);
