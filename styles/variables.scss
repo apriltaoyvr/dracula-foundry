@@ -59,19 +59,11 @@ $bg_window_content: $blackSecondary;
 @mixin gradientBorder($firstColor, $secondColor) {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(
-    $gradientDegree,
-    $firstColor 0%,
-    $secondColor 100%
-  );
+  border-image-source: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
 }
 
 @mixin gradientText($firstColor, $secondColor) {
-  background: linear-gradient(
-    $gradientDegree,
-    $firstColor 0%,
-    $secondColor 100%
-  );
+  background: linear-gradient($gradientDegree, $firstColor 0%, $secondColor 100%);
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -80,15 +72,11 @@ $bg_window_content: $blackSecondary;
 
 @mixin heavyShadow {
   --shadow-color: 232deg 22% 2%;
-  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
-    0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
+  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32), 0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
     0px 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
-  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
-    0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
-    0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33),
-    0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
-    -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color) / 0.36),
-    -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color) / 0.37),
+  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31), 0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
+    0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33), 0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
+    -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color) / 0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color) / 0.37),
     -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color) / 0.38),
     -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color) / 0.39);
 }

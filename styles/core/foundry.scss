@@ -104,15 +104,44 @@ body {
     }
     // Left sidebar menu
     #controls {
-        .scene-control {
-            @include gradientBorder($accent, $highlight);
+        .control-tool {
             @include heavyShadow;
-            background: $bg_content;
         }
-        ol.sub-controls {
-        //    @include gradientBorder($accent, $highlight);
-            @include heavyShadow;
-        //    background: $bg_content;
+        ol {
+            .scene-control {
+                @include gradientBorder($accent, $highlight);
+                background: $bg_content;
+                filter: opacity(75%);
+                &.active {
+                    @include gradientBorder($accent, $highlight);
+                    border-radius: 1px;
+                    box-shadow: 0px 0px $accent;
+                    filter: none;
+                }
+                &:hover {
+                    @include gradientBorder($accent, $highlight);
+                    border-radius: 1px;
+                    box-shadow: 0px 0px $accent;
+                    filter: none;
+                }
+            }
+            &.sub-controls {
+                .control-tool {
+                    @include gradientBorder($accent, $highlight);
+                    background: $bg_content;
+                    filter: opacity(75%);
+                    &.active {
+                        @include gradientBorder($accent, $highlight);
+                        border-radius: 1px;
+                        filter: none;
+                    }
+                    &:hover {
+                        @include gradientBorder($accent, $highlight);
+                        border-radius: 1px;
+                        filter: none;
+                    }
+                }
+            }
         }
     }
 
@@ -146,7 +175,7 @@ body {
         }
 
         &-tabs > .item {
-            color: $disabled;
+            color: $text-color-secondary;
             background: transparent;
             backdrop-filter: none;
             border: none;
@@ -378,7 +407,7 @@ body {
             .directory-item {
                 &.active,
                 &.context {
-                border-color: $border-color;
+                    border-color: $border-color;
                 }
             }
         }
