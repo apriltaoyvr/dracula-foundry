@@ -30,7 +30,7 @@
       display: inherit;
     }
 
-    background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
+    background: linear-gradient(0deg, rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
     backdrop-filter: blur(6px);
     border-radius: 5px;
     text-shadow: 0 0 10px rgba(0 0 0 / 90%);
@@ -68,7 +68,7 @@
     position: absolute;
     top: 50px;
     right: 0;
-    color: white;
+    color: #d0c2a8;
     background: rgba(0, 0, 0, 0.5);
     border: solid 1px black;
     border-radius: 2px;
@@ -83,7 +83,7 @@
   .resize-handle {
     width: 18px;
     height: 18px;
-    color: white;
+    color: #d0c2a8;
     background: transparent;
     position: absolute;
     top: 40%;
@@ -125,7 +125,7 @@ li[data-control="combat-carousel"] {
 
     &:hover {
       border: 1px solid transparent;
-      box-shadow: #1d1e23e6;
+      box-shadow: #414B55E6;
     }
   }
 
@@ -134,7 +134,7 @@ li[data-control="combat-carousel"] {
     position: absolute;
     right: 2px;
     top: 2px;
-    color: white;
+    color: #d0c2a8;
     background: transparent;
 
     .icon {
@@ -160,7 +160,7 @@ li[data-control="combat-carousel"] {
     width: 50px;
     height: 65px;
     text-align: center;
-    color: white;
+    color: #d0c2a8;
 
     /* backdrop-filter: blur(6px);
     background: transparent; */
@@ -254,7 +254,7 @@ li[data-control="combat-carousel"] {
     left: 5px;
     top: 35%;
     font-size: 1.5rem;
-    color: white;
+    color: #d0c2a8;
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
   }
 
@@ -286,7 +286,7 @@ li[data-control="combat-carousel"] {
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(6px);
-    background: #1d1e23e6;
+    background: #414B55E6;
 
     img {
       width: 15px;
@@ -337,7 +337,7 @@ li[data-control="combat-carousel"] {
     position: absolute;
     right: 0;
     padding: 2px 0;
-    background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
+    background: radial-gradient(0deg, rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
     border-radius: 60%;
     z-index: 20;
   }
@@ -373,7 +373,7 @@ li[data-control="combat-carousel"] {
   }
 
   .fa-dice-d20 {
-    color: #44475aff;
+    color: rgb(113, 116, 133);
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
   }
 
@@ -386,7 +386,7 @@ li[data-control="combat-carousel"] {
 
   .effect {
     backdrop-filter: blur(6px);
-    background: #1d1e23e6;
+    background: #414B55E6;
 
     img {
       height: 15px;
@@ -400,7 +400,7 @@ li[data-control="combat-carousel"] {
     backdrop-filter: blur(6px);
     background: linear-gradient(0deg, rgba(40, 42, 54, 0.9) 0%, rgba(68, 71, 90, 0.4) 50%, rgba(75, 85, 95, 0) 100%);
 
-    /* background: #1d1e23e6; */
+    /* background: #414B55E6; */
     box-shadow: 0 0 10px rgba(0 0 0 / 90%);
     padding: 2px;
     color: #f0f0e0;
@@ -432,7 +432,7 @@ li[data-control="combat-carousel"] {
       width: 100%;
       height: 100%;
       backdrop-filter: blur(6px);
-      background: #1d1e23e6;
+      background: #414B55E6;
       border: 1px solid transparent;
       border-bottom: 1px solid transparent;
       text-shadow: 0 0 10px rgb(0 0 0 / 70%);
@@ -458,7 +458,7 @@ li[data-control="combat-carousel"] {
 
   meter {
     --background:#282a36ff;
-    --optimum:#00ffaaff;
+    --optimum: #8aff80ff;
     --sub-optimum:#ffb86cff;
     --sub-sub-optimum:#ff5555ff;
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
@@ -525,7 +525,7 @@ li[data-control="combat-carousel"] {
     align-items: center;
     border: 1px #44475aff;
     border-radius: 50%;
-    background: #1d1e23e6;
+    background: #414B55E6;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -568,26 +568,6 @@ li[data-control="combat-carousel"] {
   }
 }
 
-/* #combat-carousel meter[value="0"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: rgba(0,0,0,0.9);
-} */
-
-/* #combat-carousel .splide__slide:hover meter[value="0"]::after {
-    position: inherit;
-    content: attr(value) "/" attr(max);
-    top: -15px;
-} */
-
-#combat-carousel-config img.icon {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  flex-grow: 0;
-  margin: 3px;
-}
-
 #combat-carousel {
   .splide__slide {
     &.token-hover-neutral, &.token-hover-friendly {
@@ -595,7 +575,7 @@ li[data-control="combat-carousel"] {
     }
 
     &.token-hover-hostile {
-      border: 1px solid #ff5555ff;
+      border: 1px solid #753B3BE6;
     }
 
     &:hover {
@@ -615,7 +595,7 @@ li[data-control="combat-carousel"] {
         overflow: hidden;
         text-overflow: ellipsis;
         height: 20px;
-        background: #1d1e23e6;
+        background: #414B55E6;
         border: 1px solid transparent;
         z-index: 100;
       }
@@ -658,12 +638,7 @@ li[data-control="combat-carousel"] {
     border-radius: 3px;
     border: 1px solid #84d3e4e6;
     border-bottom: 1px solid #84d3e4e6;
-
-    /* height: 83% !important; */
-
-    .container {
-      /* height: 80%; */
-    }
+		clip-path: none;
   }
 
   .fa-dice-d20:hover {
@@ -696,7 +671,7 @@ li[data-control="combat-carousel"] {
     border-top: 1px solid transparent;
     background: transparent;
     font-size: large;
-    color: white;
+    color: #d0c2a8;
 
     &.round {
       top: calc(50% + 50px);
@@ -755,63 +730,5 @@ li[data-control="combat-carousel"] {
 
   100% {
     transform: rotate(360deg);
-  }
-}
-
-/* SPLIDE */
-
-/* ABOUT APP */
-
-#combat-carousel-about {
-  img {
-    border: none;
-  }
-
-  .logo {
-    width: 600px;
-  }
-
-  .version {
-    flex-grow: 0;
-  }
-
-  div.patrons {
-    width: 100%;
-  }
-
-  .patrons {
-    ol {
-      height: 175px;
-      border: 1px inset white;
-      list-style: none;
-      overflow: hidden scroll;
-      text-align: center;
-      padding: 2px;
-    }
-
-    li {
-      &:nth-child(odd) {
-        background: rgba(0, 0, 0, 0.2);
-      }
-
-      font-size: x-large;
-    }
-  }
-
-  footer div {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .death-save {
-    flex: 0 0 120px;
-  }
-
-  .heart {
-    color: tomato;
-  }
-
-  .patreon img {
-    flex: 0 0 100px;
   }
 }

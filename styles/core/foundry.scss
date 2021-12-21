@@ -105,22 +105,22 @@ body {
   // Left sidebar menu
   #controls {
     .control-tool {
-      @include toolsShadow;
+      @include heavyShadow;
     }
     ol {
       .scene-control {
-        @include toolsShadow;
+        @include heavyShadow;
         @include gradientBorder($accentSecondary, $accentTertiary);
         background: $bg_content;
         filter: opacity(75%);
         &.active {
-          @include toolsShadow;
+          @include heavyShadow;
           @include gradientBorder($accentSecondary, $accentTertiary);
           border-radius: 1px;
           filter: none;
         }
         &:hover {
-          @include toolsShadow;
+          @include heavyShadow;
           @include gradientBorder($accentSecondary, $accentTertiary);
           border-radius: 1px;
           filter: none;
@@ -128,7 +128,7 @@ body {
       }
       &.sub-controls {
         .control-tool {
-          @include toolsShadow;
+          @include heavyShadow;
           @include gradientBorder($accentSecondary, $accentTertiary);
           filter: opacity(75%);
           background: $bg_content;
@@ -159,12 +159,12 @@ body {
             }
           }
           &.active {
-            @include toolsShadow;
+            @include heavyShadow;
             @include gradientBorder($accentSecondary, $accentTertiary);
             filter: none;
           }
           &:hover {
-            @include toolsShadow;
+            @include heavyShadow;
             @include gradientBorder($accentSecondary, $accentTertiary);
             filter: none;
           }
@@ -263,7 +263,6 @@ body {
       @include lightToDark($bg_content);
       @include heavyShadow;
       font-size: 14px;
-      margin: 2px;
     }
 
     &:focus,
@@ -274,8 +273,6 @@ body {
   }
 
   input {
-    margin: 2px;
-
     &:focus {
       box-shadow: none;
     }
