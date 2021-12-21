@@ -124,23 +124,24 @@ body {
             hsla(230, 15%, 15%, 75%) 75%,
             hsla(230, 15%, 15%, 70%) 100%
         );
-        border: 2px solid transparent;
+        border: none;
         backdrop-filter: blur(6px);
 
         &-tabs {
-            border-bottom: 2px solid $disabled;
+            border: none;
+            margin-bottom: 2px;
         }
 
         &-tabs > .item.active {
             color: $accent;
             background: transparent;
             backdrop-filter: none;
-            box-shadow: none;
+            text-shadow: none;
             border-bottom: 2px solid $accent;
             &:hover {
-                color: $accentTertiary;
-                border-bottom: 2px solid $accentTertiary;
-                text-shadow: 0 0 2px $glowColor;
+                color: $accent;
+                border-bottom: 2px solid $accent;
+                text-shadow: 0 0 4px $glowColor;
             }
         }
 
@@ -148,10 +149,11 @@ body {
             color: $disabled;
             background: transparent;
             backdrop-filter: none;
-            text-shadow: 0 0 4px $disabled;
+            border: none;
+            text-shadow: none;
             &:hover {
-                color: $accentTertiary;
-                border-bottom: 2px solid $accentTertiary;
+                color: $accent;
+                border-bottom: 2px solid $accent;
                 text-shadow: 0 0 2px $glowColor;
             }
         }
@@ -372,6 +374,15 @@ body {
             background: $bg_content;
         }
 
+        .directory-list {
+            .directory-item {
+                &.active,
+                &.context {
+                border-color: $border-color;
+                }
+            }
+        }
+
         .directory-header .header-search input {
             @include thinBorder($accent);
             background: $bg_content;
@@ -403,6 +414,21 @@ body {
                 background: $border-color-secondary;
                 color: $accent;
             }
+        }
+    }
+
+    // Combat Tracker
+    #combat {
+        #combat-round {
+            border-bottom: 2px solid transparent;
+        }
+        li.combatant {
+            &.active {
+                background: $bg_content;
+            }
+        }
+        #combat-controls {
+            border-top: 2px solid $border-color;
         }
     }
 

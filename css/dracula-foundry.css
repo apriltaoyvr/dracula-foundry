@@ -94,36 +94,38 @@ body #controls ol.sub-controls {
 }
 body #sidebar {
   background: linear-gradient(0deg, rgba(33, 34, 44, 0.9) 0%, rgba(33, 34, 44, 0.75) 75%, rgba(33, 34, 44, 0.7) 100%);
-  border: 2px solid transparent;
+  border: none;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
 body #sidebar-tabs {
-  border-bottom: 2px solid #6c7393;
+  border: none;
+  margin-bottom: 2px;
 }
 body #sidebar-tabs > .item.active {
   color: rgba(128, 118, 183, 0.8);
   background: transparent;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
-  box-shadow: none;
+  text-shadow: none;
   border-bottom: 2px solid rgba(128, 118, 183, 0.8);
 }
 body #sidebar-tabs > .item.active:hover {
-  color: #ff80bf;
-  border-bottom: 2px solid #ff80bf;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
+  color: rgba(128, 118, 183, 0.8);
+  border-bottom: 2px solid rgba(128, 118, 183, 0.8);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
 }
 body #sidebar-tabs > .item {
   color: #6c7393;
   background: transparent;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
-  text-shadow: 0 0 4px #6c7393;
+  border: none;
+  text-shadow: none;
 }
 body #sidebar-tabs > .item:hover {
-  color: #ff80bf;
-  border-bottom: 2px solid #ff80bf;
+  color: rgba(128, 118, 183, 0.8);
+  border-bottom: 2px solid rgba(128, 118, 183, 0.8);
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
 }
 body ::-webkit-scrollbar {
