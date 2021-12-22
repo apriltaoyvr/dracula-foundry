@@ -29,13 +29,6 @@ body {
     }
   }
   .dnd5e {
-    .window-content {
-      color: $text-color;
-      background: $bg_content;
-      border: 1px solid $border-color;
-      border-radius: 6px;
-    }
-
     .form-header {
       border-top: 1px solid $border-color;
       border-bottom: 1px solid $border-color;
@@ -52,13 +45,37 @@ body {
     input {
       &[type="text"],
       &[type="number"] {
-        color: $text-color;
-        border: 1px solid transparent;
-        border-radius: 2px;
-        &:focus {
-          box-shadow: $glowColor;
-        }
+        border-color: $border-color-secondary;
+        background: rgba(0, 0, 0, 0.05);
+        color: $accent;
       }
+    }
+
+    select {
+      border-color: $border-color-secondary;
+      background: rgba(0, 0, 0, 0.05);
+      color: $accent;
+    }
+
+    input {
+      &[type="text"]:hover,
+      &[type="number"]:hover,
+      &[type="checkbox"]:hover,
+      &[type="text"]:focus,
+      &[type="number"]:focus,
+      &[type="checkbox"]:focus {
+        border: 1px solid $border-color-secondary;
+        box-shadow: 0 0 8px $accentTertiary;
+      }
+
+      &:disabled {
+        color: #4b4a44;
+      }
+    }
+
+    select:disabled,
+    textarea:disabled {
+      color: #4b4a44;
     }
 
     //Attack + Damage Buttons
@@ -125,6 +142,13 @@ body {
         border-radius: 6px;
       }
 
+      .editable {
+        h4.rollable:hover, .rollable:hover > h4 {
+          color: $accent;
+          text-shadow: 0 0 10px $accentTertiary;
+        }
+      }
+
       .sheet-header {
         border-bottom: 1px solid $border-color;
         .summary {
@@ -147,7 +171,7 @@ body {
           }
 
           &:hover {
-            text-shadow: $glowColor;
+            color: $accent;
           }
         }
 
@@ -292,6 +316,11 @@ body {
         .spell-action,
         .spell-target {
           border-right: 1px solid $blackSecondary;
+        }
+
+        .traits i.fas:hover {
+          color: $accent;
+          text-shadow: 0 0 10px $accentTertiary;
         }
 
         &.character {

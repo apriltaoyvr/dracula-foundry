@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 #combat-carousel {
   &.wrapper {
     position: fixed;
@@ -31,7 +33,7 @@
     }
 
     background: linear-gradient(0deg, rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     border-radius: 5px;
     text-shadow: 0 0 10px rgba(0 0 0 / 90%);
     z-index: 0;
@@ -162,7 +164,7 @@ li[data-control="combat-carousel"] {
     text-align: center;
     color: #d0c2a8;
 
-    /* backdrop-filter: blur(6px);
+    /* backdrop-filter: $filter-backdrop;
     background: transparent; */
     padding: 2px;
   }
@@ -277,7 +279,7 @@ li[data-control="combat-carousel"] {
     z-index: 20;
 
     .tracker-indicators {
-      backdrop-filter: blur(6px);
+      backdrop-filter: $filter-backdrop;
       background: transparent;
     }
   }
@@ -285,7 +287,7 @@ li[data-control="combat-carousel"] {
   .overlay-properties {
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     background: #414B55E6;
 
     img {
@@ -308,7 +310,7 @@ li[data-control="combat-carousel"] {
 
     /* background: transparent; */
     border: 1px solid transparent;
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,7 +387,7 @@ li[data-control="combat-carousel"] {
   }
 
   .effect {
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     background: #414B55E6;
 
     img {
@@ -397,7 +399,7 @@ li[data-control="combat-carousel"] {
   .card {
     border: 1px solid #44475aff;
     border-radius: 3px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     background: linear-gradient(0deg, rgba(40, 42, 54, 0.9) 0%, rgba(68, 71, 90, 0.4) 50%, rgba(75, 85, 95, 0) 100%);
 
     /* background: #414B55E6; */
@@ -422,7 +424,7 @@ li[data-control="combat-carousel"] {
       left: 0;
       width: 99%;
       height: 6%; */
-      backdrop-filter: blur(6px);
+      backdrop-filter: $filter-backdrop;
       background: #282a36d8;
     }
 
@@ -431,7 +433,7 @@ li[data-control="combat-carousel"] {
       position: absolute;
       width: 100%;
       height: 100%;
-      backdrop-filter: blur(6px);
+      backdrop-filter: $filter-backdrop;
       background: #414B55E6;
       border: 1px solid transparent;
       border-bottom: 1px solid transparent;
@@ -634,11 +636,11 @@ li[data-control="combat-carousel"] {
 
   .is-active-combatant.card {
     /* clip-path: polygon(0px -21px, 100% -21px, 100% 95%, 50% 100%, 0px 95%); */
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
     border-radius: 3px;
     border: 1px solid #84d3e4e6;
     border-bottom: 1px solid #84d3e4e6;
-		clip-path: none;
+	clip-path: none;
   }
 
   .fa-dice-d20:hover {
