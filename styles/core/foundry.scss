@@ -1,6 +1,5 @@
 @use "../variables" as *;
-
-/* Global stylings */
+@import "../bourbon/bourbon";
 
 // body {
 :root {
@@ -94,7 +93,6 @@ textarea {
   border: 1px solid $border-color-secondary;
   background: $bg_content;
   color: $text-color;
-  margin: 2px;
 
   &:focus {
     border-width: 2px;
@@ -377,7 +375,7 @@ form button {
   @include lightToDark($bg_content);
   @include heavyShadow;
 
-  // Margin values referenced from Tidy UI settings
+  border-margin: 1px;
   margin: 0 0 0.125rem 0;
 
   &:hover {
@@ -829,7 +827,6 @@ form {
   @include thinBorder($accent);
   color: $text-color-secondary;
   background: transparent;
-  margin: 2px;
 
   &:focus {
     border-width: 2px;
