@@ -1,4 +1,4 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 body {
   .dnd5e.sheet {
@@ -21,6 +21,18 @@ body {
         flexrow,
         style {
           border: none;
+        }
+      }
+    }
+    .sheet-navigation {
+      &.item {
+        .dae-effect-list {
+          .effect-label,
+          .effect-name,
+          .effect-mode {
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+          }
         }
       }
     }

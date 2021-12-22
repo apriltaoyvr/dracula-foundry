@@ -1,4 +1,4 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 body {
   // Dice total mini-boxes
@@ -23,7 +23,7 @@ body {
         @include gradientText($failure, $redSecondary);
       }
       &:hover {
-        @include hoverRaise
+        @include hoverRaise;
       }
     }
   }
@@ -82,12 +82,12 @@ body {
       @include heavyShadow;
       @include lightToDark($bg_content);
       border: 1px solid $accent;
-			border-radius: 1px;
+      border-radius: 1px;
       margin: 2px;
       &:focus,
       &:hover {
-				@include hoverRaise;
-			}
+        @include hoverRaise;
+      }
     }
 
     &.chat-card {
@@ -142,7 +142,8 @@ body {
       }
 
       .editable {
-        h4.rolltable:hover, .rolltable:hover > h4 {
+        h4.rolltable:hover,
+        .rolltable:hover > h4 {
           color: $accent;
           text-shadow: 0 0 10px $accentTertiary;
         }
@@ -177,15 +178,6 @@ body {
         &.item {
           .effect-header {
             border: 1px solid $border-color;
-          }
-          // DAE Item: Window
-          .dae-effect-list {
-            .effect-label,
-            .effect-name,
-            .effect-mode {
-              border-left: 1px solid $border-color;
-              border-right: 1px solid $border-color;
-            }
           }
         }
       }

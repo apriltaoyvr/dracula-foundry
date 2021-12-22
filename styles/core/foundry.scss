@@ -16,6 +16,7 @@ h3,
 footer {
   border-width: 1px;
   border-color: $border-color;
+
   &.nue {
     border-color: $border-color;
   }
@@ -30,20 +31,50 @@ hr {
   border-bottom: 1px solid transparent;
 }
 
+p {
+  color: $text-color;
+}
+
 .app {
   color: $text-color-secondary;
   background: $bg_content;
+  .mce {
+    &-btn,
+    &-ico {
+      color: $text-color;
+    }
+  }
 }
 
+// Text editors + Oxide Override
 .editor {
+  &-content {
+    color: $text-color;
+  }
   &-edit {
     color: $text-color;
-    background: $bg_window_content;
     border: 1px solid $border-color;
     box-shadow: 0 0 4px $glowColor;
   }
 }
 
+.tox {
+  &.tox {
+    &-tinymce {
+      .tox-edit-area {
+        color: $text-color;
+        &__iframe {
+          background: $bg_window_content;
+          #tinymce {
+            &.mce-content-body {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .sheet {
   nav.sheet-tabs {
     border-top: none;
@@ -97,23 +128,27 @@ textarea {
     text-shadow: 0 0 10px rgba(0 0 0 / 50%);
   }
 }
+
 // Left sidebar menu
 #controls {
   .control-tool {
     @include heavyShadow;
   }
+
   ol {
     .scene-control {
       @include heavyShadow;
       @include gradientBorder($accentSecondary, $accentTertiary);
       background: $bg_content;
       filter: opacity(75%);
+
       &.active {
         @include heavyShadow;
         @include gradientBorder($accentSecondary, $accentTertiary);
         border-radius: 1px;
         filter: none;
       }
+
       &:hover {
         @include heavyShadow;
         @include gradientBorder($accentSecondary, $accentTertiary);
@@ -121,15 +156,18 @@ textarea {
         filter: none;
       }
     }
+
     &.sub-controls {
       .control-tool {
         @include heavyShadow;
         @include gradientBorder($accentSecondary, $accentTertiary);
         filter: opacity(75%);
         background: $bg_content;
+
         &.toggle {
           @include heavyShadow;
           @include gradientBorder($accent, $highlight);
+
           &.active {
             @include toolsShadow;
             @include gradientBorder($accent, $highlight);
@@ -141,6 +179,7 @@ textarea {
             --shadow-color: 171deg 61% 33%;
             filter: none;
           }
+
           &:hover {
             @include toolsShadow;
             @include gradientBorder($accent, $highlight);
@@ -153,11 +192,13 @@ textarea {
             filter: none;
           }
         }
+
         &.active {
           @include heavyShadow;
           @include gradientBorder($accentSecondary, $accentTertiary);
           filter: none;
         }
+
         &:hover {
           @include heavyShadow;
           @include gradientBorder($accentSecondary, $accentTertiary);
@@ -182,14 +223,15 @@ textarea {
 
   #hotbar {
     border-radius: 1px;
+
     &-directory-controls,
     &-page-controls {
-			    background: linear-gradient(
-      $gradientDegree,
-      hsla(235, 14%, 15%, 90%) 0%,
-      hsla(230, 15%, 15%, 75%) 50%,
-      hsla(230, 15%, 15%, 50%) 100%
-    );
+      background: linear-gradient(
+        $gradientDegree,
+        hsla(235, 14%, 15%, 90%) 0%,
+        hsla(230, 15%, 15%, 75%) 50%,
+        hsla(230, 15%, 15%, 50%) 100%
+      );
       --shadow-color: 0deg 0% 48%;
       text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
         0 0 0.3px hsl(var(--shadow-color) / 0.18),
@@ -209,19 +251,23 @@ textarea {
       hsla(230, 15%, 15%, 50%) 100%
     );
     backdrop-filter: $filter-backdrop;
+
     // Macro boxes containing items
     &.active {
       @include gradientBorder($accentSecondary, $accentTertiary);
+
       &:hover {
         @include borderExpand($accentTertiary);
       }
     }
+
     // Empty macro boxes
     &.inactive {
       &:hover {
         @include borderExpand($blackSecondary);
       }
     }
+
     .macro-key {
       --shadow-color: 0deg 0% 48%;
       background: hsla(235, 14%, 15%, 0.25);
@@ -232,6 +278,7 @@ textarea {
         0 0 2px hsl(var(--shadow-color) / 0.7);
     }
   }
+
   .bar-controls {
     --shadow-color: 0deg 0% 48%;
     background: $border-color;
@@ -282,6 +329,7 @@ textarea {
     border: 2px solid transparent;
     border-bottom: 2px solid $accent;
     text-shadow: 0 0 0 4px $accent;
+
     &:hover {
       text-shadow: 0 0 8px $glowColor;
     }
@@ -415,7 +463,7 @@ input {
   }
 
   &[type="color"][data-edit][data-edit],
-  &[type="color" i] {
+  &[type="color"i] {
     appearance: auto;
     background-color: transparent;
     color: $text-color;
@@ -491,10 +539,12 @@ form {
       border-radius: 2px;
       background: $bg_window_content;
       color: $text-color-secondary;
+
       &:focus {
         border-width: 2px;
       }
     }
+
     .form-fields > *:last-child {
       border: 1px solid $border-color;
       border-radius: 2px;
@@ -574,11 +624,13 @@ form {
   #combat-round {
     border-bottom: 2px solid transparent;
   }
+
   li.combatant {
     &.active {
       background: $bg_content;
     }
   }
+
   #combat-controls {
     border-top: 2px solid $border-color;
   }
@@ -928,4 +980,5 @@ nav.list-filters a.filter {
     }
   }
 }
+
 //}
