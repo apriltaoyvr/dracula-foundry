@@ -1,62 +1,89 @@
-/* esversion: 6 */
-Hooks.once("init", () => {
-	const root = document.documentElement;
-	root.style.setProperty(
-		"--color-underline-header",
-		"var(--color-dracula-accent)"
-	);
-	root.style.setProperty(
-		"--color-underline-active",
-		"var(--color-dracula-accent)"
-	);
-	root.style.setProperty(
-		"--color-text-hyperlink",
-		"var(--color-dracula-tertiary)"
-	);
-	root.style.setProperty(
-		"--color-shadow-primary",
-		"var(--color-dracula-accent)"
-	);
-	root.style.setProperty(
-		"--color-shadow-highlight",
-		"var(--color-dracula-tertiary)"
-	);
-	root.style.setProperty(
-		"--color-shadow-highlight-alt",
-		"var(--color-dracula-accent)"
-	);
-	root.style.setProperty(
-		"--color-border-highlight",
-		"var(--color-dracula-tertiary)"
-	);
-	root.style.setProperty(
-		"--color-border-highlight-alt",
-		"var(--color-dracula-accent)"
-	);
-	root.style.setProperty(
-		"--color-shadow-dark",
-		"var(--color-dracula-text-primary)"
-	);
+Hooks.once('init', () => {
+  const root = document.documentElement;
 
-	// Light variables, trying to figure out why they turn dark. Commenting out for now.
-	// 	root.style.setProperty("--color-text-light-highlight", 'var(--color-dracula-text-secondary)');
-	// 	root.style.setProperty("--color-text-light-heading", 'var(--color-dracula-text-secondary)');
-	// root.style.setProperty("--color-text-light-primary", 'var(--color-dracula-text-secondary)');
+  root.style.setProperty(
+      '--color-border-dark',
+      'var(--color-dracula-border)',
+  );
 
-	root.style.setProperty(
-		"--color-text-dark-primary",
-		"var(--color-dracula-text-primary)"
-	);
-	root.style.setProperty(
-		"--color-text-dark-secondary",
-		"var(--color-dracula-text-primary)"
-	);
-	root.style.setProperty(
-		"--color-text-dark-header",
-		"var(--color-dracula-text-primary)"
-	);
-	root.style.setProperty(
-		"--color-text-dark-inactive",
-		"var(--color-dracula-text-inactive)"
-	);
+  root.style.setProperty(
+      '--color-underline-header',
+      'var(--color-dracula-accent)',
+  );
+  root.style.setProperty(
+      '--color-underline-active',
+      'var(--color-dracula-accent)',
+  );
+  root.style.setProperty(
+      '--color-text-hyperlink',
+      'var(--color-dracula-tertiary)',
+  );
+  root.style.setProperty(
+      '--color-shadow-primary',
+      'var(--color-dracula-accent)',
+  );
+  root.style.setProperty(
+      '--color-shadow-highlight',
+      'var(--color-dracula-secondary)',
+  );
+  root.style.setProperty(
+      '--color-shadow-highlight-alt',
+      'var(--color-dracula-tertiary)',
+  );
+
+  root.style.setProperty(
+      '--color-shadow-dark',
+      'var(color-dracula-shadow)',
+  );
+
+  root.style.setProperty(
+      '--color-text-light-highlight',
+      'var(--color-dracula-text-highlight)',
+  );
+  root.style.setProperty(
+      '--color-text-light-heading',
+      'var(--color-dracula-text-primary)',
+  );
+  root.style.setProperty(
+      '--color-text-light-primary',
+      'var(--color-dracula-text-primary)',
+  );
+
+  root.style.setProperty(
+      '--color-text-dark-primary',
+      'var(--color-dracula-text-primary)',
+  );
+  root.style.setProperty(
+      '--color-text-dark-secondary',
+      'var(--color-dracula-text-secondary)',
+  );
+  root.style.setProperty(
+      '--color-text-dark-header',
+      'var(--color-dracula-text-header)',
+  );
+  root.style.setProperty(
+      '--color-text-dark-inactive',
+      'var(--color-dracula-text-inactive)',
+  );
+
+  root.style.setProperty(
+      '--color-border-light-primary',
+      'var(--color-dracula-border)',
+  );
+  root.style.setProperty(
+      '--color-border-light-secondary',
+      'var(--color-dracula-border-secondary)',
+  );
+  root.style.setProperty(
+      '--color-border-light-tertiary',
+      'var(--color-dracula-border-tertiary)',
+  );
+  root.style.setProperty(
+      '--color-border-highlight',
+      'var(--color-dracula-accent)',
+  );
+  root.style.setProperty(
+      '--color-border-highlight-alt',
+      'var(--color-dracula-secondary)',
+  );
 });
