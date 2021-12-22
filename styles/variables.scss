@@ -37,27 +37,45 @@ $yellow-transparent: hsla(60, 100%, 75%, 0.1);
 
 $gradientDegree: 135deg;
 
-$accent: $purple;
-$accentSecondary: $red;
-$accentTertiary: $pink;
-$highlight: $cyan;
-$disabled: hsl(230, 15%, 50%);
-$success: hsl(135, 94%, 65%);
-$failure: hsl(0, 100%, 67%);
+//$accent: $purple;
+//$accentSecondary: $red;
+//$accentTertiary: $pink;
+//$highlight: $cyan;
+//$disabled: hsl(230, 15%, 50%);
+//$success: hsl(135, 94%, 65%);
+//$failure: hsl(0, 100%, 67%);
 
-$text-color: $white;
-$text-color-secondary: $whiteSecondary;
-$text-color-dark: $blackSecondary;
-$border-color: $blackLight;
-$border-color-secondary: $purpleLight;
-$glowColor: rgba(255, 255, 255, 0.25);
-$shadowColor: hsla(0, 0%, 0%, 0.9);
+$accent: var(--color-dracula-accent);
+$accentSecondary: var(--color-dracula-secondary);
+$accentTertiary: var(--color-dracula-tertiary);
+$highlight: var(--color-dracula-text-highlight);
+$disabled: var(--color-dracula-disabled);
+$success: var(--color-dracula-success);
+$failure: var(--color-dracula-failure);
 
-$bg_content: $black;
-$bg_window_content: $blackSecondary;
+//$text-color: $white;
+//$text-color-secondary: $whiteSecondary;
+//$text-color-dark: $blackSecondary;
+//$border-color: $blackLight;
+//$border-color-secondary: $purpleLight;
+//$glowColor: rgba(255, 255, 255, 0.25);
+//$shadowColor: hsla(0, 0%, 0%, 0.9);
 
-@mixin gradientBorder($firstColor, $secondColor) {
-  border: 1px solid;
+$text-color: var(--color-dracula-text-primary);
+$text-color-secondary: var(--color-dracula-text-secondary);
+$text-color-dark: var(--color-dracula-text-dark);
+$border-color: var(--color-dracula-border);
+$border-color-secondary: var(--color-dracula-border-secondary);
+$glowColor: var(--color-dracula-glow);
+$shadowColor: var(--color-dracula-shadow);
+
+$bg_content: var(--color-dracula-content);
+$bg_window_content: var(--color-dracula-content-window);
+
+$filter-backdrop: var(--filter-backdrop);
+
+@mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
+  border: $width solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(
     $gradientDegree,
@@ -80,13 +98,13 @@ $bg_window_content: $blackSecondary;
 
 @mixin heavyShadow {
   --shadow-color: 232deg 22% 2%;
-  box-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
-    0px 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
-    0px 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
-  text-shadow: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
-    0px 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
-    0px 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33),
-    0px 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
+  box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
+    0 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
+    0 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
+  text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
+    0 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
+    0 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33),
+    0 3.3px 3.9px -0.9px hsl(var(--shadow-color) / 0.35),
     -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color) / 0.36),
     -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color) / 0.37),
     -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color) / 0.38),
@@ -95,22 +113,22 @@ $bg_window_content: $blackSecondary;
 
 @mixin toolsShadow {
   --shadow-color: 0deg 0% 48%;
-  box-shadow: 0px 0.1px 0.2px hsl(var(--shadow-color) / 0),
-    0px 0px 0.9px hsl(var(--shadow-color) / 0.08),
-    0px 0px 1.7px hsl(var(--shadow-color) / 0.16),
-    0px 0px 2.4px hsl(var(--shadow-color) / 0.24),
-    0px 0px 3.3px hsl(var(--shadow-color) / 0.33),
-    0px 0px 4.2px hsl(var(--shadow-color) / 0.41),
-    0px 0px 5.6px hsl(var(--shadow-color) / 0.49),
-    0px 0px 7.1px hsl(var(--shadow-color) / 0.57),
-    0px 0px 9.1px hsl(var(--shadow-color) / 0.65),
-    0px 0px 11.7px hsl(var(--shadow-color) / 0.73);
+  box-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
+    0 0 0.9px hsl(var(--shadow-color) / 0.08),
+    0 0 1.7px hsl(var(--shadow-color) / 0.16),
+    0 0 2.4px hsl(var(--shadow-color) / 0.24),
+    0 0 3.3px hsl(var(--shadow-color) / 0.33),
+    0 0 4.2px hsl(var(--shadow-color) / 0.41),
+    0 0 5.6px hsl(var(--shadow-color) / 0.49),
+    0 0 7.1px hsl(var(--shadow-color) / 0.57),
+    0 0 9.1px hsl(var(--shadow-color) / 0.65),
+    0 0 11.7px hsl(var(--shadow-color) / 0.73);
 
-  text-shadow: 0px 0.1px 0.2px hsl(var(--shadow-color) / 0),
-    0px 0px 0.3px hsl(var(--shadow-color) / 0.18),
-    0px 0px 0.6px hsl(var(--shadow-color) / 0.35),
-    0px 0px 1.2px hsl(var(--shadow-color) / 0.52),
-    0px 0px 2px hsl(var(--shadow-color) / 0.7);
+  text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
+    0 0 0.3px hsl(var(--shadow-color) / 0.18),
+    0 0 0.6px hsl(var(--shadow-color) / 0.35),
+    0 0 1.2px hsl(var(--shadow-color) / 0.52),
+    0 0 2px hsl(var(--shadow-color) / 0.7);
 }
 
 // Use for buttons and the like on hover

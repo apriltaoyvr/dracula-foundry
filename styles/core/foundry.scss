@@ -2,19 +2,11 @@
 
 /* Global stylings */
 
-body {
+//body {
   :root {
-    // Link color values with init.js
-    --color-dracula-accent: $accent;
-    --color-dracula-secondary: $accentSecondary;
-    --color-dracula-tertiary: $accentTertiary;
-    --color-dracula-text-primary: $text-color;
-    --color-dracula-text-secondary: $text-color-secondary;
-    --color-dracula-text-tertiary: $disabled;
-    --color-dracula-text-inactive: $disabled;
     // Scrollbar
     scrollbar-width: thin;
-    scrollbar-color: $accentTertiary $accentTertiary;
+    scrollbar-color: var(--color-dracula-tertiary) var(--color-dracula-tertiary);
   }
 
   h1,
@@ -37,6 +29,7 @@ body {
 
   .app {
     color: $text-color-secondary;
+    background: $bg_content;
   }
 
   .editor {
@@ -77,7 +70,7 @@ body {
 
   // Main window wrappers
   .window-app {
-    backdrop-filter: blur(6px);
+    backdrop-filter: $filter-backdrop;
 
     .window-content {
       background: $bg_content;
@@ -90,7 +83,6 @@ body {
     }
 
     .window-header {
-      background: $bg_content;
       border-radius: 6px;
       border: 1px solid transparent;
     }
@@ -172,18 +164,12 @@ body {
       }
     }
   }
-  // Bottom left players list
-  #players {
-    border: 1px solid $accent;
-    h3 {
-      border-bottom: 1px solid $border-color;
+
+  // Hotbar
+  #hotbar {
+    .macro, .bar-controls {
+      background: $bg_content;
     }
-    background: radial-gradient(
-      0deg,
-      hsla(235, 14%, 15%, 0.9) 0%,
-      hsla(230, 15%, 15%, 75%) 50%
-    );
-		// backdrop-filter: blur(6px);
   }
 
   // The right sidebar itself
@@ -194,7 +180,7 @@ body {
       hsla(230, 15%, 15%, 75%) 75%,
       hsla(230, 15%, 15%, 70%) 100%
     );
-    //	backdrop-filter: blur(6px);
+    //	backdrop-filter: $filter-backdrop;
     border: 1px solid transparent;
     --shadow-color: 232deg 22% 2%;
     box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
@@ -214,12 +200,10 @@ body {
     &-tabs > .item.active {
       color: $text-color;
       background: transparent;
-      backdrop-filter: none;
       text-shadow: 0 0 0 4px $accent;
       border-bottom: 2px solid $accent;
       &:hover {
         color: $text-color;
-        border-bottom: 2px solid $accent;
         text-shadow: 0 0 8px $glowColor;
       }
     }
@@ -227,12 +211,11 @@ body {
     &-tabs > .item {
       color: $text-color-secondary;
       background: transparent;
-      backdrop-filter: none;
       border: none;
       text-shadow: 0 0 2px $shadowColor;
+
       &:hover {
         color: $text-color;
-        border-bottom: 2px solid $accent;
         text-shadow: 0 0 2px $glowColor;
       }
     }
@@ -247,7 +230,7 @@ body {
 
     &-track {
       box-shadow: 0 0 6px $glowColor inset;
-      border-radius: 4;
+      border-radius: 4px;
     }
 
     &-thumb {
@@ -528,10 +511,12 @@ body {
   }
 
   // Sound Menu
-  #playlists .sound-control {
-    &[data-action="sound-stop"],
-    &[data-action="playlist-stop"] {
-      color: $accentTertiary;
+  #playlists {
+    .sound-control {
+      &[data-action="sound-stop"],
+      &[data-action="playlist-stop"] {
+        color: $accentTertiary;
+      }
     }
   }
 
@@ -852,4 +837,4 @@ body {
       }
     }
   }
-}
+//}

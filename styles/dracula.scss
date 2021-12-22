@@ -1,0 +1,27 @@
+:root {
+  // Link color values with init.js
+  --color-dracula-accent: hsla(249, 31%, 59%, 0.8);
+  --color-dracula-secondary: hsla(10, 100%, 75%, 0.8);
+  --color-dracula-tertiary: hsl(330, 100%, 75%);
+
+  --color-dracula-content: hsla(235, 14%, 15%, 0.8);
+  --color-dracula-content-window: hsla(230, 15%, 30%, 0.8);
+
+  --color-dracula-border: hsla(235, 14%, 15%, 0.05);
+  --color-dracula-border-secondary: hsla(250, 100%, 75%, 0.05);
+
+  --color-dracula-glow: rgba(255, 255, 255, 0.25);
+  --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
+
+  --color-dracula-text-dark: hsla(230, 15%, 30%, 0.8);
+  --color-dracula-text-highlight: hsl(170, 100%, 75%);
+  --color-dracula-text-primary: hsla(60, 30%, 96%, 0.9);
+  --color-dracula-text-secondary: hsla(0, 0%, 100%, 0.8);
+  --color-dracula-text-inactive: hsl(230, 15%, 50%);
+
+  --color-dracula-disabled: hsl(230, 15%, 50%);
+  --color-dracula-failure: hsl(0, 100%, 67%);
+  --color-dracula-success: hsl(135, 94%, 65%);
+
+  --filter-backdrop: none; //blur(6px);
+}
