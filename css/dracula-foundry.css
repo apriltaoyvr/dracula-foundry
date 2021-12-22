@@ -1003,65 +1003,6 @@ nav.list-filters a.filter.active {
   border-bottom: 1px solid transparent;
 }
 
-:root {
-  --color-border-dark: var(--color-dracula-border);
-  --color-underline-header: var(--color-dracula-accent);
-  --color-underline-active: var(--color-dracula-accent);
-  --color-text-hyperlink: var(--color-dracula-tertiary);
-  --color-shadow-primary: var(--color-dracula-accent);
-  --color-shadow-highlight: var(--color-dracula-tertiary);
-  --color-shadow-highlight-alt: var(--color-dracula-accent);
-  --color-border-highlight: var(--color-dracula-tertiary);
-  --color-border-highlight-alt: var(--color-dracula-accent);
-  --color-shadow-dark: var(--color-dracula-shadow);
-  --color-text-light-highlight: var(--color-dracula-text-secondary);
-  --color-text-light-heading: var(--color-dracula-text-secondary);
-  --color-text-light-primary: var(--color-dracula-text-secondary);
-  --color-text-dark-primary: var(--color-dracula-text-primary);
-  --color-text-dark-secondary: var(--color-dracula-text-primary);
-  --color-text-dark-header: var(--color-dracula-text-primary);
-  --color-text-dark-inactive: var(--color-dracula-text-inactive);
-  --color-border-light-primary: var(--color-dracula-border);
-  --color-border-light-secondary: var(--color-dracula-border-secondary);
-  --color-border-light-tertiary: var(--color-dracula-border-tertiary);
-  --color-border-light-highlight: var(--color-dracula-border-secondary);
-}
-
-a.entity-link.broken,
-a.content-link.broken {
-  background: rgba(87, 48, 48, 0.05);
-  border: 1px dashed hsl(0, 100%, 67%);
-  border: 1px dashed var(--color-dracula-failure);
-}
-
-a.inline-roll.gmroll {
-  background: hsla(235, 14%, 15%, 0.8);
-  background: var(--color-dracula-content);
-  border-color: hsl(170, 100%, 75%);
-  border-color: var(--color-dracula-text-highlight);
-}
-
-a.inline-roll.blindroll {
-  background: hsla(235, 14%, 15%, 0.8);
-  background: var(--color-dracula-content);
-  border-color: hsl(330, 100%, 75%);
-  border-color: var(--color-dracula-tertiary);
-}
-
-::-moz-selection {
-  background: hsl(230, 15%, 50%);
-  background: var(--color-dracula-disabled);
-  color: hsla(60, 30%, 96%, 0.9);
-  color: var(--color-dracula-text-primary);
-}
-
-::selection {
-  background: hsl(230, 15%, 50%);
-  background: var(--color-dracula-disabled);
-  color: hsla(60, 30%, 96%, 0.9);
-  color: var(--color-dracula-text-primary);
-}
-
 body .dice-roll {
   margin: 2px;
 }
