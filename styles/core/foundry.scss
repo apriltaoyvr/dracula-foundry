@@ -115,7 +115,8 @@ textarea {
   }
 
   .window-header {
-    border-radius: 6px;
+		@include border-top-radius(2px);
+		background: $bg_content;
     border: 1px solid transparent;
   }
 
