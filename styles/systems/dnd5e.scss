@@ -315,8 +315,8 @@ body {
         }
 
         &.character {
+					min-height: 690px;
           .sheet-header {
-						min-height: 690px;
             img.profile {
               border: 1px solid $blackSecondary;
               border-radius: 3px;
