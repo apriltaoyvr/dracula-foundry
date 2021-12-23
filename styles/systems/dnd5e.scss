@@ -42,12 +42,12 @@
     &[type="text"],
     &[type="number"] {
       border-color: $border-color-secondary;
-      background: rgba(0, 0, 0, 0.05);
+      background: transparent;
       color: $accent;
     }
 
     &:disabled {
-      color: #4b4a44;
+      color: $disabled;
     }
   }
 
@@ -99,14 +99,13 @@
         font-family: "Signika";
         font-weight: bold;
         font-size: 14px;
-      }
-
-      &:hover h3 {
-        color: $text-color;
-        font-family: "Signika";
-        font-weight: bold;
-        font-size: 14px;
-        text-shadow: 0 0 8px $accent;
+        &:hover {
+          color: $text-color;
+          font-family: "Signika";
+          font-weight: bold;
+          font-size: 14px;
+          text-shadow: 0 0 8px $accent;
+        }
       }
 
       img {
@@ -372,7 +371,7 @@
           text-shadow: 0 0 10px $accentTertiary;
         }
       }
-
+      /* .dnd5e.sheet.actor.character */
       &.character {
         min-height: 690px;
         .sheet-header {
@@ -388,20 +387,35 @@
             }
           }
           .xpbar {
-						color: $highlight;
-						background: none;
-						border: 1px solid transparent;
-						border-radius: 2px;
-						.bar {
-							background: $highlight;
-							border: 1px solid transparent;
-						}
+            color: $highlight;
+            background: none;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            .bar {
+              background: $highlight;
+              border: 1px solid transparent;
+            }
           }
         }
         .resource {
           .attribute-value {
             label.recharge {
               color: $text-color-secondary;
+            }
+          }
+        }
+
+        .inventory,
+        .spellbook {
+          .item-controls {
+            .item-toggle {
+              color: $text-color-secondary;
+              &.active {
+                color: $text-color-dark;
+              }
+              &.fixed {
+                color: $accent;
+              }
             }
           }
         }
