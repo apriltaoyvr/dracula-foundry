@@ -5,13 +5,13 @@ Currently incomplete, but most menus in Foundry have been skinned/touched by the
 
 If you see something off, let me know and I'll see what I can do.
 
-# Screenshot(s)
+## Screenshot(s)
 Picture of Dracula with Minimal UI : 
 ![image](https://user-images.githubusercontent.com/95392008/147194866-d3489363-9ff4-42cc-acf8-40a46408a0fc.png)
 Picture of Dracula with mostly vanilla foundry:
 ![image](https://user-images.githubusercontent.com/95392008/147195091-c1c02c54-319e-4f92-ac1f-3b680ce5fd2e.png)
 
-# Planned Features
+## Planned Features
 - Theme selection
 - Colour customization
 
