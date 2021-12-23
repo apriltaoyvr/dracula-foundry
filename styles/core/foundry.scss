@@ -484,10 +484,11 @@ Separated if I want these buttons to be styled differently */
 		border: 1px solid $bg_content;
 		border-radius: 1px;
 		background: linear-gradient(
-			180deg,
-			$bg_window_content 0%,
-			$bg_content 100%
-		);
+				180deg,
+				hsla(235, 14%, 15%, 90%) 0%,
+				hsla(230, 15%, 15%, 75%) 50%,
+				hsla(230, 15%, 15%, 50%) 100%
+			);
 		backdrop-filter: $filter-backdrop;
 
 		/* Macro boxes containing items */
@@ -500,7 +501,7 @@ Separated if I want these buttons to be styled differently */
 
 		/* Empty macro boxes */
 		&.inactive {
-			opacity: 90%;
+			opacity: 75%;
 			&:hover {
 				@include borderExpand($bg_content);
 				opacity: 100%;
