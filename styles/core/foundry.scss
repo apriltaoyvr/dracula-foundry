@@ -871,10 +871,6 @@ Separated if I want these buttons to be styled differently */
 	border-bottom: 1px solid transparent;
 }
 
-
-
-
-
 /* Foundry Settings */
 #client-settings {
 	&.app.window-app.form #config-tabs .settings-list h2.module-header span,
@@ -955,8 +951,6 @@ Separated if I want these buttons to be styled differently */
 	}
 }
 
-
-
 nav.list-filters a.filter {
 	color: $disabled;
 	border-bottom: 1px solid $disabled;
@@ -978,7 +972,7 @@ nav.list-filters a.filter {
 	}
 }
 
-/* Keybindings Menu*
+/* Keybindings Menu */
 #keybindings {
 	.filters h3 {
 		border-bottom: 1px solid transparent;
