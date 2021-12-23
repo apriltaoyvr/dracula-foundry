@@ -1,6 +1,7 @@
 .DS_Store
 .eslintrc.cjs
 .prettierrc
+.editorconfig
 .idea/
 .vscode/
 node_modules/
