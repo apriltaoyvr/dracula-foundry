@@ -5,7 +5,7 @@ $blackSecondary: hsla(230, 15%, 30%, 0.8);
 $blackTernary: hsl(230, 15%, 70%);
 $blackLight: hsla(235, 14%, 15%, 0.05);
 $white: hsla(60, 30%, 96%, 0.9);
-$whiteSecondary: hsla(0, 0%, 100%, 0.8);
+$whiteSecondary: hsla(0, 0%, 100%, 0.6);
 $whiteLight: hsla(60, 30%, 96%, 0.05);
 $cyan: hsl(170, 100%, 75%);
 $cyanSecondary: hsl(170, 100%, 90%);
@@ -49,10 +49,13 @@ $failure: var(--color-dracula-failure);
 
 $text-color: var(--color-dracula-text-primary);
 $text-color-secondary: var(--color-dracula-text-secondary);
+$text-color-tertiary: var(--color-dracula-text-tertiary);
 $text-color-dark: var(--color-dracula-text-dark);
+
 $border-color: var(--color-dracula-border);
 $border-color-secondary: var(--color-dracula-border-secondary);
 $border-color-tertiary: var(--color-dracula-border-tertiary);
+
 $glowColor: var(--color-dracula-glow);
 $shadowColor: var(--color-dracula-shadow);
 

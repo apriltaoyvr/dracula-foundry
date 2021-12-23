@@ -65,6 +65,8 @@ textarea {
 // Main window wrappers
 .window-app {
   backdrop-filter: $filter-backdrop;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 
   .window-content {
     background: $bg_content;
@@ -79,6 +81,8 @@ textarea {
   .window-header {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
     background: $bg_content;
     border: 1px solid transparent;
   }
@@ -206,12 +210,14 @@ textarea {
   /* Individual macro boxes */
   .macro {
     border: 1px solid $bg_content;
+    border-top: 2px solid $bg_content;
+    border-bottom: 2px solid $bg_content;
+
     border-radius: 1px;
     background: linear-gradient(
       180deg,
-      hsla(235, 14%, 15%, 90%) 0%,
-      hsla(230, 15%, 15%, 50%) 50%,
-      hsla(230, 15%, 15%, 10%) 100%
+      hsla(235, 14%, 15%, 80%) 0%,
+      hsla(230, 15%, 15%, 25%) 90%
     );
     backdrop-filter: $filter-backdrop;
 
@@ -227,7 +233,7 @@ textarea {
     /* Empty macro boxes */
     &.inactive {
       &:hover {
-        @include borderExpand($border-color-tertiary);
+        @include borderExpand($accentSecondary);
       }
     }
 
@@ -239,7 +245,7 @@ textarea {
         0 0 1.7px hsl(var(--shadow-color) / 0.16),
         0 0 2.4px hsl(var(--shadow-color) / 0.24),
         0 0 3.3px hsl(var(--shadow-color) / 0.33),
-        0 0 4.2px hsl(var(--shadow-color) / 0.41),
+        0 0 4.2px hsl(var(--shadow-color) / 0.41);
     }
   }
 
@@ -882,7 +888,8 @@ form {
 
   #scene-list {
     .nav-item {
-      border: 1px solid transparent;
+      border: 1px solid $border-color;
+      border-radius: 1px;
       background: $bg_content;
     }
 
