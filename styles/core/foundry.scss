@@ -650,6 +650,10 @@ Separated if I want these buttons to be styled differently */
 
 	.message-header,
 	.message-metadata {
+		.message-sender {
+			color: $text-color-secondary;
+			font-size: inherit;
+		}
 		color: $text-color-secondary;
 		text-shadow: none;
 	}
