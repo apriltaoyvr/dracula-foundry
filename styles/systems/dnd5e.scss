@@ -8,13 +8,13 @@
     &[type="text"]:focus,
     &[type="number"]:focus,
     &[type="checkbox"]:focus {
-      border: 1px solid $border-color-secondary;
+      border: 1px solid $borderSecondary;
       box-shadow: 0 0 8px $accentTertiary;
     }
 
     &[type="text"],
     &[type="number"] {
-      border-color: $border-color-secondary;
+      border-color: $borderSecondary;
       background: transparent;
       color: $accent;
     }
@@ -26,7 +26,7 @@
 
   button {
     @include heavyShadow;
-    @include lightToDark($bg_content);
+    @include lightToDark($content);
     border: 1px solid $accent;
     border-radius: 1px;
     margin: 2px;
@@ -38,7 +38,7 @@
   }
 
   select {
-    border-color: $border-color-secondary;
+    border-color: $borderSecondary;
     background: rgba(0, 0, 0, 0.05);
     color: $accent;
   }
@@ -50,8 +50,8 @@
 
   .form {
     &-header {
-      border-top: 1px solid $border-color;
-      border-bottom: 1px solid $border-color;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
     }
 
     &-group label {
@@ -67,7 +67,7 @@
   &.chat-card {
     .card-buttons {
       button {
-        color: $text-color;
+        color: $text;
       }
 
       span {
@@ -76,7 +76,7 @@
     }
 
     .card-content > * {
-      color: $text-color-tertiary;
+      color: $textTertiary;
     }
 
     .card-header {
@@ -84,13 +84,13 @@
       border-bottom: 2px solid transparent;
 
       h3 {
-        color: $text-color;
+        color: $text;
         font-family: "Signika";
         font-weight: bold;
         font-size: 14px;
 
         &:hover {
-          color: $text-color;
+          color: $text;
           font-family: "Signika";
           font-weight: bold;
           font-size: 14px;
@@ -109,7 +109,7 @@
     }
 
     .card-footer {
-      color: $text-color-secondary;
+      color: $textSecondary;
       border: 1px solid transparent;
       padding: 0;
 
@@ -134,8 +134,8 @@
           &-controls,
           &-duration,
           &-source {
-            border-left: 1px solid $border-color;
-            border-right: 1px solid $border-color;
+            border-left: 1px solid $border;
+            border-right: 1px solid $border;
           }
         }
       }
@@ -150,7 +150,7 @@
         &:hover {
           color: $accentTertiary;
           border-bottom: 3px solid $accentTertiary;
-          text-shadow: 0 0 4px $glowColor;
+          text-shadow: 0 0 4px $glow;
         }
 
         &.active {
@@ -161,7 +161,7 @@
           &:hover {
             color: $accentTertiary;
             border-bottom: 3px solid $accentTertiary;
-            text-shadow: 0 0 4px $glowColor;
+            text-shadow: 0 0 4px $glow;
           }
         }
       }
@@ -169,26 +169,26 @@
 
     .items-list {
       .items-header {
-        color: $text-color-tertiary;
-        border: 1px solid $border-color-tertiary;
+        color: $textTertiary;
+        border: 1px solid $borderTertiary;
       }
 
       .item-name {
         &:hover {
           color: $purple;
-          text-shadow: $glowColor;
+          text-shadow: $glow;
         }
       }
 
       .item {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
 
         .item-name {
-          color: $text-color;
+          color: $text;
 
           .item-image {
             margin: 4px;
-            border: 2px solid $border-color;
+            border: 2px solid $border;
             border-radius: 6px;
           }
         }
@@ -196,21 +196,21 @@
     }
 
     .sheet-header {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $border;
 
       .summary {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border;
       }
     }
 
     .sheet-navigation {
-      color: $text-color;
+      color: $text;
       font-family: "Signika";
       font-size: 16px;
 
       .item {
-        color: $text-color-dark;
-        border-bottom: 2px solid $text-color-dark;
+        color: $textDark;
+        border-bottom: 2px solid $textDark;
 
         &.active {
           color: $accent;
@@ -220,39 +220,39 @@
           &:hover {
             color: $accentTertiary;
             border-color: $accentTertiary;
-            text-shadow: 0 0 4px $glowColor;
+            text-shadow: 0 0 4px $glow;
           }
         }
 
         &:hover {
           color: $accentTertiary;
           border-bottom: 2px solid $accentTertiary;
-          text-shadow: 0 0 4px $glowColor;
+          text-shadow: 0 0 4px $glow;
         }
       }
 
       &.item {
         .effect-header {
-          border: 1px solid $border-color;
+          border: 1px solid $border;
         }
       }
     }
 
     .window-content {
-      color: $text-color;
-      background: $bg_content;
-      border: 1px solid $border-color-secondary;
+      color: $text;
+      background: $content;
+      border: 1px solid $borderSecondary;
       border-radius: 6px;
     }
 
     &.actor {
       h4.box-title {
-        border-bottom: 1px solid $border-color;
-        color: $text-color-tertiary;
+        border-bottom: 1px solid $border;
+        color: $textTertiary;
       }
 
       ul.skills-list {
-        border: 1px solid $border-color-tertiary;
+        border: 1px solid $borderTertiary;
 
         li.skill {
           .skill-passive {
@@ -263,14 +263,14 @@
 
       ul.attributes {
         li.attribute {
-          border: 1px solid $border-color-tertiary;
+          border: 1px solid $borderTertiary;
 
           .attribute-value > * {
-            color: $text-color;
+            color: $text;
           }
 
           .attribute-footer {
-            color: $text-color-secondary;
+            color: $textSecondary;
           }
         }
       }
@@ -282,13 +282,13 @@
       }
 
       .ability-scores {
-        border-top: 1px solid $border-color-tertiary;
-        border-left: 1px solid $border-color-tertiary;
-        border-right: 1px solid $border-color-tertiary;
-        border-bottom: 1px solid $border-color-tertiary;
+        border-top: 1px solid $borderTertiary;
+        border-left: 1px solid $borderTertiary;
+        border-right: 1px solid $borderTertiary;
+        border-bottom: 1px solid $borderTertiary;
 
         .ability {
-          border-bottom: 1px solid $border-color-tertiary;
+          border-bottom: 1px solid $borderTertiary;
 
           .ability-modifiers {
             border-right: 1px solid transparent;
@@ -297,37 +297,37 @@
 
             span.ability-save,
             span.ability-mod {
-              border-top: 1px solid $border-color-tertiary;
+              border-top: 1px solid $borderTertiary;
             }
 
             span.ability-mod {
-              border-right: 1px solid $border-color-tertiary;
+              border-right: 1px solid $borderTertiary;
             }
 
             span.ability-save {
-              border-left: 1px solid $border-color-tertiary;
+              border-left: 1px solid $borderTertiary;
             }
           }
         }
       }
 
       .counters {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
 
         .counter h4 {
-          color: $text-color-tertiary;
+          color: $textTertiary;
         }
       }
 
       .inventory {
         &-list {
           .item-detail {
-            border-right: 1px solid $border-color;
+            border-right: 1px solid $border;
           }
 
           .item-weight {
-            border-left: 1px solid $border-color;
-            border-left: 1px solid $border-color;
+            border-left: 1px solid $border;
+            border-left: 1px solid $border;
           }
         }
       }
@@ -342,16 +342,16 @@
 
       .sheet-header {
         .summary {
-          border-bottom: 1px solid $border-color;
+          border-bottom: 1px solid $border;
 
           li {
-            border-right: 1px solid $border-color-tertiary;
+            border-right: 1px solid $borderTertiary;
           }
         }
 
         .attributes {
           .attribute {
-            border-right: 1px solid $border-color-tertiary;
+            border-right: 1px solid $borderTertiary;
           }
         }
       }
@@ -361,7 +361,7 @@
         &-school,
         &-action,
         &-target {
-          border-right: 1px solid $border-color-tertiary;
+          border-right: 1px solid $borderTertiary;
         }
       }
 
@@ -383,14 +383,14 @@
           }
 
           textarea {
-            @include thinBorder($border-color);
+            @include thinBorder($border);
           }
         }
 
         .sheet-header {
           img.profile {
-            border: 1px solid $border-color-tertiary;
-            border-right: 1px solid $border-color-tertiary;
+            border: 1px solid $borderTertiary;
+            border-right: 1px solid $borderTertiary;
             border-radius: 3px;
             margin: 5px;
           }
@@ -417,7 +417,7 @@
         .resource {
           .attribute-value {
             label.recharge {
-              color: $text-color-secondary;
+              color: $textSecondary;
             }
           }
         }
@@ -426,10 +426,10 @@
         .spellbook {
           .item-controls {
             .item-toggle {
-              color: $text-color-secondary;
+              color: $textSecondary;
 
               &.active {
-                color: $text-color-dark;
+                color: $textDark;
               }
 
               &.fixed {
@@ -442,19 +442,19 @@
         .inventory {
           &-list {
             .item.detail {
-              border-right: 1px solid $border-color;
+              border-right: 1px solid $border;
             }
 
             .item-weight {
-              border-left: 1px solid $border-color;
-              border-left: 1px solid $border-color;
+              border-left: 1px solid $border;
+              border-left: 1px solid $border;
             }
           }
 
           &-filters {
             .currency {
               input[type="text"] {
-                border-bottom: 2px solid $border-color;
+                border-bottom: 2px solid $border;
               }
             }
           }
@@ -462,14 +462,14 @@
       }
 
       &.item .effect-header {
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         border-radius: 2px;
       }
 
       &.inventory {
         &-list {
           .item-detail {
-            border-right: 1px solid $border-color;
+            border-right: 1px solid $border;
           }
         }
 
@@ -489,8 +489,8 @@
       /* Select aka Dropdown Boxes */
       .form-group .form-fields,
       select {
-        color: $text-color;
-        background: $bg_window_content;
+        color: $text;
+        background: $contentWindow;
         border: 1px solid $accent;
         border-radius: 2px;
       }
@@ -498,21 +498,21 @@
       input {
         &[type="text"],
         &[type="number"] {
-          color: $text-color;
+          color: $text;
           border: 1px solid transparent;
           border-radius: 2px;
 
           &:focus {
-            box-shadow: $glowColor;
+            box-shadow: $glow;
           }
         }
       }
 
       &.sheet .item-buttons {
         padding: 0;
-        color: $text-color;
+        color: $text;
         border-radius: 6px;
-        border: 1px solid $border-color;
+        border: 1px solid $border;
         border-radius: 2px;
       }
     }

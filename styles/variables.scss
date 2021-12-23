@@ -47,22 +47,22 @@ $disabled: var(--color-dracula-disabled);
 $success: var(--color-dracula-success);
 $failure: var(--color-dracula-failure);
 
-$text-color: var(--color-dracula-text-primary);
-$text-color-secondary: var(--color-dracula-text-secondary);
-$text-color-tertiary: var(--color-dracula-text-tertiary);
-$text-color-dark: var(--color-dracula-text-dark);
+$text: var(--color-dracula-text-primary);
+$textSecondary: var(--color-dracula-text-secondary);
+$textTertiary: var(--color-dracula-text-tertiary);
+$textDark: var(--color-dracula-text-dark);
 
-$border-color: var(--color-dracula-border);
-$border-color-secondary: var(--color-dracula-border-secondary);
-$border-color-tertiary: var(--color-dracula-border-tertiary);
+$border: var(--color-dracula-border);
+$borderSecondary: var(--color-dracula-border-secondary);
+$borderTertiary: var(--color-dracula-border-tertiary);
 
-$glowColor: var(--color-dracula-glow);
-$shadowColor: var(--color-dracula-shadow);
+$glow: var(--color-dracula-glow);
+$shadow: var(--color-dracula-shadow);
 
-$bg_content: var(--color-dracula-content);
-$bg_window_content: var(--color-dracula-content-window);
+$content: var(--color-dracula-content);
+$contentWindow: var(--color-dracula-content-window);
 
-$filter-backdrop: var(--filter-backdrop);
+$filterBackdrop: var(--filter-backdrop);
 
 /* @mixin reference */
 @mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
@@ -139,7 +139,7 @@ $filter-backdrop: var(--filter-backdrop);
 
 // For being lazy
 @mixin lightToDark($bg) {
-  color: $text-color-secondary;
+  color: $textSecondary;
   background: $bg;
 }
 

@@ -1,30 +1,37 @@
-:root {
-  // Link color values with init.js
-  --color-dracula-accent: hsla(249, 31%, 59%, 0.8);
-  --color-dracula-secondary: hsla(10, 100%, 75%, 0.8);
-  --color-dracula-tertiary: hsl(330, 100%, 75%);
+/* Dracula UI Colours Import */
 
-  --color-dracula-content: hsla(235, 14%, 15%, 0.8);
-  --color-dracula-content-window: hsla(230, 15%, 30%, 0.8);
-
-  --color-dracula-border: hsla(235, 14%, 15%, 0.05);
-  --color-dracula-border-secondary: hsla(250, 100%, 75%, 0.05);
-  --color-dracula-border-tertiary: hsla(230, 15%, 30%, 0.8);
-  --color-dracula-border-highlight: hsl(330, 100%, 75%);
-
-  --color-dracula-glow: rgba(255, 255, 255, 0.25);
-  --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
-
-  --color-dracula-text-dark: hsla(230, 15%, 30%, 0.8);
-  --color-dracula-text-highlight: hsl(170, 100%, 75%);
-  --color-dracula-text-primary: hsla(60, 30%, 96%, 0.9);
-  --color-dracula-text-secondary: hsla(0, 0%, 100%, 0.6);
-  --color-dracula-text-tertiary: hsl(230, 15%, 70%);
-  --color-dracula-text-inactive: hsl(230, 15%, 50%);
-
-  --color-dracula-disabled: hsl(230, 15%, 50%);
-  --color-dracula-failure: hsl(0, 100%, 67%);
-  --color-dracula-success: hsl(135, 94%, 65%);
-
-  --filter-backdrop: none; //blur(6px);
-}
+$black: hsla(235, 14%, 15%, 0.8);
+$blackSecondary: hsla(230, 15%, 30%, 0.8);
+$blackTernary: hsl(230, 15%, 70%);
+$blackLight: hsla(235, 14%, 15%, 0.05);
+$white: hsla(60, 30%, 96%, 0.9);
+$whiteSecondary: hsla(0, 0%, 100%, 0.6);
+$whiteLight: hsla(60, 30%, 96%, 0.05);
+$cyan: hsl(170, 100%, 75%);
+$cyanSecondary: hsl(170, 100%, 90%);
+$cyanLight: hsla(170, 100%, 75%, 0.05);
+$green: hsl(115, 100%, 75%);
+$greenSecondary: hsl(115, 100%, 90%);
+$greenLight: hsla(115, 100%, 75%, 0.05);
+$orange: hsl(35, 100%, 75%);
+$orangeSecondary: hsl(35, 100%, 90%);
+$orangeLight: hsla(35, 100%, 75%, 0.05);
+$pink: hsl(330, 100%, 75%);
+$pinkSecondary: hsl(330, 100%, 90%);
+$pinkLight: hsla(330, 100%, 75%, 0.05);
+$purple: hsla(249, 31%, 59%, 0.8);
+$purpleSecondary: hsla(251, 100%, 90%, 0.8);
+$purpleLight: hsla(250, 100%, 75%, 0.05);
+$red: hsla(10, 100%, 75%, 0.8);
+$redSecondary: hsla(11, 100%, 90%, 0.8);
+$redLight: hsla(10, 100%, 75%, 0.05);
+$yellow: hsla(16, 100%, 75%, 0.012);
+$yellowSecondary: hsl(60, 100%, 90%);
+$yellowLight: hsla(60, 100%, 75%, 0.05);
+$cyan-transparent: hsla(170, 100%, 75%, 0.1);
+$green-transparent: hsla(115, 100%, 75%, 0.1);
+$orange-transparent: hsla(35, 100%, 75%, 0.1);
+$pink-transparent: hsla(330, 100%, 75%, 0.1);
+$purple-transparent: hsla(250, 100%, 75%, 0.1);
+$red-transparent: hsla(10, 100%, 75%, 0.1);
+$yellow-transparent: hsla(60, 100%, 75%, 0.1);

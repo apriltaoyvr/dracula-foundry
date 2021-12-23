@@ -13,7 +13,7 @@
   height: 6px;
 
   &-track {
-    box-shadow: 0 0 6px $glowColor inset;
+    box-shadow: 0 0 6px $glow inset;
     border-radius: 4px;
   }
 
@@ -36,15 +36,15 @@ h3,
 h3,
 footer {
   border-width: 1px;
-  border-color: $border-color;
+  border-color: $border;
 
   &.nue {
-    border-color: $border-color;
+    border-color: $border;
   }
 }
 
 h4 {
-  color: $text-color;
+  color: $text;
 }
 
 hr {
@@ -54,7 +54,7 @@ hr {
 
 /* Paragraph */
 p {
-  color: $text-color;
+  color: $text;
 }
 
 /* Anchor */
@@ -62,7 +62,7 @@ a {
   &.content-link,
   &.entity-link,
   &.inline-roll {
-    color: $text-color-secondary;
+    color: $textSecondary;
     background: transparent;
     border: 1px solid $accentSecondary;
   }
@@ -95,8 +95,8 @@ input {
   &[type="text"].color,
   &[type="color"][data-edit] {
     @include thinBorder($accent);
-    color: $text-color-secondary;
-    background: $border-color;
+    color: $textSecondary;
+    background: $border;
     box-shadow: none;
     transition: 0.3s ease-in-out all;
   }
@@ -106,15 +106,15 @@ input {
   &[type="password"]:focus,
   &[type="date"]:focus,
   &[type="time"]:focus {
-    background: $border-color;
+    background: $border;
     border-width: 2px;
     box-shadow: none;
   }
 
   &[type="range"] + .range-value {
     @include thinBorder($accent);
-    color: $text-color-secondary;
-    background: $border-color;
+    color: $textSecondary;
+    background: $border;
     box-shadow: none;
     margin: 2px;
     transition: 0.3s ease-in-out all;
@@ -134,25 +134,25 @@ input {
 
   &[type="checkbox"] {
     background: $accent;
-    color: $text-color;
+    color: $text;
   }
 
   &[type="radio"] {
     background: accent;
-    color: $text-color;
+    color: $text;
   }
 
   &[type="color"][data-edit][data-edit],
   &[type="color"i] {
     appearance: auto;
     background-color: transparent;
-    color: $text-color;
-    border-color: $bg_window_content;
+    color: $text;
+    border-color: $contentWindow;
   }
 
   &:placeholder {
     color: $disabled;
-    text-shadow: 0 0 10px $glowColor;
+    text-shadow: 0 0 10px $glow;
   }
 }
 
@@ -164,14 +164,14 @@ table {
   font-size: 12px;
 
   thead {
-    background: $border-color;
+    background: $border;
     border-bottom: none;
   }
 }
 
 /* Select (drop-down boxes) */
 select {
-  color: $text-color-secondary;
+  color: $textSecondary;
   background: $black;
   border: 1px solid $accent;
   border-radius: 2px;
@@ -189,15 +189,15 @@ select {
 form {
   .hint,
   .notes {
-    color: $text-color;
+    color: $text;
   }
 
   &-group {
     .form-fields {
-      border: 1px solid $border-color;
+      border: 1px solid $border;
       border-radius: 2px;
-      background: $bg_window_content;
-      color: $text-color-secondary;
+      background: $contentWindow;
+      color: $textSecondary;
 
       &:focus {
         border-width: 2px;
@@ -205,10 +205,10 @@ form {
     }
 
     .form-fields > *:last-child {
-      border: 1px solid $border-color;
+      border: 1px solid $border;
       border-radius: 2px;
-      background: $bg_window_content;
-      color: $text-color-secondary;
+      background: $contentWindow;
+      color: $textSecondary;
     }
   }
 }
@@ -218,9 +218,9 @@ fieldset {
 }
 
 textarea {
-  border: 1px solid $border-color-secondary;
-  background: $bg_content;
-  color: $text-color;
+  border: 1px solid $borderSecondary;
+  background: $content;
+  color: $text;
 
   &:focus {
     border-width: 2px;
@@ -232,10 +232,10 @@ textarea {
 button,
 form button {
   @include thinBorder($accent);
-  @include lightToDark($bg_content);
+  @include lightToDark($content);
   @include heavyShadow;
 
-  color: $text-color;
+  color: $text;
   border-radius: 1px;
   margin: 0 0 0.125rem 0;
 
@@ -246,13 +246,13 @@ form button {
 
 /* Colour Pickers */
 .picker_wrapper {
-  background: $bg_content;
-  color: $text-color;
+  background: $content;
+  color: $text;
 
   .button {
-    background: $bg_content;
+    background: $content;
     border: 1px solid $blackSecondary;
-    color: $text-color;
+    color: $text;
   }
 }
 
@@ -260,13 +260,13 @@ form button {
 Separated if I want these buttons to be styled differently */
 .dialog .dialog-buttons button {
   @include thinBorder($accent);
-  @include lightToDark($bg_content);
+  @include lightToDark($content);
   @include heavyShadow;
   font-size: 14px;
 
   &.default {
     @include thinBorder($accent);
-    @include lightToDark($bg_content);
+    @include lightToDark($content);
     @include heavyShadow;
     font-size: 14px;
   }
@@ -279,8 +279,8 @@ Separated if I want these buttons to be styled differently */
 }
 
 .app {
-  color: $text-color-secondary;
-  background: $bg_content;
+  color: $textSecondary;
+  background: $content;
 }
 
 .sheet {
@@ -296,13 +296,13 @@ Separated if I want these buttons to be styled differently */
 
 // Window Styles
 .window-app {
-  backdrop-filter: $filter-backdrop;
+  backdrop-filter: $filterBackdrop;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 
   .window-content {
-    background: $bg_content;
-    color: $text-color;
+    background: $content;
+    color: $text;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 3px;
@@ -310,7 +310,7 @@ Separated if I want these buttons to be styled differently */
 
     > * {
       background: transparent;
-      color: $text-color;
+      color: $text;
     }
   }
 
@@ -319,12 +319,12 @@ Separated if I want these buttons to be styled differently */
     border-top-right-radius: 6px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    background: $bg_content;
+    background: $content;
     border: 1px solid transparent;
   }
 
   .dialogue {
-    background: $bg_content;
+    background: $content;
     border-radius: 6px;
     border: none;
     text-shadow: 0 0 10px rgba(0 0 0 / 50%);
@@ -335,33 +335,33 @@ Separated if I want these buttons to be styled differently */
 #navigation {
   #nav-toggle {
     &:hover {
-      text-shadow: 0 0 4px $glowColor;
+      text-shadow: 0 0 4px $glow;
     }
   }
 
   #scene-list {
     .nav-item {
-      border: 1px solid $border-color;
+      border: 1px solid $border;
       border-radius: 1px;
-      background: $bg_content;
+      background: $content;
     }
 
     .scene {
       &.gm {
         @include thinBorder($accent);
-        background: $bg_content;
+        background: $content;
       }
 
       &.view,
       &.view.gm {
         @include gradientBorder($accentSecondary, $accentTertiary);
-        background: $bg_content;
+        background: $content;
         box-shadow: inset 0 0 0.1px 0.25px $accentTertiary;
       }
 
       &-context {
         @include thinBorder($accent);
-        background: $bg_content;
+        background: $content;
       }
     }
   }
@@ -377,7 +377,7 @@ Separated if I want these buttons to be styled differently */
     .scene-control {
       @include heavyShadow;
       @include gradientBorder($accentSecondary, $accentTertiary);
-      background: $bg_content;
+      background: $content;
       filter: opacity(75%);
 
       &.active {
@@ -400,7 +400,7 @@ Separated if I want these buttons to be styled differently */
         @include heavyShadow;
         @include gradientBorder($accentSecondary, $accentTertiary);
         filter: opacity(75%);
-        background: $bg_content;
+        background: $content;
 
         &.toggle {
           @include heavyShadow;
@@ -450,7 +450,7 @@ Separated if I want these buttons to be styled differently */
 /* Hotbar (Bottom Center) */
 #hotbar {
   #macro-list {
-    @include thinBorder($border-color);
+    @include thinBorder($border);
     border-radius: 1px;
 
     &.inactive {
@@ -481,7 +481,7 @@ Separated if I want these buttons to be styled differently */
 
   /* Individual macro boxes */
   .macro {
-    border: 1px solid $bg_content;
+    border: 1px solid $content;
     border-radius: 1px;
     background: linear-gradient(
         180deg,
@@ -489,7 +489,7 @@ Separated if I want these buttons to be styled differently */
         hsla(230, 15%, 15%, 75%) 50%,
         hsla(230, 15%, 15%, 50%) 100%
     );
-    backdrop-filter: $filter-backdrop;
+    backdrop-filter: $filterBackdrop;
 
     /* Macro boxes containing items */
     &.active {
@@ -505,21 +505,21 @@ Separated if I want these buttons to be styled differently */
       opacity: 75%;
 
       &:hover {
-        @include borderExpand($bg_content);
+        @include borderExpand($content);
         opacity: 100%;
       }
     }
 
     .macro-key {
       @include heavyShadow;
-      color: $text-color;
-      background: $border-color;
+      color: $text;
+      background: $border;
     }
   }
 
   .bar-controls {
     --shadow-color: 0deg 0% 48%;
-    background: $border-color;
+    background: $border;
     border-radius: 1px;
 
     text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
@@ -533,7 +533,7 @@ Separated if I want these buttons to be styled differently */
 /* Player List (Bottom Left) */
 #players {
   h3 {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border;
   }
 }
 
@@ -545,7 +545,7 @@ Separated if I want these buttons to be styled differently */
       hsla(230, 15%, 15%, 75%) 75%,
       hsla(230, 15%, 15%, 70%) 100%
   );
-  backdrop-filter: $filter-backdrop;
+  backdrop-filter: $filterBackdrop;
   border: 1px solid transparent;
   --shadow-color: 232deg 22% 2%;
   box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
@@ -563,7 +563,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   &-tabs > .item.active {
-    color: $text-color;
+    color: $text;
     background: transparent;
     box-shadow: none;
     border: 2px solid transparent;
@@ -571,19 +571,19 @@ Separated if I want these buttons to be styled differently */
     text-shadow: 0 0 0 4px $accent;
 
     &:hover {
-      text-shadow: 0 0 8px $glowColor;
+      text-shadow: 0 0 8px $glow;
     }
   }
 
   &-tabs > .item {
-    color: $text-color-secondary;
+    color: $textSecondary;
     background: transparent;
     border: none;
-    text-shadow: 0 0 2px $shadowColor;
+    text-shadow: 0 0 2px $shadow;
 
     &:hover {
-      color: $text-color;
-      text-shadow: 0 0 2px $glowColor;
+      color: $text;
+      text-shadow: 0 0 2px $glow;
     }
   }
 }
@@ -591,22 +591,22 @@ Separated if I want these buttons to be styled differently */
 /* Directory Navigation */
 .directory {
   .action-buttons button {
-    background: $bg_content;
+    background: $content;
   }
 
   .directory-list {
     .directory-item {
       &.active,
       &.context {
-        border-color: $border-color;
+        border-color: $border;
       }
     }
   }
 
   .directory-header .header-search input {
     @include thinBorder($accent);
-    background: $bg_content;
-    color: $text-color-secondary;
+    background: $content;
+    color: $textSecondary;
     box-shadow: none;
     margin: 2px;
     transition: 0.3s ease-in-out all;
@@ -627,38 +627,38 @@ Separated if I want these buttons to be styled differently */
 // Chat Cards (will restyle most aspects)
 .chat-message {
   @include gradientBorder($accent, $accentSecondary);
-  background: $bg_content;
-  color: $text-color-secondary;
+  background: $content;
+  color: $textSecondary;
   transition: max-height 0.3s ease-in-out;
 
   &.whisper {
     @include gradientBorder($accent, $highlight);
-    background: $bg_content;
-    color: $text-color-secondary;
+    background: $content;
+    color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
   }
 
   &.blind {
     @include gradientBorder($accent, $accentTertiary);
-    background: $bg_content;
-    color: $text-color-secondary;
+    background: $content;
+    color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
   }
 
   &.emote {
     @include gradientBorder($accent, $yellow);
-    background: $bg_content;
-    color: $text-color-secondary;
+    background: $content;
+    color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
   }
 
   .message-header,
   .message-metadata {
     .message-sender {
-      color: $text-color-secondary;
+      color: $textSecondary;
     }
 
-    color: $text-color-secondary;
+    color: $textSecondary;
     text-shadow: none;
   }
 
@@ -673,7 +673,7 @@ Separated if I want these buttons to be styled differently */
 
     .dice-formula {
       @include heavyShadow;
-      background: $border-color;
+      background: $border;
       border: 1px solid $accent;
       border-radius: 1px;
 
@@ -686,7 +686,7 @@ Separated if I want these buttons to be styled differently */
     // Dice total mini-boxes
     .dice-total {
       @include heavyShadow;
-      background: $border-color;
+      background: $border;
       border: 1px solid $accent;
       border-radius: 1px;
       font-size: 14px;
@@ -700,13 +700,13 @@ Separated if I want these buttons to be styled differently */
       &.success {
         @include gradientBorder($success, $greenSecondary);
         color: inherit;
-        background: $bg_content;
+        background: $content;
       }
 
       &.failure {
         @include gradientBorder($red, $failure);
         color: inherit;
-        background: $bg_content;
+        background: $content;
       }
 
       /* For the large result box */
@@ -726,7 +726,7 @@ Separated if I want these buttons to be styled differently */
       .dice-tooltip .dice {
         .part-header.flexrow {
           @include gradientBorder($accent, $disabled);
-          background: $border-color;
+          background: $border;
 
           .part-total {
             border: none;
@@ -755,7 +755,7 @@ Separated if I want these buttons to be styled differently */
         .roll {
           @include gradientBorder($purple, $disabled);
           @include heavyShadow;
-          color: $text-color;
+          color: $text;
           background: transparent;
           font-size: 14px;
           margin: 2px;
@@ -779,7 +779,7 @@ Separated if I want these buttons to be styled differently */
           }
 
           .dice-result {
-            color: $text-color-secondary;
+            color: $textSecondary;
           }
         }
       }
@@ -787,12 +787,12 @@ Separated if I want these buttons to be styled differently */
   }
 
   .message-content {
-    color: $text-color-secondary;
+    color: $textSecondary;
     border: none;
     margin: 2px;
 
     .form-group.sheet.actor .items-list {
-      color: $text-color-secondary;
+      color: $textSecondary;
       border: none;
       margin: 1px;
     }
@@ -804,7 +804,7 @@ Separated if I want these buttons to be styled differently */
   background: none;
 
   .roll-type-select {
-    @include lightToDark($bg_content);
+    @include lightToDark($content);
     @include thinBorder(transparent);
     border-radius: 2px;
     padding: 2px;
@@ -814,7 +814,7 @@ Separated if I want these buttons to be styled differently */
 /* Input area (form) for chat menu */
 #chat-form textarea {
   @include thinBorder($accent);
-  color: $text-color-secondary;
+  color: $textSecondary;
   background: transparent;
 
   &:focus {
@@ -830,18 +830,18 @@ Separated if I want these buttons to be styled differently */
 
   li.combatant {
     &.active {
-      background: $bg_content;
+      background: $content;
     }
   }
 
   #combat-controls {
-    border-top: 2px solid $border-color;
+    border-top: 2px solid $border;
   }
 }
 
 // Default text editor for journals
 .tinymce .mce-content-body {
-  color: $text-color-secondary;
+  color: $textSecondary;
 }
 
 // Roll tables
@@ -851,7 +851,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   .table-result .result-controls .lock-result {
-    color: $text-color-secondary;
+    color: $textSecondary;
   }
 
   .table-result.drawn .lock-result {
@@ -884,7 +884,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   nav.tabs {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border;
 
     &:focus {
       text-shadow: 0 0 4px $accentSecondary;
@@ -906,7 +906,7 @@ Separated if I want these buttons to be styled differently */
   h2 {
     border-bottom: none;
     border-top: none;
-    color: $text-color-secondary;
+    color: $textSecondary;
     background: none;
   }
 }
@@ -914,18 +914,18 @@ Separated if I want these buttons to be styled differently */
 #permissions-config {
   header.table-header {
     background: none;
-    border: 1px solid $border-color-secondary;
+    border: 1px solid $borderSecondary;
     border-radius: 2px;
     padding-bottom: 4px;
   }
 
   li.permission {
-    border-bottom: 1px solid $border-color-secondary;
+    border-bottom: 1px solid $borderSecondary;
   }
 
   p {
     &.hint {
-      color: $text-color-secondary;
+      color: $textSecondary;
     }
   }
 
@@ -938,18 +938,18 @@ Separated if I want these buttons to be styled differently */
 #module-management {
   .package-list {
     .package {
-      border-bottom: 1px solid $border-color-secondary;
+      border-bottom: 1px solid $borderSecondary;
 
       &-description,
       &-metadata,
       &-title {
-        color: $text-color;
+        color: $text;
       }
     }
 
     /* WIP doesn't seem to affect anything */
     input[type="checkbox"] {
-      background: $border-color-secondary;
+      background: $borderSecondary;
       color: $accent;
     }
   }
