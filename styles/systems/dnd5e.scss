@@ -2,378 +2,378 @@
 
 // Dice total mini-boxes
 .dice-roll {
-  margin: 2px;
-  .dice-total {
-    @include heavyShadow;
-    &.success {
-      @include gradientBorder($success, $greenSecondary);
-      color: inherit;
-      background: $bg_content;
-    }
-    &.failure {
-      @include gradientBorder($red, $failure);
-      color: inherit;
-      background: $bg_content;
-    }
-    &.critical {
-      @include gradientText($success, $greenSecondary);
-    }
-    &.fumble {
-      @include gradientText($failure, $redSecondary);
-    }
-    &:hover {
-      @include hoverRaise;
-    }
-  }
+	margin: 2px;
+	.dice-total {
+		@include heavyShadow;
+		&.success {
+			@include gradientBorder($success, $greenSecondary);
+			color: inherit;
+			background: $bg_content;
+		}
+		&.failure {
+			@include gradientBorder($red, $failure);
+			color: inherit;
+			background: $bg_content;
+		}
+		&.critical {
+			@include gradientText($success, $greenSecondary);
+		}
+		&.fumble {
+			@include gradientText($failure, $redSecondary);
+		}
+		&:hover {
+			@include hoverRaise;
+		}
+	}
 }
 
 .dnd5e {
-  input {
-    &[type="text"]:hover,
-    &[type="number"]:hover,
-    &[type="checkbox"]:hover,
-    &[type="text"]:focus,
-    &[type="number"]:focus,
-    &[type="checkbox"]:focus {
-      border: 1px solid $border-color-secondary;
-      box-shadow: 0 0 8px $accentTertiary;
-    }
+	input {
+		&[type="text"]:hover,
+		&[type="number"]:hover,
+		&[type="checkbox"]:hover,
+		&[type="text"]:focus,
+		&[type="number"]:focus,
+		&[type="checkbox"]:focus {
+			border: 1px solid $border-color-secondary;
+			box-shadow: 0 0 8px $accentTertiary;
+		}
 
-    &[type="text"],
-    &[type="number"] {
-      border-color: $border-color-secondary;
-      background: transparent;
-      color: $accent;
-    }
+		&[type="text"],
+		&[type="number"] {
+			border-color: $border-color-secondary;
+			background: transparent;
+			color: $accent;
+		}
 
-    &:disabled {
-      color: $disabled;
-    }
-  }
+		&:disabled {
+			color: $disabled;
+		}
+	}
 
-  button {
-    @include heavyShadow;
-    @include lightToDark($bg_content);
-    border: 1px solid $accent;
-    border-radius: 1px;
-    margin: 2px;
-    &:focus,
-    &:hover {
-      @include hoverRaise;
-    }
-  }
+	button {
+		@include heavyShadow;
+		@include lightToDark($bg_content);
+		border: 1px solid $accent;
+		border-radius: 1px;
+		margin: 2px;
+		&:focus,
+		&:hover {
+			@include hoverRaise;
+		}
+	}
 
-  select {
-    border-color: $border-color-secondary;
-    background: rgba(0, 0, 0, 0.05);
-    color: $accent;
-  }
+	select {
+		border-color: $border-color-secondary;
+		background: rgba(0, 0, 0, 0.05);
+		color: $accent;
+	}
 
-  select:disabled,
-  textarea:disabled {
-    color: #4b4a44;
-  }
-  .form {
-    &-header {
-      border-top: 1px solid $border-color;
-      border-bottom: 1px solid $border-color;
-    }
+	select:disabled,
+	textarea:disabled {
+		color: #4b4a44;
+	}
+	.form {
+		&-header {
+			border-top: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+		}
 
-    &-group label {
-      color: $whiteSecondary;
-    }
-  }
+		&-group label {
+			color: $whiteSecondary;
+		}
+	}
 
-  .tag {
-    border: 1px solid $accent;
-  }
+	.tag {
+		border: 1px solid $accent;
+	}
 
-  //Attack + Damage Buttons
+	//Attack + Damage Buttons
 
-  &.chat-card {
-    .card-header {
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
-      h3 {
-        color: $text-color;
-        font-family: "Signika";
-        font-weight: bold;
-        font-size: 14px;
-        &:hover {
-          color: $text-color;
-          font-family: "Signika";
-          font-weight: bold;
-          font-size: 14px;
-          text-shadow: 0 0 8px $accent;
-        }
-      }
+	&.chat-card {
+		.card-header {
+			border-top: 2px solid transparent;
+			border-bottom: 2px solid transparent;
+			h3 {
+				color: $text-color;
+				font-family: "Signika";
+				font-weight: bold;
+				font-size: 14px;
+				&:hover {
+					color: $text-color;
+					font-family: "Signika";
+					font-weight: bold;
+					font-size: 14px;
+					text-shadow: 0 0 8px $accent;
+				}
+			}
 
-      img {
-        height: 36px;
-        width: 36px;
-        border-radius: 12px;
-        border: 1px solid $black;
-        border-radius: 6px;
-        padding: 0;
-      }
-    }
+			img {
+				height: 36px;
+				width: 36px;
+				border-radius: 12px;
+				border: 1px solid $black;
+				border-radius: 6px;
+				padding: 0;
+			}
+		}
 
-    .card-footer {
-      color: $text-color-secondary;
-      border: 1px solid transparent;
-      padding: 0;
-      span {
-        border-right: 1px solid transparent;
-      }
-    }
-    .card-buttons {
-      span {
-        border: 1px solid transparent;
-      }
-    }
-  }
+		.card-footer {
+			color: $text-color-secondary;
+			border: 1px solid transparent;
+			padding: 0;
+			span {
+				border-right: 1px solid transparent;
+			}
+		}
+		.card-buttons {
+			span {
+				border: 1px solid transparent;
+			}
+		}
+	}
 
-  &.sheet {
-    .editable {
-      h4.rolltable:hover,
-      .rolltable:hover > h4 {
-        color: $accent;
-        text-shadow: 0 0 10px $accentTertiary;
-      }
-    }
+	&.sheet {
+		.editable {
+			h4.rolltable:hover,
+			.rolltable:hover > h4 {
+				color: $accent;
+				text-shadow: 0 0 10px $accentTertiary;
+			}
+		}
 
-    .effects {
-      .item {
-        .effect {
-          &-controls,
-          &-duration,
-          &-source {
-            border-left: 1px solid $border-color;
-            border-right: 1px solid $border-color;
-          }
-        }
-      }
-    }
+		.effects {
+			.item {
+				.effect {
+					&-controls,
+					&-duration,
+					&-source {
+						border-left: 1px solid $border-color;
+						border-right: 1px solid $border-color;
+					}
+				}
+			}
+		}
 
-    .filter-list {
-      .filter-item {
-        color: $disabled;
-        border-bottom: 3px solid $disabled;
-        transition: all 0.2s ease-in-out;
+		.filter-list {
+			.filter-item {
+				color: $disabled;
+				border-bottom: 3px solid $disabled;
+				transition: all 0.2s ease-in-out;
 
-        &:hover {
-          color: $accentTertiary;
-          border-bottom: 3px solid $accentTertiary;
-          text-shadow: 0 0 4px $glowColor;
-        }
+				&:hover {
+					color: $accentTertiary;
+					border-bottom: 3px solid $accentTertiary;
+					text-shadow: 0 0 4px $glowColor;
+				}
 
-        &.active {
-          color: $accentTertiary;
-          border-bottom: 3px solid $accentTertiary;
-          text-shadow: none;
+				&.active {
+					color: $accentTertiary;
+					border-bottom: 3px solid $accentTertiary;
+					text-shadow: none;
 
-          &:hover {
-            color: $accentTertiary;
-            border-bottom: 3px solid $accentTertiary;
-            text-shadow: 0 0 4px $glowColor;
-          }
-        }
-      }
-    }
+					&:hover {
+						color: $accentTertiary;
+						border-bottom: 3px solid $accentTertiary;
+						text-shadow: 0 0 4px $glowColor;
+					}
+				}
+			}
+		}
 
-    .items-list {
-      .items-header {
-        color: $text-color-tertiary;
-        border: 1px solid $border-color-tertiary;
-      }
+		.items-list {
+			.items-header {
+				color: $text-color-tertiary;
+				border: 1px solid $border-color-tertiary;
+			}
 
-      .item-name {
-        &:hover {
-          color: $purple;
-          text-shadow: $glowColor;
-        }
-      }
+			.item-name {
+				&:hover {
+					color: $purple;
+					text-shadow: $glowColor;
+				}
+			}
 
-      .item {
-        border-bottom: 1px solid $border-color;
+			.item {
+				border-bottom: 1px solid $border-color;
 
-        .item-name {
-          color: $text-color;
+				.item-name {
+					color: $text-color;
 
-          .item-image {
-            margin: 4px;
-            border: 2px solid $border-color;
-            border-radius: 6px;
-          }
-        }
-      }
-    }
+					.item-image {
+						margin: 4px;
+						border: 2px solid $border-color;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
 
-    .sheet-header {
-      border-bottom: 1px solid $border-color;
-      .summary {
-        border-top: 1px solid $border-color;
-      }
-    }
+		.sheet-header {
+			border-bottom: 1px solid $border-color;
+			.summary {
+				border-top: 1px solid $border-color;
+			}
+		}
 
-    .sheet-navigation {
-      color: $text-color;
-      font-family: "Signika";
-      font-size: 16px;
+		.sheet-navigation {
+			color: $text-color;
+			font-family: "Signika";
+			font-size: 16px;
 
-      .item {
-        color: $text-color-dark;
-        border-bottom: 2px solid $text-color-dark;
+			.item {
+				color: $text-color-dark;
+				border-bottom: 2px solid $text-color-dark;
 
-        &.active {
-          color: $accent;
-          border-bottom: 2px solid $accent;
-          text-shadow: none;
-          &:hover {
-            color: $accentTertiary;
-            border-color: $accentTertiary;
-            text-shadow: 0 0 4px $glowColor;
-          }
-        }
+				&.active {
+					color: $accent;
+					border-bottom: 2px solid $accent;
+					text-shadow: none;
+					&:hover {
+						color: $accentTertiary;
+						border-color: $accentTertiary;
+						text-shadow: 0 0 4px $glowColor;
+					}
+				}
 
-        &:hover {
-          color: $accentTertiary;
-          border-bottom: 2px solid $accentTertiary;
-          text-shadow: 0 0 4px $glowColor;
-        }
-      }
+				&:hover {
+					color: $accentTertiary;
+					border-bottom: 2px solid $accentTertiary;
+					text-shadow: 0 0 4px $glowColor;
+				}
+			}
 
-      &.item {
-        .effect-header {
-          border: 1px solid $border-color;
-        }
-      }
-    }
+			&.item {
+				.effect-header {
+					border: 1px solid $border-color;
+				}
+			}
+		}
 
-    .window-content {
-      color: $text-color;
-      background: $bg_content;
-      border: 1px solid $border-color-secondary;
-      border-radius: 6px;
-    }
+		.window-content {
+			color: $text-color;
+			background: $bg_content;
+			border: 1px solid $border-color-secondary;
+			border-radius: 6px;
+		}
 
-    &.actor {
-      h4.box-title {
-        border-bottom: 1px solid $border-color;
-        color: $text-color-tertiary;
-      }
+		&.actor {
+			h4.box-title {
+				border-bottom: 1px solid $border-color;
+				color: $text-color-tertiary;
+			}
 
-      ul.skills-list {
-        border: 1px solid $border-color-tertiary;
-        li.skill {
-          .skill-passive {
-            color: $disabled;
-          }
-        }
-      }
+			ul.skills-list {
+				border: 1px solid $border-color-tertiary;
+				li.skill {
+					.skill-passive {
+						color: $disabled;
+					}
+				}
+			}
 
-      ul.attributes {
-        li.attribute {
-          border: 1px solid $border-color-tertiary;
-          .attribute-value > * {
-            color: $text-color;
-          }
-          .attribute-footer {
-            color: $text-color-secondary;
-          }
-        }
-      }
+			ul.attributes {
+				li.attribute {
+					border: 1px solid $border-color-tertiary;
+					.attribute-value > * {
+						color: $text-color;
+					}
+					.attribute-footer {
+						color: $text-color-secondary;
+					}
+				}
+			}
 
-      span {
-        .sep {
-          color: $disabled;
-        }
-      }
+			span {
+				.sep {
+					color: $disabled;
+				}
+			}
 
-      .ability-scores {
-        border-top: 1px solid $border-color-tertiary;
-        border-left: 1px solid $border-color-tertiary;
-        border-right: 1px solid $border-color-tertiary;
-        border-bottom: 1px solid $border-color-tertiary;
-        .ability {
-          border-bottom: 1px solid $border-color-tertiary;
-          .ability-modifiers {
-            border-right: 1px solid transparent;
-            border-top: 1px solid transparent;
-            border-bottom: 1px solid transparent;
-            span.ability-save,
-            span.ability-mod {
-              border-top: 1px solid $border-color-tertiary;
-            }
-            span.ability-mod {
-              border-right: 1px solid $border-color-tertiary;
-            }
-            span.ability-save {
-              border-left: 1px solid $border-color-tertiary;
-            }
-          }
-        }
-      }
+			.ability-scores {
+				border-top: 1px solid $border-color-tertiary;
+				border-left: 1px solid $border-color-tertiary;
+				border-right: 1px solid $border-color-tertiary;
+				border-bottom: 1px solid $border-color-tertiary;
+				.ability {
+					border-bottom: 1px solid $border-color-tertiary;
+					.ability-modifiers {
+						border-right: 1px solid transparent;
+						border-top: 1px solid transparent;
+						border-bottom: 1px solid transparent;
+						span.ability-save,
+						span.ability-mod {
+							border-top: 1px solid $border-color-tertiary;
+						}
+						span.ability-mod {
+							border-right: 1px solid $border-color-tertiary;
+						}
+						span.ability-save {
+							border-left: 1px solid $border-color-tertiary;
+						}
+					}
+				}
+			}
 
-      .counters {
-        border-bottom: 1px solid $border-color;
-        .counter h4 {
-          color: $text-color-tertiary;
-        }
-      }
+			.counters {
+				border-bottom: 1px solid $border-color;
+				.counter h4 {
+					color: $text-color-tertiary;
+				}
+			}
 
-      .inventory {
-        &-list {
-          .item-detail {
-            border-right: 1px solid $border-color;
-          }
-          .item-weight {
-            border-left: 1px solid $border-color;
-            border-left: 1px solid $border-color;
-          }
-        }
-      }
+			.inventory {
+				&-list {
+					.item-detail {
+						border-right: 1px solid $border-color;
+					}
+					.item-weight {
+						border-left: 1px solid $border-color;
+						border-left: 1px solid $border-color;
+					}
+				}
+			}
 
-      .proficient {
-        color: $accent;
+			.proficient {
+				color: $accent;
 
-        .proficiency-toggle {
-          color: $accent;
-        }
-      }
+				.proficiency-toggle {
+					color: $accent;
+				}
+			}
 
-      .sheet-header {
-        .summary {
-          border-bottom: 1px solid $border-color;
-          li {
-            border-right: 1px solid $border-color-tertiary;
-          }
-        }
-        .attributes {
-          .attribute {
-            border-right: 1px solid $border-color-tertiary;
-          }
-        }
-      }
+			.sheet-header {
+				.summary {
+					border-bottom: 1px solid $border-color;
+					li {
+						border-right: 1px solid $border-color-tertiary;
+					}
+				}
+				.attributes {
+					.attribute {
+						border-right: 1px solid $border-color-tertiary;
+					}
+				}
+			}
 
-      .spell {
-        &-slots,
-        &-school,
-        &-action,
-        &-target {
-          border-right: 1px solid $border-color-tertiary;
-        }
-      }
+			.spell {
+				&-slots,
+				&-school,
+				&-action,
+				&-target {
+					border-right: 1px solid $border-color-tertiary;
+				}
+			}
 
-      .traits {
-        i.fas:hover {
-          color: $accent;
-          text-shadow: 0 0 10px $accentTertiary;
-        }
-      }
-      /* .dnd5e.sheet.actor.character */
-      &.character {
-        min-height: 690px;
+			.traits {
+				i.fas:hover {
+					color: $accent;
+					text-shadow: 0 0 10px $accentTertiary;
+				}
+			}
+			/* .dnd5e.sheet.actor.character */
+			&.character {
+				min-height: 690px;
 
 				/* Biography and Descriptors */
 				.characteristics {
@@ -384,122 +384,122 @@
 						@include thinBorder($border-color);
 					}
 				}
-        .sheet-header {
-          img.profile {
-            border: 1px solid $border-color-tertiary;
-            border-right: 1 px solid $border-color-tertiary;
-            border-radius: 3px;
-            margin: 5px;
-          }
-          .attributes {
-            a.rest {
-              @include thinBorder($accent);
-            }
-          }
-          .xpbar {
-            color: $highlight;
-            background: none;
-            border: 1px solid transparent;
-            border-radius: 2px;
-            .bar {
-              background: $highlight;
-              border: 1px solid transparent;
-            }
-          }
-        }
-        .resource {
-          .attribute-value {
-            label.recharge {
-              color: $text-color-secondary;
-            }
-          }
-        }
+				.sheet-header {
+					img.profile {
+						border: 1px solid $border-color-tertiary;
+						border-right: 1 px solid $border-color-tertiary;
+						border-radius: 3px;
+						margin: 5px;
+					}
+					.attributes {
+						a.rest {
+							@include thinBorder($accent);
+						}
+					}
+					.xpbar {
+						color: $highlight;
+						background: none;
+						border: 1px solid transparent;
+						border-radius: 2px;
+						.bar {
+							background: $highlight;
+							border: 1px solid transparent;
+						}
+					}
+				}
+				.resource {
+					.attribute-value {
+						label.recharge {
+							color: $text-color-secondary;
+						}
+					}
+				}
 
-        .inventory,
-        .spellbook {
-          .item-controls {
-            .item-toggle {
-              color: $text-color-secondary;
-              &.active {
-                color: $text-color-dark;
-              }
-              &.fixed {
-                color: $accent;
-              }
-            }
-          }
-        }
-        .inventory {
-          &-list {
-            .item.detail {
-              border-right: 1px solid $border-color;
-            }
-            .item-weight {
-              border-left: 1px solid $border-color;
-              border-left: 1px solid $border-color;
-            }
-          }
-          &-filters {
-            .currency {
-              input[type="text"] {
-                border-bottom: 2px solid $border-color;
-              }
-            }
-          }
-        }
-      }
+				.inventory,
+				.spellbook {
+					.item-controls {
+						.item-toggle {
+							color: $text-color-secondary;
+							&.active {
+								color: $text-color-dark;
+							}
+							&.fixed {
+								color: $accent;
+							}
+						}
+					}
+				}
+				.inventory {
+					&-list {
+						.item.detail {
+							border-right: 1px solid $border-color;
+						}
+						.item-weight {
+							border-left: 1px solid $border-color;
+							border-left: 1px solid $border-color;
+						}
+					}
+					&-filters {
+						.currency {
+							input[type="text"] {
+								border-bottom: 2px solid $border-color;
+							}
+						}
+					}
+				}
+			}
 
-      &.item .effect-header {
-        border: 1px solid $border-color;
-        border-radius: 2px;
-      }
+			&.item .effect-header {
+				border: 1px solid $border-color;
+				border-radius: 2px;
+			}
 
-      &.inventory {
-        &-list {
-          .item-detail {
-            border-right: 1px solid $border-color;
-          }
-        }
-        .item {
-          &-filters.flexrow element.style {
-            border: none;
-          }
-        }
-        select {
-          background: $black;
-          border: 1px solid $accent;
-          border-radius: 2px;
-        }
-      }
+			&.inventory {
+				&-list {
+					.item-detail {
+						border-right: 1px solid $border-color;
+					}
+				}
+				.item {
+					&-filters.flexrow element.style {
+						border: none;
+					}
+				}
+				select {
+					background: $black;
+					border: 1px solid $accent;
+					border-radius: 2px;
+				}
+			}
 
-      /* Select aka Dropdown Boxes */
-      .form-group .form-fields,
-      select {
-        color: $text-color;
-        background: $bg_window_content;
-        border: 1px solid $accent;
-        border-radius: 2px;
-      }
+			/* Select aka Dropdown Boxes */
+			.form-group .form-fields,
+			select {
+				color: $text-color;
+				background: $bg_window_content;
+				border: 1px solid $accent;
+				border-radius: 2px;
+			}
 
-      input {
-        &[type="text"],
-        &[type="number"] {
-          color: $text-color;
-          border: 1px solid transparent;
-          border-radius: 2px;
-          &:focus {
-            box-shadow: $glowColor;
-          }
-        }
-      }
+			input {
+				&[type="text"],
+				&[type="number"] {
+					color: $text-color;
+					border: 1px solid transparent;
+					border-radius: 2px;
+					&:focus {
+						box-shadow: $glowColor;
+					}
+				}
+			}
 
-      &.sheet .item-buttons {
-        padding: 0;
-        color: $text-color;
-        border-radius: 6px;
-        border: 1px solid $border-color;
-        border-radius: 2px;
-      }
-    }
-  }
+			&.sheet .item-buttons {
+				padding: 0;
+				color: $text-color;
+				border-radius: 6px;
+				border: 1px solid $border-color;
+				border-radius: 2px;
+			}
+		}
+	}
 }
