@@ -1,21 +1,19 @@
 @use '../variables' as *;
 
-body {
-  :root {
-    --filepickerplus-text-color: $text-color-secondary;
-  }
-  .filepicker-plus-tooltip {
-      background: $bg_content;
-      border: 1px solid $border-color;
-      animation: fadein 0.5s;
-  }
+:root {
+  --filepickerplus-text-color: var(--color-dracula-text-secondary);
+}
+.filepicker-plus-tooltip {
+    background: $bg_content;
+    border: 1px solid $border-color;
+    animation: fadein 0.5s;
+}
 
-  .filepicker {
-    .directory > li:last-child {
-      border-bottom: 1px solid $border-color;
-    }
-    input[type="text"] {
-      color: $text-color-dark;
-    }
+.filepicker {
+  .directory > li:last-child {
+    border-bottom: 1px solid $border-color;
+  }
+  input[type="text"] {
+    color: $text-color-dark;
   }
 }

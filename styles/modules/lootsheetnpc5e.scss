@@ -1,47 +1,45 @@
 @use '../variables' as *;
 
-body {
-  .loot-sheet-npc {
-    .gm-section {
-      border-top: 1px solid transparent;
+.loot-sheet-npc {
+  .gm-section {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    color: $blackTernary;
+    .permission,
+    .denomination {
       border-bottom: 1px solid transparent;
-      color: $blackTernary;
-      .permission,
-      .denomination {
-        border-bottom: 1px solid transparent;
-      }
     }
-    .gm-settings {
-      .permission,
-      .denomination {
+  }
+  .gm-settings {
+    .permission,
+    .denomination {
+      border-bottom: 1px solid $border-color;
+    }
+    .merchant-settings {
+      .flexrow {
         border-bottom: 1px solid $border-color;
-      }
-      .merchant-settings {
-        .flexrow {
-          border-bottom: 1px solid $border-color;
-          margin-bottom: 1px;
-        }
+        margin-bottom: 1px;
       }
     }
+  }
 
-    .inventory-filers {
-      .item-controls {
-        flex: auto;
+  .inventory-filers {
+    .item-controls {
+      flex: auto;
+    }
+  }
+  &.sheet {
+    .sheet-header {
+      .charbutton {
+        margin-right: 10px;
       }
     }
-    &.sheet {
-      .sheet-header {
-        .charbutton {
-          margin-right: 10px;
-        }
-      }
-    }
-    section.sheet-sidebar.content {
-      border-bottom: 2px solid transparent;
-      border-right: 2px solid transparent;
-    }
-    section.sheet-content.content {
-      border-bottom: 2px solid transparent;
-    }
+  }
+  section.sheet-sidebar.content {
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+  section.sheet-content.content {
+    border-bottom: 2px solid transparent;
   }
 }
