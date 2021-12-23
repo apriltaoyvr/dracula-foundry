@@ -1,4 +1,4 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 .app {
   .mce {
@@ -27,7 +27,7 @@
       .tox-edit-area {
         color: $text-color;
         &__iframe {
-          background: $bg_window_content;
+					background: adjust-color(hsla(235, 14%, 15%, 0.8), $lightness: 40%, $alpha: -0.3);
           #tinymce {
             &.mce-content-body {
               color: $text-color;
