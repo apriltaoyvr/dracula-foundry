@@ -2,23 +2,23 @@
 
 /* Monk's Token Bar */
 .monks-tokenbar .sheet .items-list .item-list .item .item-name {
-  color: $text-color-secondary;
+  color: $textSecondary;
 }
 
 #requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
-  color: $text-color-secondary;
+  color: $textSecondary;
 }
 
 #requestsavingthrow .request-header {
-  background: $border-color;
-  border: 2px solid $border-color;
+  background: $border;
+  border: 2px solid $border;
   box-shadow: none;
 }
 
 .monks-tokenbar {
   &.chat-card {
     .flexrow {
-      color: $text-color-secondary;
+      color: $textSecondary;
       font-family: "Signika";
       font-weight: bold;
       font-size: 16px;
@@ -43,7 +43,7 @@
     }
 
     .card-header {
-      color: $text-color-secondary;
+      color: $textSecondary;
       background: none;
       border: none;
       font-family: "Signika";
@@ -51,7 +51,7 @@
   }
 
   .sheet .items-list .items-header h3 {
-    color: $text-color-secondary;
+    color: $textSecondary;
     background: none;
     border: none;
     font-family: "Signika";
@@ -59,7 +59,7 @@
 }
 
 .chat-message .message-content .form-group.sheet.actor .items-header {
-  color: $text-color-secondary;
+  color: $textSecondary;
   background: none;
   border: none;
   font-family: "Signika";
@@ -68,33 +68,34 @@
 .monks-tokenbar {
   &.chat-card {
     .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
-      color: $text-color-secondary;
+      color: $textSecondary;
       background: none;
       border: none;
       font-family: "Signika";
     }
 
     .card-header h3, .message-content .items-header .item-name {
-      color: $text-color-secondary;
+      color: $textSecondary;
       font-family: "Signika";
       font-weight: bold;
       font-size: 14px;
-        &:hover {
-          color: $text-color-secondary;
-          text-shadow: $glowColor;
-          box-shadow: none;
-        }
+
+      &:hover {
+        color: $textSecondary;
+        text-shadow: $glow;
+        box-shadow: none;
+      }
     }
 
     .card-footer button {
-      color: $text-color-secondary;
+      color: $textSecondary;
       background: none;
       border: none;
     }
   }
 
   .sheet .items-list .items-header {
-    color: $text-color-secondary;
+    color: $textSecondary;
     font-family: "Signika";
     background: none;
     border: none;

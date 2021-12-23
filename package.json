@@ -5,6 +5,9 @@
   "private": true,
   "type": "module",
   "author": "CasanovaSekova",
+  "dependencies": {
+    "chroma-js": "^2.1.2"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "cssnano": "^5",
@@ -13,20 +16,14 @@
     "postcss": "^8.4.5",
     "postcss-cli": "^9",
     "postcss-preset-env": "^7",
-    "sass": "^1.45.1"
+    "sass": "^1"
   },
+  "browserslist": [
+    ">5%",
+    "not IE 11"
+  ],
   "scripts": {
     "build-dev": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env -m -o ./css/dracula-foundry.css",
     "build-release": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env cssnano -m -o ./css/dracula-foundry.css"
-  },
-  "dependencies": {
-    "chroma-js": "^2.1.2",
-    "doiuse": "^4.4.1",
-    "jshint": "^2.13.1",
-    "merge": "^2.1.1",
-    "minimist": "^1.2.5",
-    "postcss-scss": "^4.0.2",
-    "scss": "^0.2.4",
-    "stylelint": "^14.2.0"
   }
 }

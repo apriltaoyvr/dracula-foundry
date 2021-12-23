@@ -6,11 +6,13 @@
     background: transparent;
     border: 1px solid $purpleLight;
   }
+
   .dice-so-nice .sfxs-list .sfx {
-      border-bottom: 1px solid $purpleLight;
+    border-bottom: 1px solid $purpleLight;
   }
+
   .sfx-data .sfx-flex-5 select {
-      background: $blackSecondary;
-      color: $text-color;
+    background: $blackSecondary;
+    color: $text;
   }
 }

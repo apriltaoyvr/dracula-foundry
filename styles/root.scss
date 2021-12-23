@@ -1,0 +1,32 @@
+@use 'dracula' as *;
+
+:root {
+  // Link color values with init.js
+  --color-dracula-accent: #{$purple};
+  --color-dracula-secondary: #{$red};
+  --color-dracula-tertiary: #{$pink};
+
+  --color-dracula-content: #{$black};
+  --color-dracula-content-window: #{$blackSecondary};
+
+  --color-dracula-border: #{$blackLight};
+  --color-dracula-border-secondary: #{$purpleLight};
+  --color-dracula-border-tertiary: #{$blackSecondary};
+  --color-dracula-border-highlight: #{$pink};
+
+  --color-dracula-glow: rgba(255, 255, 255, 0.25);
+  --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
+
+  --color-dracula-text-dark: #{$blackSecondary};
+  --color-dracula-text-highlight: #{$cyan};
+  --color-dracula-text-primary: #{$white};
+  --color-dracula-text-secondary: #{$whiteSecondary};
+  --color-dracula-text-tertiary: #{$blackTernary};
+  --color-dracula-text-inactive: hsl(230, 15%, 50%);
+
+  --color-dracula-disabled: hsl(230, 15%, 50%);
+  --color-dracula-failure: hsl(0, 100%, 67%);
+  --color-dracula-success: hsl(135, 94%, 65%);
+
+  --filter-backdrop: none; //blur(6px);
+}

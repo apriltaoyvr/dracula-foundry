@@ -4,14 +4,17 @@
   button {
     border: 1px solid $blackLight;
     box-shadow: 0 0 4px $accent;
+
     .dice-tray__flag {
       background-color: $accent;
     }
+
     &:hover {
       color: $accent;
       box-shadow: 0 0 12px $accent;
     }
   }
+
   input[type="text"] {
     border: 1px solid transparent;
     box-shadow: 0 0 4px $accent;
@@ -22,34 +25,41 @@
   > button,
   .dice-calculator--button {
     border: 1px solid transparent;
+
     &:hover {
       box-shadow: 0 0 4px $accent;
     }
   }
+
   &__rolls {
     &--hidden {
       background: $black;
       border: $blackSecondary;
     }
   }
+
   // Do not replace primary and accent colours for these buttons
   &--op {
     background-color: $red;
     border-color: $redSecondary;
   }
+
   &--math {
     background-color: $red;
     border-color: $redSecondary;
   }
+
   &--confirm {
     background-color: $cyan;
     border-color: $cyanSecondary;
   }
+
   &--stat,
   &--custom {
     background-color: $red;
     border-color: $redSecondary;
   }
+
   &--attr {
     background-color: $purple;
     border-color: $purpleSecondary;

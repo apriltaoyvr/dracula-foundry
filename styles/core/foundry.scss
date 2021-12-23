@@ -1,31 +1,31 @@
 @use "../variables" as *;
 
 :root {
-	scrollbar-width: thin;
-	scrollbar-color: var(--color-dracula-tertiary) var(--color-dracula-tertiary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dracula-tertiary) var(--color-dracula-tertiary);
 }
 
 // Scrollbar
 ::-webkit-scrollbar {
-	@include thinBorder(transparent);
-	background: transparent;
-	width: 6px;
-	height: 6px;
+  @include thinBorder(transparent);
+  background: transparent;
+  width: 6px;
+  height: 6px;
 
-	&-track {
-		box-shadow: 0 0 6px $glowColor inset;
-		border-radius: 4px;
-	}
+  &-track {
+    box-shadow: 0 0 6px $glow inset;
+    border-radius: 4px;
+  }
 
-	&-thumb {
-		outline: none;
-		border-radius: 0;
-		background: linear-gradient(
-			0deg,
-			$accentTertiary 0%,
-			$accentSecondary 100%
-		);
-	}
+  &-thumb {
+    outline: none;
+    border-radius: 0;
+    background: linear-gradient(
+        0deg,
+        $accentTertiary 0%,
+        $accentSecondary 100%
+    );
+  }
 }
 
 /* Global Text Styles */
@@ -35,955 +35,960 @@ h2,
 h3,
 h3,
 footer {
-	border-width: 1px;
-	border-color: $border-color;
+  border-width: 1px;
+  border-color: $border;
 
-	&.nue {
-		border-color: $border-color;
-	}
+  &.nue {
+    border-color: $border;
+  }
 }
 
 h4 {
-	color: $text-color;
+  color: $text;
 }
 
 hr {
-	border-top: 1px solid $accent;
-	border-bottom: 1px solid transparent;
+  border-top: 1px solid $accent;
+  border-bottom: 1px solid transparent;
 }
 
 /* Paragraph */
 p {
-	color: $text-color;
+  color: $text;
 }
 
 /* Anchor */
 a {
-	&.content-link,
-	&.entity-link,
-	&.inline-roll {
-		color: $text-color-secondary;
-		background: transparent;
-		border: 1px solid $accentSecondary;
-	}
+  &.content-link,
+  &.entity-link,
+  &.inline-roll {
+    color: $textSecondary;
+    background: transparent;
+    border: 1px solid $accentSecondary;
+  }
 
-	&.content-link:hover,
-	&.entity-link:hover,
-	&.inline-roll:hover {
-		text-shadow: 0 0 4px $accentSecondary;
-		box-shadow: none;
-	}
+  &.content-link:hover,
+  &.entity-link:hover,
+  &.inline-roll:hover {
+    text-shadow: 0 0 4px $accentSecondary;
+    box-shadow: none;
+  }
 
-	&.content-link i,
-	&.entity-link i,
-	&.inline-roll i {
-		color: $disabled;
-	}
+  &.content-link i,
+  &.entity-link i,
+  &.inline-roll i {
+    color: $disabled;
+  }
 }
 
 /* Most input forms */
 input {
-	&:focus {
-		box-shadow: none;
-	}
+  &:focus {
+    box-shadow: none;
+  }
 
-	&[type="text"],
-	&[type="number"],
-	&[type="password"],
-	&[type="date"],
-	&[type="time"],
-	&[type="text"].color,
-	&[type="color"][data-edit] {
-		@include thinBorder($accent);
-		color: $text-color-secondary;
-		background: $border-color;
-		box-shadow: none;
-		transition: 0.3s ease-in-out all;
-	}
+  &[type="text"],
+  &[type="number"],
+  &[type="password"],
+  &[type="date"],
+  &[type="time"],
+  &[type="text"].color,
+  &[type="color"][data-edit] {
+    @include thinBorder($accent);
+    color: $textSecondary;
+    background: $border;
+    box-shadow: none;
+    transition: 0.3s ease-in-out all;
+  }
 
-	&[type="text"]:focus,
-	&[type="number"]:focus,
-	&[type="password"]:focus,
-	&[type="date"]:focus,
-	&[type="time"]:focus {
-		background: $border-color;
-		border-width: 2px;
-		box-shadow: none;
-	}
+  &[type="text"]:focus,
+  &[type="number"]:focus,
+  &[type="password"]:focus,
+  &[type="date"]:focus,
+  &[type="time"]:focus {
+    background: $border;
+    border-width: 2px;
+    box-shadow: none;
+  }
 
-	&[type="range"] + .range-value {
-		@include thinBorder($accent);
-		color: $text-color-secondary;
-		background: $border-color;
-		box-shadow: none;
-		margin: 2px;
-		transition: 0.3s ease-in-out all;
-	}
+  &[type="range"] + .range-value {
+    @include thinBorder($accent);
+    color: $textSecondary;
+    background: $border;
+    box-shadow: none;
+    margin: 2px;
+    transition: 0.3s ease-in-out all;
+  }
 
-	&[type="range"]::-webkit-slider-thumb {
-		background: linear-gradient(
-			$gradientDegree,
-			$accentTertiary,
-			$accentSecondary
-		);
-		height: 12px;
-		width: 12px;
-		cursor: pointer;
-		box-shadow: none;
-	}
+  &[type="range"]::-webkit-slider-thumb {
+    background: linear-gradient(
+        $gradientDegree,
+        $accentTertiary,
+        $accentSecondary
+    );
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    box-shadow: none;
+  }
 
-	&[type="checkbox"] {
-		background: $accent;
-		color: $text-color;
-	}
+  &[type="checkbox"] {
+    background: $accent;
+    color: $text;
+  }
 
-	&[type="radio"] {
-		background: accent;
-		color: $text-color;
-	}
+  &[type="radio"] {
+    background: accent;
+    color: $text;
+  }
 
-	&[type="color"][data-edit][data-edit],
-	&[type="color"i] {
-		appearance: auto;
-		background-color: transparent;
-		color: $text-color;
-		border-color: $bg_window_content;
-	}
+  &[type="color"][data-edit][data-edit],
+  &[type="color"i] {
+    appearance: auto;
+    background-color: transparent;
+    color: $text;
+    border-color: $contentWindow;
+  }
 
-	&:placeholder {
-		color: $disabled;
-		text-shadow: 0 0 10px $glowColor;
-	}
+  &:placeholder {
+    color: $disabled;
+    text-shadow: 0 0 10px $glow;
+  }
 }
 
 /* Tables (General sense, not specific to rolltables) */
 table {
-	border-top: 1px solid transparent;
-	border-bottom: 1px solid transparent;
-	text-shadow: none;
-	font-size: 12px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  text-shadow: none;
+  font-size: 12px;
 
-	thead {
-		background: $border-color;
-		border-bottom: none;
-	}
+  thead {
+    background: $border;
+    border-bottom: none;
+  }
 }
 
 /* Select (drop-down boxes) */
 select {
-	color: $text-color-secondary;
-	background: $black;
-	border: 1px solid $accent;
-	border-radius: 2px;
-	box-shadow: none;
-	margin: 2px;
-	transition: 0.3s ease-in-out all;
+  color: $textSecondary;
+  background: $black;
+  border: 1px solid $accent;
+  border-radius: 2px;
+  box-shadow: none;
+  margin: 2px;
+  transition: 0.3s ease-in-out all;
 
-	&:focus {
-		border-width: 2px;
-		box-shadow: none;
-	}
+  &:focus {
+    border-width: 2px;
+    box-shadow: none;
+  }
 }
 
 /* Forms */
 form {
-	.hint,
-	.notes {
-		color: $text-color;
-	}
+  .hint,
+  .notes {
+    color: $text;
+  }
 
-	&-group {
-		.form-fields {
-			border: 1px solid $border-color;
-			border-radius: 2px;
-			background: $bg_window_content;
-			color: $text-color-secondary;
+  &-group {
+    .form-fields {
+      border: 1px solid $border;
+      border-radius: 2px;
+      background: $contentWindow;
+      color: $textSecondary;
 
-			&:focus {
-				border-width: 2px;
-			}
-		}
+      &:focus {
+        border-width: 2px;
+      }
+    }
 
-		.form-fields > *:last-child {
-			border: 1px solid $border-color;
-			border-radius: 2px;
-			background: $bg_window_content;
-			color: $text-color-secondary;
-		}
-	}
+    .form-fields > *:last-child {
+      border: 1px solid $border;
+      border-radius: 2px;
+      background: $contentWindow;
+      color: $textSecondary;
+    }
+  }
 }
 
 fieldset {
-	border: 1px solid transparent;
+  border: 1px solid transparent;
 }
 
 textarea {
-	border: 1px solid $border-color-secondary;
-	background: $bg_content;
-	color: $text-color;
+  border: 1px solid $borderSecondary;
+  background: $content;
+  color: $text;
 
-	&:focus {
-		border-width: 2px;
-		box-shadow: none;
-	}
+  &:focus {
+    border-width: 2px;
+    box-shadow: none;
+  }
 }
 
 /* Buttons */
 button,
 form button {
-	@include thinBorder($accent);
-	@include lightToDark($bg_content);
-	@include heavyShadow;
+  @include thinBorder($accent);
+  @include lightToDark($content);
+  @include heavyShadow;
 
-	color: $text-color;
-	border-radius: 1px;
-	margin: 0 0 0.125rem 0;
+  color: $text;
+  border-radius: 1px;
+  margin: 0 0 0.125rem 0;
 
-	&:hover {
-		@include hoverRaise;
-	}
+  &:hover {
+    @include hoverRaise;
+  }
 }
 
 /* Colour Pickers */
 .picker_wrapper {
-	background: $bg_content;
-	color: $text-color;
+  background: $content;
+  color: $text;
 
-	.button {
-		background: $bg_content;
-		border: 1px solid $blackSecondary;
-		color: $text-color;
-	}
+  .button {
+    background: $content;
+    border: 1px solid $blackSecondary;
+    color: $text;
+  }
 }
 
-/* Window pop-up buttons  
+/* Window pop-up buttons
 Separated if I want these buttons to be styled differently */
 .dialog .dialog-buttons button {
-	@include thinBorder($accent);
-	@include lightToDark($bg_content);
-	@include heavyShadow;
-	font-size: 14px;
+  @include thinBorder($accent);
+  @include lightToDark($content);
+  @include heavyShadow;
+  font-size: 14px;
 
-	&.default {
-		@include thinBorder($accent);
-		@include lightToDark($bg_content);
-		@include heavyShadow;
-		font-size: 14px;
-	}
+  &.default {
+    @include thinBorder($accent);
+    @include lightToDark($content);
+    @include heavyShadow;
+    font-size: 14px;
+  }
 
-	&:focus,
-	&:hover {
-		@include hoverRaise;
-		box-shadow: none;
-	}
+  &:focus,
+  &:hover {
+    @include hoverRaise;
+    box-shadow: none;
+  }
 }
 
 .app {
-	color: $text-color-secondary;
-	background: $bg_content;
+  color: $textSecondary;
+  background: $content;
 }
 
 .sheet {
-	nav.sheet-tabs {
-		border-top: none;
-		border-bottom: none;
-	}
+  nav.sheet-tabs {
+    border-top: none;
+    border-bottom: none;
+  }
 
-	header.sheet-header img {
-		border: none;
-	}
+  header.sheet-header img {
+    border: none;
+  }
 }
 
 // Window Styles
 .window-app {
-	backdrop-filter: $filter-backdrop;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+  backdrop-filter: $filterBackdrop;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 
-	.window-content {
-		background: $bg_content;
-		color: $text-color;
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
+  .window-content {
+    background: $content;
+    color: $text;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 
-		> * {
-			background: transparent;
-			color: $text-color;
-		}
-	}
+    > * {
+      background: transparent;
+      color: $text;
+    }
+  }
 
-	.window-header {
-		border-top-left-radius: 6px;
-		border-top-right-radius: 6px;
-		border-bottom-left-radius: 0px;
-		border-bottom-right-radius: 0px;
-		background: $bg_content;
-		border: 1px solid transparent;
-	}
+  .window-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: $content;
+    border: 1px solid transparent;
+  }
 
-	.dialogue {
-		background: $bg_content;
-		border-radius: 6px;
-		border: none;
-		text-shadow: 0 0 10px rgba(0 0 0 / 50%);
-	}
+  .dialogue {
+    background: $content;
+    border-radius: 6px;
+    border: none;
+    text-shadow: 0 0 10px rgba(0 0 0 / 50%);
+  }
 }
 
 // Navigation (Top bar)
 #navigation {
-	#nav-toggle {
-		&:hover {
-			text-shadow: 0 0 4px $glowColor;
-		}
-	}
+  #nav-toggle {
+    &:hover {
+      text-shadow: 0 0 4px $glow;
+    }
+  }
 
-	#scene-list {
-		.nav-item {
-			border: 1px solid $border-color;
-			border-radius: 1px;
-			background: $bg_content;
-		}
+  #scene-list {
+    .nav-item {
+      border: 1px solid $border;
+      border-radius: 1px;
+      background: $content;
+    }
 
-		.scene {
-			&.gm {
-				@include thinBorder($accent);
-				background: $bg_content;
-			}
+    .scene {
+      &.gm {
+        @include thinBorder($accent);
+        background: $content;
+      }
 
-			&.view,
-			&.view.gm {
-				@include gradientBorder($accentSecondary, $accentTertiary);
-				background: $bg_content;
-				box-shadow: inset 0 0 0.1px 0.25px $accentTertiary;
-			}
+      &.view,
+      &.view.gm {
+        @include gradientBorder($accentSecondary, $accentTertiary);
+        background: $content;
+        box-shadow: inset 0 0 0.1px 0.25px $accentTertiary;
+      }
 
-			&-context {
-				@include thinBorder($accent);
-				background: $bg_content;
-			}
-		}
-	}
+      &-context {
+        @include thinBorder($accent);
+        background: $content;
+      }
+    }
+  }
 }
 
 // Controls/Tools Sidebar (Left Sidebar)
 #controls {
-	.control-tool {
-		@include heavyShadow;
-	}
+  .control-tool {
+    @include heavyShadow;
+  }
 
-	ol {
-		.scene-control {
-			@include heavyShadow;
-			@include gradientBorder($accentSecondary, $accentTertiary);
-			background: $bg_content;
-			filter: opacity(75%);
+  ol {
+    .scene-control {
+      @include heavyShadow;
+      @include gradientBorder($accentSecondary, $accentTertiary);
+      background: $content;
+      filter: opacity(75%);
 
-			&.active {
-				@include heavyShadow;
-				@include gradientBorder($accentSecondary, $accentTertiary);
-				border-radius: 1px;
-				filter: none;
-			}
+      &.active {
+        @include heavyShadow;
+        @include gradientBorder($accentSecondary, $accentTertiary);
+        border-radius: 1px;
+        filter: none;
+      }
 
-			&:hover {
-				@include heavyShadow;
-				@include gradientBorder($accentSecondary, $accentTertiary);
-				border-radius: 1px;
-				filter: none;
-			}
-		}
+      &:hover {
+        @include heavyShadow;
+        @include gradientBorder($accentSecondary, $accentTertiary);
+        border-radius: 1px;
+        filter: none;
+      }
+    }
 
-		&.sub-controls {
-			.control-tool {
-				@include heavyShadow;
-				@include gradientBorder($accentSecondary, $accentTertiary);
-				filter: opacity(75%);
-				background: $bg_content;
+    &.sub-controls {
+      .control-tool {
+        @include heavyShadow;
+        @include gradientBorder($accentSecondary, $accentTertiary);
+        filter: opacity(75%);
+        background: $content;
 
-				&.toggle {
-					@include heavyShadow;
-					@include gradientBorder($accent, $highlight);
+        &.toggle {
+          @include heavyShadow;
+          @include gradientBorder($accent, $highlight);
 
-					&.active {
-						@include toolsShadow;
-						@include gradientBorder($accent, $highlight);
-						background: linear-gradient(
-							$gradientDegree,
-							$accent 0%,
-							$highlight 100%
-						);
-						--shadow-color: 171deg 61% 33%;
-						filter: none;
-					}
+          &.active {
+            @include toolsShadow;
+            @include gradientBorder($accent, $highlight);
+            background: linear-gradient(
+                $gradientDegree,
+                $accent 0%,
+                $highlight 100%
+            );
+            --shadow-color: 171deg 61% 33%;
+            filter: none;
+          }
 
-					&:hover {
-						@include toolsShadow;
-						@include gradientBorder($accent, $highlight);
-						background: linear-gradient(
-							$gradientDegree,
-							$accent 0%,
-							$highlight 100%
-						);
-						--shadow-color: 171deg 61% 33%;
-						filter: none;
-					}
-				}
+          &:hover {
+            @include toolsShadow;
+            @include gradientBorder($accent, $highlight);
+            background: linear-gradient(
+                $gradientDegree,
+                $accent 0%,
+                $highlight 100%
+            );
+            --shadow-color: 171deg 61% 33%;
+            filter: none;
+          }
+        }
 
-				&.active {
-					@include heavyShadow;
-					@include gradientBorder($accentSecondary, $accentTertiary);
-					filter: none;
-				}
+        &.active {
+          @include heavyShadow;
+          @include gradientBorder($accentSecondary, $accentTertiary);
+          filter: none;
+        }
 
-				&:hover {
-					@include heavyShadow;
-					@include gradientBorder($accentSecondary, $accentTertiary);
-					filter: none;
-				}
-			}
-		}
-	}
+        &:hover {
+          @include heavyShadow;
+          @include gradientBorder($accentSecondary, $accentTertiary);
+          filter: none;
+        }
+      }
+    }
+  }
 }
 
 /* Hotbar (Bottom Center) */
 #hotbar {
-	#macro-list {
-		@include thinBorder($border-color);
-		border-radius: 1px;
+  #macro-list {
+    @include thinBorder($border);
+    border-radius: 1px;
 
-		&.inactive {
-			/* Replace later. */
-			box-shadow: 0 0 5px var(--color-dracula-glow) inset;
-		}
-	}
+    &.inactive {
+      /* Replace later. */
+      box-shadow: 0 0 5px var(--color-dracula-glow) inset;
+    }
+  }
 
-	#hotbar {
-		border-radius: 1px;
+  #hotbar {
+    border-radius: 1px;
 
-		&-directory-controls,
-		&-page-controls {
-			background: linear-gradient(
-				180deg,
-				hsla(235, 14%, 15%, 90%) 0%,
-				hsla(230, 15%, 15%, 75%) 50%,
-				hsla(230, 15%, 15%, 50%) 100%
-			);
-			--shadow-color: 0deg 0% 48%;
-			text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
-				0 0 0.3px hsl(var(--shadow-color) / 0.18),
-				0 0 0.6px hsl(var(--shadow-color) / 0.35),
-				0 0 1.2px hsl(var(--shadow-color) / 0.52),
-				0 0 2px hsl(var(--shadow-color) / 0.7);
-		}
-	}
+    &-directory-controls,
+    &-page-controls {
+      background: linear-gradient(
+          180deg,
+          hsla(235, 14%, 15%, 90%) 0%,
+          hsla(230, 15%, 15%, 75%) 50%,
+          hsla(230, 15%, 15%, 50%) 100%
+      );
+      --shadow-color: 0deg 0% 48%;
+      text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
+      0 0 0.3px hsl(var(--shadow-color) / 0.18),
+      0 0 0.6px hsl(var(--shadow-color) / 0.35),
+      0 0 1.2px hsl(var(--shadow-color) / 0.52),
+      0 0 2px hsl(var(--shadow-color) / 0.7);
+    }
+  }
 
-	/* Individual macro boxes */
-	.macro {
-		border: 1px solid $bg_content;
-		border-radius: 1px;
-		background: linear-gradient(
-				180deg,
-				hsla(235, 14%, 15%, 90%) 0%,
-				hsla(230, 15%, 15%, 75%) 50%,
-				hsla(230, 15%, 15%, 50%) 100%
-			);
-		backdrop-filter: $filter-backdrop;
+  /* Individual macro boxes */
+  .macro {
+    border: 1px solid $content;
+    border-radius: 1px;
+    background: linear-gradient(
+        180deg,
+        hsla(235, 14%, 15%, 90%) 0%,
+        hsla(230, 15%, 15%, 75%) 50%,
+        hsla(230, 15%, 15%, 50%) 100%
+    );
+    backdrop-filter: $filterBackdrop;
 
-		/* Macro boxes containing items */
-		&.active {
-			@include gradientBorder($accent, $disabled);
-			&:hover {
-				@include borderExpand($accent);
-			}
-		}
+    /* Macro boxes containing items */
+    &.active {
+      @include gradientBorder($accent, $disabled);
 
-		/* Empty macro boxes */
-		&.inactive {
-			opacity: 75%;
-			&:hover {
-				@include borderExpand($bg_content);
-				opacity: 100%;
-			}
-		}
+      &:hover {
+        @include borderExpand($accent);
+      }
+    }
 
-		.macro-key {
-			@include heavyShadow;
-			color: $text-color;
-			background: $border-color;
-		}
-	}
+    /* Empty macro boxes */
+    &.inactive {
+      opacity: 75%;
 
-	.bar-controls {
-		--shadow-color: 0deg 0% 48%;
-		background: $border-color;
-		border-radius: 1px;
+      &:hover {
+        @include borderExpand($content);
+        opacity: 100%;
+      }
+    }
 
-		text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
-			0 0 0.3px hsl(var(--shadow-color) / 0.18),
-			0 0 0.6px hsl(var(--shadow-color) / 0.35),
-			0 0 1.2px hsl(var(--shadow-color) / 0.52),
-			0 0 2px hsl(var(--shadow-color) / 0.7);
-	}
+    .macro-key {
+      @include heavyShadow;
+      color: $text;
+      background: $border;
+    }
+  }
+
+  .bar-controls {
+    --shadow-color: 0deg 0% 48%;
+    background: $border;
+    border-radius: 1px;
+
+    text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
+    0 0 0.3px hsl(var(--shadow-color) / 0.18),
+    0 0 0.6px hsl(var(--shadow-color) / 0.35),
+    0 0 1.2px hsl(var(--shadow-color) / 0.52),
+    0 0 2px hsl(var(--shadow-color) / 0.7);
+  }
 }
 
 /* Player List (Bottom Left) */
 #players {
-	h3 {
-		border-bottom: 1px solid $border-color;
-	}
+  h3 {
+    border-bottom: 1px solid $border;
+  }
 }
 
 /* Main Sidebar (Right) */
 #sidebar {
-	background: linear-gradient(
-		0deg,
-		hsla(235, 14%, 15%, 0.9) 0%,
-		hsla(230, 15%, 15%, 75%) 75%,
-		hsla(230, 15%, 15%, 70%) 100%
-	);
-	backdrop-filter: $filter-backdrop;
-	border: 1px solid transparent;
-	--shadow-color: 232deg 22% 2%;
-	box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
-		-0.9px 0.1px 1px -0.3px hsl(var(--shadow-color) / 0.14),
-		-1.8px 0.1px 2.1px -0.7px hsl(var(--shadow-color) / 0.15),
-		-2.9px 0.2px 3.4px -1px hsl(var(--shadow-color) / 0.15),
-		-4.6px 0.3px 5.3px -1.3px hsl(var(--shadow-color) / 0.15),
-		-7.1px 0.4px 8.2px -1.6px hsl(var(--shadow-color) / 0.16),
-		-10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
-		-15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
+  background: linear-gradient(
+      0deg,
+      hsla(235, 14%, 15%, 0.9) 0%,
+      hsla(230, 15%, 15%, 75%) 75%,
+      hsla(230, 15%, 15%, 70%) 100%
+  );
+  backdrop-filter: $filterBackdrop;
+  border: 1px solid transparent;
+  --shadow-color: 232deg 22% 2%;
+  box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
+  -0.9px 0.1px 1px -0.3px hsl(var(--shadow-color) / 0.14),
+  -1.8px 0.1px 2.1px -0.7px hsl(var(--shadow-color) / 0.15),
+  -2.9px 0.2px 3.4px -1px hsl(var(--shadow-color) / 0.15),
+  -4.6px 0.3px 5.3px -1.3px hsl(var(--shadow-color) / 0.15),
+  -7.1px 0.4px 8.2px -1.6px hsl(var(--shadow-color) / 0.16),
+  -10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
+  -15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
 
-	/* Sidebar Navigation Tabs */
-	&-tabs {
-		border: none;
-	}
+  /* Sidebar Navigation Tabs */
+  &-tabs {
+    border: none;
+  }
 
-	&-tabs > .item.active {
-		color: $text-color;
-		background: transparent;
-		box-shadow: none;
-		border: 2px solid transparent;
-		border-bottom: 2px solid $accent;
-		text-shadow: 0 0 0 4px $accent;
+  &-tabs > .item.active {
+    color: $text;
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid transparent;
+    border-bottom: 2px solid $accent;
+    text-shadow: 0 0 0 4px $accent;
 
-		&:hover {
-			text-shadow: 0 0 8px $glowColor;
-		}
-	}
+    &:hover {
+      text-shadow: 0 0 8px $glow;
+    }
+  }
 
-	&-tabs > .item {
-		color: $text-color-secondary;
-		background: transparent;
-		border: none;
-		text-shadow: 0 0 2px $shadowColor;
+  &-tabs > .item {
+    color: $textSecondary;
+    background: transparent;
+    border: none;
+    text-shadow: 0 0 2px $shadow;
 
-		&:hover {
-			color: $text-color;
-			text-shadow: 0 0 2px $glowColor;
-		}
-	}
+    &:hover {
+      color: $text;
+      text-shadow: 0 0 2px $glow;
+    }
+  }
 }
 
 /* Directory Navigation */
 .directory {
-	.action-buttons button {
-		background: $bg_content;
-	}
+  .action-buttons button {
+    background: $content;
+  }
 
-	.directory-list {
-		.directory-item {
-			&.active,
-			&.context {
-				border-color: $border-color;
-			}
-		}
-	}
+  .directory-list {
+    .directory-item {
+      &.active,
+      &.context {
+        border-color: $border;
+      }
+    }
+  }
 
-	.directory-header .header-search input {
-		@include thinBorder($accent);
-		background: $bg_content;
-		color: $text-color-secondary;
-		box-shadow: none;
-		margin: 2px;
-		transition: 0.3s ease-in-out all;
+  .directory-header .header-search input {
+    @include thinBorder($accent);
+    background: $content;
+    color: $textSecondary;
+    box-shadow: none;
+    margin: 2px;
+    transition: 0.3s ease-in-out all;
 
-		&:focus {
-			border-width: 2px;
-		}
-	}
+    &:focus {
+      border-width: 2px;
+    }
+  }
 }
 
 /* Sidebar Chat Log */
 #chat-log {
-	@include thinBorder(transparent);
-	background: transparent;
-	border-radius: 2px;
+  @include thinBorder(transparent);
+  background: transparent;
+  border-radius: 2px;
 }
+
 // Chat Cards (will restyle most aspects)
 .chat-message {
-	@include gradientBorder($accent, $accentSecondary);
-	background: $bg_content;
-	color: $text-color-secondary;
-	transition: max-height 0.3s ease-in-out;
+  @include gradientBorder($accent, $accentSecondary);
+  background: $content;
+  color: $textSecondary;
+  transition: max-height 0.3s ease-in-out;
 
-	&.whisper {
-		@include gradientBorder($accent, $highlight);
-		background: $bg_content;
-		color: $text-color-secondary;
-		transition: max-height 0.3s ease-in-out;
-	}
+  &.whisper {
+    @include gradientBorder($accent, $highlight);
+    background: $content;
+    color: $textSecondary;
+    transition: max-height 0.3s ease-in-out;
+  }
 
-	&.blind {
-		@include gradientBorder($accent, $accentTertiary);
-		background: $bg_content;
-		color: $text-color-secondary;
-		transition: max-height 0.3s ease-in-out;
-	}
+  &.blind {
+    @include gradientBorder($accent, $accentTertiary);
+    background: $content;
+    color: $textSecondary;
+    transition: max-height 0.3s ease-in-out;
+  }
 
-	&.emote {
-		@include gradientBorder($accent, $yellow);
-		background: $bg_content;
-		color: $text-color-secondary;
-		transition: max-height 0.3s ease-in-out;
-	}
+  &.emote {
+    @include gradientBorder($accent, $yellow);
+    background: $content;
+    color: $textSecondary;
+    transition: max-height 0.3s ease-in-out;
+  }
 
-	.message-header,
-	.message-metadata {
-		.message-sender {
-			color: $text-color-secondary;
-		}
-		color: $text-color-secondary;
-		text-shadow: none;
-	}
+  .message-header,
+  .message-metadata {
+    .message-sender {
+      color: $textSecondary;
+    }
 
-	.table-draw .table-description {
-		border-top: 1px solid $whiteLight;
-		color: $disabled;
-	}
+    color: $textSecondary;
+    text-shadow: none;
+  }
 
-	// Most values related to dice result boxes
-	.dice-roll {
-		margin: 2px;
-		.dice-formula {
-			@include heavyShadow;
-			background: $border-color;
-			border: 1px solid $accent;
-			border-radius: 1px;
+  .table-draw .table-description {
+    border-top: 1px solid $whiteLight;
+    color: $disabled;
+  }
 
-			&:hover {
-				@include hoverRaise;
-				cursor: pointer;
-			}
-		}
+  // Most values related to dice result boxes
+  .dice-roll {
+    margin: 2px;
 
-		// Dice total mini-boxes
-		.dice-total {
-			@include heavyShadow;
-			background: $border-color;
-			border: 1px solid $accent;
-			border-radius: 1px;
-			font-size: 14px;
+    .dice-formula {
+      @include heavyShadow;
+      background: $border;
+      border: 1px solid $accent;
+      border-radius: 1px;
 
-			&:hover {
-				@include hoverRaise;
-				cursor: pointer;
-			}
+      &:hover {
+        @include hoverRaise;
+        cursor: pointer;
+      }
+    }
 
-			/* For the small square boxes */
-			&.success {
-				@include gradientBorder($success, $greenSecondary);
-				color: inherit;
-				background: $bg_content;
-			}
+    // Dice total mini-boxes
+    .dice-total {
+      @include heavyShadow;
+      background: $border;
+      border: 1px solid $accent;
+      border-radius: 1px;
+      font-size: 14px;
 
-			&.failure {
-				@include gradientBorder($red, $failure);
-				color: inherit;
-				background: $bg_content;
-			}
-			
-			/* For the large result box */
-			&.critical {
-				@include gradientText($success, $greenSecondary);
-				@include gradientBorder($success, $greenSecondary);
-			}
+      &:hover {
+        @include hoverRaise;
+        cursor: pointer;
+      }
 
-			&.fumble {
-				@include gradientText($failure, $red);
-				@include gradientBorder($failure, $red);
-			}
-		}
+      /* For the small square boxes */
+      &.success {
+        @include gradientBorder($success, $greenSecondary);
+        color: inherit;
+        background: $content;
+      }
 
-		// Detailed attack formula + damage buttons
-		.dice-result {
-			.dice-tooltip .dice {
-				.part-header.flexrow {
-					@include gradientBorder($accent, $disabled);
-					background: $border-color;
+      &.failure {
+        @include gradientBorder($red, $failure);
+        color: inherit;
+        background: $content;
+      }
 
-					.part-total {
-						border: none;
-						background: transparent;
-						font-size: 12px;
-						margin-right: 5px;
-						margin-top: 1px;
-					}
+      /* For the large result box */
+      &.critical {
+        @include gradientText($success, $greenSecondary);
+        @include gradientBorder($success, $greenSecondary);
+      }
 
-					.part-formula {
-						margin-left: 6px;
-					}
+      &.fumble {
+        @include gradientText($failure, $red);
+        @include gradientBorder($failure, $red);
+      }
+    }
 
-					.part-flavor {
-						color: inherit;
-						background: none;
-						border: 1px solid transparent;
-					}
-				}
+    // Detailed attack formula + damage buttons
+    .dice-result {
+      .dice-tooltip .dice {
+        .part-header.flexrow {
+          @include gradientBorder($accent, $disabled);
+          background: $border;
 
-				&-rolls {
-					margin: 0.3em;
-					padding-top: 2px;
-				}
+          .part-total {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 1px;
+          }
 
-				.roll {
-					@include gradientBorder($purple, $disabled);
-					@include heavyShadow;
-					color: $text-color;
-					background: transparent;
-					font-size: 14px;
-					margin: 2px;
+          .part-formula {
+            margin-left: 6px;
+          }
 
-					&:hover {
-						@include hoverRaise;
-					}
+          .part-flavor {
+            color: inherit;
+            background: none;
+            border: 1px solid transparent;
+          }
+        }
 
-					&.failure,
-					&.min {
-						@include gradientBorder($failure, $red);
-						@include gradientText($failure, $red);
-						filter: none;
-					}
+        &-rolls {
+          margin: 0.3em;
+          padding-top: 2px;
+        }
 
-					&.max,
-					&.success {
-						@include gradientBorder($success, $green);
-						@include gradientText($success, $green);
-						filter: none;
-					}
+        .roll {
+          @include gradientBorder($purple, $disabled);
+          @include heavyShadow;
+          color: $text;
+          background: transparent;
+          font-size: 14px;
+          margin: 2px;
 
-					.dice-result {
-						color: $text-color-secondary;
-					}
-				}
-			}
-		}
-	}
+          &:hover {
+            @include hoverRaise;
+          }
 
-	.message-content {
-		color: $text-color-secondary;
-		border: none;
-		margin: 2px;
+          &.failure,
+          &.min {
+            @include gradientBorder($failure, $red);
+            @include gradientText($failure, $red);
+            filter: none;
+          }
 
-		.form-group.sheet.actor .items-list {
-			color: $text-color-secondary;
-			border: none;
-			margin: 1px;
-		}
-	}
+          &.max,
+          &.success {
+            @include gradientBorder($success, $green);
+            @include gradientText($success, $green);
+            filter: none;
+          }
+
+          .dice-result {
+            color: $textSecondary;
+          }
+        }
+      }
+    }
+  }
+
+  .message-content {
+    color: $textSecondary;
+    border: none;
+    margin: 2px;
+
+    .form-group.sheet.actor .items-list {
+      color: $textSecondary;
+      border: none;
+      margin: 1px;
+    }
+  }
 }
 
 // Chat Menu
 #chat-controls {
-	background: none;
+  background: none;
 
-	.roll-type-select {
-		@include lightToDark($bg_content);
-		@include thinBorder(transparent);
-		border-radius: 2px;
-		padding: 2px;
-	}
+  .roll-type-select {
+    @include lightToDark($content);
+    @include thinBorder(transparent);
+    border-radius: 2px;
+    padding: 2px;
+  }
 }
 
 /* Input area (form) for chat menu */
 #chat-form textarea {
-	@include thinBorder($accent);
-	color: $text-color-secondary;
-	background: transparent;
+  @include thinBorder($accent);
+  color: $textSecondary;
+  background: transparent;
 
-	&:focus {
-		border-width: 2px;
-	}
+  &:focus {
+    border-width: 2px;
+  }
 }
 
 // Combat Tracker
 #combat {
-	#combat-round {
-		border-bottom: 2px solid transparent;
-	}
+  #combat-round {
+    border-bottom: 2px solid transparent;
+  }
 
-	li.combatant {
-		&.active {
-			background: $bg_content;
-		}
-	}
+  li.combatant {
+    &.active {
+      background: $content;
+    }
+  }
 
-	#combat-controls {
-		border-top: 2px solid $border-color;
-	}
+  #combat-controls {
+    border-top: 2px solid $border;
+  }
 }
 
 // Default text editor for journals
 .tinymce .mce-content-body {
-	color: $text-color-secondary;
+  color: $textSecondary;
 }
 
 // Roll tables
 .roll-table-config ol.table-results {
-	.table-header {
-		border: none;
-	}
+  .table-header {
+    border: none;
+  }
 
-	.table-result .result-controls .lock-result {
-		color: $text-color-secondary;
-	}
+  .table-result .result-controls .lock-result {
+    color: $textSecondary;
+  }
 
-	.table-result.drawn .lock-result {
-		color: $disabled;
-	}
+  .table-result.drawn .lock-result {
+    color: $disabled;
+  }
 }
 
 // Sound Menu
 #playlists {
-	.sound-control {
-		&[data-action="sound-stop"],
-		&[data-action="playlist-stop"] {
-			color: $accentTertiary;
-		}
-	}
+  .sound-control {
+    &[data-action="sound-stop"],
+    &[data-action="playlist-stop"] {
+      color: $accentTertiary;
+    }
+  }
 }
 
 // Compendium Submenu
 .compendium.directory .directory-list .directory-item {
-	border-top: none;
-	border-bottom: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid transparent;
 }
 
 /* Foundry Settings */
 #client-settings {
-	&.app.window-app.form #config-tabs .settings-list h2.module-header span,
-	section.content h2.module-header {
-		color: hsla(60, 30%, 100%, 80%);
-		border-bottom: 1px solid transparent;
-	}
+  &.app.window-app.form #config-tabs .settings-list h2.module-header span,
+  section.content h2.module-header {
+    color: hsla(60, 30%, 100%, 80%);
+    border-bottom: 1px solid transparent;
+  }
 
-	nav.tabs {
-		border-bottom: 1px solid $border-color;
+  nav.tabs {
+    border-bottom: 1px solid $border;
 
-		&:focus {
-			text-shadow: 0 0 4px $accentSecondary;
-		}
-	}
+    &:focus {
+      text-shadow: 0 0 4px $accentSecondary;
+    }
+  }
 
-	&#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-		@include gradientBorder($accent, $highlight);
-		margin: 2px;
+  &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+    @include gradientBorder($accent, $highlight);
+    margin: 2px;
 
-		&:focus {
-			border-width: 2px;
-			box-shadow: none;
-		}
-	}
+    &:focus {
+      border-width: 2px;
+      box-shadow: none;
+    }
+  }
 }
 
 #settings {
-	h2 {
-		border-bottom: none;
-		border-top: none;
-		color: $text-color-secondary;
-		background: none;
-	}
+  h2 {
+    border-bottom: none;
+    border-top: none;
+    color: $textSecondary;
+    background: none;
+  }
 }
 
 #permissions-config {
-	header.table-header {
-		background: none;
-		border: 1px solid $border-color-secondary;
-		border-radius: 2px;
-		padding-bottom: 4px;
-	}
+  header.table-header {
+    background: none;
+    border: 1px solid $borderSecondary;
+    border-radius: 2px;
+    padding-bottom: 4px;
+  }
 
-	li.permission {
-		border-bottom: 1px solid $border-color-secondary;
-	}
+  li.permission {
+    border-bottom: 1px solid $borderSecondary;
+  }
 
-	p {
-		&.hint {
-			color: $text-color-secondary;
-		}
-	}
+  p {
+    &.hint {
+      color: $textSecondary;
+    }
+  }
 
-	.hint {
-		color: $disabled;
-	}
+  .hint {
+    color: $disabled;
+  }
 }
 
 /* Module Management Menu */
 #module-management {
-	.package-list {
-		.package {
-			border-bottom: 1px solid $border-color-secondary;
+  .package-list {
+    .package {
+      border-bottom: 1px solid $borderSecondary;
 
-			&-description,
-			&-metadata,
-			&-title {
-				color: $text-color;
-			}
-		}
+      &-description,
+      &-metadata,
+      &-title {
+        color: $text;
+      }
+    }
 
-		/* WIP doesn't seem to affect anything */
-		input[type="checkbox"] {
-			background: $border-color-secondary;
-			color: $accent;
-		}
-	}
+    /* WIP doesn't seem to affect anything */
+    input[type="checkbox"] {
+      background: $borderSecondary;
+      color: $accent;
+    }
+  }
 }
 
 nav.list-filters a.filter {
-	color: $disabled;
-	border-bottom: 1px solid $disabled;
-	text-shadow: none;
-	transition: all 0.2s ease-in-out;
+  color: $disabled;
+  border-bottom: 1px solid $disabled;
+  text-shadow: none;
+  transition: all 0.2s ease-in-out;
 
-	&:hover {
-		color: $white;
-		border-bottom: 1px solid $disabled;
-		box-shadow: none;
-		transition: color 0.2s ease-in-out;
-	}
+  &:hover {
+    color: $white;
+    border-bottom: 1px solid $disabled;
+    box-shadow: none;
+    transition: color 0.2s ease-in-out;
+  }
 
-	&.active {
-		color: $accentSecondary;
-		border-bottom: 1px solid $accentSecondary;
-		box-shadow: none;
-		transition: all 0.2s ease-in-out;
-	}
+  &.active {
+    color: $accentSecondary;
+    border-bottom: 1px solid $accentSecondary;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 /* Keybindings Menu */
 #keybindings {
-	.filters h3 {
-		border-bottom: 1px solid transparent;
-	}
+  .filters h3 {
+    border-bottom: 1px solid transparent;
+  }
 
-	.action {
-		border-bottom: 1px solid transparent;
-	}
+  .action {
+    border-bottom: 1px solid transparent;
+  }
 
-	.category {
-		.category-header {
-			border-bottom: 1px solid transparent;
-		}
-	}
+  .category {
+    .category-header {
+      border-bottom: 1px solid transparent;
+    }
+  }
 }

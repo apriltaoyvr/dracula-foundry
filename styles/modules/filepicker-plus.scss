@@ -1,19 +1,21 @@
 @use '../variables' as *;
 
 :root {
-  --filepickerplus-text-color: var(--color-dracula-text-secondary);
+  --filepickerplus-text-color: #{$textSecondary};
 }
+
 .filepicker-plus-tooltip {
-    background: $bg_content;
-    border: 1px solid $border-color;
-    animation: fadein 0.5s;
+  background: $content;
+  border: 1px solid $border;
+  animation: fadein 0.5s;
 }
 
 .filepicker {
   .directory > li:last-child {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border;
   }
+
   input[type="text"] {
-    color: $text-color-dark;
+    color: $textDark;
   }
 }

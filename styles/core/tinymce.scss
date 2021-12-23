@@ -4,7 +4,7 @@
   .mce {
     &-btn,
     &-ico {
-      color: $text-color;
+      color: $text;
     }
   }
 }
@@ -12,12 +12,13 @@
 // Text editors + Oxide Override
 .editor {
   &-content {
-    color: $text-color;
+    color: $text;
   }
+
   &-edit {
-    color: $text-color;
-    border: 1px solid $border-color;
-    box-shadow: 0 0 4px $glowColor;
+    color: $text;
+    border: 1px solid $border;
+    box-shadow: 0 0 4px $glow;
   }
 }
 
@@ -25,12 +26,14 @@
   &.tox {
     &-tinymce {
       .tox-edit-area {
-        color: $text-color;
+        color: $text;
+
         &__iframe {
-					background: adjust-color(hsla(235, 14%, 15%, 0.8), $lightness: 40%, $alpha: -0.3);
+          background: adjust-color(hsla(235, 14%, 15%, 0.8), $lightness: 40%, $alpha: -0.3);
+
           #tinymce {
             &.mce-content-body {
-              color: $text-color;
+              color: $text;
             }
           }
         }
