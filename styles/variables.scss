@@ -1,4 +1,5 @@
 /* Dracula UI Colours Import */
+
 $black: hsla(235, 14%, 15%, 0.8);
 $blackSecondary: hsla(230, 15%, 30%, 0.8);
 $blackTernary: hsl(230, 15%, 70%);
@@ -99,20 +100,6 @@ $filter-backdrop: var(--filter-backdrop);
   -webkit-text-fill-color: transparent;
 }
 
-@mixin roundGradient($from, $to, $weight: 0) {
-  $mix-main: mix($from, $to);
-  $mix-sub-from: mix($mix-main, $from);
-  $mix-sub-to: mix($mix-main, $to);
-
-  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, 0.25),
-    0 -1px 0 $weight rgba($mix-sub-from, 0.25),
-    1px 0 0 $weight rgba($mix-sub-to, 0.25),
-    -1px 0 0 $weight rgba($mix-sub-from, 0.25),
-    1px -1px 0 $weight rgba($mix-main, 0.5),
-    -1px 1px 0 $weight rgba($mix-main, 0.5), 1px 1px 0 $weight rgba($to, 0.75),
-    -1px -1px 0 $weight rgba($from, 0.75);
-}
-
 @mixin heavyShadow {
   --shadow-color: 232deg 22% 2%;
   box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
@@ -174,7 +161,7 @@ $filter-backdrop: var(--filter-backdrop);
 }
 
 /* Reference for button press effect
-@mixin pressDown {
+ @mixin pressDown {
 	transform: translateY(0.5em);
 	transition: 0.25s;
 } */

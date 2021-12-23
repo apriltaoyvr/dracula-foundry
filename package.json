@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "merge": "^2.1.1",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "postcss-scss": "^4.0.2",
+    "stylelint": "^14.2.0"
   }
 }
