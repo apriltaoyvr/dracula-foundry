@@ -5,6 +5,32 @@
 	scrollbar-color: var(--color-dracula-tertiary) var(--color-dracula-tertiary);
 }
 
+// Scrollbar
+::-webkit-scrollbar {
+	@include thinBorder(transparent);
+	background: transparent;
+	width: 6px;
+	height: 6px;
+
+	&-track {
+		box-shadow: 0 0 6px $glowColor inset;
+		border-radius: 4px;
+	}
+
+	&-thumb {
+		outline: none;
+		border-radius: 0;
+		background: linear-gradient(
+			0deg,
+			$accentTertiary 0%,
+			$accentSecondary 100%
+		);
+	}
+}
+
+
+/* Global Text Styles */
+/* Headings */
 h1,
 h2,
 h3,
@@ -27,23 +53,164 @@ hr {
 	border-bottom: 1px solid transparent;
 }
 
+/* Paragraph */
 p {
 	color: $text-color;
 }
 
-.app {
-	color: $text-color-secondary;
-	background: $bg_content;
-}
-
-.sheet {
-	nav.sheet-tabs {
-		border-top: none;
-		border-bottom: none;
+/* Anchor */
+a {
+	&.content-link,
+	&.entity-link,
+	&.inline-roll {
+		color: $text-color-secondary;
+		background: transparent;
+		border: 1px solid $accentSecondary;
 	}
 
-	header.sheet-header img {
-		border: none;
+	&.content-link:hover,
+	&.entity-link:hover,
+	&.inline-roll:hover {
+		text-shadow: 0 0 4px $accentSecondary;
+		box-shadow: none;
+	}
+
+	&.content-link i,
+	&.entity-link i,
+	&.inline-roll i {
+		color: $disabled;
+	}
+}
+
+/* Most input forms */
+input {
+	&:focus {
+		box-shadow: none;
+	}
+
+	&[type="text"],
+	&[type="number"],
+	&[type="password"],
+	&[type="date"],
+	&[type="time"],
+	&[type="text"].color,
+	&[type="color"][data-edit] {
+		@include thinBorder($accent);
+		color: $text-color-secondary;
+		background: $border-color;
+		box-shadow: none;
+		transition: 0.3s ease-in-out all;
+	}
+
+	&[type="text"]:focus,
+	&[type="number"]:focus,
+	&[type="password"]:focus,
+	&[type="date"]:focus,
+	&[type="time"]:focus {
+		background: $border-color;
+		border-width: 2px;
+		box-shadow: none;
+	}
+
+	&[type="range"] + .range-value {
+		@include thinBorder($accent);
+		color: $text-color-secondary;
+		background: $border-color;
+		box-shadow: none;
+		margin: 2px;
+		transition: 0.3s ease-in-out all;
+	}
+
+	&[type="range"]::-webkit-slider-thumb {
+		background: linear-gradient(
+			$gradientDegree,
+			$accentTertiary,
+			$accentSecondary
+		);
+		height: 12px;
+		width: 12px;
+		cursor: pointer;
+		box-shadow: none;
+	}
+
+	&[type="checkbox"] {
+		background: $accent;
+		color: $text-color;
+	}
+
+	&[type="radio"] {
+		background: accent;
+		color: $text-color;
+	}
+
+	&[type="color"][data-edit][data-edit],
+	&[type="color"i] {
+		appearance: auto;
+		background-color: transparent;
+		color: $text-color;
+		border-color: $bg_window_content;
+	}
+
+	&:placeholder {
+		color: $disabled;
+		text-shadow: 0 0 10px $glowColor;
+	}
+}
+
+/* Tables (General sense, not specific to rolltables) */
+table {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	text-shadow: none;
+	font-size: 12px;
+
+	thead {
+		background: $border-color;
+		border-bottom: none;
+	}
+}
+
+/* Select (drop-down boxes) */
+select {
+	color: $text-color-secondary;
+	background: $black;
+	border: 1px solid $accent;
+	border-radius: 2px;
+	box-shadow: none;
+	margin: 2px;
+	transition: 0.3s ease-in-out all;
+
+	&:focus {
+		border-width: 2px;
+		box-shadow: none;
+	}
+}
+
+/* Forms */
+form {
+	.hint,
+	.notes {
+		color: $text-color;
+	}
+
+	&-group {
+		.form-fields {
+			border: 1px solid $border-color;
+			border-radius: 2px;
+			background: $bg_window_content;
+			color: $text-color-secondary;
+
+			&:focus {
+				border-width: 2px;
+			}
+		}
+
+		.form-fields > *:last-child {
+			border: 1px solid $border-color;
+			border-radius: 2px;
+			background: $bg_window_content;
+			color: $text-color-secondary;
+		}
 	}
 }
 
@@ -62,7 +229,74 @@ textarea {
 	}
 }
 
-// Main window wrappers
+
+/* Buttons */
+button,
+form button {
+	@include thinBorder($accent);
+	@include lightToDark($bg_content);
+	@include heavyShadow;
+
+	border-radius: 1px;
+	margin: 0 0 0.125rem 0;
+
+	&:hover {
+		@include hoverRaise;
+	}
+}
+
+/* Colour Pickers */
+.picker_wrapper {
+	background: $bg_content;
+	color: $text-color;
+
+	.button {
+		background: $bg_content;
+		border: 1px solid $blackSecondary;
+		color: $text-color;
+	}
+}
+
+/* Window pop-up buttons  
+Separated if I want these buttons to be styled differently */
+.dialog .dialog-buttons button {
+	@include thinBorder($accent);
+	@include lightToDark($bg_content);
+	@include heavyShadow;
+	font-size: 14px;
+
+	&.default {
+		@include thinBorder($accent);
+		@include lightToDark($bg_content);
+		@include heavyShadow;
+		font-size: 14px;
+	}
+
+	&:focus,
+	&:hover {
+		@include hoverRaise;
+		box-shadow: none;
+	}
+}
+
+.app {
+	color: $text-color-secondary;
+	background: $bg_content;
+}
+
+.sheet {
+	nav.sheet-tabs {
+		border-top: none;
+		border-bottom: none;
+	}
+
+	header.sheet-header img {
+		border: none;
+	}
+}
+
+
+// Window Styles
 .window-app {
 	backdrop-filter: $filter-backdrop;
 	border-bottom-left-radius: 3px;
@@ -99,7 +333,43 @@ textarea {
 	}
 }
 
-// Left sidebar menu
+// Navigation (Top bar)
+#navigation {
+	#nav-toggle {
+		&:hover {
+			text-shadow: 0 0 4px $glowColor;
+		}
+	}
+
+	#scene-list {
+		.nav-item {
+			border: 1px solid $border-color;
+			border-radius: 1px;
+			background: $bg_content;
+		}
+
+		.scene {
+			&.gm {
+				@include thinBorder($accent);
+				background: $bg_content;
+			}
+
+			&.view,
+			&.view.gm {
+				@include gradientBorder($accentSecondary, $accentTertiary);
+				background: $bg_content;
+				box-shadow: inset 0 0 0.1px 0.25px $accentTertiary;
+			}
+
+			&-context {
+				@include thinBorder($accent);
+				background: $bg_content;
+			}
+		}
+	}
+}
+
+// Controls/Tools Sidebar (Left Sidebar)
 #controls {
 	.control-tool {
 		@include heavyShadow;
@@ -179,7 +449,7 @@ textarea {
 	}
 }
 
-/* Hotbar */
+/* Hotbar (Bottom Center */
 #hotbar {
 	#macro-list {
 		@include thinBorder($border-color);
@@ -263,13 +533,14 @@ textarea {
 	}
 }
 
+/* Player List (Bottom Left) */
 #players {
 	h3 {
 		border-bottom: 1px solid $border-color;
 	}
 }
 
-/* The right sidebar itself */
+/* Main Sidebar (Right) */
 #sidebar {
 	background: linear-gradient(
 		0deg,
@@ -289,6 +560,7 @@ textarea {
 		-10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
 		-15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
 
+	/* Sidebar Navigation Tabs */
 	&-tabs {
 		border: none;
 	}
@@ -319,233 +591,8 @@ textarea {
 	}
 }
 
-// Scrollbar
-::-webkit-scrollbar {
-	@include thinBorder(transparent);
-	background: transparent;
-	width: 6px;
-	height: 6px;
 
-	&-track {
-		box-shadow: 0 0 6px $glowColor inset;
-		border-radius: 4px;
-	}
-
-	&-thumb {
-		outline: none;
-		border-radius: 0;
-		background: linear-gradient(
-			0deg,
-			$accentTertiary 0%,
-			$accentSecondary 100%
-		);
-	}
-}
-
-button,
-form button {
-	@include thinBorder($accent);
-	@include lightToDark($bg_content);
-	@include heavyShadow;
-
-	border-radius: 1px;
-	margin: 0 0 0.125rem 0;
-
-	&:hover {
-		@include hoverRaise;
-	}
-}
-
-// Separate from the above if I want pop-ups to have different colours
-.dialog .dialog-buttons button {
-	@include thinBorder($accent);
-	@include lightToDark($bg_content);
-	@include heavyShadow;
-	font-size: 14px;
-
-	&.default {
-		@include thinBorder($accent);
-		@include lightToDark($bg_content);
-		@include heavyShadow;
-		font-size: 14px;
-	}
-
-	&:focus,
-	&:hover {
-		@include hoverRaise;
-		box-shadow: none;
-	}
-}
-
-input {
-	&:focus {
-		box-shadow: none;
-	}
-
-	&[type="text"],
-	&[type="number"],
-	&[type="password"],
-	&[type="date"],
-	&[type="time"],
-	&[type="text"].color,
-	&[type="color"][data-edit] {
-		@include thinBorder($accent);
-		color: $text-color-secondary;
-		background: $border-color;
-		box-shadow: none;
-		transition: 0.3s ease-in-out all;
-	}
-
-	&[type="text"]:focus,
-	&[type="number"]:focus,
-	&[type="password"]:focus,
-	&[type="date"]:focus,
-	&[type="time"]:focus {
-		background: $border-color;
-		border-width: 2px;
-		box-shadow: none;
-	}
-
-	&[type="range"] + .range-value {
-		@include thinBorder($accent);
-		color: $text-color-secondary;
-		background: $border-color;
-		box-shadow: none;
-		margin: 2px;
-		transition: 0.3s ease-in-out all;
-	}
-
-	&[type="range"]::-webkit-slider-thumb {
-		background: linear-gradient(
-			$gradientDegree,
-			$accentTertiary,
-			$accentSecondary
-		);
-		height: 12px;
-		width: 12px;
-		cursor: pointer;
-		box-shadow: none;
-	}
-
-	&[type="checkbox"] {
-		background: $accent;
-		color: $text-color;
-	}
-
-	&[type="radio"] {
-		background: accent;
-		color: $text-color;
-	}
-
-	&[type="color"][data-edit][data-edit],
-	&[type="color"i] {
-		appearance: auto;
-		background-color: transparent;
-		color: $text-color;
-		border-color: $bg_window_content;
-	}
-
-	&:placeholder {
-		color: $disabled;
-		text-shadow: 0 0 10px $glowColor;
-	}
-}
-
-a {
-	&.content-link,
-	&.entity-link,
-	&.inline-roll {
-		color: $text-color-secondary;
-		background: transparent;
-		border: 1px solid $accentSecondary;
-	}
-
-	&.content-link:hover,
-	&.entity-link:hover,
-	&.inline-roll:hover {
-		text-shadow: 0 0 4px $accentSecondary;
-		box-shadow: none;
-	}
-
-	&.content-link i,
-	&.entity-link i,
-	&.inline-roll i {
-		color: $disabled;
-	}
-}
-
-table {
-	border-top: 1px solid transparent;
-	border-bottom: 1px solid transparent;
-	text-shadow: none;
-	font-size: 12px;
-
-	thead {
-		background: $border-color;
-		border-bottom: none;
-	}
-}
-
-// Select aka drop-down boxes
-select {
-	color: $text-color-secondary;
-	background: $black;
-	border: 1px solid $accent;
-	border-radius: 2px;
-	box-shadow: none;
-	margin: 2px;
-	transition: 0.3s ease-in-out all;
-
-	&:focus {
-		border-width: 2px;
-		box-shadow: none;
-	}
-}
-
-form {
-	.hint,
-	.notes {
-		color: $text-color;
-	}
-
-	&-group {
-		.form-fields {
-			border: 1px solid $border-color;
-			border-radius: 2px;
-			background: $bg_window_content;
-			color: $text-color-secondary;
-
-			&:focus {
-				border-width: 2px;
-			}
-		}
-
-		.form-fields > *:last-child {
-			border: 1px solid $border-color;
-			border-radius: 2px;
-			background: $bg_window_content;
-			color: $text-color-secondary;
-		}
-	}
-}
-
-// For color pickers
-.picker_wrapper {
-	background: $bg_content;
-	color: $text-color;
-
-	.button {
-		background: $bg_content;
-		border: 1px solid $blackSecondary;
-		color: $text-color;
-	}
-}
-
-// Default text editor for journals
-.tinymce .mce-content-body {
-	color: $text-color-secondary;
-}
-
+/* Directory Navigation */
 .directory {
 	.action-buttons button {
 		background: $bg_content;
@@ -574,78 +621,13 @@ form {
 	}
 }
 
-#module-management {
-	.package-list {
-		.package {
-			border-bottom: 1px solid $border-color-secondary;
-
-			&-description,
-			&-metadata,
-			&-title {
-				color: $text-color;
-			}
-		}
-
-		/* WIP doesn't seem to affect anything */
-		input[type="checkbox"] {
-			background: $border-color-secondary;
-			color: $accent;
-		}
-	}
-}
-
-// Combat Tracker
-#combat {
-	#combat-round {
-		border-bottom: 2px solid transparent;
-	}
-
-	li.combatant {
-		&.active {
-			background: $bg_content;
-		}
-	}
-
-	#combat-controls {
-		border-top: 2px solid $border-color;
-	}
-}
-
-// Compendium Menu
-.compendium.directory .directory-list .directory-item {
-	border-top: none;
-	border-bottom: 1px solid transparent;
-}
-
-// Sound Menu
-#playlists {
-	.sound-control {
-		&[data-action="sound-stop"],
-		&[data-action="playlist-stop"] {
-			color: $accentTertiary;
-		}
-	}
-}
-
-// Chat Menu
-#chat-controls {
-	background: none;
-
-	.roll-type-select {
-		@include lightToDark($bg_content);
-		@include thinBorder(transparent);
-		border-radius: 2px;
-		padding: 2px;
-	}
-}
-
+/* Sidebar Chat Log */
 #chat-log {
 	@include thinBorder(transparent);
 	background: transparent;
 	border-radius: 2px;
 }
-
-// Restyles most chat cards
+// Chat Cards (will restyle most aspects)
 .chat-message {
 	@include gradientBorder($accent, $accentSecondary);
 	background: $bg_content;
@@ -811,6 +793,19 @@ form {
 	}
 }
 
+// Chat Menu
+#chat-controls {
+	background: none;
+
+	.roll-type-select {
+		@include lightToDark($bg_content);
+		@include thinBorder(transparent);
+		border-radius: 2px;
+		padding: 2px;
+	}
+}
+
+/* Input area (form) for chat menu */
 #chat-form textarea {
 	@include thinBorder($accent);
 	color: $text-color-secondary;
@@ -821,6 +816,66 @@ form {
 	}
 }
 
+// Combat Tracker
+#combat {
+	#combat-round {
+		border-bottom: 2px solid transparent;
+	}
+
+	li.combatant {
+		&.active {
+			background: $bg_content;
+		}
+	}
+
+	#combat-controls {
+		border-top: 2px solid $border-color;
+	}
+}
+
+// Default text editor for journals
+.tinymce .mce-content-body {
+	color: $text-color-secondary;
+}
+
+// Roll tables
+.roll-table-config ol.table-results {
+	.table-header {
+		border: none;
+	}
+
+	.table-result .result-controls .lock-result {
+		color: $text-color-secondary;
+	}
+
+	.table-result.drawn .lock-result {
+		color: $disabled;
+	}
+}
+
+
+
+// Sound Menu
+#playlists {
+	.sound-control {
+		&[data-action="sound-stop"],
+		&[data-action="playlist-stop"] {
+			color: $accentTertiary;
+		}
+	}
+}
+
+// Compendium Submenu
+.compendium.directory .directory-list .directory-item {
+	border-top: none;
+	border-bottom: 1px solid transparent;
+}
+
+
+
+
+
+/* Foundry Settings */
 #client-settings {
 	&.app.window-app.form #config-tabs .settings-list h2.module-header span,
 	section.content h2.module-header {
@@ -879,56 +934,28 @@ form {
 	}
 }
 
-// Roll tables
-.roll-table-config ol.table-results {
-	.table-header {
-		border: none;
-	}
+/* Module Management Menu */
+#module-management {
+	.package-list {
+		.package {
+			border-bottom: 1px solid $border-color-secondary;
 
-	.table-result .result-controls .lock-result {
-		color: $text-color-secondary;
-	}
-
-	.table-result.drawn .lock-result {
-		color: $disabled;
-	}
-}
-
-// Navigation
-#navigation {
-	#nav-toggle {
-		&:hover {
-			text-shadow: 0 0 4px $glowColor;
-		}
-	}
-
-	#scene-list {
-		.nav-item {
-			border: 1px solid $border-color;
-			border-radius: 1px;
-			background: $bg_content;
+			&-description,
+			&-metadata,
+			&-title {
+				color: $text-color;
+			}
 		}
 
-		.scene {
-			&.gm {
-				@include thinBorder($accent);
-				background: $bg_content;
-			}
-
-			&.view,
-			&.view.gm {
-				@include gradientBorder($accentSecondary, $accentTertiary);
-				background: $bg_content;
-				box-shadow: inset 0 0 0.1px 0.25px $accentTertiary;
-			}
-
-			&-context {
-				@include thinBorder($accent);
-				background: $bg_content;
-			}
+		/* WIP doesn't seem to affect anything */
+		input[type="checkbox"] {
+			background: $border-color-secondary;
+			color: $accent;
 		}
 	}
 }
+
+
 
 nav.list-filters a.filter {
 	color: $disabled;
@@ -951,6 +978,7 @@ nav.list-filters a.filter {
 	}
 }
 
+/* Keybindings Menu*
 #keybindings {
 	.filters h3 {
 		border-bottom: 1px solid transparent;
