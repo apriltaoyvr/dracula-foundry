@@ -79,11 +79,12 @@
       font-family: "Signika";
       font-weight: bold;
       font-size: 14px;
-        &:hover {
-          color: $text-color-secondary;
-          text-shadow: $glowColor;
-          box-shadow: none;
-        }
+
+      &:hover {
+        color: $text-color-secondary;
+        text-shadow: $glowColor;
+        box-shadow: none;
+      }
     }
 
     .card-footer button {

@@ -339,7 +339,7 @@ li[data-control="combat-carousel"] {
     position: absolute;
     right: 0;
     padding: 2px 0;
-    background: radial-gradient(0deg, rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
+    background: radial-gradient(rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
     border-radius: 60%;
     z-index: 20;
   }
@@ -459,10 +459,10 @@ li[data-control="combat-carousel"] {
   }
 
   meter {
-    --background:#282a36ff;
+    --background: #282a36ff;
     --optimum: #8aff80ff;
-    --sub-optimum:#ffb86cff;
-    --sub-sub-optimum:#ff5555ff;
+    --sub-optimum: #ffb86cff;
+    --sub-sub-optimum: #ff5555ff;
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 
     /* display: block; */
@@ -640,7 +640,7 @@ li[data-control="combat-carousel"] {
     border-radius: 3px;
     border: 1px solid #84d3e4e6;
     border-bottom: 1px solid #84d3e4e6;
-	clip-path: none;
+    clip-path: none;
   }
 
   .fa-dice-d20:hover {

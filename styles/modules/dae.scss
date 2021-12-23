@@ -5,6 +5,7 @@
     .effect-header {
       border: 3px solid transparent;
     }
+
     .dae-effect-list {
       .effect {
         &-name,
@@ -15,6 +16,7 @@
       }
     }
   }
+
   &.actor {
     .inventory-filters {
       flexrow,
@@ -23,6 +25,7 @@
       }
     }
   }
+
   .sheet-navigation {
     &.item {
       .dae-effect-list {

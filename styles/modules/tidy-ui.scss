@@ -27,15 +27,17 @@
     button[name="submit"] {
       @include gradientBorder($accent, $highlight);
       margin: 2px;
+
       &:focus {
         border-width: 2px;
       }
     }
   }
 
-#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-  @include gradientBorder($accent, $highlight);
-  margin: 2px;
+  #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+    @include gradientBorder($accent, $highlight);
+    margin: 2px;
+
     &:focus {
       border-width: 2px;
     }
