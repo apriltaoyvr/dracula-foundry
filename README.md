@@ -5,7 +5,7 @@ Currently incomplete, but most menus in Foundry have been skinned/touched by the
 
 If you see something off, let me know and I'll see what I can do.
 
-## Screenshot(s)
+# Screenshot(s)
 Picture of Dracula with Minimal UI : 
 ![image](https://user-images.githubusercontent.com/95392008/147194866-d3489363-9ff4-42cc-acf8-40a46408a0fc.png)
 Picture of Dracula with mostly vanilla foundry:
@@ -15,12 +15,12 @@ Picture of Dracula with mostly vanilla foundry:
 - Theme selection
 - Colour customization
 
-## Recommended Modules
+# Recommended Modules
 - [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/)
 - [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui)
 - [Tidy 5e Sheet (Dark)](https://github.com/sdenec/tidy5e-sheet)
 
-## Credits
+# Credits
 Colour palette from [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui)
 
 Substantial help by @typhonrt with advice, refactoring, and a whole list of things I would not be able to write down in a day
