@@ -17,9 +17,6 @@
     "esmodules": [
         "/src/init.js"
     ],
-    "styles": [
-        "/css/dracula-foundry.css"
-    ],
     "languages": [
         {
             "lang": "en",

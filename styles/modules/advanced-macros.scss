@@ -1,81 +1,80 @@
 @use '../variables' as *;
+
 /* Advanced Macros Module */
+.macro-sheet .form-group.command .furnace-macro-command {
+  code,
+  textarea {
+    color: $white;
+    border: 1px solid $accent;
+    text-shadow: $blackSecondary;
+  }
+}
 
-body {
-  .macro-sheet .form-group.command .furnace-macro-command {
-    code,
-    textarea {
-      color: $white;
-      border: 1px solid $accent;
-      text-shadow: $blackSecondary;
-    }
-  }
-  /* GitHub Gist Replacement for Advanced Macros Module */
-  .hljs {
-    background: #282a36;
-    color: #f8f8f2;
-  }
+/* GitHub Gist Replacement for Advanced Macros Module */
+.hljs {
+  background: #282a36;
+  color: #f8f8f2;
+}
 
-  .hljs-comment,
-  .hljs-meta {
-    color: #6272a4;
-  }
+.hljs-comment,
+.hljs-meta {
+  color: #6272a4;
+}
 
-  .hljs-emphasis,
-  .hljs-quote,
-  .hljs-strong,
-  .hljs-template-variable,
-  .hljs-variable {
-    color: $yellow;
-  }
+.hljs-emphasis,
+.hljs-quote,
+.hljs-strong,
+.hljs-template-variable,
+.hljs-variable {
+  color: $yellow;
+}
 
-  .hljs-keyword,
-  .hljs-selector-tag,
-  .hljs-type {
-    color: $red;
-  }
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: $red;
+}
 
-  .hljs-attribute,
-  .hljs-bullet,
-  .hljs-literal,
-  .hljs-symbol {
-    color: #0086b3;
-  }
+.hljs-attribute,
+.hljs-bullet,
+.hljs-literal,
+.hljs-symbol {
+  color: #0086b3;
+}
 
-  .hljs-name,
-  .hljs-section {
-    color: $green;
-  }
+.hljs-name,
+.hljs-section {
+  color: $green;
+}
 
-  .hljs-tag {
-    color: #333333;
-  }
+.hljs-tag {
+  color: #333333;
+}
 
-  .hljs-attr,
-  .hljs-selector-attr,
-  .hljs-selector-class,
-  .hljs-selector-id,
-  .hljs-selector-pseudo,
-  .hljs-title {
-    color: #bd93f9;
-  }
+.hljs-attr,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-title {
+  color: #bd93f9;
+}
 
-  .hljs-addition {
-    color: $green;
-    background-color: #282a36;
-  }
+.hljs-addition {
+  color: $green;
+  background-color: #282a36;
+}
 
-  .hljs-deletion {
-    color: $red;
-    background-color: #282a36;
-  }
+.hljs-deletion {
+  color: $red;
+  background-color: #282a36;
+}
 
-  .hljs-link {
-    text-decoration: underline;
-  }
+.hljs-link {
+  text-decoration: underline;
+}
 
-  .hljs-number,
-  .hljs-string {
-    color: #8be9fd;
-  }
+.hljs-number,
+.hljs-string {
+  color: #8be9fd;
 }

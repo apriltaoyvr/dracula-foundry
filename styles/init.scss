@@ -1,20 +1,21 @@
 // Dracula Variables
-@use "dracula";
+@use 'dracula';
 
 // Core
-@use "core/foundry";
+@use 'core/foundry';
+@use 'core/tinymce';
 
 // Systems
-@use "systems/dnd5e";
+@use 'systems/dnd5e';
 
 // Modules
-@use "modules/advanced-macros";
-@use "modules/combat-carousel";
-@use "modules/dae";
-@use "modules/dice-calculator";
-@use "modules/dice-so-nice";
-@use "modules/filepicker-plus";
-@use "modules/lootsheetnpc5e";
-@use "modules/midi-qol";
-@use "modules/monks-token-bar";
-@use "modules/tidy-ui";
+@use 'modules/advanced-macros';
+@use 'modules/combat-carousel';
+@use 'modules/dae';
+@use 'modules/dice-calculator';
+@use 'modules/dice-so-nice';
+@use 'modules/filepicker-plus';
+@use 'modules/lootsheetnpc5e';
+@use 'modules/midi-qol';
+@use 'modules/monks-token-bar';
+@use 'modules/tidy-ui';

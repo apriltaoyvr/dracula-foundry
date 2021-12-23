@@ -1,38 +1,36 @@
 @use "../variables" as *;
 
-body {
-  .dnd5e.sheet {
+.dnd5e.sheet {
+  &.item {
+    .effect-header {
+      border: 3px solid transparent;
+    }
+    .dae-effect-list {
+      .effect {
+        &-name,
+        &-label {
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+  &.actor {
+    .inventory-filters {
+      flexrow,
+      style {
+        border: none;
+      }
+    }
+  }
+  .sheet-navigation {
     &.item {
-      .effect-header {
-        border: 3px solid transparent;
-      }
       .dae-effect-list {
-        .effect {
-          &-name,
-          &-label {
-            border-left: 1px solid transparent;
-            border-right: 1px solid transparent;
-          }
-        }
-      }
-    }
-    &.actor {
-      .inventory-filters {
-        flexrow,
-        style {
-          border: none;
-        }
-      }
-    }
-    .sheet-navigation {
-      &.item {
-        .dae-effect-list {
-          .effect-label,
-          .effect-name,
-          .effect-mode {
-            border-left: 1px solid $border-color;
-            border-right: 1px solid $border-color;
-          }
+        .effect-label,
+        .effect-name,
+        .effect-mode {
+          border-left: 1px solid $border-color;
+          border-right: 1px solid $border-color;
         }
       }
     }

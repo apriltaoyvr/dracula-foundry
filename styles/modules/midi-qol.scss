@@ -1,19 +1,18 @@
 @use '../variables' as *;
 
 /* General midi-qol settings */
-body {
-  .midi-qol-nobox {
-    border: none;
-    padding: 0;
-  }
-
-  .midi-qol-box {
-    border: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
-  }
-
-  .midi-qol-faint {
-    color: $text-color-secondary;
-  }
+.midi-qol-nobox {
+  border: none;
+  padding: 0;
 }
+
+.midi-qol-box {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient($gradientDegree, $accent 0%, $highlight 100%);
+}
+
+.midi-qol-faint {
+  color: $text-color-secondary;
+}
+

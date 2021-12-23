@@ -1,7 +1,6 @@
-@use "../variables" as *;
-@import "../bourbon/bourbon";
+@use '../variables' as *;
+@use '../bourbon/bourbon' as *;
 
-// body {
 :root {
   // Scrollbar
   scrollbar-width: thin;
@@ -37,43 +36,8 @@ p {
 .app {
   color: $text-color-secondary;
   background: $bg_content;
-  .mce {
-    &-btn,
-    &-ico {
-      color: $text-color;
-    }
-  }
 }
 
-// Text editors + Oxide Override
-.editor {
-  &-content {
-    color: $text-color;
-  }
-  &-edit {
-    color: $text-color;
-    border: 1px solid $border-color;
-    box-shadow: 0 0 4px $glowColor;
-  }
-}
-
-.tox {
-  &.tox {
-    &-tinymce {
-      .tox-edit-area {
-        color: $text-color;
-        &__iframe {
-          background: $bg_window_content;
-          #tinymce {
-            &.mce-content-body {
-              color: $text-color;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .sheet {
   nav.sheet-tabs {
     border-top: none;
@@ -115,8 +79,8 @@ textarea {
   }
 
   .window-header {
-		@include border-top-radius(2px);
-		background: $bg_content;
+	@include border-top-radius(2px);
+	background: $bg_content;
     border: 1px solid transparent;
   }
 
@@ -978,5 +942,3 @@ nav.list-filters a.filter {
     }
   }
 }
-
-//}

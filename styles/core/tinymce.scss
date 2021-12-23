@@ -1,0 +1,40 @@
+@use '../variables' as *;
+
+.app {
+  .mce {
+    &-btn,
+    &-ico {
+      color: $text-color;
+    }
+  }
+}
+
+// Text editors + Oxide Override
+.editor {
+  &-content {
+    color: $text-color;
+  }
+  &-edit {
+    color: $text-color;
+    border: 1px solid $border-color;
+    box-shadow: 0 0 4px $glowColor;
+  }
+}
+
+.tox {
+  &.tox {
+    &-tinymce {
+      .tox-edit-area {
+        color: $text-color;
+        &__iframe {
+          background: $bg_window_content;
+          #tinymce {
+            &.mce-content-body {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

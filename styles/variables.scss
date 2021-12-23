@@ -39,14 +39,6 @@ $yellow-transparent: hsla(60, 100%, 75%, 0.1);
 $gradientDegree: 135deg;
 
 /* Mapping reference */
-//$accent: $purple;
-//$accentSecondary: $red;
-//$accentTertiary: $pink;
-//$highlight: $cyan;
-//$disabled: hsl(230, 15%, 50%);
-//$success: hsl(135, 94%, 65%);
-//$failure: hsl(0, 100%, 67%);
-
 $accent: var(--color-dracula-accent);
 $accentSecondary: var(--color-dracula-secondary);
 $accentTertiary: var(--color-dracula-tertiary);
@@ -54,14 +46,6 @@ $highlight: var(--color-dracula-text-highlight);
 $disabled: var(--color-dracula-disabled);
 $success: var(--color-dracula-success);
 $failure: var(--color-dracula-failure);
-
-//$text-color: $white;
-//$text-color-secondary: $whiteSecondary;
-//$text-color-dark: $blackSecondary;
-//$border-color: $blackLight;
-//$border-color-secondary: $purpleLight;
-//$glowColor: rgba(255, 255, 255, 0.25);
-//$shadowColor: hsla(0, 0%, 0%, 0.9);
 
 $text-color: var(--color-dracula-text-primary);
 $text-color-secondary: var(--color-dracula-text-secondary);
