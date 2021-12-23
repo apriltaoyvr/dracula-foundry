@@ -374,6 +374,16 @@
       /* .dnd5e.sheet.actor.character */
       &.character {
         min-height: 690px;
+
+				/* Biography and Descriptors */
+				.characteristics {
+					label {
+						font-family: "Signika";
+					}
+					textarea {
+						@include thinBorder($border-color);
+					}
+				}
         .sheet-header {
           img.profile {
             border: 1px solid $border-color-tertiary;

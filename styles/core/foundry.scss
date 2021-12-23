@@ -71,7 +71,11 @@ textarea {
   .window-content {
     background: $bg_content;
     color: $text-color;
-
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		
     > * {
       background: transparent;
       color: $text-color;
