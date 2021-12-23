@@ -65,17 +65,17 @@ textarea {
 // Main window wrappers
 .window-app {
   backdrop-filter: $filter-backdrop;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 
   .window-content {
     background: $bg_content;
     color: $text-color;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
     > * {
       background: transparent;
       color: $text-color;
@@ -85,8 +85,8 @@ textarea {
   .window-header {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-		border-bottom-left-radius: 0px;
-		border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     background: $bg_content;
     border: 1px solid transparent;
   }
@@ -419,7 +419,11 @@ input {
   }
 
   &[type="range"]::-webkit-slider-thumb {
-    background: linear-gradient($gradientDegree, $accentTertiary, $accentSecondary);
+    background: linear-gradient(
+      $gradientDegree,
+      $accentTertiary,
+      $accentSecondary
+    );
     height: 12px;
     width: 12px;
     cursor: pointer;
