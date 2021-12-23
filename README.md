@@ -11,16 +11,16 @@ Picture of Dracula with Minimal UI :
 Picture of Dracula with mostly vanilla foundry:
 ![image](https://user-images.githubusercontent.com/95392008/147195091-c1c02c54-319e-4f92-ac1f-3b680ce5fd2e.png)
 
-# Planned Features
+## Planned Features
 - Theme selection
 - Colour customization
 
-## Recommended Modules
+# Recommended Modules
 - [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/)
 - [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui)
 - [Tidy 5e Sheet (Dark)](https://github.com/sdenec/tidy5e-sheet)
 
-## Credits
+# Credits
 Colour palette from [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui)
 
 Substantial help by @typhonrt with advice, refactoring, and a whole list of things I would not be able to write down in a day
