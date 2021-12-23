@@ -493,9 +493,9 @@ Separated if I want these buttons to be styled differently */
 
 		/* Macro boxes containing items */
 		&.active {
-			@include gradientBorder($accentSecondary, $accentTertiary);
+			@include gradientBorder($accent, $disabled);
 			&:hover {
-				@include borderExpand($accentTertiary);
+				@include borderExpand($accent);
 			}
 		}
 
