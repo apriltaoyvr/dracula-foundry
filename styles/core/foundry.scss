@@ -484,8 +484,8 @@ Separated if I want these buttons to be styled differently */
 		border-radius: 1px;
 		background: linear-gradient(
 			180deg,
-			hsla(235, 14%, 15%, 80%) 0%,
-			hsla(230, 15%, 15%, 25%) 90%
+			$bg_window_content 0%,
+			$bg_content 100%
 		);
 		backdrop-filter: $filter-backdrop;
 
@@ -493,27 +493,23 @@ Separated if I want these buttons to be styled differently */
 		&.active {
 			@include gradientBorder($accentSecondary, $accentTertiary);
 			&:hover {
-				border: inherit;
-				box-shadow: inset 0 0 0 1px $accentSecondary;
+				@include borderExpand($accentTertiary);
 			}
 		}
 
 		/* Empty macro boxes */
 		&.inactive {
+			opacity: 90%;
 			&:hover {
-				@include borderExpand($accentSecondary);
+				@include borderExpand($bg_content);
+				opacity: 100%;
 			}
 		}
 
 		.macro-key {
-			--shadow-color: 0deg 0% 48%;
+			@include heavyShadow;
+			color: $text-color;
 			background: $border-color;
-			text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
-				0 0 0.9px hsl(var(--shadow-color) / 0.08),
-				0 0 1.7px hsl(var(--shadow-color) / 0.16),
-				0 0 2.4px hsl(var(--shadow-color) / 0.24),
-				0 0 3.3px hsl(var(--shadow-color) / 0.33),
-				0 0 4.2px hsl(var(--shadow-color) / 0.41);
 		}
 	}
 
