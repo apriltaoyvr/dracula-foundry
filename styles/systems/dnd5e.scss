@@ -63,6 +63,17 @@
 
 	//Attack + Damage Buttons
 	&.chat-card {
+		.card-buttons {
+			button {
+				color: $text-color;
+			}
+			span {
+				border: 1px solid transparent;
+			}
+		}
+		.card-content > * {
+			color: $text-color-tertiary;
+		}
 		.card-header {
 			border-top: 2px solid transparent;
 			border-bottom: 2px solid transparent;
@@ -96,11 +107,6 @@
 			padding: 0;
 			span {
 				border-right: 1px solid transparent;
-			}
-		}
-		.card-buttons {
-			span {
-				border: 1px solid transparent;
 			}
 		}
 	}

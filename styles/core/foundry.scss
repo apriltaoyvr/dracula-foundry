@@ -235,6 +235,7 @@ form button {
 	@include lightToDark($bg_content);
 	@include heavyShadow;
 
+	color: $text-color;
 	border-radius: 1px;
 	margin: 0 0 0.125rem 0;
 
