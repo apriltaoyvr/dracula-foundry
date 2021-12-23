@@ -653,7 +653,6 @@ Separated if I want these buttons to be styled differently */
 	.message-metadata {
 		.message-sender {
 			color: $text-color-secondary;
-			font-size: inherit;
 		}
 		color: $text-color-secondary;
 		text-shadow: none;
@@ -682,24 +681,21 @@ Separated if I want these buttons to be styled differently */
 		// Dice total mini-boxes
 		.dice-total {
 			@include heavyShadow;
-			border: 1px solid $accent;
 			background: $border-color;
-			font-size: 14px;
+			border: 1px solid $accent;
 			border-radius: 1px;
+			font-size: 14px;
 
 			&:hover {
 				@include hoverRaise;
 				cursor: pointer;
 			}
 
+			/* For the small square boxes */
 			&.success {
 				@include gradientBorder($success, $greenSecondary);
 				color: inherit;
 				background: $bg_content;
-			}
-
-			&.critical {
-				@include gradientText($success, $greenSecondary);
 			}
 
 			&.failure {
@@ -707,9 +703,16 @@ Separated if I want these buttons to be styled differently */
 				color: inherit;
 				background: $bg_content;
 			}
+			
+			/* For the large result box */
+			&.critical {
+				@include gradientText($success, $greenSecondary);
+				@include gradientBorder($success, $greenSecondary);
+			}
 
 			&.fumble {
 				@include gradientText($failure, $red);
+				@include gradientBorder($failure, $red);
 			}
 		}
 
