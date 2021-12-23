@@ -1,57 +1,48 @@
 @use '../variables' as *;
 
 /* Monk's Token Bar */
-body {
-  .monks-tokenbar .sheet .items-list .item-list .item .item-name {
-    color: $text-color-secondary;
-  }
+.monks-tokenbar .sheet .items-list .item-list .item .item-name {
+  color: $text-color-secondary;
+}
 
-  #requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
-    color: $text-color-secondary;
-  }
+#requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
+  color: $text-color-secondary;
+}
 
-  #requestsavingthrow .request-header {
-    background: $border-color;
-    border: 2px solid $border-color;
-    box-shadow: none;
-  }
+#requestsavingthrow .request-header {
+  background: $border-color;
+  border: 2px solid $border-color;
+  box-shadow: none;
+}
 
-  .monks-tokenbar {
-    &.chat-card {
-      .flexrow {
-        color: $text-color-secondary;
-        font-family: "Signika";
-        font-weight: bold;
-        font-size: 16px;
-      }
-
-      .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
-        border: none;
-      }
+.monks-tokenbar {
+  &.chat-card {
+    .flexrow {
+      color: $text-color-secondary;
+      font-family: "Signika";
+      font-weight: bold;
+      font-size: 16px;
     }
 
-    .sheet .items-list .item {
+    .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
       border: none;
     }
+  }
 
-    &.chat-card {
-      .card-footer {
+  .sheet .items-list .item {
+    border: none;
+  }
+
+  &.chat-card {
+    .card-footer {
+      border: none;
+
+      span {
         border: none;
-
-        span {
-          border: none;
-        }
-      }
-
-      .card-header {
-        color: $text-color-secondary;
-        background: none;
-        border: none;
-        font-family: "Signika";
       }
     }
 
-    .sheet .items-list .items-header h3 {
+    .card-header {
       color: $text-color-secondary;
       background: none;
       border: none;
@@ -59,56 +50,63 @@ body {
     }
   }
 
-  .chat-message .message-content .form-group.sheet.actor .items-header {
+  .sheet .items-list .items-header h3 {
     color: $text-color-secondary;
     background: none;
     border: none;
     font-family: "Signika";
   }
+}
 
-  .monks-tokenbar {
-    &.chat-card {
-      .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
-        color: $text-color-secondary;
-        background: none;
-        border: none;
-        font-family: "Signika";
-      }
+.chat-message .message-content .form-group.sheet.actor .items-header {
+  color: $text-color-secondary;
+  background: none;
+  border: none;
+  font-family: "Signika";
+}
 
-      .card-header h3, .message-content .items-header .item-name {
-        color: $text-color-secondary;
-        font-family: "Signika";
-        font-weight: bold;
-        font-size: 14px;
-          &:hover {
-            color: $text-color-secondary;
-            text-shadow: $glowColor;
-            box-shadow: none;
-          }
-      }
-
-      .card-footer button {
-        color: $text-color-secondary;
-        background: none;
-        border: none;
-      }
+.monks-tokenbar {
+  &.chat-card {
+    .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+      color: $text-color-secondary;
+      background: none;
+      border: none;
+      font-family: "Signika";
     }
 
-    .sheet .items-list .items-header {
+    .card-header h3, .message-content .items-header .item-name {
       color: $text-color-secondary;
       font-family: "Signika";
+      font-weight: bold;
+      font-size: 14px;
+        &:hover {
+          color: $text-color-secondary;
+          text-shadow: $glowColor;
+          box-shadow: none;
+        }
+    }
+
+    .card-footer button {
+      color: $text-color-secondary;
       background: none;
       border: none;
     }
   }
 
-  #requestsavingthrow .request-grid > div {
-    &.selected, &:hover {
-      color: $white;
-      background: $black;
-      border: $accent;
-      border-radius: 6px;
-      box-shadow: 0 0 10px $accent;
-    }
+  .sheet .items-list .items-header {
+    color: $text-color-secondary;
+    font-family: "Signika";
+    background: none;
+    border: none;
+  }
+}
+
+#requestsavingthrow .request-grid > div {
+  &.selected, &:hover {
+    color: $white;
+    background: $black;
+    border: $accent;
+    border-radius: 6px;
+    box-shadow: 0 0 10px $accent;
   }
 }

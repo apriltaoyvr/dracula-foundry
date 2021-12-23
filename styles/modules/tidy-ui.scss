@@ -1,45 +1,44 @@
-@use '../variables' as *; 
+@use '../variables' as *;
 
 /* Tidy UI */
-body {
-  #module-management {
-    #importExportModal {
-      #modalIO {
-        color: $text-color;
-        background: $bg_window-content;
-      }
-    }
-
-//The top two buttons in module management for TidyUI
-    .disable-all-modules {
-      background: $failure;
-      border: none;
-    }
-
-    .enable-all-modules {
-      background: $success;
-      border: none;
+#module-management {
+  #importExportModal {
+    #modalIO {
+      color: $text-color;
+      background: $bg_window-content;
     }
   }
 
-  #client-settings {
-    .sheet-footer {
-      button[name="reset"],
-      button[name="submit"] {
-        @include gradientBorder($accent, $highlight);
-        margin: 2px;
-        &:focus {
-          border-width: 2px;
-        }
-      }
-    }
+  //The top two buttons in module management for TidyUI
+  .disable-all-modules {
+    background: $failure;
+    border: none;
+  }
 
-  #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-    @include gradientBorder($accent, $highlight);
-    margin: 2px;
+  .enable-all-modules {
+    background: $success;
+    border: none;
+  }
+}
+
+#client-settings {
+  .sheet-footer {
+    button[name="reset"],
+    button[name="submit"] {
+      @include gradientBorder($accent, $highlight);
+      margin: 2px;
       &:focus {
         border-width: 2px;
       }
     }
   }
+
+#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+  @include gradientBorder($accent, $highlight);
+  margin: 2px;
+    &:focus {
+      border-width: 2px;
+    }
+  }
 }
+
