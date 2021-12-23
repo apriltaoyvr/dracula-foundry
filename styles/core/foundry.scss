@@ -686,6 +686,7 @@ form {
 
 	// Most values related to dice result boxes
 	.dice-roll {
+		margin: 2px;
 		.dice-formula {
 			@include heavyShadow;
 			background: $border-color;
@@ -698,6 +699,7 @@ form {
 			}
 		}
 
+		// Dice total mini-boxes
 		.dice-total {
 			@include heavyShadow;
 			border: 1px solid $accent;
@@ -710,8 +712,20 @@ form {
 				cursor: pointer;
 			}
 
+			&.success {
+				@include gradientBorder($success, $greenSecondary);
+				color: inherit;
+				background: $bg_content;
+			}
+
 			&.critical {
 				@include gradientText($success, $greenSecondary);
+			}
+
+			&.failure {
+				@include gradientBorder($red, $failure);
+				color: inherit;
+				background: $bg_content;
 			}
 
 			&.fumble {

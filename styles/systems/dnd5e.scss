@@ -1,32 +1,5 @@
 @use "../variables" as *;
 
-// Dice total mini-boxes
-.dice-roll {
-	margin: 2px;
-	.dice-total {
-		@include heavyShadow;
-		&.success {
-			@include gradientBorder($success, $greenSecondary);
-			color: inherit;
-			background: $bg_content;
-		}
-		&.failure {
-			@include gradientBorder($red, $failure);
-			color: inherit;
-			background: $bg_content;
-		}
-		&.critical {
-			@include gradientText($success, $greenSecondary);
-		}
-		&.fumble {
-			@include gradientText($failure, $redSecondary);
-		}
-		&:hover {
-			@include hoverRaise;
-		}
-	}
-}
-
 .dnd5e {
 	input {
 		&[type="text"]:hover,
@@ -89,7 +62,6 @@
 	}
 
 	//Attack + Damage Buttons
-
 	&.chat-card {
 		.card-header {
 			border-top: 2px solid transparent;

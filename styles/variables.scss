@@ -146,9 +146,3 @@ $filter-backdrop: var(--filter-backdrop);
 @mixin thinBorder($thinColor) {
 	border: 1px solid $thinColor;
 }
-
-/* Reference for button press effect
- @mixin pressDown {
-	transform: translateY(0.5em);
-	transition: 0.25s;
-} */
