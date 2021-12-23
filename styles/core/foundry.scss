@@ -28,7 +28,6 @@
 	}
 }
 
-
 /* Global Text Styles */
 /* Headings */
 h1,
@@ -229,7 +228,6 @@ textarea {
 	}
 }
 
-
 /* Buttons */
 button,
 form button {
@@ -294,7 +292,6 @@ Separated if I want these buttons to be styled differently */
 		border: none;
 	}
 }
-
 
 // Window Styles
 .window-app {
@@ -449,7 +446,7 @@ Separated if I want these buttons to be styled differently */
 	}
 }
 
-/* Hotbar (Bottom Center */
+/* Hotbar (Bottom Center) */
 #hotbar {
 	#macro-list {
 		@include thinBorder($border-color);
@@ -590,7 +587,6 @@ Separated if I want these buttons to be styled differently */
 		}
 	}
 }
-
 
 /* Directory Navigation */
 .directory {
@@ -852,8 +848,6 @@ Separated if I want these buttons to be styled differently */
 		color: $disabled;
 	}
 }
-
-
 
 // Sound Menu
 #playlists {

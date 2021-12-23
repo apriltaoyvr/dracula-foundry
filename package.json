@@ -22,6 +22,7 @@
   "dependencies": {
     "chroma-js": "^2.1.2",
     "doiuse": "^4.4.1",
+    "jshint": "^2.13.1",
     "merge": "^2.1.1",
     "minimist": "^1.2.5",
     "postcss-scss": "^4.0.2",
