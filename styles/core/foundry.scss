@@ -214,9 +214,6 @@ textarea {
   /* Individual macro boxes */
   .macro {
     border: 1px solid $bg_content;
-    border-top: 2px solid $bg_content;
-    border-bottom: 2px solid $bg_content;
-
     border-radius: 1px;
     background: linear-gradient(
       180deg,
@@ -728,13 +725,11 @@ form {
         .part-header.flexrow {
           @include gradientBorder($accent, $disabled);
           background: $border-color;
-          margin: 0.3em;
 
           .part-total {
             border: none;
             background: transparent;
             font-size: 12px;
-            line-height: 25px;
             margin-right: 5px;
             margin-top: 1px;
           }
@@ -747,7 +742,6 @@ form {
             color: inherit;
             background: none;
             border: 1px solid transparent;
-            line-height: 25px;
           }
         }
 
