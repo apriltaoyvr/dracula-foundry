@@ -1,37 +1,37 @@
 /* Dracula UI Colours Import */
 :root {
-  --color-dracula-accent: rgba(128, 118, 183, 0.8);
-  --color-dracula-accent-secondary: rgba(255, 149, 128, 0.8);
-  --color-dracula-accent-tertiary: #ff80bf;
-  --color-dracula-accent-highlight: #80ffea;
-  --color-dracula-border: rgba(33, 34, 44, 0.05);
-  --color-dracula-border-secondary: rgba(149, 128, 255, 0.05);
-  --color-dracula-border-tertiary: rgba(65, 69, 88, 0.8);
-  --color-dracula-border-highlight: #ff80bf;
-  --color-dracula-border-cyan: #80ffea;
-  --color-dracula-border-yellow: rgba(255, 162, 128, 0.012);
-  --color-dracula-border-white: rgba(248, 248, 242, 0.05);
-  --color-dracula-content: rgba(33, 34, 44, 0.8);
-  --color-dracula-content-window: rgba(65, 69, 88, 0.8);
+  --color-dracula-accent: hsl(250, 100%, 75%);
+  --color-dracula-accent-secondary: hsla(10, 100%, 75%, 0.8);
+  --color-dracula-accent-tertiary: hsl(330, 100%, 75%);
+  --color-dracula-accent-highlight: hsl(170, 100%, 75%);
+  --color-dracula-border: hsla(230, 15%, 15%, 5%);
+  --color-dracula-border-secondary: hsl(250, 100%, 75%, 15%);
+  --color-dracula-border-tertiary: hsl(230, 15%, 30%);
+  --color-dracula-border-highlight: hsl(170, 100%, 75%);
+  --color-dracula-border-cyan: hsl(170, 100%, 75%);
+  --color-dracula-border-yellow: hsl(60, 100%, 75%);
+  --color-dracula-content: hsla(240, 7%, 14%, 0.8);
+  --color-dracula-content-window: hsl(230, 15%, 30%);
   --color-dracula-glow: hsla(0, 0%, 100%, 0.25);
   --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
-  --color-dracula-text-dark: rgba(65, 69, 88, 0.8);
-  --color-dracula-text-highlight: #80ffea;
-  --color-dracula-text-primary: rgba(248, 248, 242, 0.9);
-  --color-dracula-text-secondary: rgba(255, 255, 255, 0.6);
-  --color-dracula-text-tertiary: #a7abbe;
+  --color-dracula-text-dark: hsl(230, 15%, 30%);
+  --color-dracula-text-highlight: hsl(170, 100%, 75%);
+  --color-dracula-text-primary: hsla(0, 0%, 90%, 0.877);
+  --color-dracula-text-secondary: rgba(255, 255, 255, 0.801);
+  --color-dracula-text-tertiary: hsl(230, 15%, 70%);
   --color-dracula-text-inactive: hsl(230, 15%, 50%);
-  --color-dracula-disabled: hsl(230, 15%, 50%);
-  --color-dracula-failure: hsl(0, 58%, 70%);
-  --color-dracula-failure-secondary: rgba(255, 149, 128, 0.8);
-  --color-dracula-success: hsl(135, 52%, 65%);
-  --color-dracula-success-secondary: #8aff80;
+  --color-dracula-inactive: hsl(230, 15%, 50%);
+  --color-dracula-failure: hsl(0, 60%, 64%);
+  --color-dracula-failure-secondary: hsl(10, 100%, 75%);
+  --color-dracula-success: hsl(135, 52%, 61%);
+  --color-dracula-success-secondary: hsl(115, 100%, 75%);
   --filter-dracula-backdrop: none;
 }
 
 /* Mapping reference */
 /* @mixin reference */
 :root {
+  scrollbar-width: thin;
   scrollbar-color: var(--color-dracula-accent-tertiary);
 }
 
@@ -81,6 +81,8 @@ hr {
 /* Paragraph */
 p {
   color: var(--color-dracula-text-primary);
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* Anchor */
@@ -94,7 +96,7 @@ a.content-link:hover, a.entity-link:hover, a.inline-roll:hover {
   box-shadow: none;
 }
 a.content-link i, a.entity-link i, a.inline-roll i {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 
 /* Most input forms */
@@ -145,7 +147,7 @@ input[type=color][data-edit][data-edit], input[type=color i] {
   border-color: var(--color-dracula-content-window);
 }
 input::placeholder {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
   text-shadow: 0 0 10px var(--color-dracula-glow);
 }
 
@@ -180,6 +182,8 @@ select:focus {
 form .hint,
 form .notes {
   color: var(--color-dracula-text-secondary);
+  box-shadow: none;
+  text-shadow: none;
 }
 form-group .form-fields {
   border: 1px solid var(--color-dracula-border);
@@ -439,7 +443,7 @@ Separated if I want these buttons to be styled differently */
 }
 #hotbar #macro-list.inactive {
   /* Replace later. */
-  box-shadow: 0 0 5px var(--color-dracula-glow) inset;
+  box-shadow: none;
 }
 #hotbar #hotbar {
   border-radius: 1px;
@@ -461,7 +465,7 @@ Separated if I want these buttons to be styled differently */
 #hotbar .macro.active {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-disabled) 100%);
+  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-inactive) 100%);
 }
 #hotbar .macro.active:hover {
   cursor: pointer;
@@ -608,7 +612,7 @@ Separated if I want these buttons to be styled differently */
 }
 .chat-message .table-draw .table-description {
   border-top: 1px solid var(--color-dracula-border-white);
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 .chat-message .dice-roll {
   margin: 2px;
@@ -683,7 +687,7 @@ Separated if I want these buttons to be styled differently */
 .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-disabled) 100%);
+  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-inactive) 100%);
   background: var(--color-dracula-border);
 }
 .chat-message .dice-roll .dice-result .dice-tooltip .dice .part-header.flexrow .part-total {
@@ -708,7 +712,7 @@ Separated if I want these buttons to be styled differently */
 .chat-message .dice-roll .dice-result .dice-tooltip .dice .roll {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-disabled) 100%);
+  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-inactive) 100%);
   --shadow-color: 232deg 22% 2%;
   box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color)/0.32), 0 0.3px 0.4px -1.1px hsl(var(--shadow-color)/0.35), 0 0.7px 0.8px -2.2px hsl(var(--shadow-color)/0.38);
   text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color)/0.31), 0 1.1px 1.3px -0.3px hsl(var(--shadow-color)/0.32), 0 2px 2.3px -0.6px hsl(var(--shadow-color)/0.33), 0 3.3px 3.9px -0.9px hsl(var(--shadow-color)/0.35), -0.1px 5.1px 6px -1.3px hsl(var(--shadow-color)/0.36), -0.1px 7.9px 9.2px -1.6px hsl(var(--shadow-color)/0.37), -0.2px 11.9px 13.9px -1.9px hsl(var(--shadow-color)/0.38), -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color)/0.39);
@@ -801,7 +805,7 @@ Separated if I want these buttons to be styled differently */
   color: var(--color-dracula-text-secondary);
 }
 .roll-table-config ol.table-results .table-result.drawn .lock-result {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 
 #playlists .sound-control[data-action=sound-stop], #playlists .sound-control[data-action=playlist-stop] {
@@ -814,13 +818,13 @@ Separated if I want these buttons to be styled differently */
 }
 
 /* Foundry Settings */
-#client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span,
-#client-settings section.content h2.module-header {
+#client-settings section.content h2.module-header, #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
   color: var(--color-dracula-text-primary);
-  background: var(--color-dracula-content-window);
-  border-top: 1px solid var(--color-dracula-border-tertiary);
-  border-bottom: 1px solid var(--color-dracula-border-tertiary);
+  background: transparent;
   padding-left: 4px;
+}
+#client-settings section.content h2.module-header {
+  border-bottom: 1px solid var(--color-dracula-accent);
 }
 #client-settings nav.tabs {
   border-bottom: 1px solid var(--color-dracula-border);
@@ -859,7 +863,7 @@ Separated if I want these buttons to be styled differently */
   color: var(--color-dracula-text-secondary);
 }
 #permissions-config .hint {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 
 /* Module Management Menu */
@@ -878,21 +882,21 @@ Separated if I want these buttons to be styled differently */
   border-top: 1px solid var(--color-dracula-border);
 }
 #module-management .package-list .package {
-  border-bottom: 1px solid var(--color-dracula-accent);
+  border-bottom: 1px solid var(--color-dracula-border-tertiary);
 }
 #module-management .package-list .package-description, #module-management .package-list .package-metadata, #module-management .package-list .package-title {
   color: var(--color-dracula-text-primary);
 }
 
 nav.list-filters a.filter {
-  color: var(--color-dracula-disabled);
-  border-bottom: 1px solid var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
+  border-bottom: 1px solid var(--color-dracula-inactive);
   text-shadow: none;
   transition: all 0.2s ease-in-out;
 }
 nav.list-filters a.filter:hover {
   color: var(--color-dracula-text-primary);
-  border-bottom: 1px solid var(--color-dracula-disabled);
+  border-bottom: 1px solid var(--color-dracula-inactive);
   box-shadow: none;
   transition: color 0.2s ease-in-out;
 }
@@ -938,7 +942,7 @@ nav.list-filters a.filter.active {
 }
 .editor-edit:hover {
   color: var(--color-dracula-accent-tertiary);
-  text-shadow: 0 0 10px var(--color-dracula-glow);
+  text-shadow: 0 0 3px var(--color-dracula-glow);
 }
 
 .tox.tox-tinymce .tox-edit-area {
@@ -951,17 +955,18 @@ nav.list-filters a.filter.active {
   color: var(--color-dracula-text-primary);
 }
 
+.dnd5e input[type=text], .dnd5e input[type=number],
+.dnd5e input select {
+  background: transparent;
+  border-color: var(--color-dracula-border-secondary);
+  color: var(--color-dracula-accent);
+}
 .dnd5e input[type=text]:hover, .dnd5e input[type=number]:hover, .dnd5e input[type=checkbox]:hover, .dnd5e input[type=text]:focus, .dnd5e input[type=number]:focus, .dnd5e input[type=checkbox]:focus {
   border: 1px solid var(--color-dracula-border-secondary);
   box-shadow: 0 0 8px var(--color-dracula-accent-tertiary);
 }
-.dnd5e input[type=text], .dnd5e input[type=number] {
-  border-color: var(--color-dracula-border-secondary);
-  background: transparent;
-  color: var(--color-dracula-accent);
-}
 .dnd5e input:disabled {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 .dnd5e button {
   --shadow-color: 232deg 22% 2%;
@@ -984,16 +989,22 @@ nav.list-filters a.filter.active {
   background: rgba(0, 0, 0, 0.05);
   color: var(--color-dracula-accent);
 }
-.dnd5e select:disabled,
+.dnd5e select:disabled {
+  color: var(--color-dracula-inactive);
+}
 .dnd5e textarea:disabled {
-  color: #4b4a44;
+  color: var(--color-dracula-inactive);
 }
 .dnd5e .form-header {
   border-top: 1px solid var(--color-dracula-border);
   border-bottom: 1px solid var(--color-dracula-border);
+  box-shadow: none;
+  text-shadow: none;
 }
 .dnd5e .form-group label {
   color: var(--color-dracula-text-secondary);
+  box-shadow: none;
+  text-shadow: none;
 }
 .dnd5e .tag {
   color: var(--color-dracula-text-secondary);
@@ -1043,15 +1054,19 @@ nav.list-filters a.filter.active {
 .dnd5e.sheet .editable h4.rollable:hover,
 .dnd5e.sheet .editable .rollable:hover > h4 {
   color: var(--color-dracula-accent);
-  text-shadow: 0 0 10px var(--color-dracula-accent-tertiary);
+  text-shadow: 0 0 10px var(--color-dracula-accent);
+}
+.dnd5e.sheet .editable.actor flexrow,
+.dnd5e.sheet .editable.actor style {
+  border: 1px solid transparent;
 }
 .dnd5e.sheet .effects .item .effect-controls, .dnd5e.sheet .effects .item .effect-duration, .dnd5e.sheet .effects .item .effect-source {
   border-left: 1px solid var(--color-dracula-border);
   border-right: 1px solid var(--color-dracula-border);
 }
 .dnd5e.sheet .filter-list .filter-item {
-  color: var(--color-dracula-disabled);
-  border-bottom: 3px solid var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
+  border-bottom: 3px solid var(--color-dracula-inactive);
   transition: all 0.2s ease-in-out;
 }
 .dnd5e.sheet .filter-list .filter-item:hover {
@@ -1100,12 +1115,12 @@ nav.list-filters a.filter.active {
   font-size: 16px;
 }
 .dnd5e.sheet .sheet-navigation .item {
-  color: var(--color-dracula-accent);
-  border-bottom: 2px solid var(--color-dracula-accent);
+  color: var(--color-dracula-inactive);
+  border-bottom: 2px solid var(--color-dracula-inactive);
 }
 .dnd5e.sheet .sheet-navigation .item.active {
-  color: var(--color-dracula-text-secondary);
-  border-bottom: 2px solid var(--color-dracula-text-secondary);
+  color: var(--color-dracula-accent);
+  border-bottom: 2px solid var(--color-dracula-accent);
   text-shadow: none;
 }
 .dnd5e.sheet .sheet-navigation .item.active:hover {
@@ -1139,7 +1154,7 @@ nav.list-filters a.filter.active {
   border: 1px solid var(--color-dracula-border-tertiary);
 }
 .dnd5e.sheet.actor ul.skills-list li.skill .skill-passive {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 .dnd5e.sheet.actor ul.attributes li.attribute {
   border: 1px solid var(--color-dracula-border-tertiary);
@@ -1151,7 +1166,7 @@ nav.list-filters a.filter.active {
   color: var(--color-dracula-text-secondary);
 }
 .dnd5e.sheet.actor span .sep {
-  color: var(--color-dracula-disabled);
+  color: var(--color-dracula-inactive);
 }
 .dnd5e.sheet.actor .ability-scores {
   border-top: 1px solid var(--color-dracula-border-tertiary);
@@ -1191,7 +1206,7 @@ nav.list-filters a.filter.active {
   border-left: 1px solid var(--color-dracula-border);
 }
 .dnd5e.sheet.actor .proficient {
-  color: var(--color-dracula-accent);
+  color: var(--color-dracula-text-tertiary);
 }
 .dnd5e.sheet.actor .proficient .proficiency-toggle {
   color: var(--color-dracula-accent);
@@ -1289,7 +1304,7 @@ nav.list-filters a.filter.active {
 .dnd5e.sheet.actor .form-group .form-fields,
 .dnd5e.sheet.actor select {
   color: var(--color-dracula-text-primary);
-  background: var(--color-dracula-content-window);
+  background: transparent;
   border: 1px solid var(--color-dracula-accent);
   border-radius: 2px;
 }

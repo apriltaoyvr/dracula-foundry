@@ -42,7 +42,7 @@ export default class ModuleSettings
          type: Boolean,
          onChange: (value) =>
          {
-            document.documentElement.style.setProperty('--filter-dracula-backdrop', value ? 'blur(6px)' : 'none');
+            document.documentElement.style.setProperty('--filter-dracula-backdrop', value ? 'blur(12px)' : 'none');
          }
       });
    }

@@ -2,37 +2,36 @@
 
 :root {
   // Link color values with init.js
-  --color-dracula-accent: #{hsl(250, 100%, 75%)};
-  --color-dracula-accent-secondary: #{hsla(10, 100%, 75%, 0.8)};
+  --color-dracula-accent: hsl(250, 100%, 75%);
+  --color-dracula-accent-secondary: hsla(10, 100%, 75%, 0.8);
   --color-dracula-accent-tertiary: hsl(330, 100%, 75%);
   --color-dracula-accent-highlight: hsl(170, 100%, 75%);
 
-  --color-dracula-border: #{$blackLight};
-  --color-dracula-border-secondary: #{$purpleLight};
-  --color-dracula-border-tertiary: #{$blackSecondary};
-  --color-dracula-border-highlight: #{$pink};
+  --color-dracula-border: hsla(230, 15%, 15%, 5%);
+  --color-dracula-border-secondary: hsl(250, 100%, 75%, 15%);
+  --color-dracula-border-tertiary: hsl(230, 15%, 30%);
+  --color-dracula-border-highlight: hsl(170, 100%, 75%);
   --color-dracula-border-cyan: hsl(170, 100%, 75%);
-  --color-dracula-border-yellow: #{$yellow};
-  --color-dracula-border-white: #{$whiteLight};
+  --color-dracula-border-yellow: hsl(60, 100%, 75%);
 
-  --color-dracula-content: #{$black};
-  --color-dracula-content-window: #{$blackSecondary};
+  --color-dracula-content: hsla(240, 7%, 14%, 0.8);
+  --color-dracula-content-window: hsl(230, 15%, 30%);
 
   --color-dracula-glow: hsla(0, 0%, 100%, 0.25);
   --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
 
-  --color-dracula-text-dark: #{$blackSecondary};
+  --color-dracula-text-dark: hsl(230, 15%, 30%);
   --color-dracula-text-highlight: hsl(170, 100%, 75%);
-  --color-dracula-text-primary: #{$white};
-  --color-dracula-text-secondary: #{$whiteSecondary};
-  --color-dracula-text-tertiary: #{$blackTertiary};
+  --color-dracula-text-primary: hsla(0, 0%, 90%, 0.877);
+  --color-dracula-text-secondary: rgba(255, 255, 255, 0.801);
+  --color-dracula-text-tertiary: hsl(230, 15%, 70%);
   --color-dracula-text-inactive: hsl(230, 15%, 50%);
 
-  --color-dracula-disabled: hsl(230, 15%, 50%);
+  --color-dracula-inactive: hsl(230, 15%, 50%);
   --color-dracula-failure: hsl(0, 60%, 64%);
-  --color-dracula-failure-secondary: #{$red};
+  --color-dracula-failure-secondary: hsl(10, 100%, 75%);
   --color-dracula-success: hsl(135, 52%, 61%);
-  --color-dracula-success-secondary: #{$green};
+  --color-dracula-success-secondary: hsl(115, 100%, 75%);
 
   --filter-dracula-backdrop: none; //blur(6px);
 }

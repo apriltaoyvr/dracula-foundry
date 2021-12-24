@@ -33,7 +33,7 @@ function appendStyles(href)
 function modifyCSSVariables()
 {
    const root = document.documentElement;
-
+   
    root.style.setProperty('--color-border-dark', 'var(--color-dracula-border)');
    root.style.setProperty('--color-border-highlight', 'var(--color-dracula-tertiary)');
    root.style.setProperty('--color-border-highlight-alt', 'var(--color-dracula-accent)');

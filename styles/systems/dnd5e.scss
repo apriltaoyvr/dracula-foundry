@@ -2,6 +2,14 @@
 
 .dnd5e {
   input {
+    &[type="text"],
+    &[type="number"],
+    select {
+      background: transparent;
+      border-color: $borderSecondary;
+      color: $accent;
+    }
+
     &[type="text"]:hover,
     &[type="number"]:hover,
     &[type="checkbox"]:hover,
@@ -12,15 +20,8 @@
       box-shadow: 0 0 8px $accentTertiary;
     }
 
-    &[type="text"],
-    &[type="number"] {
-      border-color: $borderSecondary;
-      background: transparent;
-      color: $accent;
-    }
-
     &:disabled {
-      color: $disabled;
+      color: $inactive;
     }
   }
 
@@ -41,21 +42,29 @@
     border-color: $borderSecondary;
     background: rgba(0, 0, 0, 0.05);
     color: $accent;
+    &:disabled {
+      color: $inactive;
+    }
   }
 
-  select:disabled,
-  textarea:disabled {
-    color: #4b4a44;
+  textarea {
+    &:disabled {
+      color: $inactive;
+    }
   }
 
   .form {
     &-header {
       border-top: 1px solid $border;
       border-bottom: 1px solid $border;
+      box-shadow: none;
+      text-shadow: none;
     }
 
     &-group label {
       color: $textSecondary;
+      box-shadow: none;
+      text-shadow: none;
     }
   }
 
@@ -124,7 +133,7 @@
       h4.rollable:hover,
       .rollable:hover > h4 {
         color: $accent;
-        text-shadow: 0 0 10px $accentTertiary;
+        text-shadow: 0 0 10px $accent;
       }
       &.actor {
         flexrow,
@@ -149,8 +158,8 @@
 
     .filter-list {
       .filter-item {
-        color: $disabled;
-        border-bottom: 3px solid $disabled;
+        color: $inactive;
+        border-bottom: 3px solid $inactive;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -215,12 +224,12 @@
       font-size: 16px;
 
       .item {
-        color: $accent;
-        border-bottom: 2px solid $accent;
+        color: $inactive;
+        border-bottom: 2px solid $inactive;
 
         &.active {
-          color: $textSecondary;
-          border-bottom: 2px solid $textSecondary;
+          color: $accent;
+          border-bottom: 2px solid $accent;
           text-shadow: none;
 
           &:hover {
@@ -262,7 +271,7 @@
 
         li.skill {
           .skill-passive {
-            color: $disabled;
+            color: $inactive;
           }
         }
       }
@@ -283,7 +292,7 @@
 
       span {
         .sep {
-          color: $disabled;
+          color: $inactive;
         }
       }
 
@@ -339,7 +348,7 @@
       }
 
       .proficient {
-        color: $accent;
+        color: $textTertiary;
 
         .proficiency-toggle {
           color: $accent;
@@ -503,7 +512,7 @@
       .form-group .form-fields,
       select {
         color: $text;
-        background: $contentWindow;
+        background: transparent;
         border: 1px solid $accent;
         border-radius: 2px;
       }

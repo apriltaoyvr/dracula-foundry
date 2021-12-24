@@ -55,6 +55,8 @@ hr {
 /* Paragraph */
 p {
   color: $text;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* Anchor */
@@ -77,12 +79,15 @@ a {
   &.content-link i,
   &.entity-link i,
   &.inline-roll i {
-    color: $disabled;
+    color: $inactive;
   }
 }
 
 /* Most input forms */
 input {
+  box-shadow: none;
+  text-shadow: none;
+
   &:focus {
     box-shadow: none;
     text-shadow: none;
@@ -148,7 +153,7 @@ input {
   }
 
   &::placeholder {
-    color: $disabled;
+    color: $inactive;
     text-shadow: 0 0 10px $glow;
   }
 }
@@ -187,6 +192,8 @@ form {
   .hint,
   .notes {
     color: $textSecondary;
+    box-shadow: none;
+    text-shadow: none;
   }
 
   &-group {
@@ -446,7 +453,7 @@ Separated if I want these buttons to be styled differently */
 
     &.inactive {
       /* Replace later. */
-      box-shadow: 0 0 5px $glow inset;
+      box-shadow: none;
     }
   }
 
@@ -479,7 +486,7 @@ Separated if I want these buttons to be styled differently */
 
     /* Macro boxes containing items */
     &.active {
-      @include gradientBorder($accent, $disabled);
+      @include gradientBorder($accent, $inactive);
 
       &:hover {
         @include borderExpand($accent);
@@ -660,7 +667,7 @@ Separated if I want these buttons to be styled differently */
 
   .table-draw .table-description {
     border-top: 1px solid $borderWhite;
-    color: $disabled;
+    color: $inactive;
   }
 
   // Most values related to dice result boxes
@@ -721,7 +728,7 @@ Separated if I want these buttons to be styled differently */
     .dice-result {
       .dice-tooltip .dice {
         .part-header.flexrow {
-          @include gradientBorder($accent, $disabled);
+          @include gradientBorder($accent, $inactive);
           background: $border;
 
           .part-total {
@@ -749,7 +756,7 @@ Separated if I want these buttons to be styled differently */
         }
 
         .roll {
-          @include gradientBorder($accent, $disabled);
+          @include gradientBorder($accent, $inactive);
           @include heavyShadow;
           color: $text;
           background: transparent;
@@ -851,7 +858,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   .table-result.drawn .lock-result {
-    color: $disabled;
+    color: $inactive;
   }
 }
 
@@ -873,13 +880,14 @@ Separated if I want these buttons to be styled differently */
 
 /* Foundry Settings */
 #client-settings {
-  &.app.window-app.form #config-tabs .settings-list h2.module-header span,
-  section.content h2.module-header {
+  section.content h2.module-header,
+  &.app.window-app.form #config-tabs .settings-list h2.module-header span, {
     color: $text;
-    background: $contentWindow;
-    border-top: 1px solid $borderTertiary;
-    border-bottom: 1px solid $borderTertiary;
+    background: transparent;
     padding-left: 4px;
+  }
+  section.content h2.module-header {
+    border-bottom: 1px solid $accent;
   }
 
   nav.tabs {
@@ -929,7 +937,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   .hint {
-    color: $disabled;
+    color: $inactive;
   }
 }
 
@@ -948,7 +956,7 @@ Separated if I want these buttons to be styled differently */
   .package-list {
     border-top: 1px solid $border;
     .package {
-      border-bottom: 1px solid $accent;
+      border-bottom: 1px solid $borderTertiary;
       &-description,
       &-metadata,
       &-title {
@@ -960,14 +968,14 @@ Separated if I want these buttons to be styled differently */
 
 // Navigation tabs for module management
 nav.list-filters a.filter {
-  color: $disabled;
-  border-bottom: 1px solid $disabled;
+  color: $inactive;
+  border-bottom: 1px solid $inactive;
   text-shadow: none;
   transition: all 0.2s ease-in-out;
 
   &:hover {
     color: $text;
-    border-bottom: 1px solid $disabled;
+    border-bottom: 1px solid $inactive;
     box-shadow: none;
     transition: color 0.2s ease-in-out;
   }
