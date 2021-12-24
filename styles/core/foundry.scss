@@ -948,6 +948,7 @@ Separated if I want these buttons to be styled differently */
   }
 }
 
+// Navigation tabs for module management
 nav.list-filters a.filter {
   color: $disabled;
   border-bottom: 1px solid $disabled;
@@ -962,8 +963,8 @@ nav.list-filters a.filter {
   }
 
   &.active {
-    color: $accentSecondary;
-    border-bottom: 1px solid $accentSecondary;
+    color: $accent;
+    border-bottom: 1px solid $accent;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
   }
