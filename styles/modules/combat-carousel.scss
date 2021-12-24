@@ -3,7 +3,7 @@
 #combat-carousel {
   &.wrapper {
     position: fixed;
-    font-family: "Roboto";
+    font-family: "Roboto", serif;
 
     /* top: 0;
     left: 120px; */
@@ -311,7 +311,6 @@ li[data-control="combat-carousel"] {
     /* background: transparent; */
     border: 1px solid transparent;
     backdrop-filter: $filterBackdrop;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
@@ -436,7 +435,6 @@ li[data-control="combat-carousel"] {
       backdrop-filter: $filterBackdrop;
       background: #414B55E6;
       border: 1px solid transparent;
-      border-bottom: 1px solid transparent;
       text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 
       /* border: 1px silver; */
@@ -639,7 +637,6 @@ li[data-control="combat-carousel"] {
     backdrop-filter: $filterBackdrop;
     border-radius: 3px;
     border: 1px solid #84d3e4e6;
-    border-bottom: 1px solid #84d3e4e6;
     clip-path: none;
   }
 

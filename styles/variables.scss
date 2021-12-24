@@ -1,68 +1,38 @@
-/* Dracula UI Colours Import */
-
-$black: hsla(235, 14%, 15%, 0.8);
-$blackSecondary: hsla(230, 15%, 30%, 0.8);
-$blackTernary: hsl(230, 15%, 70%);
-$blackLight: hsla(235, 14%, 15%, 0.05);
-$white: hsla(60, 30%, 96%, 0.9);
-$whiteSecondary: hsla(0, 0%, 100%, 0.6);
-$whiteLight: hsla(60, 30%, 96%, 0.05);
-$cyan: hsl(170, 100%, 75%);
-$cyanSecondary: hsl(170, 100%, 90%);
-$cyanLight: hsla(170, 100%, 75%, 0.05);
-$green: hsl(115, 100%, 75%);
-$greenSecondary: hsl(115, 100%, 90%);
-$greenLight: hsla(115, 100%, 75%, 0.05);
-$orange: hsl(35, 100%, 75%);
-$orangeSecondary: hsl(35, 100%, 90%);
-$orangeLight: hsla(35, 100%, 75%, 0.05);
-$pink: hsl(330, 100%, 75%);
-$pinkSecondary: hsl(330, 100%, 90%);
-$pinkLight: hsla(330, 100%, 75%, 0.05);
-$purple: hsla(249, 31%, 59%, 0.8);
-$purpleSecondary: hsla(251, 100%, 90%, 0.8);
-$purpleLight: hsla(250, 100%, 75%, 0.05);
-$red: hsla(10, 100%, 75%, 0.8);
-$redSecondary: hsla(11, 100%, 90%, 0.8);
-$redLight: hsla(10, 100%, 75%, 0.05);
-$yellow: hsla(16, 100%, 75%, 0.012);
-$yellowSecondary: hsl(60, 100%, 90%);
-$yellowLight: hsla(60, 100%, 75%, 0.05);
-$cyan-transparent: hsla(170, 100%, 75%, 0.1);
-$green-transparent: hsla(115, 100%, 75%, 0.1);
-$orange-transparent: hsla(35, 100%, 75%, 0.1);
-$pink-transparent: hsla(330, 100%, 75%, 0.1);
-$purple-transparent: hsla(250, 100%, 75%, 0.1);
-$red-transparent: hsla(10, 100%, 75%, 0.1);
-$yellow-transparent: hsla(60, 100%, 75%, 0.1);
-
 $gradientDegree: 135deg;
 
 /* Mapping reference */
 $accent: var(--color-dracula-accent);
-$accentSecondary: var(--color-dracula-secondary);
-$accentTertiary: var(--color-dracula-tertiary);
-$highlight: var(--color-dracula-text-highlight);
-$disabled: var(--color-dracula-disabled);
-$success: var(--color-dracula-success);
-$failure: var(--color-dracula-failure);
-
-$text: var(--color-dracula-text-primary);
-$textSecondary: var(--color-dracula-text-secondary);
-$textTertiary: var(--color-dracula-text-tertiary);
-$textDark: var(--color-dracula-text-dark);
+$accentSecondary: var(--color-dracula-accent-secondary);
+$accentTertiary: var(--color-dracula-accent-tertiary);
+$accentHighlight: var(--color-dracula-accent-highlight);
 
 $border: var(--color-dracula-border);
 $borderSecondary: var(--color-dracula-border-secondary);
 $borderTertiary: var(--color-dracula-border-tertiary);
-
-$glow: var(--color-dracula-glow);
-$shadow: var(--color-dracula-shadow);
+$borderHighlight: var(--color-dracula-border-highlight);
+$borderCyan: var(--color-dracula-border-cyan);
+$borderYellow: var(--color-dracula-border-yellow);
+$borderWhite: var(--color-dracula-border-white);
 
 $content: var(--color-dracula-content);
 $contentWindow: var(--color-dracula-content-window);
 
-$filterBackdrop: var(--filter-backdrop);
+$glow: var(--color-dracula-glow);
+$shadow: var(--color-dracula-shadow);
+
+$text: var(--color-dracula-text-primary);
+$textDark: var(--color-dracula-text-dark);
+$textHighlight: var(--color-dracula-text-highlight);
+$textSecondary: var(--color-dracula-text-secondary);
+$textTertiary: var(--color-dracula-text-tertiary);
+
+$disabled: var(--color-dracula-disabled);
+$failure: var(--color-dracula-failure);
+$failureSecondary: var(--color-dracula-failure-secondary);
+$success: var(--color-dracula-success);
+$successSecondary: var(--color-dracula-success-secondary);
+
+$filterBackdrop: var(--filter-dracula-backdrop);
 
 /* @mixin reference */
 @mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
@@ -82,9 +52,9 @@ $filterBackdrop: var(--filter-backdrop);
       $secondColor 100%
   );
   background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 @mixin heavyShadow {
