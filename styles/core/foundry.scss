@@ -1,8 +1,7 @@
 @use "../variables" as *;
 
 :root {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-dracula-tertiary) var(--color-dracula-tertiary);
+  scrollbar-color: #{$accentTertiary};
 }
 
 // Scrollbar
@@ -21,9 +20,9 @@
     outline: none;
     border-radius: 0;
     background: linear-gradient(
-        0deg,
-        $accentTertiary 0%,
-        $accentSecondary 100%
+      0deg,
+      $accentTertiary 0%,
+      $accentSecondary 100%
     );
   }
 }
@@ -122,9 +121,9 @@ input {
 
   &[type="range"]::-webkit-slider-thumb {
     background: linear-gradient(
-        $gradientDegree,
-        $accentTertiary,
-        $accentSecondary
+      $gradientDegree,
+      $accentTertiary,
+      $accentSecondary
     );
     height: 12px;
     width: 12px;
@@ -132,13 +131,9 @@ input {
     box-shadow: none;
   }
 
-  &[type="checkbox"] {
-    background: $accent;
-    color: $text;
-  }
-
+  &[type="checkbox"],
   &[type="radio"] {
-    background: accent;
+    background: $accent;
     color: $text;
   }
 
@@ -150,13 +145,13 @@ input {
     border-color: $contentWindow;
   }
 
-  &:placeholder {
+  &::placeholder {
     color: $disabled;
     text-shadow: 0 0 10px $glow;
   }
 }
 
-/* Tables (General sense, not specific to rolltables) */
+/* Tables (General sense, not specific to roll tables) */
 table {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -172,7 +167,7 @@ table {
 /* Select (drop-down boxes) */
 select {
   color: $textSecondary;
-  background: $black;
+  background: $content;
   border: 1px solid $accent;
   border-radius: 2px;
   box-shadow: none;
@@ -251,7 +246,7 @@ form button {
 
   .button {
     background: $content;
-    border: 1px solid $blackSecondary;
+    border: 1px solid $borderSecondary;
     color: $text;
   }
 }
@@ -303,10 +298,7 @@ Separated if I want these buttons to be styled differently */
   .window-content {
     background: $content;
     color: $text;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-radius: 0 0 3px 3px;
 
     > * {
       background: transparent;
@@ -315,10 +307,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   .window-header {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 6px 6px 0 0;
     background: $content;
     border: 1px solid transparent;
   }
@@ -404,15 +393,15 @@ Separated if I want these buttons to be styled differently */
 
         &.toggle {
           @include heavyShadow;
-          @include gradientBorder($accent, $highlight);
+          @include gradientBorder($accent, $borderCyan);
 
           &.active {
             @include toolsShadow;
-            @include gradientBorder($accent, $highlight);
+            @include gradientBorder($accent, $borderCyan);
             background: linear-gradient(
                 $gradientDegree,
                 $accent 0%,
-                $highlight 100%
+                $accentHighlight 100%
             );
             --shadow-color: 171deg 61% 33%;
             filter: none;
@@ -420,11 +409,11 @@ Separated if I want these buttons to be styled differently */
 
           &:hover {
             @include toolsShadow;
-            @include gradientBorder($accent, $highlight);
+            @include gradientBorder($accent, $borderCyan);
             background: linear-gradient(
                 $gradientDegree,
                 $accent 0%,
-                $highlight 100%
+                $accentHighlight 100%
             );
             --shadow-color: 171deg 61% 33%;
             filter: none;
@@ -455,7 +444,7 @@ Separated if I want these buttons to be styled differently */
 
     &.inactive {
       /* Replace later. */
-      box-shadow: 0 0 5px var(--color-dracula-glow) inset;
+      box-shadow: 0 0 5px $glow inset;
     }
   }
 
@@ -465,10 +454,10 @@ Separated if I want these buttons to be styled differently */
     &-directory-controls,
     &-page-controls {
       background: linear-gradient(
-          180deg,
-          hsla(235, 14%, 15%, 90%) 0%,
-          hsla(230, 15%, 15%, 75%) 50%,
-          hsla(230, 15%, 15%, 50%) 100%
+        180deg,
+        hsla(235, 14%, 15%, 90%) 0%,
+        hsla(230, 15%, 15%, 75%) 50%,
+        hsla(230, 15%, 15%, 50%) 100%
       );
       --shadow-color: 0deg 0% 48%;
       text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
@@ -484,10 +473,10 @@ Separated if I want these buttons to be styled differently */
     border: 1px solid $content;
     border-radius: 1px;
     background: linear-gradient(
-        180deg,
-        hsla(235, 14%, 15%, 90%) 0%,
-        hsla(230, 15%, 15%, 75%) 50%,
-        hsla(230, 15%, 15%, 50%) 100%
+      180deg,
+      hsla(235, 14%, 15%, 90%) 0%,
+      hsla(230, 15%, 15%, 75%) 50%,
+      hsla(230, 15%, 15%, 50%) 100%
     );
     backdrop-filter: $filterBackdrop;
 
@@ -540,10 +529,10 @@ Separated if I want these buttons to be styled differently */
 /* Main Sidebar (Right) */
 #sidebar {
   background: linear-gradient(
-      0deg,
-      hsla(235, 14%, 15%, 0.9) 0%,
-      hsla(230, 15%, 15%, 75%) 75%,
-      hsla(230, 15%, 15%, 70%) 100%
+    0deg,
+    hsla(235, 14%, 15%, 0.9) 0%,
+    hsla(230, 15%, 15%, 75%) 75%,
+    hsla(230, 15%, 15%, 70%) 100%
   );
   backdrop-filter: $filterBackdrop;
   border: 1px solid transparent;
@@ -566,7 +555,7 @@ Separated if I want these buttons to be styled differently */
     color: $text;
     background: transparent;
     box-shadow: none;
-    border: 2px solid transparent;
+    border: none;
     border-bottom: 2px solid $accent;
     text-shadow: 0 0 0 4px $accent;
 
@@ -632,7 +621,7 @@ Separated if I want these buttons to be styled differently */
   transition: max-height 0.3s ease-in-out;
 
   &.whisper {
-    @include gradientBorder($accent, $highlight);
+    @include gradientBorder($accent, $borderCyan);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
@@ -646,7 +635,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   &.emote {
-    @include gradientBorder($accent, $yellow);
+    @include gradientBorder($accent, $borderYellow);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
@@ -663,7 +652,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   .table-draw .table-description {
-    border-top: 1px solid $whiteLight;
+    border-top: 1px solid $borderWhite;
     color: $disabled;
   }
 
@@ -698,26 +687,26 @@ Separated if I want these buttons to be styled differently */
 
       /* For the small square boxes */
       &.success {
-        @include gradientBorder($success, $greenSecondary);
+        @include gradientBorder($success, $successSecondary);
         color: inherit;
         background: $content;
       }
 
       &.failure {
-        @include gradientBorder($red, $failure);
+        @include gradientBorder($failureSecondary, $failure);
         color: inherit;
         background: $content;
       }
 
       /* For the large result box */
       &.critical {
-        @include gradientText($success, $greenSecondary);
-        @include gradientBorder($success, $greenSecondary);
+        @include gradientText($success, $successSecondary);
+        @include gradientBorder($success, $successSecondary);
       }
 
       &.fumble {
-        @include gradientText($failure, $red);
-        @include gradientBorder($failure, $red);
+        @include gradientText($failure, $failureSecondary);
+        @include gradientBorder($failure, $failureSecondary);
       }
     }
 
@@ -753,7 +742,7 @@ Separated if I want these buttons to be styled differently */
         }
 
         .roll {
-          @include gradientBorder($purple, $disabled);
+          @include gradientBorder($accent, $disabled);
           @include heavyShadow;
           color: $text;
           background: transparent;
@@ -766,15 +755,15 @@ Separated if I want these buttons to be styled differently */
 
           &.failure,
           &.min {
-            @include gradientBorder($failure, $red);
-            @include gradientText($failure, $red);
+            @include gradientBorder($failure, $failureSecondary);
+            @include gradientText($failure, $failureSecondary);
             filter: none;
           }
 
           &.max,
           &.success {
-            @include gradientBorder($success, $green);
-            @include gradientText($success, $green);
+            @include gradientBorder($success, $successSecondary);
+            @include gradientText($success, $successSecondary);
             filter: none;
           }
 
@@ -892,7 +881,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-    @include gradientBorder($accent, $highlight);
+    @include gradientBorder($accent, $borderCyan);
     margin: 2px;
 
     &:focus {
@@ -962,7 +951,7 @@ nav.list-filters a.filter {
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: $white;
+    color: $text;
     border-bottom: 1px solid $disabled;
     box-shadow: none;
     transition: color 0.2s ease-in-out;

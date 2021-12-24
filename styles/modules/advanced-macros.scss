@@ -4,9 +4,8 @@
 .macro-sheet .form-group.command .furnace-macro-command {
   code,
   textarea {
-    color: $white;
+    color: $text;
     border: 1px solid $accent;
-    text-shadow: $blackSecondary;
   }
 }
 
@@ -26,13 +25,13 @@
 .hljs-strong,
 .hljs-template-variable,
 .hljs-variable {
-  color: $yellow;
+  color: hsla(16, 100%, 75%, 0.012);
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-type {
-  color: $red;
+  color: $failureSecondary;
 }
 
 .hljs-attribute,
@@ -44,7 +43,7 @@
 
 .hljs-name,
 .hljs-section {
-  color: $green;
+  color: $successSecondary;
 }
 
 .hljs-tag {
@@ -61,12 +60,12 @@
 }
 
 .hljs-addition {
-  color: $green;
+  color: $successSecondary;
   background-color: #282a36;
 }
 
 .hljs-deletion {
-  color: $red;
+  color: $failureSecondary;
   background-color: #282a36;
 }
 

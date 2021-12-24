@@ -3,16 +3,20 @@
 :root {
   // Link color values with init.js
   --color-dracula-accent: #{$purple};
-  --color-dracula-secondary: #{$red};
-  --color-dracula-tertiary: #{$pink};
-
-  --color-dracula-content: #{$black};
-  --color-dracula-content-window: #{$blackSecondary};
+  --color-dracula-accent-secondary: #{$red};
+  --color-dracula-accent-tertiary: #{$pink};
+  --color-dracula-accent-highlight: #{$cyan};
 
   --color-dracula-border: #{$blackLight};
   --color-dracula-border-secondary: #{$purpleLight};
   --color-dracula-border-tertiary: #{$blackSecondary};
   --color-dracula-border-highlight: #{$pink};
+  --color-dracula-border-cyan: #{$cyan};
+  --color-dracula-border-yellow: #{$yellow};
+  --color-dracula-border-white: #{$whiteLight};
+
+  --color-dracula-content: #{$black};
+  --color-dracula-content-window: #{$blackSecondary};
 
   --color-dracula-glow: rgba(255, 255, 255, 0.25);
   --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
@@ -26,7 +30,9 @@
 
   --color-dracula-disabled: hsl(230, 15%, 50%);
   --color-dracula-failure: hsl(0, 100%, 67%);
+  --color-dracula-failure-secondary: #{$red};
   --color-dracula-success: hsl(135, 94%, 65%);
+  --color-dracula-success-secondary: #{$green};
 
-  --filter-backdrop: none; //blur(6px);
+  --filter-dracula-backdrop: none; //blur(6px);
 }

@@ -19,7 +19,7 @@
   &.chat-card {
     .flexrow {
       color: $textSecondary;
-      font-family: "Signika";
+      font-family: "Signika", serif;
       font-weight: bold;
       font-size: 16px;
     }
@@ -46,7 +46,7 @@
       color: $textSecondary;
       background: none;
       border: none;
-      font-family: "Signika";
+      font-family: "Signika", serif;
     }
   }
 
@@ -54,7 +54,7 @@
     color: $textSecondary;
     background: none;
     border: none;
-    font-family: "Signika";
+    font-family: "Signika", serif;
   }
 }
 
@@ -62,7 +62,7 @@
   color: $textSecondary;
   background: none;
   border: none;
-  font-family: "Signika";
+  font-family: "Signika", serif;
 }
 
 .monks-tokenbar {
@@ -71,12 +71,12 @@
       color: $textSecondary;
       background: none;
       border: none;
-      font-family: "Signika";
+      font-family: "Signika", serif;
     }
 
     .card-header h3, .message-content .items-header .item-name {
       color: $textSecondary;
-      font-family: "Signika";
+      font-family: "Signika", serif;
       font-weight: bold;
       font-size: 14px;
 
@@ -96,7 +96,7 @@
 
   .sheet .items-list .items-header {
     color: $textSecondary;
-    font-family: "Signika";
+    font-family: "Signika", serif;
     background: none;
     border: none;
   }
@@ -104,8 +104,8 @@
 
 #requestsavingthrow .request-grid > div {
   &.selected, &:hover {
-    color: $white;
-    background: $black;
+    color: $text;
+    background: $content;
     border: $accent;
     border-radius: 6px;
     box-shadow: 0 0 10px $accent;

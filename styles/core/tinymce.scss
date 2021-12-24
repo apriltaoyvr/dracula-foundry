@@ -5,6 +5,11 @@
     &-btn,
     &-ico {
       color: $text;
+
+      &:hover {
+        color: $accentTertiary;
+        text-shadow: 0 0 10px $glow;
+      }
     }
   }
 }
@@ -16,9 +21,15 @@
   }
 
   &-edit {
+    background: $accent;
     color: $text;
     border: 1px solid $border;
-    box-shadow: 0 0 4px $glow;
+
+    &:hover {
+      color: $accentTertiary;
+      text-shadow: 0 0 10px $glow;
+    }
+    //box-shadow: 0 0 4px $glow;
   }
 }
 

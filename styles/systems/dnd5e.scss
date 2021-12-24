@@ -55,11 +55,12 @@
     }
 
     &-group label {
-      color: $whiteSecondary;
+      color: $textSecondary;
     }
   }
 
   .tag {
+    color: $textSecondary;
     border: 1px solid $accent;
   }
 
@@ -85,13 +86,13 @@
 
       h3 {
         color: $text;
-        font-family: "Signika";
+        font-family: "Signika", serif;
         font-weight: bold;
         font-size: 14px;
 
         &:hover {
           color: $text;
-          font-family: "Signika";
+          font-family: "Signika", serif;
           font-weight: bold;
           font-size: 14px;
           text-shadow: 0 0 8px $accent;
@@ -101,8 +102,7 @@
       img {
         height: 36px;
         width: 36px;
-        border-radius: 12px;
-        border: 1px solid $black;
+        border: 1px solid $border;
         border-radius: 6px;
         padding: 0;
       }
@@ -121,8 +121,8 @@
 
   &.sheet {
     .editable {
-      h4.rolltable:hover,
-      .rolltable:hover > h4 {
+      h4.rollable:hover,
+      .rollable:hover > h4 {
         color: $accent;
         text-shadow: 0 0 10px $accentTertiary;
       }
@@ -175,7 +175,7 @@
 
       .item-name {
         &:hover {
-          color: $purple;
+          color: $accent;
           text-shadow: $glow;
         }
       }
@@ -205,16 +205,16 @@
 
     .sheet-navigation {
       color: $text;
-      font-family: "Signika";
+      font-family: "Signika", serif;
       font-size: 16px;
 
       .item {
-        color: $textDark;
-        border-bottom: 2px solid $textDark;
+        color: $accent;
+        border-bottom: 2px solid $accent;
 
         &.active {
-          color: $accent;
-          border-bottom: 2px solid $accent;
+          color: $textSecondary;
+          border-bottom: 2px solid $textSecondary;
           text-shadow: none;
 
           &:hover {
@@ -379,18 +379,17 @@
         /* Biography and Descriptors */
         .characteristics {
           label {
-            font-family: "Signika";
+            font-family: "Signika", serif;
           }
 
           textarea {
-            @include thinBorder($border);
+            @include thinBorder($borderTertiary);
           }
         }
 
         .sheet-header {
           img.profile {
             border: 1px solid $borderTertiary;
-            border-right: 1px solid $borderTertiary;
             border-radius: 3px;
             margin: 5px;
           }
@@ -402,13 +401,13 @@
           }
 
           .xpbar {
-            color: $highlight;
+            color: $textHighlight;
             background: none;
             border: 1px solid transparent;
             border-radius: 2px;
 
             .bar {
-              background: $highlight;
+              background: $accentHighlight;
               border: 1px solid transparent;
             }
           }
@@ -441,6 +440,10 @@
 
         .inventory {
           &-list {
+            .item .item-name.rollable .item-image:hover {
+              background-image: url("../assets/icons/svg/d20-pink.svg") !important;
+            }
+
             .item.detail {
               border-right: 1px solid $border;
             }
@@ -456,6 +459,10 @@
               input[type="text"] {
                 border-bottom: 2px solid $border;
               }
+            }
+
+            .flexrow {
+              border: none;
             }
           }
         }
@@ -474,13 +481,13 @@
         }
 
         .item {
-          &-filters.flexrow element.style {
+          &-filters.flexrow {
             border: none;
           }
         }
 
         select {
-          background: $black;
+          background: $content;
           border: 1px solid $accent;
           border-radius: 2px;
         }
@@ -511,7 +518,6 @@
       &.sheet .item-buttons {
         padding: 0;
         color: $text;
-        border-radius: 6px;
         border: 1px solid $border;
         border-radius: 2px;
       }

@@ -17,15 +17,6 @@
     }
   }
 
-  &.actor {
-    .inventory-filters {
-      flexrow,
-      style {
-        border: none;
-      }
-    }
-  }
-
   .sheet-navigation {
     &.item {
       .dae-effect-list {
