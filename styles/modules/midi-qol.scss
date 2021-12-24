@@ -9,7 +9,7 @@
 .midi-qol-box {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient($gradientDegree, $accent 0%, $borderCyan 100%);
+  border-image-source: linear-gradient($gradientDegree, $accent 0%, $accentHighlight 100%);
 }
 
 .midi-qol-faint {

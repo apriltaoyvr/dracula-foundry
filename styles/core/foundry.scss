@@ -55,8 +55,6 @@ hr {
 /* Paragraph */
 p {
   color: $text;
-  text-shadow: none;
-  box-shadow: none;
 }
 
 /* Anchor */
@@ -402,11 +400,11 @@ Separated if I want these buttons to be styled differently */
 
         &.toggle {
           @include heavyShadow;
-          @include gradientBorder($accent, $borderCyan);
+          @include gradientBorder($accent, $accentHighlight);
 
           &.active {
             @include toolsShadow;
-            @include gradientBorder($accent, $borderCyan);
+            @include gradientBorder($accent, $accentHighlight);
             background: linear-gradient(
               $gradientDegree,
               $accent 0%,
@@ -418,7 +416,7 @@ Separated if I want these buttons to be styled differently */
 
           &:hover {
             @include toolsShadow;
-            @include gradientBorder($accent, $borderCyan);
+            @include gradientBorder($accent, $accentHighlight);
             background: linear-gradient(
               $gradientDegree,
               $accent 0%,
@@ -635,7 +633,7 @@ Separated if I want these buttons to be styled differently */
   transition: max-height 0.3s ease-in-out;
 
   &.whisper {
-    @include gradientBorder($accent, $borderCyan);
+    @include gradientBorder($accent, $accentHighlight);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
@@ -649,7 +647,7 @@ Separated if I want these buttons to be styled differently */
   }
 
   &.emote {
-    @include gradientBorder($accent, $borderYellow);
+    @include gradientBorder($accent, $success);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;

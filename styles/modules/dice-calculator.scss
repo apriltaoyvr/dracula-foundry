@@ -1,4 +1,3 @@
-@use '../dracula' as *;
 @use '../variables' as *;
 
 .dice-tray {
@@ -39,23 +38,22 @@
     }
   }
 
-  // Do not replace primary and accent colours for these buttons
   &--op,
   &--math,
   &--stat,
   &--custom {
-    background-color: $red;
-    border-color: $redSecondary;
+    background-color: $failure;
+    border-color: $border;
   }
 
   &--confirm {
-    background-color: $cyan;
-    border-color: $cyanSecondary;
+    background-color: $accentHighlight;
+    border-color: $border;
   }
 
   &--attr {
-    background-color: $purple;
-    border-color: $purpleSecondary;
+    background-color: $accentSecondary;
+    border-color: $border;
   }
 }
 

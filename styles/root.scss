@@ -1,18 +1,16 @@
-@use 'dracula' as *;
+@use 'variables' as *;
 
 :root {
   // Link color values with init.js
   --color-dracula-accent: hsl(250, 100%, 75%);
-  --color-dracula-accent-secondary: hsla(10, 100%, 75%, 0.8);
+  --color-dracula-accent-secondary: hsla(10, 100%, 75%);
   --color-dracula-accent-tertiary: hsl(330, 100%, 75%);
   --color-dracula-accent-highlight: hsl(170, 100%, 75%);
 
-  --color-dracula-border: hsla(230, 15%, 15%, 5%);
-  --color-dracula-border-secondary: hsl(250, 100%, 75%, 15%);
-  --color-dracula-border-tertiary: hsl(230, 15%, 30%);
+  --color-dracula-border: hsla(230, 15%, 15%, 15%);
+  --color-dracula-border-secondary: hsl(250, 100%, 75%, 25%);
+  --color-dracula-border-tertiary: hsl(230, 15%, 40%);
   --color-dracula-border-highlight: hsl(170, 100%, 75%);
-  --color-dracula-border-cyan: hsl(170, 100%, 75%);
-  --color-dracula-border-yellow: hsl(60, 100%, 75%);
 
   --color-dracula-content: hsla(240, 7%, 14%, 0.8);
   --color-dracula-content-window: hsl(230, 15%, 30%);
@@ -28,9 +26,9 @@
   --color-dracula-text-inactive: hsl(230, 15%, 50%);
 
   --color-dracula-inactive: hsl(230, 15%, 50%);
-  --color-dracula-failure: hsl(0, 27%, 43%);
+  --color-dracula-failure: hsl(0, 26%, 49%);
   --color-dracula-failure-secondary: hsl(10, 100%, 75%);
-  --color-dracula-success: hsl(136, 30%, 50%);
+  --color-dracula-success: hsl(136, 37%, 53%);
   --color-dracula-success-secondary: hsl(115, 100%, 75%);
 
   --filter-dracula-backdrop: none; //blur(6px);
