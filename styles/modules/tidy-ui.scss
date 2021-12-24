@@ -50,8 +50,11 @@
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
     @include thinBorder($accent);
     margin: 2px;
-    &:focus {
+
+    &:focus,
+    &:active {
       @include borderExpand($accent);
+      cursor: text;
     }
   }
   &.app.window-app.form #config-tabs .settings-list h2.module-header span {

@@ -881,6 +881,7 @@ Separated if I want these buttons to be styled differently */
 /* Foundry Settings */
 #client-settings {
   section.content {
+    @include thinBorder($border);
     .settings-list {
       border-top: 1px solid transparent;
     }
@@ -896,9 +897,10 @@ Separated if I want these buttons to be styled differently */
   }
 
   nav.tabs {
-    border-bottom: 1px solid $border;
+    border-bottom: none;
 
     &:focus {
+      border-bottom: none;
       text-shadow: 0 0 4px $accentSecondary;
     }
   }
@@ -908,9 +910,9 @@ Separated if I want these buttons to be styled differently */
     margin: 2px;
     cursor: text;
 
-    &:focus {
-      border-width: 2px;
-      box-shadow: none;
+    &:focus,
+    &:active {
+      @include borderExpand($accent);
       cursor: text;
     }
   }
