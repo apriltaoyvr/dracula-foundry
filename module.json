@@ -1,34 +1,34 @@
 {
-  "name": "dracula-foundry",
-  "title": "Dracula Theme",
-  "description": "A WIP Dracula and Argon inspired theme for Foundry menus",
-  "version": "0.1.1",
-  "library": false,
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
-  "author": "CasanovaSekova",
-  "authors": [
-    {
-      "name": "CasanovaSekova",
-      "url": "https://github.com/CasanovaSekova/",
-      "discord": "Casanova#0003"
-    },
-  ],
-  "esmodules": [
-    "/src/init.js"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "url": "https://github.com/CasanovaSekova/dracula-foundry",
-  "readme": "https://github.com/CasanovaSekova/dracula-foundry#readme",
-  "bugs": "https://github.com/CasanovaSekova/dracula-foundry/issues",
-  "changelog": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/",
-  "manifest": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/download/module.json",
-  "download": "https://github.com/CasanovaSekova/dracula-foundry/releases/download/0.1.1/module.zip"
+    "name": "dracula-foundry",
+    "title": "Dracula Theme",
+    "description": "A WIP Dracula and Argon inspired theme for Foundry menus",
+    "version": "0.1.1",
+    "library": false,
+    "manifestPlusVersion": "1.0.0",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "9",
+    "authors": [
+        {
+            "name": "CasanovaSekova",
+            "url": "https://github.com/CasanovaSekova/",
+            "discord": "Casanova#0003"
+        }
+    ],
+    "esmodules": [
+        "/src/init.js"
+    ],
+
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "langs/en.json"
+        }
+    ],
+    "url": "https://github.com/CasanovaSekova/dracula-foundry",
+    "readme": "https://github.com/CasanovaSekova/dracula-foundry#readme",
+    "bugs": "https://github.com/CasanovaSekova/dracula-foundry/issues",
+    "changelog": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/",
+    "manifest": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/download/module.json",
+    "download": "https://github.com/CasanovaSekova/dracula-foundry/releases/download/0.1.1/module.zip"
 }

@@ -1,8 +1,7 @@
 import ModuleSettings from './ModuleSettings.js';
 
-Hooks.once('init', () =>
-{
-   appendStyles('modules/dracula-foundry/css/dracula-foundry.css');
+Hooks.once('init', () => {
+   appendStyles('modules/dracula-foundry/css/init.css');
 
    ModuleSettings.register();
    ModuleSettings.apply();
@@ -15,8 +14,7 @@ Hooks.once('init', () =>
  *
  * @param {string}  href - the reference to the stylesheet to append.
  */
-function appendStyles(href)
-{
+function appendStyles(href) {
    const head = document.getElementsByTagName('head')[0];
    const style = document.createElement('link');
 
@@ -24,16 +22,15 @@ function appendStyles(href)
    style.rel = 'stylesheet';
    style.type = 'text/css';
    style.media = 'all';
-   head.append(style)
+   head.append(style);
 }
 
 /**
  * Modifies the core Foundry CSS variables introduced in v9.
  */
-function modifyCSSVariables()
-{
+function modifyCSSVariables() {
    const root = document.documentElement;
-   
+
    root.style.setProperty('--color-border-dark', 'var(--color-dracula-border)');
    root.style.setProperty('--color-border-highlight', 'var(--color-dracula-tertiary)');
    root.style.setProperty('--color-border-highlight-alt', 'var(--color-dracula-accent)');

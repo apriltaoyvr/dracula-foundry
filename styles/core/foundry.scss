@@ -55,6 +55,7 @@ hr {
 /* Paragraph */
 p {
   color: $text;
+  text-shadow: none;
 }
 
 /* Anchor */
@@ -298,14 +299,15 @@ Separated if I want these buttons to be styled differently */
 
 // Window Styles
 .window-app {
+  @include heavyShadow;
   backdrop-filter: $filterBackdrop;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 
   .window-content {
     background: $content;
-    color: $text;
     border-radius: 0 0 3px 3px;
+    color: $text;
 
     > * {
       background: transparent;
@@ -479,7 +481,12 @@ Separated if I want these buttons to be styled differently */
   .macro {
     border: 1px solid $content;
     border-radius: 1px;
-    background: $content;
+    background: linear-gradient(
+      0deg,
+      hsla(235, 14%, 15%, 90%) 0%,
+      hsla(230, 15%, 15%, 75%) 50%,
+      hsla(230, 15%, 15%, 50%) 100%
+    );    
     backdrop-filter: $filterBackdrop;
 
     /* Macro boxes containing items */
@@ -963,7 +970,7 @@ Separated if I want these buttons to be styled differently */
   .package-list {
     border-top: 1px solid $border;
     .package {
-      border-bottom: 1px solid $borderTertiary;
+      border-bottom: 2px groove $border;
       &-description,
       &-metadata,
       &-title {
