@@ -21,9 +21,9 @@
   --color-dracula-text-tertiary: hsl(230, 15%, 70%);
   --color-dracula-text-inactive: hsl(230, 15%, 50%);
   --color-dracula-inactive: hsl(230, 15%, 50%);
-  --color-dracula-failure: hsl(0, 60%, 64%);
+  --color-dracula-failure: hsl(0, 27%, 43%);
   --color-dracula-failure-secondary: hsl(10, 100%, 75%);
-  --color-dracula-success: hsl(135, 52%, 61%);
+  --color-dracula-success: hsl(136, 30%, 50%);
   --color-dracula-success-secondary: hsl(115, 100%, 75%);
   --filter-dracula-backdrop: none;
 }
@@ -2238,11 +2238,11 @@ li[data-control=combat-carousel] i.collapse-indicator {
 }
 #module-management .disable-all-modules {
   background: var(--color-dracula-failure);
-  border: 1px solid var(--color-dracula-border);
+  border: 1px solid var(--color-dracula-content);
 }
 #module-management .enable-all-modules {
   background: var(--color-dracula-success);
-  border: 1px solid var(--color-dracula-border);
+  border: 1px solid var(--color-dracula-content);
 }
 #module-management .package-list {
   border-bottom: 1px solid transparent;
