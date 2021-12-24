@@ -2,6 +2,21 @@
 
 /* Tidy UI */
 #module-management {
+  // Override default tidy-ui height (previously 100vh)
+  min-height: auto;
+  // The top two buttons in module management for TidyUI
+  // TO change colours later
+  .disable-all-modules {
+    background: $failure;
+    border: 1px solid $border;
+  }
+
+  .enable-all-modules {
+    background: $success;
+    border: 1px solid $border;
+  }
+  
+  /* Fix unreadable import/export box */
   #importExportModal {
     #modalIO {
       color: $text;
@@ -9,16 +24,6 @@
     }
   }
 
-  //The top two buttons in module management for TidyUI
-  .disable-all-modules {
-    background: $failure;
-    border: none;
-  }
-
-  .enable-all-modules {
-    background: $success;
-    border: none;
-  }
 }
 
 #client-settings {

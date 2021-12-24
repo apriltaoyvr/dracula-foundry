@@ -929,6 +929,7 @@ Separated if I want these buttons to be styled differently */
 /* Module Management Menu */
 #module-management {
   .package-list {
+    border-top: 1px solid $border;
     .package {
       border-bottom: 1px solid $borderSecondary;
 
