@@ -27,7 +27,7 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "langs/en.json"
+      "path": "lang/en.json"
     }
   ],
   "url": "https://github.com/CasanovaSekova/dracula-foundry",
