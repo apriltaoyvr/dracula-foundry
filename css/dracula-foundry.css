@@ -818,12 +818,15 @@ Separated if I want these buttons to be styled differently */
 }
 
 /* Foundry Settings */
-#client-settings section.content h2.module-header, #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
+#client-settings section.content .settings-list {
+  border-top: 1px solid transparent;
+}
+#client-settings h2.module-header, #client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
   color: var(--color-dracula-text-primary);
   background: transparent;
   padding-left: 4px;
 }
-#client-settings section.content h2.module-header {
+#client-settings h2.module-header {
   border-bottom: 1px solid var(--color-dracula-accent);
 }
 #client-settings nav.tabs {
@@ -833,14 +836,14 @@ Separated if I want these buttons to be styled differently */
   text-shadow: 0 0 4px var(--color-dracula-accent-secondary);
 }
 #client-settings#config-tabs div.tab[data-tab=modules] #searchField #searchInput {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-border-cyan) 100%);
+  border: 1px solid var(--color-dracula-accent);
   margin: 2px;
+  cursor: text;
 }
 #client-settings#config-tabs div.tab[data-tab=modules] #searchField #searchInput:focus {
   border-width: 2px;
   box-shadow: none;
+  cursor: text;
 }
 
 #settings h2 {
@@ -2246,9 +2249,7 @@ li[data-control=combat-carousel] i.collapse-indicator {
 
 #client-settings .sheet-footer button[name=reset],
 #client-settings .sheet-footer button[name=submit] {
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, var(--color-dracula-accent) 0%, var(--color-dracula-border-cyan) 100%);
+  border: 1px solid var(--color-dracula-accent);
   margin: 2px;
 }
 #client-settings .sheet-footer button[name=reset]:focus,
@@ -2263,6 +2264,9 @@ li[data-control=combat-carousel] i.collapse-indicator {
   cursor: pointer;
   border-color: var(--color-dracula-accent);
   box-shadow: inset 0 0 0 0.5px var(--color-dracula-accent);
+}
+#client-settings.app.window-app.form #config-tabs .settings-list h2.module-header span {
+  color: var(--color-dracula-text-secondary);
 }
 
 /*# sourceMappingURL=dracula-foundry.css.map */

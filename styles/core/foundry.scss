@@ -880,13 +880,18 @@ Separated if I want these buttons to be styled differently */
 
 /* Foundry Settings */
 #client-settings {
-  section.content h2.module-header,
-  &.app.window-app.form #config-tabs .settings-list h2.module-header span, {
+  section.content {
+    .settings-list {
+      border-top: 1px solid transparent;
+    }
+  }
+  h2.module-header,
+  &.app.window-app.form #config-tabs .settings-list h2.module-header span {
     color: $text;
     background: transparent;
     padding-left: 4px;
   }
-  section.content h2.module-header {
+  h2.module-header {
     border-bottom: 1px solid $accent;
   }
 
@@ -899,12 +904,14 @@ Separated if I want these buttons to be styled differently */
   }
 
   &#config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-    @include gradientBorder($accent, $borderCyan);
+    @include thinBorder($accent);
     margin: 2px;
+    cursor: text;
 
     &:focus {
       border-width: 2px;
       box-shadow: none;
+      cursor: text;
     }
   }
 }
