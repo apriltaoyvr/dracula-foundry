@@ -184,7 +184,7 @@ select {
 form {
   .hint,
   .notes {
-    color: $text;
+    color: $textSecondary;
   }
 
   &-group {
@@ -868,8 +868,11 @@ Separated if I want these buttons to be styled differently */
 #client-settings {
   &.app.window-app.form #config-tabs .settings-list h2.module-header span,
   section.content h2.module-header {
-    color: hsla(60, 30%, 100%, 80%);
-    border-bottom: 1px solid transparent;
+    color: $text;
+    background: $contentWindow;
+    border-top: 1px solid $borderTertiary;
+    border-bottom: 1px solid $borderTertiary;
+    padding-left: 4px;
   }
 
   nav.tabs {
