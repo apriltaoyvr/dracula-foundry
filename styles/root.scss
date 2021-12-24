@@ -18,20 +18,20 @@
   --color-dracula-content: #{$black};
   --color-dracula-content-window: #{$blackSecondary};
 
-  --color-dracula-glow: rgba(255, 255, 255, 0.25);
+  --color-dracula-glow: hsla(0, 0%, 100%, 0.25);
   --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
 
   --color-dracula-text-dark: #{$blackSecondary};
   --color-dracula-text-highlight: #{$cyan};
   --color-dracula-text-primary: #{$white};
   --color-dracula-text-secondary: #{$whiteSecondary};
-  --color-dracula-text-tertiary: #{$blackTernary};
+  --color-dracula-text-tertiary: #{$blackTertiary};
   --color-dracula-text-inactive: hsl(230, 15%, 50%);
 
   --color-dracula-disabled: hsl(230, 15%, 50%);
-  --color-dracula-failure: hsl(0, 100%, 67%);
+  --color-dracula-failure: hsl(0, 58%, 70%);
   --color-dracula-failure-secondary: #{$red};
-  --color-dracula-success: hsl(135, 94%, 65%);
+  --color-dracula-success: hsl(135, 52%, 65%);
   --color-dracula-success-secondary: #{$green};
 
   --filter-dracula-backdrop: none; //blur(6px);

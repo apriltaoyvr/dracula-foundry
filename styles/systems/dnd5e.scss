@@ -126,6 +126,12 @@
         color: $accent;
         text-shadow: 0 0 10px $accentTertiary;
       }
+      &.actor {
+        flexrow,
+        style {
+          border: 1px solid transparent;
+        }
+      }
     }
 
     .effects {

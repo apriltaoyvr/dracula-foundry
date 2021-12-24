@@ -14,11 +14,6 @@
       "url": "https://github.com/CasanovaSekova/",
       "discord": "Casanova#0003"
     },
-    {
-      "name": "Michael Leahy (TyphonJS)",
-      "url": "https://www.typhonjs.io",
-      "discord": "MLeahy#4299"
-    }
   ],
   "esmodules": [
     "/src/init.js"
@@ -27,7 +22,7 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "langs/en.json"
+      "path": "lang/en.json"
     }
   ],
   "url": "https://github.com/CasanovaSekova/dracula-foundry",

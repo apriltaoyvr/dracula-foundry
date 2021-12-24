@@ -2,10 +2,14 @@
 
 /* Tidy UI */
 #module-management {
+  button {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
   // Override default tidy-ui height (previously 100vh)
-  min-height: auto;
+  min-height: 100vh - 20;
+
   // The top two buttons in module management for TidyUI
-  // TO change colours later
   .disable-all-modules {
     background: $failure;
     border: 1px solid $border;
@@ -15,8 +19,12 @@
     background: $success;
     border: 1px solid $border;
   }
+
+  .package-list {
+    border-bottom: 1px solid transparent;
+  }
   
-  /* Fix unreadable import/export box */
+  // Fix unreadable import/export box
   #importExportModal {
     #modalIO {
       color: $text;
@@ -40,11 +48,10 @@
   }
 
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
-    @include gradientBorder($accent, $borderCyan);
+    @include thinBorder($accent);
     margin: 2px;
-
     &:focus {
-      border-width: 2px;
+      @include borderExpand($accent);
     }
   }
 }

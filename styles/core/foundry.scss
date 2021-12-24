@@ -1,6 +1,7 @@
 @use "../variables" as *;
 
 :root {
+  scrollbar-width: thin;
   scrollbar-color: #{$accentTertiary};
 }
 
@@ -84,6 +85,7 @@ a {
 input {
   &:focus {
     box-shadow: none;
+    text-shadow: none;
   }
 
   &[type="text"],
@@ -151,7 +153,7 @@ input {
   }
 }
 
-/* Tables (General sense, not specific to roll tables) */
+/* Tables */
 table {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -399,9 +401,9 @@ Separated if I want these buttons to be styled differently */
             @include toolsShadow;
             @include gradientBorder($accent, $borderCyan);
             background: linear-gradient(
-                $gradientDegree,
-                $accent 0%,
-                $accentHighlight 100%
+              $gradientDegree,
+              $accent 0%,
+              $accentHighlight 100%
             );
             --shadow-color: 171deg 61% 33%;
             filter: none;
@@ -411,9 +413,9 @@ Separated if I want these buttons to be styled differently */
             @include toolsShadow;
             @include gradientBorder($accent, $borderCyan);
             background: linear-gradient(
-                $gradientDegree,
-                $accent 0%,
-                $accentHighlight 100%
+              $gradientDegree,
+              $accent 0%,
+              $accentHighlight 100%
             );
             --shadow-color: 171deg 61% 33%;
             filter: none;
@@ -461,10 +463,10 @@ Separated if I want these buttons to be styled differently */
       );
       --shadow-color: 0deg 0% 48%;
       text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
-      0 0 0.3px hsl(var(--shadow-color) / 0.18),
-      0 0 0.6px hsl(var(--shadow-color) / 0.35),
-      0 0 1.2px hsl(var(--shadow-color) / 0.52),
-      0 0 2px hsl(var(--shadow-color) / 0.7);
+        0 0 0.3px hsl(var(--shadow-color) / 0.18),
+        0 0 0.6px hsl(var(--shadow-color) / 0.35),
+        0 0 1.2px hsl(var(--shadow-color) / 0.52),
+        0 0 2px hsl(var(--shadow-color) / 0.7);
     }
   }
 
@@ -472,12 +474,7 @@ Separated if I want these buttons to be styled differently */
   .macro {
     border: 1px solid $content;
     border-radius: 1px;
-    background: linear-gradient(
-      180deg,
-      hsla(235, 14%, 15%, 90%) 0%,
-      hsla(230, 15%, 15%, 75%) 50%,
-      hsla(230, 15%, 15%, 50%) 100%
-    );
+    background: $content;
     backdrop-filter: $filterBackdrop;
 
     /* Macro boxes containing items */
@@ -512,10 +509,10 @@ Separated if I want these buttons to be styled differently */
     border-radius: 1px;
 
     text-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
-    0 0 0.3px hsl(var(--shadow-color) / 0.18),
-    0 0 0.6px hsl(var(--shadow-color) / 0.35),
-    0 0 1.2px hsl(var(--shadow-color) / 0.52),
-    0 0 2px hsl(var(--shadow-color) / 0.7);
+      0 0 0.3px hsl(var(--shadow-color) / 0.18),
+      0 0 0.6px hsl(var(--shadow-color) / 0.35),
+      0 0 1.2px hsl(var(--shadow-color) / 0.52),
+      0 0 2px hsl(var(--shadow-color) / 0.7);
   }
 }
 
@@ -538,17 +535,27 @@ Separated if I want these buttons to be styled differently */
   border: 1px solid transparent;
   --shadow-color: 232deg 22% 2%;
   box-shadow: -0.1px 0px 0.1px hsl(var(--shadow-color) / 0.14),
-  -0.9px 0.1px 1px -0.3px hsl(var(--shadow-color) / 0.14),
-  -1.8px 0.1px 2.1px -0.7px hsl(var(--shadow-color) / 0.15),
-  -2.9px 0.2px 3.4px -1px hsl(var(--shadow-color) / 0.15),
-  -4.6px 0.3px 5.3px -1.3px hsl(var(--shadow-color) / 0.15),
-  -7.1px 0.4px 8.2px -1.6px hsl(var(--shadow-color) / 0.16),
-  -10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
-  -15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
+    -0.9px 0.1px 1px -0.3px hsl(var(--shadow-color) / 0.14),
+    -1.8px 0.1px 2.1px -0.7px hsl(var(--shadow-color) / 0.15),
+    -2.9px 0.2px 3.4px -1px hsl(var(--shadow-color) / 0.15),
+    -4.6px 0.3px 5.3px -1.3px hsl(var(--shadow-color) / 0.15),
+    -7.1px 0.4px 8.2px -1.6px hsl(var(--shadow-color) / 0.16),
+    -10.7px 0.6px 12.4px -2px hsl(var(--shadow-color) / 0.16),
+    -15.7px 0.9px 18.2px -2.3px hsl(var(--shadow-color) / 0.16);
 
+  &.collapsed {
+    #sidebar.tabs {
+      border-bottom: 2px solid transparent;
+    }
+    #sidebar-tabs > .item.active {
+      border-bottom: 2px solid $accent;
+      border-radius: 1px;
+    }
+  }
   /* Sidebar Navigation Tabs */
   &-tabs {
     border: none;
+    box-shadow: none;
   }
 
   &-tabs > .item.active {
@@ -928,22 +935,25 @@ Separated if I want these buttons to be styled differently */
 
 /* Module Management Menu */
 #module-management {
+  /* WIP doesn't seem to affect anything */
+  input[type="checkbox"] {
+    background: $borderSecondary;
+    color: $accent;
+  }
+
+  button {
+    margin-left: 0.5px;
+    margin-right: 0.5px;
+  }
   .package-list {
     border-top: 1px solid $border;
     .package {
-      border-bottom: 1px solid $borderSecondary;
-
+      border-bottom: 1px solid $accent;
       &-description,
       &-metadata,
       &-title {
         color: $text;
       }
-    }
-
-    /* WIP doesn't seem to affect anything */
-    input[type="checkbox"] {
-      background: $borderSecondary;
-      color: $accent;
     }
   }
 }
@@ -967,6 +977,16 @@ nav.list-filters a.filter {
     border-bottom: 1px solid $accent;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
+  }
+}
+
+/* Filepicker */
+.filepicker {
+  .display-modes {
+    a {
+      background: $content;
+      border-color: $border;
+    }
   }
 }
 

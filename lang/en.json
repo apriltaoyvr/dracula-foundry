@@ -1,3 +1,10 @@
 {
-    "MODULE.hello": "hello"
+  "Dracula": {
+    "Settings": {
+      "backdropBlur": {
+        "Enable": "Background Blur",
+        "EnableHint": "Check to allow enable a blur filter to the background."
+      }
+    }
+  }
 }
