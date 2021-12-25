@@ -1,7 +1,7 @@
 # Dracula Theme
-My take on the open theme [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui) for Foundry VTT. Heavily inspired/taken by theripper93 and mouse0270's [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/). 
+My take on the open theme [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui) for Foundry VTT. I hate light UIs with a passion and wanted to make something I could enjoy looking at. I'm sharing this for anyone else who also hates light UIs.
 
-Currently incomplete, but most menus in Foundry have been skinned/touched by the module so far. This is intended to be mostly system agnostic as the focus is primarily on reskinning core foundry. Will likely not play well with systems that use a lot of custom theming beyond core.
+It is relatively system agnostic because most of the reskinning is for core foundry. Keep in mind it will likely not play well with systems that use a lot of system specific theming. D&D 5e will have the most support/integration due to it being my main system.
 
 If you see something off, let me know and I'll see what I can do.
 
