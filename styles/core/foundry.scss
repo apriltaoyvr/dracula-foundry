@@ -1,11 +1,12 @@
 @use "../variables" as *;
 
 :root {
+  // Scrollbar
   scrollbar-width: thin;
   scrollbar-color: #{$accentTertiary};
 }
 
-// Scrollbar
+/* Scrollbar */
 ::-webkit-scrollbar {
   @include thinBorder(transparent);
   background: transparent;
@@ -48,7 +49,7 @@ h4 {
 }
 
 hr {
-  border-top: 1px solid $accent;
+  border-top: 1px groove $border;
   border-bottom: 1px solid transparent;
 }
 
@@ -82,11 +83,9 @@ a {
   }
 }
 
-/* Most input forms */
+/* Inputs */
+// RESTYLE: Adjust or remove text shadow/glow on inactive forms
 input {
-  box-shadow: none;
-  text-shadow: none;
-
   &:focus {
     box-shadow: none;
     text-shadow: none;
@@ -259,8 +258,8 @@ form button {
   }
 }
 
-/* Window pop-up buttons
-Separated if I want these buttons to be styled differently */
+/* Buttons for pop up windows
+? Should they be styled differently? */
 .dialog .dialog-buttons button {
   @include thinBorder($accent);
   @include lightToDark($content);
@@ -297,7 +296,7 @@ Separated if I want these buttons to be styled differently */
   }
 }
 
-// Window Styles
+/* Windows */
 .window-app {
   @include heavyShadow;
   backdrop-filter: $filterBackdrop;
@@ -477,7 +476,7 @@ Separated if I want these buttons to be styled differently */
     }
   }
 
-  /* Individual macro boxes */
+  // Individual macro boxes
   .macro {
     border: 1px solid $content;
     border-radius: 1px;
@@ -486,10 +485,10 @@ Separated if I want these buttons to be styled differently */
       hsla(235, 14%, 15%, 90%) 0%,
       hsla(230, 15%, 15%, 75%) 50%,
       hsla(230, 15%, 15%, 50%) 100%
-    );    
+    );
     backdrop-filter: $filterBackdrop;
 
-    /* Macro boxes containing items */
+    // Macro boxes containing items
     &.active {
       @include gradientBorder($accent, $inactive);
 
@@ -498,7 +497,7 @@ Separated if I want these buttons to be styled differently */
       }
     }
 
-    /* Empty macro boxes */
+    // Empty macro boxes
     &.inactive {
       opacity: 75%;
 
@@ -515,6 +514,7 @@ Separated if I want these buttons to be styled differently */
     }
   }
 
+  // Macro Bar Controls
   .bar-controls {
     --shadow-color: 0deg 0% 48%;
     background: $border;
@@ -819,7 +819,7 @@ Separated if I want these buttons to be styled differently */
   }
 }
 
-/* Input area (form) for chat menu */
+// Text input for chat menu
 #chat-form textarea {
   @include thinBorder($accent);
   color: $textSecondary;
@@ -957,7 +957,7 @@ Separated if I want these buttons to be styled differently */
 
 /* Module Management Menu */
 #module-management {
-  /* WIP doesn't seem to affect anything */
+  // RESTYLE: Checkboxes
   input[type="checkbox"] {
     background: $borderSecondary;
     color: $accent;
@@ -980,7 +980,7 @@ Separated if I want these buttons to be styled differently */
   }
 }
 
-// Navigation tabs for module management
+// Module Management Navigation Tabs
 nav.list-filters a.filter {
   color: $inactive;
   border-bottom: 1px solid $inactive;
@@ -1013,6 +1013,7 @@ nav.list-filters a.filter {
 }
 
 /* Keybindings Menu */
+//TODO: Remaining borders
 #keybindings {
   .filters h3 {
     border-bottom: 1px solid transparent;
