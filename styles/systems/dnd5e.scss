@@ -455,8 +455,11 @@
 
         .inventory {
           &-list {
+            .item .item-name.rollable:hover .item-image {
+              background-image: url("../assets/icons/svg/dice-d20-solid.svg") !important;
+            }
             .item .item-name.rollable .item-image:hover {
-              background-image: url("../assets/icons/svg/dice-d20-solid.svg");
+              background-image: url("../assets/icons/svg/dice-d20-solid-alt.svg") !important;
               border: inherit;
             }
 
