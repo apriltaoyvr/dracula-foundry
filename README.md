@@ -10,11 +10,11 @@ I'm also publishing this as a foundation / skeleton for anyone else who wants to
 If you see something off, let me know and I'll see what I can do.
 
 ## Screenshot(s)
-Picture of Dracula with Minimal UI, Midi QOL, Combat Hud, and Dice Tray:
+Pictures of Dracula with Minimal UI, Midi QOL, Combat Hud, and Dice Tray:
 ![Screenshot 1](https://user-images.githubusercontent.com/95392008/147394182-0cb0a781-4d84-4b28-958e-0c2ed6526b4d.png)
 ![Screenshot 5](https://user-images.githubusercontent.com/95392008/147394179-6777840b-3554-4e9c-b4c3-50cd99616ee2.png)
 
-Picture of Dracula with mostly vanilla foundry:
+Pictures of Dracula with mostly vanilla foundry:
 ![Screenshot 3](https://user-images.githubusercontent.com/95392008/147394076-a2fa6013-f8e8-4d28-9328-6f24df0a2763.png)
 ![Screenshot 2](https://user-images.githubusercontent.com/95392008/147394075-acbfd71a-1a14-4854-8438-867bafac8f9c.png)
 
