@@ -1,3 +1,6 @@
 @use '../variables' as *;
 
-// TODO: Everything
+// Courtesy of Arcanist
+.ws-block:not(.box):not(.sidebar):not(.note) p {
+  color: $text;
+}

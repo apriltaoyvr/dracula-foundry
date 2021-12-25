@@ -32,14 +32,103 @@
   }
 }
 
+// Most of this courtesy of Arcanist
 .tox {
   &.tox {
+    &-toolbar {
+      background: $content;
+      border: 1px solid $accent;
+      border-radius: 2px;
+      &__overflow,
+      &__primary,
+      &-overlord {
+        background: $content;
+        border: 1px solid $accent;
+        border-radius: 2px;
+      }
+    }
+    &-button {
+      background: $content;
+      color: $text;
+      &:hover:not(:disabled) {
+        @include borderExpand($accent);
+      }
+      &--naked[disabled],
+      &--secondary[disabled] {
+        background: $inactive;
+      }
+    }
+    &-listboxfield .tox-listbox--select,
+    &-textarea,
+    &-textfield,
+    &-toolbar-textfield,
+    &-tbtn,
+    &-dialog,
+    &-menu,
+    &-collection--list .tox-collection__item--active {
+      background: $content;
+      color: $text;
+      &:hover,
+      &:active {
+        @include borderExpand($accent);
+      }
+    }
+
+    &-dialog__body-content svg,
+    &-tbtn:focus:not(.tox-tbtn--disabled) svg,
+    &-collection__item-caret svg,
+    &-tbtn svg,
+    &-tbtn:hover svg,
+    &-tbtn:active svg,
+    &-tbtn:focus svg {
+      fill: $textSecondary;
+    }
+
+    &-dialog__body,
+    &-collection__item-label,
+    &-dialog__header {
+      color: $textColorSecondary;
+    }
+
+    &-listboxfield .tox-listbox--select:focus,
+    &-textarea:focus,
+    &-textfield:focus {
+      background: var(--color-dracula-content);
+    }
+
+    &-dialog__header,
+    &-dialog__footer {
+      background: none;
+    }
+
+    &-dialog-wrap__backdrop {
+      background: $contentWindow;
+    }
+
+    &-selectfield select,
+    &-selectfield select:active,
+    &-selectfield select:hover,
+    &-selectfield select:focus {
+      color: $textColorSecondary;
+      background: $content;
+      border: 1px solid $accent;
+      border-radius: 2px;
+      box-shadow: none;
+      margin: 2px;
+      transition: 0.3s ease-in-out all;
+    }
+
     &-tinymce {
       .tox-edit-area {
         color: $text;
+        border-radius: 2px;
 
         &__iframe {
-          background: adjust-color(hsla(235, 14%, 15%, 0.8), $lightness: 40%, $alpha: -0.3);
+          background: adjust-color(
+            hsla(235, 14%, 15%, 0.8),
+            $lightness: 40%,
+            $alpha: -0.3
+          );
 
           #tinymce {
             &.mce-content-body {
