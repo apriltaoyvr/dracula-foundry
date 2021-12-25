@@ -6,8 +6,9 @@
     margin-left: 1px;
     margin-right: 1px;
   }
-  // Override default tidy-ui height (previously 100vh)
-  // min-height: 100vh;
+  // Override default tidy-ui height (default: 100vh)
+  height: auto;
+  min-height: auto;
 
   // The top two buttons in module management for TidyUI
   .disable-all-modules {

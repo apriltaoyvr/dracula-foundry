@@ -14,13 +14,13 @@
   --color-dracula-content: hsla(240, 7%, 14%, 0.8);
   --color-dracula-content-window: hsl(230, 15%, 30%);
 
-  --color-dracula-glow: hsla(0, 0%, 100%, 0.1);
+  --color-dracula-glow: hsla(0, 0%, 100%, 0.05);
   --color-dracula-shadow: hsla(0, 0%, 0%, 0.9);
 
   --color-dracula-text-dark: hsl(230, 15%, 30%);
   --color-dracula-text-highlight: var(--color-dracula-accent-highlight);
   --color-dracula-text-primary: hsla(0, 0%, 90%, 0.9);
-  --color-dracula-text-secondary: #ffffffcc;
+  --color-dracula-text-secondary: hsla(0, 0%, 100%, 0.8);
   --color-dracula-text-tertiary: hsl(230, 15%, 70%);
   --color-dracula-text-inactive: var(--color-dracula-inactive)
 
