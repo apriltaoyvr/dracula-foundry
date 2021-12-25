@@ -77,17 +77,19 @@
     &-dialog__body-content svg,
     &-tbtn:focus:not(.tox-tbtn--disabled) svg,
     &-collection__item-caret svg,
-    &-tbtn svg,
-    &-tbtn:hover svg,
-    &-tbtn:active svg,
-    &-tbtn:focus svg {
+    &-tbtn svg {
       fill: $textSecondary;
+      &:hover svg,
+      &:active svg,
+      &:focus svg {
+        fill: $accent;
+      }
     }
 
     &-dialog__body,
     &-collection__item-label,
     &-dialog__header {
-      color: $textColorSecondary;
+      color: $textSecondary;
     }
 
     &-listboxfield .tox-listbox--select:focus,
@@ -105,17 +107,19 @@
       background: $contentWindow;
     }
 
-    &-selectfield select,
-    &-selectfield select:active,
-    &-selectfield select:hover,
-    &-selectfield select:focus {
-      color: $textColorSecondary;
+    &-selectfield select {
+      color: $textSecondary;
       background: $content;
       border: 1px solid $accent;
       border-radius: 2px;
       box-shadow: none;
       margin: 2px;
       transition: 0.3s ease-in-out all;
+      &:active,
+      &:hover,
+      &:focus {
+        @include borderExpand($accent);
+      }
     }
 
     &-tinymce {

@@ -2,14 +2,12 @@ import ModuleSettings from './ModuleSettings.js';
 
 Hooks.once('init', () => {
    appendStyles('modules/dracula-foundry/css/init.css');
-
    ModuleSettings.register();
    ModuleSettings.apply();
 
    modifyCSSVariables();
 });
 
-replaceFont();
 
 
 /**
@@ -43,6 +41,8 @@ function modifyCSSVariables() {
    root.style.setProperty('--color-shadow-highlight-alt', 'var(--color-dracula-accent)');
    root.style.setProperty('--color-shadow-primary', 'var(--color-dracula-accent)');
 
+   root.style.setProperty('--color-bg-btn-minor-active', 'var(--color-dracula-accent)');
+
    root.style.setProperty('--color-text-dark-primary', 'var(--color-dracula-text-primary)');
    root.style.setProperty('--color-text-dark-secondary', 'var(--color-dracula-text-primary)');
    root.style.setProperty('--color-text-dark-header', 'var(--color-dracula-text-primary)');
@@ -55,7 +55,6 @@ function modifyCSSVariables() {
    root.style.setProperty('--color-underline-header', 'var(--color-dracula-accent)');
    root.style.setProperty('--color-underline-active', 'var(--color-dracula-accent)');
 }
-
 
 /**
  * Override box-shadow root and colour box-shadow with Minimal UI's box shadow setting
