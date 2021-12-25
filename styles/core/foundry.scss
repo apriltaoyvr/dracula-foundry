@@ -152,7 +152,7 @@ input {
 
   &::placeholder {
     color: $inactive;
-    text-shadow: 0 0 10px $glow;
+    text-shadow: 0 0 2px $glow;
   }
 }
 
