@@ -15,6 +15,13 @@ Picture of Dracula with Minimal UI :
 Picture of Dracula with mostly vanilla foundry:
 ![image](https://user-images.githubusercontent.com/95392008/147195091-c1c02c54-319e-4f92-ac1f-3b680ce5fd2e.png)
 
+## Planned Features
+- 2-4 preset themes for player preference
+  - Argon
+  - Dracula Classic
+  - Monochrome
+- Personalization of accent and background colours
+
 # Recommended Modules
 - [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/)
 - [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui)
