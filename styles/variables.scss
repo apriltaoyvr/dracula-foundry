@@ -95,7 +95,6 @@ $gradientDegree: 135deg;
 @mixin hoverRaise {
   cursor: pointer;
   box-shadow: 0 0.5em 0.5em -0.4em $accent;
-  transform: translateY(-0.125em);
   transition: 0.25s;
 }
 
