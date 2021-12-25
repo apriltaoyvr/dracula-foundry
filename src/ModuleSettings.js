@@ -31,8 +31,8 @@ export default class ModuleSettings {
     */
    static register() {
       game.settings.register(constants.moduleName, settings.backdropBlur, {
-         name: 'Enable Backdrop Blur',
-         hint: 'While on, blurred backgrounds for the sidebar, windows, and macro bar are enabled',
+         name: 'Enable blur',
+         hint: 'Enables a blur filter for the sidebar, macro bar, and window backgrounds.',
          scope: scope.client,
          config: true,
          default: false,
@@ -42,8 +42,8 @@ export default class ModuleSettings {
          }
       });
       game.settings.register(constants.moduleName, settings.iconFont, {
-         name: 'Use Line Awesome',
-         hint: 'Change Font Awesome icons to Line Awesome icons',
+         name: 'Change Font Awesome icons to Line Awesome icons',
+         hint: 'Line Awesome icons are smaller and much less legible than Font Awesome. For the people out there who want extra, extra small icons.',
          scope: scope.client,
          config: true,
          default: false,

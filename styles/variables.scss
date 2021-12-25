@@ -33,6 +33,8 @@ $filterBackdrop: var(--filter-dracula-backdrop);
 /* Miscellaneous Variables */
 $gradientDegree: 135deg;
 
+// Settings related
+
 /* @mixin reference */
 @mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
   border: $width solid;

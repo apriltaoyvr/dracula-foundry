@@ -3,7 +3,12 @@
     "Settings": {
       "backdropBlur": {
         "Enable": "Background Blur",
-        "EnableHint": "Check to allow enable a blur filter to the background."
+        "EnableHint": "Enables a blur filter for the sidebar, macro bar, and window backgrounds."
+      },
+      "iconFont": {
+        "Enable": "Change Font Awesome icons to Line Awesome icons",
+        "EnableHint": "Line Awesome icons are smaller and much less legible than Font Awesome. For the people out there who want extra, extra small icons."
+
       }
     }
   }

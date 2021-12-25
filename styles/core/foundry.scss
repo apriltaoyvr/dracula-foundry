@@ -810,7 +810,7 @@ form button {
 // Chat Menu
 #chat-controls {
   background: none;
-
+  
   .roll-type-select {
     @include lightToDark($content);
     @include thinBorder(transparent);
