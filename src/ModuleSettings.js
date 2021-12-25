@@ -34,8 +34,8 @@ export default class ModuleSettings
    static register()
    {
       game.settings.register(constants.moduleName, settings.backdropBlur, {
-         name: 'Dracula.Settings.backdropBlur.Enable',
-         hint: 'Dracula.Settings.backdropBlur.EnableHint',
+         name: 'Enable Backdrop Blur',
+         hint: 'While on, blurred backgrounds for the sidebar, windows, and macro bar are enabled',
          scope: scope.client,
          config: true,
          default: false,
