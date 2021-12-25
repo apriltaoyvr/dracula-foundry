@@ -17,7 +17,8 @@ Picture of Dracula with mostly vanilla foundry:
 
 ## Planned Features
 - 2-4 preset themes for player preference
-  - Argon 
+  - Argon
+  - Dracula Classic
   - Monochrome
 - Personalization of accent and background colours
 
