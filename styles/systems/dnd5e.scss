@@ -457,6 +457,7 @@
           &-list {
             .item .item-name.rollable:hover .item-image {
               background-image: url("../assets/icons/svg/dice-d20-solid.svg") !important;
+              border: inherit;
             }
             .item .item-name.rollable .item-image:hover {
               background-image: url("../assets/icons/svg/dice-d20-solid-alt.svg") !important;
