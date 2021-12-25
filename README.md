@@ -13,7 +13,9 @@ If you see something off, let me know and I'll see what I can do.
 Picture of Dracula with Minimal UI : 
 ![image](https://user-images.githubusercontent.com/95392008/147194866-d3489363-9ff4-42cc-acf8-40a46408a0fc.png)
 Picture of Dracula with mostly vanilla foundry:
-![image](https://user-images.githubusercontent.com/95392008/147195091-c1c02c54-319e-4f92-ac1f-3b680ce5fd2e.png)
+![Screenshot 3](https://user-images.githubusercontent.com/95392008/147394076-a2fa6013-f8e8-4d28-9328-6f24df0a2763.png)
+![Screenshot 2](https://user-images.githubusercontent.com/95392008/147394075-acbfd71a-1a14-4854-8438-867bafac8f9c.png)
+
 
 ## Planned Features
 - 2-4 preset themes for player preference
