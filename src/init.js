@@ -9,6 +9,9 @@ Hooks.once('init', () => {
    modifyCSSVariables();
 });
 
+replaceFont();
+
+
 /**
  * Appends a stylesheet to `head`.
  *
@@ -53,12 +56,6 @@ function modifyCSSVariables() {
    root.style.setProperty('--color-underline-active', 'var(--color-dracula-accent)');
 }
 
-/**
- * Change Code Mirror theme to Dracula if Code Mirror is detected as an active module
-/* function codeMirrorDracula {
-   // TODO: Implement this lol
-} 
-*/
 
 /**
  * Override box-shadow root and colour box-shadow with Minimal UI's box shadow setting

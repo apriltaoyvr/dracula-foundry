@@ -13,6 +13,7 @@ const constants = {
  */
 const settings = {
    backdropBlur: 'backdropBlur',
+   iconFont: 'iconFont'
 };
 
 export { constants, settings };

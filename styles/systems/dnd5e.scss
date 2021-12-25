@@ -1,6 +1,7 @@
 @use "../variables" as *;
 
 .dnd5e {
+  background-image: $content;
   input {
     &[type="text"],
     &[type="number"],
@@ -256,8 +257,7 @@
     .window-content {
       color: $text;
       background: $content;
-      border: 1px solid $borderSecondary;
-      border-radius: 6px;
+      border: 1px solid transparent;
     }
 
     &.actor {
@@ -456,7 +456,13 @@
         .inventory {
           &-list {
             .item .item-name.rollable .item-image:hover {
-              background-image: url("../assets/icons/svg/d20-pink.svg") !important;
+              background-image: url("../assets/icons/svg/dice-d20-solid.svg") !important;
+              -webkit-mask-size: cover;
+              mask-size: cover;
+              -webkit-mask-image: url("../assets/icons/svg/dice-d20-solid.svg");
+              mask-image: url("../assets/icons/svg/dice-d20-solid.svg");
+              background-color: $accentHighlight;
+            
             }
 
             .item.detail {
