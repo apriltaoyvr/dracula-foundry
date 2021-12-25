@@ -63,11 +63,11 @@ function modifyCSSVariables() {
 /**
  * Override box-shadow root and colour box-shadow with Minimal UI's box shadow setting
  * Courtesy of Jeansen himself
-
-function minimalBoxShadow {
-   if (game.modules.get('minimal-ui')?.active) {
-      rootStyle.setProperty('--any1-color-property', game.settings.get('minimal-ui', 'shadowColor'));
-      rootStyle.setProperty('--any2-color-property', game.settings.get('minimal-ui', 'borderColor'));
-   }
+ * NOTE: Currently will override accent colour and most gradients. I'll think of a way to link the two proper in a bit.
+   function minimalBoxShadow {
+      if (game.modules.get('minimal-ui')?.active) {
+         rootStyle.setProperty('--any1-color-property', game.settings.get('minimal-ui', 'shadowColor'));
+         rootStyle.setProperty('--any2-color-property', game.settings.get('minimal-ui', 'borderColor'));
+      }
 }
  */
