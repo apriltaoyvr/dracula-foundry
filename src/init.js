@@ -55,8 +55,19 @@ function modifyCSSVariables() {
 
 /**
  * Change Code Mirror theme to Dracula if Code Mirror is detected as an active module
- */
-
-function codeMirrorDracula {
+/* function codeMirrorDracula {
    // TODO: Implement this lol
+} 
+*/
+
+/**
+ * Override box-shadow root and colour box-shadow with Minimal UI's box shadow setting
+ * Courtesy of Jeansen himself
+
+function minimalBoxShadow {
+   if (game.modules.get('minimal-ui')?.active) {
+      rootStyle.setProperty('--any1-color-property', game.settings.get('minimal-ui', 'shadowColor'));
+      rootStyle.setProperty('--any2-color-property', game.settings.get('minimal-ui', 'borderColor'));
+   }
 }
+ */

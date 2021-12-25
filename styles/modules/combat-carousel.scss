@@ -1,37 +1,19 @@
 @use '../variables' as *;
 
+// TODO: Clean up redundant CSS from when this was an overwrite
+// TODO: Replace colours with universal variables
+
 #combat-carousel {
   &.wrapper {
     position: fixed;
-    font-family: "Roboto", serif;
-
-    /* top: 0;
-    left: 120px; */
-    min-width: 210px;
-
-    /* max-width: fit-content; */
-    min-height: 170px;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: unset;
     box-shadow: none;
     border: none;
   }
 
-  header {
-    display: flex;
-    justify-content: center;
-    height: 10px;
-
-    h2 {
-      display: none;
-    }
-  }
-
   &:hover {
-    header h2 {
-      display: inherit;
-    }
-
     background: linear-gradient(0deg, rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
     backdrop-filter: $filterBackdrop;
     border-radius: 5px;
@@ -83,39 +65,10 @@
   }
 
   .resize-handle {
-    width: 18px;
-    height: 18px;
     color: #d0c2a8;
     background: transparent;
-    position: absolute;
-    top: 40%;
-    right: 0;
-    padding: 2px;
   }
 
-  .carousel-icon .encounter {
-    position: absolute;
-    background: transparent;
-    font-size: 9px;
-    top: 1px;
-    left: 1px;
-  }
-}
-
-li[data-control="combat-carousel"] {
-  div.wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  i.collapse-indicator {
-    position: absolute;
-    font-size: 9px;
-    top: 1px;
-    right: 1px;
-    transform: translateY(-3px);
-  }
 }
 
 #combat-carousel {
@@ -138,11 +91,6 @@ li[data-control="combat-carousel"] {
     top: 2px;
     color: #d0c2a8;
     background: transparent;
-
-    .icon {
-      text-align: center;
-      flex: 0 0 30%;
-    }
 
     &.visible {
       display: block;
@@ -169,109 +117,15 @@ li[data-control="combat-carousel"] {
     padding: 2px;
   }
 
-  &:hover .encounter-controls {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .encounter-controls .encounter-control {
-    flex: 0 0 40%;
-    margin: 2px;
-  }
-
-  .encounter-info {
-    a.encounter-control {
-      display: none;
-      text-align: center;
-      flex: 0;
-    }
-
-    &:hover .encounter-control {
-      display: flex;
-    }
-  }
-
-  a.encounter-control.create-remove {
-    display: flex;
-    margin-left: 5px;
-  }
-
-  .encounter-info {
-    .flexrow {
-      align-items: center;
-      min-width: 50px;
-    }
-
-    .round {
-      /* padding-left: 5.25px; */
-    }
-
-    span {
-      /* max-width: fit-content; */
-    }
-
-    i.fas {
-      flex: 0;
-      text-align: center;
-    }
-
-    .counter {
-      text-align: center;
-    }
-  }
-
   .initiative-control {
-    display: none;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 56px;
-
-    /* padding: 0px 4px; */
     color: #f0f0f0;
     background: transparent;
     border: 1px solid transparent;
   }
 
-  &:hover .initiative-control {
-    display: flex;
-  }
-
-  .initiative-control a {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 2px;
-  }
-
-  .overlay {
-    /* display: none; */
-  }
-
   .drag-handle {
-    display: none;
-    position: absolute;
-    left: 5px;
-    top: 35%;
-    font-size: 1.5rem;
     color: #d0c2a8;
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
-  }
-
-  &:hover .drag-handle {
-    display: block;
-  }
-
-  .overlay.active {
-    display: block;
-    position: absolute;
-    top: 0;
-  }
-
-  .name {
-    display: none;
   }
 
   .overlay-hud {
@@ -294,15 +148,6 @@ li[data-control="combat-carousel"] {
       width: 15px;
       height: 15px;
     }
-
-    .value {
-      text-overflow: ellipsis;
-    }
-  }
-
-  .container {
-    position: relative;
-    height: 85%;
   }
 
   .avatar {
@@ -326,32 +171,13 @@ li[data-control="combat-carousel"] {
     }
   }
 
-  img.overlay-effect {
-    position: absolute;
-    left: 10px;
-    opacity: 0.7;
-    height: 80px;
-    width: 80px;
-  }
-
   .initiative {
-    position: absolute;
-    right: 0;
-    padding: 2px 0;
     background: radial-gradient(rgba(65, 75, 85, 1) 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
     border-radius: 60%;
     z-index: 20;
   }
 
-  .hidden {
-    display: none;
-  }
-
   .initiative {
-    .fa-2x {
-      font-size: 1em;
-    }
-
     .fa-stack-1x {
       text-shadow: 0 0 10px rgb(0 0 0 / 70%);
     }
@@ -378,13 +204,6 @@ li[data-control="combat-carousel"] {
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
   }
 
-  .effects {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-flow: wrap-reverse;
-  }
-
   .effect {
     backdrop-filter: $filterBackdrop;
     background: #414B55E6;
@@ -405,14 +224,6 @@ li[data-control="combat-carousel"] {
     box-shadow: 0 0 10px rgba(0 0 0 / 90%);
     padding: 2px;
     color: #f0f0e0;
-  }
-
-  .fly {
-    animation: fly-in 500ms both;
-  }
-
-  .card .active-combatant-wrapper {
-    display: none;
   }
 
   .is-active-combatant.card {
@@ -437,6 +248,7 @@ li[data-control="combat-carousel"] {
       border: 1px solid transparent;
       text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 
+      /* Code for the current combatant commented out */
       /* border: 1px silver; */
       /* bottom: 1px;
       left: 0px; */
@@ -445,15 +257,6 @@ li[data-control="combat-carousel"] {
       /* clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 0 100%, 0 50%); */
       /* clip-path: polygon(10% 0%, 90% 0, 50% 75%); */
     }
-  }
-
-  img {
-    border: none;
-  }
-
-  .bar1 {
-    text-align: center;
-    height: 10%;
   }
 
   meter {
@@ -507,18 +310,6 @@ li[data-control="combat-carousel"] {
     }
   }
 
-  .combat-round .description {
-    display: none;
-    flex-grow: 0;
-    text-align: center;
-  }
-
-  .round-marker-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .round-marker {
     display: flex;
     justify-content: center;
@@ -534,11 +325,7 @@ li[data-control="combat-carousel"] {
 
   .splide__slide:hover {
     .round-marker {
-      border-color: red;
-    }
-
-    .description, .round-number {
-      display: block;
+      border-color: var(--sub-sub-optimum);
     }
 
     meter::after {
@@ -555,18 +342,6 @@ li[data-control="combat-carousel"] {
     display: block;
 } */
 
-@keyframes fly-in {
-  from {
-    transform: skew(-10deg, -10deg) rotateX(90deg) scale(0.1);
-    opacity: 0;
-  }
-}
-
-@supports (-moz-appearance: none) {
-  #combat-carousel meter {
-    background: var(--background);
-  }
-}
 
 #combat-carousel {
   .splide__slide {
@@ -579,12 +354,6 @@ li[data-control="combat-carousel"] {
     }
 
     &:hover {
-      &:not(.combat-round) {
-        margin: 39px 10px 15px 10px;
-        transform: scale(1.2);
-        height: 168px;
-      }
-
       &.name {
         display: block;
         text-align: center;
@@ -602,19 +371,6 @@ li[data-control="combat-carousel"] {
     }
   }
 
-  .name {
-    &:hover .button-tray {
-      display: flex;
-      padding: 0 10px;
-    }
-
-    .button-tray {
-      display: none;
-      margin: 2px;
-      text-align: center;
-    }
-  }
-
   .splide__slide:hover .fa-dice-d20 {
     color: #84d3e4e6;
   }
@@ -628,10 +384,6 @@ li[data-control="combat-carousel"] {
     }
   }
 
-  .splide__slide:hover footer {
-    display: flex;
-  }
-
   .is-active-combatant.card {
     /* clip-path: polygon(0px -21px, 100% -21px, 100% 95%, 50% 100%, 0px 95%); */
     backdrop-filter: $filterBackdrop;
@@ -641,23 +393,7 @@ li[data-control="combat-carousel"] {
   }
 
   .fa-dice-d20:hover {
-    animation: spin 0.3s linear;
-  }
-
-  .combat-controls {
-    display: none;
-  }
-
-  &:hover .combat-controls {
-    display: block;
-  }
-
-  .combat-controls .previous, .splide__arrow--prev {
-    left: 0;
-  }
-
-  .combat-controls .next, .splide__arrow--next {
-    right: 0;
+    animation: spin 0.5s ease;
   }
 
   .combat-controls a {
@@ -672,62 +408,8 @@ li[data-control="combat-carousel"] {
     font-size: large;
     color: #d0c2a8;
 
-    &.round {
-      top: calc(50% + 50px);
-    }
-
-    &.turn {
-      top: calc(50% + 15px);
-    }
-  }
-
-  .splide {
-    height: 95%;
-  }
-
-  .splide__slider {
-    height: 100%;
-    padding: 0 55px;
-  }
-
-  .splide__track {
-    height: 100%;
-    padding-top: 5px;
-  }
-
-  .splide__list {
-    height: 100%;
-  }
-
-  .splide__arrow {
-    top: calc(50% + 30px);
-    border-radius: 2%;
-    background-color: transparent;
-
     svg {
       fill: #f0f0e0;
     }
-  }
-
-  .combat-carousel-pagination {
-    display: none;
-
-    &.visible {
-      display: flex;
-    }
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }

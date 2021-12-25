@@ -15,25 +15,25 @@
 .stylesheet-editor {
   background: $contentWindow;
   color: $textSecondary;
-.CodeMirror {
-  color: $text;
-  background: $contentWindow;
-  &-gutters {
+  .CodeMirror {
     color: $text;
-    background-color: $contentWindow;
-  }
+    background: $contentWindow;
+    &-gutters {
+      color: $text;
+      background-color: $contentWindow;
+    }
 
-  &-linenumber,
-  &-linenumbers {
-    color: $textSecondary;
-  }
-
-  &-guttermarker {
-    color: $content;
-    &-subtle {
+    &-linenumber,
+    &-linenumbers {
       color: $textSecondary;
     }
-  }
+
+    &-guttermarker {
+      color: $content;
+      &-subtle {
+        color: $textSecondary;
+      }
+    }
 }
 
 // There's an easier way but this is a fallback
@@ -47,10 +47,10 @@
   .cm-variable,
   .cm-punctuation,
   .cm-property,
-  .cm-operator {$accent};
+  .cm-operator {color: $accent;}
   .cm-variable-2 {color: $accentSecondary;}
   .cm-variable-3,  .cm-type {color: #ffb86c;}
-  .cm-comment {color: #$failureSecondary;}
+  .cm-comment {color: $failureSecondary;}
   .cm-string {color: failure;}
   .cm-string-2 {color: $failure;}
   .cm-meta {color: $textSecondary;}
@@ -60,6 +60,6 @@
   .cm-tag {color: $success;}
   .cm-attribute {color: $textHighlight;}
   .cm-hr {color: $textSecondary;} 
-  .cm-link $accentTertiary;
+  .cm-link {color: $accentTertiary;}
   } 
 }
