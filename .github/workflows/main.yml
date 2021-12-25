@@ -27,8 +27,7 @@ jobs:
       - run: npm install
 
       # Build distribution.
-      ## Removing for now for testing
-      ### - run: npm run build-release
+      - run: npm run build-release
 
       # Create a zip file with all files required by the module to add to the release.
       - run: zip -r ./module.zip module.json assets/ css/ lang/ src/ styles/ LICENSE

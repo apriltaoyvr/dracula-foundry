@@ -5,9 +5,6 @@
   "private": true,
   "type": "module",
   "author": "CasanovaSekova",
-  "dependencies": {
-    "chroma-js": "^2.1.2"
-  },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "cssnano": "^5",
@@ -23,7 +20,7 @@
     "not IE 11"
   ],
   "scripts": {
-    "build-dev": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env -m -o ./css/dracula-foundry.css",
-    "build-release": "sass ./styles/init.scss ./css/dracula-foundry.css && postcss ./css/dracula-foundry.css -p sass -u autoprefixer postcss-preset-env cssnano -m -o ./css/dracula-foundry.css"
+    "build-dev": "sass ./styles/init.scss ./css/init.css && postcss ./css/init.css -p sass -u autoprefixer postcss-preset-env -m -o ./css/init.css",
+    "build-release": "sass ./styles/init.scss ./css/init.css && postcss ./css/init.css -p sass -u autoprefixer postcss-preset-env cssnano -m -o ./css/init.css"
   }
 }

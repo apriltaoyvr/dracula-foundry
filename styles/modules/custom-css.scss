@@ -46,7 +46,7 @@
   .cm-variable,
   .cm-punctuation,
   .cm-property,
-  .cm-operator {$accent}
+  .cm-operator {$accent};
   .cm-variable-2 {color: $accentSecondary;}
   .cm-variable-3,  .cm-type {color: #ffb86c;}
   .cm-comment {color: #$failureSecondary;}
