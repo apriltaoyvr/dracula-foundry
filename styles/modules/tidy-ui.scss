@@ -6,19 +6,21 @@
     margin-left: 1px;
     margin-right: 1px;
   }
-  // Override default tidy-ui height (default: 100vh)
-  height: auto;
-  min-height: auto;
+  /* Override default tidy-ui height (default: 100vh)
+  * NOTE: Debating if it's worth it
+  // height: auto;
+  // min-height: auto; 
+  */
 
   // The top two buttons in module management for TidyUI
   .disable-all-modules {
-    background: $failure;
-    border: 1px solid $content;
+    background: transparent;
+    border: 1px solid $failure;
   }
 
   .enable-all-modules {
-    background: $success;
-    border: 1px solid $content;
+    background: transparent;
+    border: 1px solid $success;
   }
 
   .package-list {

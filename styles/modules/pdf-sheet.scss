@@ -1,0 +1,6 @@
+@use '../variables' as *;
+
+#pdf-export {
+  background-image: none;
+  border: 2px solid $accent;
+}

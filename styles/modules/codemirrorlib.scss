@@ -13,14 +13,15 @@
 */
 
 .stylesheet-editor {
-  background: $contentWindow;
+  background: $content;
   color: $textSecondary;
   .CodeMirror {
     color: $text;
-    background: $contentWindow;
+    background: $content;
     &-gutters {
       color: $text;
-      background-color: $contentWindow;
+      background-color: $content;
+      background-image: none;
     }
 
     &-linenumber,
