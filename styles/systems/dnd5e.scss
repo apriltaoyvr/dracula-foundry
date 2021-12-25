@@ -456,13 +456,8 @@
         .inventory {
           &-list {
             .item .item-name.rollable .item-image:hover {
-              background-image: url("../assets/icons/svg/dice-d20-solid.svg") !important;
-              -webkit-mask-size: cover;
-              mask-size: cover;
-              -webkit-mask-image: url("../assets/icons/svg/dice-d20-solid.svg");
-              mask-image: url("../assets/icons/svg/dice-d20-solid.svg");
-              background-color: $accentHighlight;
-            
+              background-image: url("../assets/icons/svg/dice-d20-solid.svg");
+              border: inherit;
             }
 
             .item.detail {
