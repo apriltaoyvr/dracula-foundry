@@ -38,6 +38,21 @@
   &-divider {
     border-bottom: 2px inset $border;
   }
+
+  &-border-autorecog {
+    border: 2px solid $border;
+  }
+
+  &-export,
+  &-import,
+  &-autorec-export,
+  &-autorec-import {
+    background: $content;
+    border: 1px solid $accent;
+    &:hover {
+      @include borderExpand($accent);
+    }
+  }
 }
 
 #AA {
@@ -53,6 +68,7 @@
         }
       }
     }
+    
     .window-content {
       background: $content;
       color: $text;
@@ -61,9 +77,14 @@
 }
 
 #automatic-recognition {
+  input.auto-search {
+    background-color: $content;
+    margin-top: 6px;
+  }
   input.auto-name {
     background-color: $content;
   }
+  
   .collapse-button:hover,
   .remove-autorecog:hover {
     @include borderExpand($accent);

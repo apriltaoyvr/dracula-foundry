@@ -8,8 +8,6 @@ Hooks.once('init', () => {
    modifyCSSVariables();
 });
 
-
-
 /**
  * Appends a stylesheet to `head`.
  *
