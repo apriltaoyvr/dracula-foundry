@@ -87,7 +87,8 @@
   
   .collapse-button:hover,
   .remove-autorecog:hover {
-    @include borderExpand($accent);
+    text-shadow: 0 0 4px $accent;
+    box-shadow: none;
   }
   .window-content {
     background: $content;
