@@ -959,8 +959,14 @@ form button {
 #module-management {
   // RESTYLE: Checkboxes
   input[type="checkbox"] {
-    background: $borderSecondary;
-    color: $accent;
+    @include thinBorder($accent);
+    background: $contentWindow;
+    border-radius: 50%;
+    filter: hue-rotate(42deg) grayscale(60%);
+    &:active,
+    &:checked:active {
+      background: $accent;
+    }
   }
 
   button {

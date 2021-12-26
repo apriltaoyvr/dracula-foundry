@@ -14,11 +14,14 @@
     &[type="text"]:hover,
     &[type="number"]:hover,
     &[type="checkbox"]:hover,
-    &[type="text"]:focus,
-    &[type="number"]:focus,
     &[type="checkbox"]:focus {
       border: 1px solid $borderSecondary;
       box-shadow: 0 0 8px $accentTertiary;
+    }
+
+    &[type="text"]:focus,
+    &[type="number"]:focus {
+      @include borderExpand($accent);
     }
 
     &:disabled {
