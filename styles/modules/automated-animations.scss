@@ -1,0 +1,96 @@
+@use "../variables" as *;
+
+// NOTE: Incomplete
+.aa,
+.AA {
+  // Original 2px beige ridged borders
+  &-audio-checkbox,
+  &-ridged,
+  &-video-previews,
+  &-options {
+    border: 2px solid $borderSecondary;
+  }
+
+  // Original 5px black ridged borders
+  &-flow-chart {
+    &-source,
+    &-primary,
+    &-target {
+      border: 5px solid $border;
+    }
+  }
+  &FGimage {
+    background: transparent;
+  }
+  &BGimage {
+    background: $content;
+    color: $text;
+  }
+
+  &-item-container,
+  &-explosion-container,
+  &-default-container {
+    background: $content;
+    border: 3px solid $borderSecondary;
+    color: $text;
+  }
+
+  &-divider {
+    border-bottom: 2px inset $border;
+  }
+}
+
+#AA {
+  &-item-settings {
+    .form-group {
+      color: $text;
+      select {
+        background: $content;
+        border: 1px solid $accent;
+        color: $text;
+        option {
+          background: $content;
+        }
+      }
+    }
+    .window-content {
+      background: $content;
+      color: $text;
+    }
+  }
+}
+
+#automatic-recognition {
+  input.auto-name {
+    background-color: $content;
+  }
+  .collapse-button:hover,
+  .remove-autorecog:hover {
+    @include borderExpand($accent);
+  }
+  .window-content {
+    background: $content;
+    color: $text;
+  }
+}
+
+.primary-animation,
+.switch-animation {
+  box-shadow: 0 0 6px $success;
+}
+
+.text-green {
+  text-shadow: 1px 1px 2px $success, 0 0 25px $success,
+    0 0 5px $successSecondary;
+}
+
+.add-explosion {
+  box-shadow: 0 0 6px $failure;
+}
+
+@keyframes aaBurning {
+  75% {
+    text-shadow: 1px 1px 15px $failure;
+    color: $accent;
+  }
+}
