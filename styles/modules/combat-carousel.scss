@@ -42,6 +42,8 @@
   }
 
   .name {
+    background: transparent;
+    border: 1px solid $border;
     &:hover .button-tray {
       background: rgba(65, 75, 85, 0.5);
 
@@ -290,10 +292,6 @@
     margin: 2px;
   }
 
-  .overlay {
-    /* display: none; */
-  }
-
   .drag-handle {
     display: none;
     position: absolute;
@@ -302,16 +300,6 @@
     font-size: 1.5rem;
     color: $text;
     text-shadow: 0 0 10px rgb(0 0 0 / 70%);
-  }
-
-  &:hover .drag-handle {
-    display: block;
-  }
-
-  .overlay.active {
-    display: block;
-    position: absolute;
-    top: 0;
   }
 
   .overlay-hud {
@@ -340,11 +328,6 @@
     }
   }
 
-  .container {
-    position: relative;
-    height: 85%;
-  }
-
   .avatar {
     /* background: transparent; */
     border: 1px solid transparent;
@@ -367,7 +350,7 @@
 
   img.overlay-effect {
     position: absolute;
-    left: 10px;
+    left: auto;
     opacity: 0.7;
     height: 80px;
     width: 80px;
@@ -464,10 +447,6 @@
     animation: fly-in 500ms both;
   }
 
-  .card .active-combatant-wrapper {
-    display: none;
-  }
-
   .is-active-combatant.card {
     .active-combatant-wrapper {
       /* display: block;
@@ -481,7 +460,6 @@
       clip-path: none !important;
     }
 
-    // RESTYLE: Replace polygon at the bottom for active combatant
     .active-combatant {
       background: $content;
       backdrop-filter: $filterBackdrop;

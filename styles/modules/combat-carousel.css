@@ -1,0 +1,494 @@
+/* Color Variables */
+/* Miscellaneous Variables */
+/* @mixin reference */
+/* TODO: Change name hover background
+** TODO: Refactor for cleanliness
+** TODO: Annotate sections */
+#combat-carousel.wrapper {
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+  min-width: 210px;
+  min-height: 170px;
+  margin: 0;
+  padding: unset;
+  box-shadow: none;
+  border: none;
+}
+#combat-carousel .splide__slide.token-hover-neutral, #combat-carousel .splide__slide.token-hover-friendly {
+  border: 1px solid var(--color-dracula-accent);
+}
+#combat-carousel .splide__slide.token-hover-hostile {
+  border: 1px solid var(--color-dracula-failure);
+}
+#combat-carousel .splide__slide:hover.name {
+  background: rgba(65, 75, 85, 0.5);
+  border: 1px solid transparent;
+}
+#combat-carousel .splide__slide:hover:not(.combat-round) {
+  margin: 39px 10px 15px 10px;
+  transform: scale(1.2);
+  height: 168px;
+}
+#combat-carousel .name:hover .button-tray {
+  background: rgba(65, 75, 85, 0.5);
+  display: flex;
+  padding: 0 10px;
+}
+#combat-carousel .name .button-tray {
+  background: rgba(65, 75, 85, 0.5);
+  display: none;
+  margin: 2px;
+  text-align: center;
+}
+#combat-carousel .splide__slide:hover .fa-dice-d20 {
+  color: var(--color-dracula-accent-highlight);
+}
+#combat-carousel a.combatant-control {
+  color: #f0f0e0;
+  border-radius: 3px;
+}
+#combat-carousel a.combatant-control.active {
+  color: #f0f0e0;
+}
+#combat-carousel .splide__slide:hover footer {
+  display: flex;
+}
+#combat-carousel .is-active-combatant.card {
+  /* clip-path: polygon(0px -21px, 100% -21px, 100% 95%, 50% 100%, 0px 95%); */
+  backdrop-filter: var(--filter-dracula-backdrop);
+  border-radius: 3px;
+  border: 1px solid var(--color-dracula-accent-highlight);
+  clip-path: none;
+}
+#combat-carousel .fa-dice-d20:hover {
+  animation: spin 0.3s linear;
+}
+#combat-carousel .combat-controls {
+  display: none;
+}
+#combat-carousel:hover .combat-controls {
+  display: block;
+}
+#combat-carousel .combat-controls .previous,
+#combat-carousel .splide__arrow--prev {
+  left: 0;
+  border: 1px solid transparent;
+}
+#combat-carousel .combat-controls .next,
+#combat-carousel .splide__arrow--next {
+  right: 0;
+  border: 1px solid transparent;
+}
+#combat-carousel .combat-controls a {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid transparent;
+  background: transparent;
+  font-size: large;
+  color: var(--color-dracula-text-primary);
+}
+#combat-carousel .combat-controls a.round {
+  top: calc(50% + 50px);
+}
+#combat-carousel .combat-controls a.turn {
+  top: calc(50% + 15px);
+}
+#combat-carousel .splide {
+  height: 95%;
+}
+#combat-carousel .splide__slider {
+  height: 100%;
+  padding: 0 55px;
+}
+#combat-carousel .splide__track {
+  height: 100%;
+  padding-top: 5px;
+}
+#combat-carousel .splide__list {
+  height: 100%;
+}
+#combat-carousel .splide__arrow {
+  top: calc(50% + 30px);
+  border-radius: 2%;
+  background-color: transparent;
+}
+#combat-carousel .splide__arrow svg {
+  fill: #f0f0e0;
+}
+#combat-carousel .combat-carousel-pagination {
+  display: none;
+}
+#combat-carousel .combat-carousel-pagination.visible {
+  display: flex;
+}
+#combat-carousel .carousel-icon img {
+  width: 16px;
+  height: 16px;
+}
+#combat-carousel .carousel-icon:hover {
+  border: 1px solid transparent;
+  box-shadow: #414b55e6;
+}
+#combat-carousel .encounter-info {
+  display: none;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  color: var(--color-dracula-text-primary);
+  background: transparent;
+}
+#combat-carousel .encounter-info .icon {
+  text-align: center;
+  flex: 0 0 30%;
+}
+#combat-carousel .encounter-info.visible {
+  display: block;
+  background: transparent;
+  border: 1px solid transparent;
+}
+#combat-carousel .encounter-controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  /* right: 0;
+  top: 25%; */
+  width: 50px;
+  height: 65px;
+  text-align: center;
+  color: var(--color-dracula-text-primary);
+  /* backdrop-filter: $filterBackdrop;
+  background: transparent; */
+  padding: 2px;
+}
+#combat-carousel:hover .encounter-controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+#combat-carousel .encounter-controls .encounter-control {
+  flex: 0 0 40%;
+  margin: 2px;
+}
+#combat-carousel .encounter-info a.encounter-control {
+  display: none;
+  text-align: center;
+  flex: 0;
+}
+#combat-carousel .encounter-info:hover .encounter-control {
+  display: flex;
+}
+#combat-carousel a.encounter-control.create-remove {
+  display: flex;
+  margin-left: 5px;
+}
+#combat-carousel .encounter-info .flexrow {
+  align-items: center;
+  min-width: 50px;
+}
+#combat-carousel .encounter-info .round {
+  /* padding-left: 5.25px; */
+}
+#combat-carousel .encounter-info span {
+  /* max-width: fit-content; */
+}
+#combat-carousel .encounter-info i.fas {
+  flex: 0;
+  text-align: center;
+}
+#combat-carousel .encounter-info .counter {
+  text-align: center;
+}
+#combat-carousel .initiative-control {
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 56px;
+  /* padding: 0px 4px; */
+  color: #f0f0f0;
+  background: transparent;
+  border: 1px solid transparent;
+}
+#combat-carousel:hover .initiative-control {
+  display: flex;
+}
+#combat-carousel .initiative-control a {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin: 2px;
+}
+#combat-carousel .drag-handle {
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 35%;
+  font-size: 1.5rem;
+  color: var(--color-dracula-text-primary);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel .overlay-hud {
+  position: absolute;
+  z-index: 20;
+}
+#combat-carousel .overlay-hud .tracker-indicators {
+  backdrop-filter: var(--filter-dracula-backdrop);
+  background: transparent;
+}
+#combat-carousel .overlay-properties {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: var(--filter-dracula-backdrop);
+  background: #414b55e6;
+}
+#combat-carousel .overlay-properties img {
+  width: 15px;
+  height: 15px;
+}
+#combat-carousel .overlay-properties .value {
+  text-overflow: ellipsis;
+}
+#combat-carousel .avatar {
+  /* background: transparent; */
+  border: 1px solid transparent;
+  backdrop-filter: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+#combat-carousel .avatar img {
+  max-height: 100%;
+  background: transparent;
+}
+#combat-carousel img.overlay-effect {
+  position: absolute;
+  left: 10px;
+  opacity: 0.7;
+  height: 80px;
+  width: 80px;
+}
+#combat-carousel .initiative {
+  position: absolute;
+  right: 0;
+  padding: 2px 0;
+  background: radial-gradient(#414b55 0%, rgba(70, 80, 90, 0.8) 25%, rgba(75, 85, 95, 0) 100%);
+  border-radius: 60%;
+  z-index: 20;
+}
+#combat-carousel .hidden {
+  display: none;
+}
+#combat-carousel .initiative .fa-2x {
+  font-size: 1em;
+}
+#combat-carousel .initiative .fa-stack-1x {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel .initiative input.fa-stack-1x {
+  background: linear-gradient(0deg, rgba(65, 75, 85, 0.9) 0%, rgba(70, 80, 90, 0.8) 50%, rgba(75, 85, 95, 0) 100%);
+  height: 100%;
+  text-align: center;
+  color: #f0f0e0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel .initiative input[type=text]:disabled.fa-stack-1x {
+  pointer-events: none;
+  background: none;
+  border: none;
+}
+#combat-carousel .fa-dice-d20 {
+  color: #717485;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel .effects {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: wrap-reverse;
+}
+#combat-carousel .effect {
+  backdrop-filter: var(--filter-dracula-backdrop);
+  background: #414b55e6;
+}
+#combat-carousel .effect img {
+  height: 15px;
+  width: 15px;
+}
+#combat-carousel .card {
+  border: 1px solid #44475aff;
+  border-radius: 3px;
+  backdrop-filter: var(--filter-dracula-backdrop);
+  background: linear-gradient(0deg, rgba(40, 42, 54, 0.9) 0%, rgba(68, 71, 90, 0.4) 50%, rgba(75, 85, 95, 0) 100%);
+  /* background: #414B55E6; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  padding: 2px;
+  color: #f0f0e0;
+}
+#combat-carousel .fly {
+  animation: fly-in 500ms both;
+}
+#combat-carousel .is-active-combatant.card .active-combatant-wrapper {
+  /* display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 99%;
+  height: 6%; */
+  display: none;
+  background: transparent;
+  clip-path: none !important;
+}
+#combat-carousel .is-active-combatant.card .active-combatant {
+  background: var(--color-dracula-content);
+  backdrop-filter: var(--filter-dracula-backdrop);
+  border: 1px solid transparent;
+  border-bottom: none;
+  clip-path: none !important;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel img {
+  border: none;
+}
+#combat-carousel .bar1 {
+  text-align: center;
+  height: 10%;
+}
+#combat-carousel meter {
+  --background: #282a36ff;
+  --optimum: #8aff80ff;
+  --sub-optimum: #ffb86cff;
+  --sub-sub-optimum: #ff5555ff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  /* display: block; */
+  /* The gray background in Firefox */
+  width: 98%;
+  height: 1.2em;
+  text-align: center;
+}
+#combat-carousel meter::-moz-meter-bar {
+  height: 25%;
+  margin-top: 0.25em;
+  background: var(--background);
+  border: 1px solid transparent;
+  /* box-shadow: 0 2px 2px -2px #333 inset; */
+}
+#combat-carousel meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--optimum);
+}
+#combat-carousel meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: var(--sub-optimum);
+}
+#combat-carousel meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: var(--sub-sub-optimum);
+}
+#combat-carousel meter::-webkit-meter-bar {
+  background: var(--background);
+  border: 1px solid transparent;
+  /* Was border-top: 1px solid transparent; */
+  height: 100%;
+}
+#combat-carousel meter::-webkit-meter-optimum-value {
+  background: var(--optimum);
+}
+#combat-carousel meter::-webkit-meter-suboptimum-value {
+  background: var(--sub-optimum);
+}
+#combat-carousel .combat-round .description {
+  display: none;
+  flex-grow: 0;
+  text-align: center;
+}
+#combat-carousel .round-marker-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#combat-carousel .round-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #44475aff;
+  border-radius: 50%;
+  background: #414b55e6;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: xx-large;
+}
+#combat-carousel .splide__slide:hover .round-marker {
+  border-color: var(--color-dracula-failure);
+}
+#combat-carousel .splide__slide:hover .description,
+#combat-carousel .splide__slide:hover .round-number {
+  display: block;
+}
+#combat-carousel .splide__slide:hover meter::after {
+  position: relative;
+  content: attr(value) "/" attr(max);
+  top: -15px;
+  background: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#combat-carousel:hover {
+  background: linear-gradient(0deg, #414b55 0%, rgba(70, 80, 90, 0.8) 15%, rgba(75, 85, 95, 0) 100%);
+  backdrop-filter: var(--filter-dracula-backdrop);
+  border-radius: 5px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  z-index: 0;
+}
+#combat-carousel:hover header h2 {
+  display: inherit;
+}
+#combat-carousel header {
+  display: flex;
+  justify-content: center;
+  height: 10px;
+}
+#combat-carousel header h2 {
+  display: none;
+}
+#combat-carousel .info-bar {
+  background: transparent;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 25px;
+}
+#combat-carousel .scene-control[data-control=combat-carousel] {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  justify-content: center;
+  align-items: center;
+}
+#combat-carousel .scene-control img.carousel-icon {
+  height: 32px;
+  width: 32px;
+  margin: 2px;
+  border: none;
+}
+#combat-carousel .resize-handle {
+  width: 18px;
+  height: 18px;
+  color: var(--color-dracula-text-primary);
+  background: transparent;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  padding: 2px;
+}
+
+/*# sourceMappingURL=combat-carousel.css.map */
