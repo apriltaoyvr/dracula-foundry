@@ -60,7 +60,8 @@
   }
 
   .splide__slide:hover .fa-dice-d20 {
-    color: $accentHighlight;
+    color: $accent;
+    text-shadow:rgb(0 0 0 / 70%)
   }
 
   a.combatant-control {
@@ -279,6 +280,7 @@
     color: #f0f0f0;
     background: transparent;
     border: 1px solid transparent;
+    text-shadow:rgba(0 0 0 / 90%);
   }
 
   &:hover .initiative-control {

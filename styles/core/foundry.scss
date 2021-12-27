@@ -53,12 +53,6 @@ hr {
   border-bottom: 1px solid transparent;
 }
 
-/* Paragraph */
-p {
-  color: $text;
-  text-shadow: none;
-}
-
 /* Anchor */
 a {
   &.content-link,
@@ -639,21 +633,21 @@ form button {
   transition: max-height 0.3s ease-in-out;
 
   &.whisper {
-    @include gradientBorder($accent, $accentHighlight);
+    @include gradientBorder($accentHighlight, $accent);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
   }
 
   &.blind {
-    @include gradientBorder($accent, $accentTertiary);
+    @include gradientBorder($accentTertiary, $accentSecondary);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
   }
 
   &.emote {
-    @include gradientBorder($accent, $success);
+    @include gradientBorder($success, $successSecondary);
     background: $content;
     color: $textSecondary;
     transition: max-height 0.3s ease-in-out;
@@ -809,7 +803,6 @@ form button {
 // Chat Menu
 #chat-controls {
   background: none;
-  
   .roll-type-select {
     @include lightToDark($content);
     @include thinBorder(transparent);
