@@ -451,7 +451,6 @@ form button {
 
   #hotbar {
     border-radius: 1px;
-
     &-directory-controls,
     &-page-controls {
       background: linear-gradient(
@@ -951,13 +950,29 @@ form button {
 #module-management {
   // RESTYLE: Checkboxes
   input[type="checkbox"] {
-    @include thinBorder($accent);
     background: $contentWindow;
+    border: 2px solid $accent;
     border-radius: 50%;
     filter: hue-rotate(42deg) grayscale(60%);
-    &:active,
-    &:checked:active {
+    &:before {
+      border-color: $accent;
+      background: $contentWindow;
+    }
+    &:active {
       background: $accent;
+      border: 2px solid $accentSecondary;
+      background: transparent;
+    }
+    &:hover,
+    *:active:hover {
+      filter: brightness(120%);
+    }
+    &:checked,
+    &:checked::after,
+    &:checked:active {
+      border: 2px solid $red;
+      background: url(../assets/icons/svg/check-solid.svg);
+      filter: invert(100%);
     }
   }
 
