@@ -113,6 +113,8 @@ $gradientDegree: 135deg;
   background: $bg;
 }
 
-@mixin thinBorder($thinColor) {
+@mixin thinBorder($thinColor, $bg: inherit) {
   border: 1px solid $thinColor;
+  border-width: 1px;
+  background: $bg;
 }

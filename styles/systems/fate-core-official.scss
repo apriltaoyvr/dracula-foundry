@@ -1,0 +1,374 @@
+@use "../variables" as *;
+
+// Windows
+.window-app {
+  .window-content,
+  .window-content>* {
+    background: $content;
+    background-color: $content;
+    color: $text;
+
+    form.editable {
+      background-color: $content !important;
+      color: $text;
+      #text {
+        color: $text;
+      }
+      table {
+        background-color: $contentWindow !important;
+        button {
+          background-color: transparent;
+          color: $content;
+        }
+        td {
+          .fa,
+          .fas {
+            background-color: transparent;
+            color: $content;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Character Sheets
+.mfate {
+  &-sheet {
+    // Sheet Background
+    &.contenteditable {
+      background: $content !important;
+      color: $text;
+    }
+    &__identity-name {
+      border: 1px solid transparent;
+      background: transparent;
+      @include gradientText($accent, $accentHighlight);
+    }
+    &__header {
+      // Pronoun Box
+      input.cs_box {
+        background: $contentWindow;
+        color: $text;
+      }
+    }
+  }
+}
+
+// Fate Specific?
+input.cs_box,
+.csbox {
+  mfate-aspects-list__input {
+    @include lightToDark($contentWindow);
+  }
+}
+
+textarea:not([name="command"]) {
+  @include thinBorder($accent, $contentWindow);
+  color: $text;
+}
+
+// Chat Cards (will restyle most aspects)
+.chat-message,
+#chat-log {
+  background: $content;
+  color: $textSecondary;
+  transition: max-height 0.3s ease-in-out;
+
+  .message {
+    background: $content;
+    // Border for regular message
+    @include gradientBorder($accent, $accentHighlight);
+    background: $content;
+    color: $textSecondary;
+    transition: max-height 0.3s ease-in-out;
+    // Most values related to dice result boxes
+    .dice-roll {
+      .dice-result {
+        .dice-total,
+        .dice-formula {
+          @include heavyShadow;
+          background: $content;
+          font-size: 14px;
+
+          // Gradient border, drawing from minimal UI then using $accentSecondary as a fallback
+          border: 1px solid $accentSecondary;
+          border-color: var(--bordercolor);
+
+          &:hover {
+            @include hoverRaise;
+            cursor: pointer;
+          }
+
+          /* For the small square boxes */
+          &.success {
+            @include gradientBorder($success, $successSecondary);
+            color: inherit;
+            background: $content;
+          }
+
+          &.failure {
+            @include gradientBorder($failureSecondary, $failure);
+            color: inherit;
+            background: $content;
+          }
+
+          /* For the large result box */
+          &.critical {
+            @include gradientText($success, $successSecondary);
+            @include gradientBorder($success, $successSecondary);
+          }
+
+          &.fumble {
+            @include gradientText($failure, $failureSecondary);
+            @include gradientBorder($failure, $failureSecondary);
+          }
+        }
+      }
+      .message-header, {
+        color: $inactive;
+        .flavor-text {
+          color: $inactive;
+        }
+        .message-sender,
+        .message-metadata {
+          color: $inactive;
+        }
+      }
+
+      &.whisper {
+        @include gradientBorder($accentHighlight, $accent);
+        background: $content;
+        color: $textSecondary;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      &.blind {
+        @include gradientBorder($accentTertiary, $accentSecondary);
+        background: $content;
+        color: $textSecondary;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      &.emote {
+        @include gradientBorder($success, $successSecondary);
+        background: $content;
+        color: $textSecondary;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      .table-draw .table-description {
+        border-top: 1px solid $borderWhite;
+        color: $inactive;
+      }
+    }
+  }
+}
+
+// Global text classes 
+h1,
+h2,
+h3,
+h3,
+footer {
+  border-width: 1px;
+  border-color: $border;
+  color: $text;
+
+  &.nue {
+    border-color: $border;
+  }
+}
+
+h4 {
+  color: $text;
+}
+
+#text {
+  color: inherit;
+  color: $text;
+}
+
+// Global values from foundry.scss
+input {
+  &:focus {
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  &[type="text"],
+  &[type="number"],
+  &[type="password"],
+  &[type="date"],
+  &[type="time"],
+  &[type="text"].color,
+  &[type="color"][data-edit] {
+    @include thinBorder($accent);
+    color: $textSecondary;
+    background: $border;
+    box-shadow: none;
+    transition: 0.3s ease-in-out all;
+  }
+
+  &[type="text"]:focus,
+  &[type="number"]:focus,
+  &[type="password"]:focus,
+  &[type="date"]:focus,
+  &[type="time"]:focus {
+    background: $border;
+    border-width: 2px;
+    box-shadow: none;
+  }
+
+  &[type="range"] + .range-value {
+    @include thinBorder($accent);
+    color: $textSecondary;
+    background: $border;
+    box-shadow: none;
+    margin: 2px;
+    transition: 0.3s ease-in-out all;
+  }
+
+  &[type="range"]::-webkit-slider-thumb {
+    background: linear-gradient(
+      $gradientDegree,
+      $accentTertiary,
+      $accentSecondary
+    );
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    background: $accent;
+    color: $text;
+  }
+
+  &[type="color"][data-edit][data-edit],
+  &[type="color"i] {
+    appearance: auto;
+    background-color: transparent;
+    color: $text;
+    border-color: $contentWindow;
+  }
+
+  &::placeholder {
+    color: $inactive;
+    text-shadow: 0 0 2px $glow;
+  }
+}
+
+select {
+  color: $textSecondary;
+  background: $content;
+  border: 1px solid $accent;
+  border-radius: 2px;
+  box-shadow: none;
+  transition: 0.3s ease-in-out all;
+
+  &:focus {
+    border-width: 2px;
+    box-shadow: none;
+  }
+}
+
+/* Forms */
+form {
+  .hint,
+  .notes {
+    color: $inactive;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  &-group {
+    .form-fields {
+      border: 1px solid $border;
+      border-radius: 2px;
+      background: $contentWindow;
+      color: $textSecondary;
+
+      &:focus {
+        border-width: 2px;
+      }
+    }
+
+    .form-fields > *:last-child {
+      border: 1px solid $border;
+      border-radius: 2px;
+      background: $contentWindow;
+      color: $textSecondary;
+    }
+  }
+}
+
+fieldset {
+  border: 1px solid transparent;
+}
+
+textarea {
+  border: 1px solid $borderSecondary;
+  background: $content;
+  color: $text;
+
+  &:focus {
+    border-width: 2px;
+    box-shadow: none;
+  }
+}
+
+button,
+form button {
+  @include thinBorder($accent);
+  @include lightToDark($content);
+  @include heavyShadow;
+
+  color: $text;
+  border-radius: 1px;
+  margin: 0 0 0.125rem 0;
+
+  &:hover {
+    @include hoverRaise;
+  }
+}
+
+/* Colour Pickers */
+.picker_wrapper {
+  background: $content;
+  color: $text;
+
+  .button {
+    background: $content;
+    border: 1px solid $borderSecondary;
+    color: $text;
+  }
+}
+
+.roll-table-config ol.table-results {
+  .table-header {
+    border: none;
+  }
+
+  .table-result .result-controls .lock-result {
+    color: $textSecondary;
+  }
+
+  .table-result.drawn .lock-result {
+    color: $inactive;
+  }
+}
+
+table {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  text-shadow: none;
+  font-size: 12px;
+
+  thead {
+    background: $border;
+    border-bottom: none;
+  }
+}

@@ -13,7 +13,7 @@
       background: transparent;
       // Replace checkmark
       &:checked::after {
-        border: 2px solid $red;
+        border: 2px solid $failure;
         background: url(../assets/icons/svg/check-solid-purple.svg);
       }
     }

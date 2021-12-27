@@ -38,6 +38,7 @@ h3,
 footer {
   border-width: 1px;
   border-color: $border;
+  color: inherit;
 
   &.nue {
     border-color: $border;
@@ -240,6 +241,15 @@ form button {
 }
 
 /* Colour Pickers */
+.layout_default {
+  .picker_editor
+  &.picker_wrapper input, 
+  &.picker_wrapper button {
+    @include thinBorder($accent);
+    @include lightToDark($content);
+    background: $content;
+  }
+}
 .picker_wrapper {
   background: $content;
   color: $text;
@@ -652,6 +662,10 @@ form button {
     transition: max-height 0.3s ease-in-out;
   }
 
+  .flavor-text {
+    color: $inactive;
+  }
+
   .message-header,
   .message-metadata {
     .message-sender {
@@ -970,7 +984,7 @@ form button {
     &:checked,
     &:checked::after,
     &:checked:active {
-      border: 2px solid $red;
+      border: 2px solid $failure;
       background: url(../assets/icons/svg/check-solid.svg);
       filter: invert(100%);
     }
