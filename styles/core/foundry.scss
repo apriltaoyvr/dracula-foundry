@@ -962,31 +962,20 @@ form button {
 
 /* Module Management Menu */
 #module-management {
-  // RESTYLE: Checkboxes
   input[type="checkbox"] {
-    background: $contentWindow;
-    border: 2px solid $accent;
     border-radius: 50%;
     filter: hue-rotate(42deg) grayscale(60%);
-    &:before {
-      border-color: $accent;
-      background: $contentWindow;
-    }
     &:active {
-      background: $accent;
-      border: 2px solid $accentSecondary;
-      background: transparent;
+      background: $accentSecondary;
     }
     &:hover,
     *:active:hover {
-      filter: brightness(120%);
+      background: $accent;
+      filter: brightness(110%);
     }
     &:checked,
-    &:checked::after,
-    &:checked:active {
-      border: 2px solid $failure;
-      background: url(../assets/icons/svg/check-solid.svg);
-      filter: invert(100%);
+    &:checked:hover, {
+      background: $accent;
     }
   }
 

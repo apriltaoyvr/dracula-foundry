@@ -6,22 +6,8 @@
     margin-left: 1px;
     margin-right: 1px;
   }
-
-  input[type="checkbox"] {
-    &:active {
-      border: 2px solid $accentSecondary;
-      background: transparent;
-      // Replace checkmark
-      &:checked::after {
-        border: 2px solid $failure;
-        background: url(../assets/icons/svg/check-solid-purple.svg);
-      }
-    }
-  }
-
   .package-list {
     border-bottom: 1px solid transparent;
-
 
 }
   /* Override default tidy-ui height (default: 100vh)
@@ -62,6 +48,19 @@
       }
     }
   }
+
+  
+  input[type="checkbox"] {
+    border: 1px solid $border;
+    &:active {
+      border: 2px solid $accentSecondary;
+    }
+      // Replace checkmark
+      &:checked::after {
+        background-image: url(../../assets/icons/svg/check-outline.svg) center no-repeat;
+      }
+  }
+
 
   #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
     @include thinBorder($accent);
