@@ -26,7 +26,7 @@
     border: 1px solid $border;
 
     &:hover {
-      color: $accentTertiary;
+      color: $text;
       text-shadow: 0 0 3px $glow;
     }
   }
@@ -124,22 +124,8 @@
 
     &-tinymce {
       .tox-edit-area {
-        color: $text;
+        background: $inactive;
         border-radius: 2px;
-
-        &__iframe {
-          background: adjust-color(
-            hsla(235, 14%, 15%, 0.8),
-            $lightness: 40%,
-            $alpha: -0.3
-          );
-
-          #tinymce {
-            &.mce-content-body {
-              color: $text;
-            }
-          }
-        }
       }
     }
   }

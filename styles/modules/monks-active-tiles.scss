@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+.monks-active-tiles.sheet .items-list .items-header {
+  border: 2px solid $borderSecondary;
+}
+
+.action-sheet .display-value {
+  @include thinBorder($inactive);
+}

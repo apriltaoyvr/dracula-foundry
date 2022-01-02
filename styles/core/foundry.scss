@@ -142,7 +142,7 @@ input {
     appearance: auto;
     background-color: transparent;
     color: $text;
-    border-color: $contentWindow;
+    border-color: $inactive;
   }
 
   &::placeholder {
@@ -165,7 +165,8 @@ table {
 }
 
 /* Select (drop-down boxes) */
-select {
+select,
+select:active {
   color: $textSecondary;
   background: $content;
   border: 1px solid $accent;
@@ -179,6 +180,10 @@ select {
   }
 }
 
+optgroup,
+option {
+  @include lightToDark;
+}
 /* Forms */
 form {
   .hint,
@@ -636,30 +641,27 @@ form button {
 
 // Chat Cards (will restyle most aspects)
 .chat-message {
-  @include gradientBorder($accent, $accentSecondary);
+  @include thinBorder($accent, $content);
   background: $content;
   color: $textSecondary;
-  transition: max-height 0.3s ease-in-out;
+  margin-bottom: 5px;
 
   &.whisper {
-    @include gradientBorder($accentHighlight, $accent);
+    @include thinBorder($accentHighlight, $content);
     background: $content;
     color: $textSecondary;
-    transition: max-height 0.3s ease-in-out;
   }
 
   &.blind {
-    @include gradientBorder($accentTertiary, $accentSecondary);
+    @include thinBorder($accentTertiary, $content);
     background: $content;
     color: $textSecondary;
-    transition: max-height 0.3s ease-in-out;
   }
 
   &.emote {
-    @include gradientBorder($success, $successSecondary);
+    @include thinBorder($success, $content);
     background: $content;
     color: $textSecondary;
-    transition: max-height 0.3s ease-in-out;
   }
 
   .flavor-text {
@@ -699,10 +701,9 @@ form button {
 
     // Dice total mini-boxes
     .dice-total {
+      @include thinBorder($accent);
       @include heavyShadow;
       background: $border;
-      border: 1px solid $accent;
-      border-radius: 1px;
       font-size: 14px;
 
       &:hover {
@@ -712,7 +713,7 @@ form button {
 
       /* For the small square boxes */
       &.success {
-        @include gradientBorder($success, $successSecondary);
+        @include gradientBorder($successSecondary, $success);
         color: inherit;
         background: $content;
       }
@@ -725,13 +726,13 @@ form button {
 
       /* For the large result box */
       &.critical {
-        @include gradientText($success, $successSecondary);
-        @include gradientBorder($success, $successSecondary);
+        @include gradientText($successSecondary, $success);
+        @include gradientBorder($successSecondary, $success);
       }
 
       &.fumble {
-        @include gradientText($failure, $failureSecondary);
-        @include gradientBorder($failure, $failureSecondary);
+        @include gradientText($failureSecondary, $failure);
+        @include gradientBorder($failureSecondary, $failure);
       }
     }
 
@@ -739,7 +740,7 @@ form button {
     .dice-result {
       .dice-tooltip .dice {
         .part-header.flexrow {
-          @include gradientBorder($accent, $inactive);
+          @include thinBorder($accent);
           background: $border;
 
           .part-total {
@@ -767,7 +768,7 @@ form button {
         }
 
         .roll {
-          @include gradientBorder($accent, $inactive);
+          @include thinBorder($accent);
           @include heavyShadow;
           color: $text;
           background: transparent;
@@ -780,15 +781,15 @@ form button {
 
           &.failure,
           &.min {
-            @include gradientBorder($failure, $failureSecondary);
-            @include gradientText($failure, $failureSecondary);
+            @include gradientBorder($failureSecondary, $failure);
+            @include gradientText($failureSecondary, $failure);
             filter: none;
           }
 
           &.max,
           &.success {
-            @include gradientBorder($success, $successSecondary);
-            @include gradientText($success, $successSecondary);
+            @include gradientBorder($successSecondary, $success);
+            @include gradientText($successSecondary, $success);
             filter: none;
           }
 
@@ -816,10 +817,9 @@ form button {
 // Chat Menu
 #chat-controls {
   background: none;
+  
   .roll-type-select {
-    @include lightToDark($content);
-    @include thinBorder(transparent);
-    border-radius: 2px;
+    @include thinBorder(transparent, $content);
     padding: 2px;
   }
 }
@@ -831,7 +831,7 @@ form button {
   background: transparent;
 
   &:focus {
-    border-width: 2px;
+    @include borderExpand($accentHighlight);
   }
 }
 
@@ -974,7 +974,7 @@ form button {
       filter: brightness(110%);
     }
     &:checked,
-    &:checked:hover, {
+    &:checked:hover {
       background: $accent;
     }
   }

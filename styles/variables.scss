@@ -108,13 +108,14 @@ $gradientDegree: 135deg;
 }
 
 // For being lazy
-@mixin lightToDark($bg) {
+@mixin lightToDark($bg: $content) {
   color: $textSecondary;
   background: $bg;
 }
 
 @mixin thinBorder($thinColor, $bg: inherit) {
   border: 1px solid $thinColor;
+  border-radius: 1px;
   border-width: 1px;
   background: $bg;
 }
