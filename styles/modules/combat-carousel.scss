@@ -29,14 +29,18 @@
     }
 
     &:hover {
-      &.name {
-        background: rgba(65, 75, 85, 0.5);
-        border: 1px solid transparent;
-      }
       &:not(.combat-round) {
         margin: 39px 10px 15px 10px;
         transform: scale(1.2);
         height: 168px;
+      }
+      .name {
+        background: rgba(65, 75, 85, 0.5);
+        border: 1px solid transparent;
+        h3 {
+          font-size: 14px;
+          text-shadow:rgba(0 0 0 / 90%);
+        }
       }
     }
   }
@@ -45,14 +49,14 @@
     background: transparent;
     border: 1px solid $border;
     &:hover .button-tray {
-      background: rgba(65, 75, 85, 0.5);
+      background: transparent;
 
       display: flex;
       padding: 0 10px;
     }
 
     .button-tray {
-      background: rgba(65, 75, 85, 0.5);
+      background: transparent;
       display: none;
       margin: 2px;
       text-align: center;
@@ -249,14 +253,6 @@
       min-width: 50px;
     }
 
-    .round {
-      /* padding-left: 5.25px; */
-    }
-
-    span {
-      /* max-width: fit-content; */
-    }
-
     i.fas {
       flex: 0;
       text-align: center;
@@ -419,8 +415,7 @@
   }
 
   .effect {
-    backdrop-filter: $filterBackdrop;
-    background: #414b55e6;
+    background: transparent;
 
     img {
       height: 15px;
@@ -490,7 +485,7 @@
 
     /* display: block; */
     /* The gray background in Firefox */
-    width: 98%;
+    width: 100%;
     height: 1.2em;
     text-align: center;
 
@@ -499,6 +494,7 @@
       margin-top: 0.25em;
       background: var(--background);
       border: 1px solid transparent;
+      border-radius: 1px;
 
       /* box-shadow: 0 2px 2px -2px #333 inset; */
     }
@@ -518,6 +514,7 @@
     &::-webkit-meter-bar {
       background: var(--background);
       border: 1px solid transparent;
+      border-radius: 1px;
 
       /* Was border-top: 1px solid transparent; */
       height: 100%;
@@ -570,8 +567,11 @@
     meter::after {
       position: relative;
       content: attr(value) "/" attr(max);
-      top: -15px;
-      background: transparent;
+
+      padding: 1.2px;
+      border: 1px solid rgba(68, 71, 90, 0.1);
+      border-radius: 2px;
+      text-align: center;
       text-shadow: 0 0 10px rgb(0 0 0 / 70%);
     }
   }
