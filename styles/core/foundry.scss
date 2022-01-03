@@ -81,6 +81,8 @@ a {
 /* Inputs */
 // RESTYLE: Adjust or remove text shadow/glow on inactive forms
 input {
+  accent-color: $accent;
+  
   &:focus {
     box-shadow: none;
     text-shadow: none;
