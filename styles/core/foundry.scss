@@ -643,25 +643,25 @@ form button {
 
 // Chat Cards (will restyle most aspects)
 .chat-message {
-  @include thinBorder($accent, $content);
+  @include gradientBorder($accent, $inactive);
   background: $content;
   color: $textSecondary;
   margin-bottom: 5px;
 
   &.whisper {
-    @include thinBorder($accentHighlight, $content);
+    @include gradientBorder($accentHighlight, $accent);
     background: $content;
     color: $textSecondary;
   }
 
   &.blind {
-    @include thinBorder($accentTertiary, $content);
+    @include gradientBorder($accentTertiary, $accent);
     background: $content;
     color: $textSecondary;
   }
 
   &.emote {
-    @include thinBorder($success, $content);
+    @include gradientBorder($success, $accent);
     background: $content;
     color: $textSecondary;
   }
