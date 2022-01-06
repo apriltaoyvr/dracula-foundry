@@ -231,6 +231,11 @@ textarea {
   }
 }
 
+.action-sheet .display-value {
+  @include thinBorder($inactive);
+  color: $text;
+}
+
 /* Buttons */
 button,
 form button {
