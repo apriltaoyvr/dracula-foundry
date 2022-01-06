@@ -1,7 +1,21 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
-.monks-active-tiles.sheet .items-list .items-header {
-  border: 2px solid $borderSecondary;
+.monks-active-tiles.sheet .items-list {
+  .items-header {
+    border: 2px solid $borderSecondary;
+  }
+  .item {
+    item-name {
+      color: $text;
+    }
+  }
+  div[data-tab="triggers"] .action-items {
+    .action-style,
+    .entity-style,
+    .details-style {
+      color: $text;
+    }
+  }
 }
 
 .action-sheet .display-value {
