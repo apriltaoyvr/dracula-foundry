@@ -1055,9 +1055,9 @@ nav.list-filters a.filter {
 
   .binding {
     .key {
-      background: $contentWindow;
+      background: $accent;
       &.uneditable {
-        background: $inactive;
+        background: $contentWindow;
       }
     }
   }
