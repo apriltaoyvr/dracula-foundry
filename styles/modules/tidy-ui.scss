@@ -55,10 +55,6 @@
     &:active {
       border: 2px solid $accentSecondary;
     }
-      // Replace checkmark
-      &:checked::after {
-        background-image: url(../../assets/icons/svg/check-outline.svg) center no-repeat;
-      }
   }
 
 
