@@ -1,0 +1,9 @@
+@use "../variables" as *;
+
+.cub-puter ul.gadget-list {
+  @include lightToDark;
+}
+
+.condition-lab .flexrow {
+  border-bottom: 2px groove $border;
+}

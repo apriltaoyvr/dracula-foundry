@@ -51,7 +51,7 @@ h4 {
 
 hr {
   border-top: 1px groove $border;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px groove $border;
 }
 
 /* Anchor */
@@ -82,7 +82,7 @@ a {
 // RESTYLE: Adjust or remove text shadow/glow on inactive forms
 input {
   accent-color: $accent;
-  
+
   &:focus {
     box-shadow: none;
     text-shadow: none;
@@ -254,8 +254,7 @@ form button {
 
 /* Colour Pickers */
 .layout_default {
-  .picker_editor
-  &.picker_wrapper input, 
+  .picker_editor &.picker_wrapper input,
   &.picker_wrapper button {
     @include thinBorder($accent);
     @include lightToDark($content);
@@ -824,7 +823,7 @@ form button {
 // Chat Menu
 #chat-controls {
   background: none;
-  
+
   .roll-type-select {
     @include thinBorder(transparent, $content);
     padding: 2px;
@@ -1036,19 +1035,41 @@ nav.list-filters a.filter {
 }
 
 /* Keybindings Menu */
-//TODO: Remaining borders
 #keybindings {
-  .filters h3 {
-    border-bottom: 1px solid transparent;
+  .filters {
+    border-right: 1px groove $border;
+    h3 {
+      border-bottom: 1px solid transparent;
+    }
+    .category-filter {
+      border-bottom: 1px groove $border;
+      &.active {
+        border-bottom: 1px groove $accent;
+      }
+    }
   }
 
   .action {
     border-bottom: 1px solid transparent;
   }
 
+  .binding {
+    .key {
+      background: $contentWindow;
+      &.uneditable {
+        background: $inactive;
+      }
+    }
+  }
+
   .category {
-    .category-header {
-      border-bottom: 1px solid transparent;
+    .category {
+      &-header {
+        border-bottom: 1px solid transparent;
+      }
+    }
+    &-list {
+      border-top: 1px groove $border;
     }
   }
 }
