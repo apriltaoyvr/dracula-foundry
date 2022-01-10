@@ -137,7 +137,7 @@
       h4.rollable:hover,
       .rollable:hover > h4 {
         color: $accent;
-        text-shadow: 0 0 10px $accent;
+        text-shadow: 0 0 5px $accent;
       }
       &.actor {
         flexrow,
