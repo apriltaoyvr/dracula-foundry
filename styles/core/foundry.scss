@@ -512,7 +512,7 @@ form button {
 
     // Empty macro boxes
     &.inactive {
-      opacity: 75%;
+      opacity: 90%;
 
       &:hover {
         @include borderExpand($content);
@@ -524,6 +524,7 @@ form button {
       @include heavyShadow;
       color: $text;
       background: $border;
+      border-radius: 90%;
     }
   }
 
@@ -835,9 +836,14 @@ form button {
   @include thinBorder($accent);
   color: $textSecondary;
   background: transparent;
+  
+  &:hover {
+    cursor: text;
+  }
 
   &:focus {
     @include borderExpand($accentHighlight);
+    cursor: text;
   }
 }
 
@@ -1056,8 +1062,10 @@ nav.list-filters a.filter {
   .binding {
     .key {
       background: $accent;
+      border-color: $accent;
       &.uneditable {
-        background: $contentWindow;
+        background: $inactive;
+        border-color: $inactive;
       }
     }
   }
@@ -1070,6 +1078,11 @@ nav.list-filters a.filter {
     }
     &-list {
       border-top: 1px groove $border;
+    }
+    .categories { 
+      .category-list { 
+        border-top: 1px groove $border;
+      }
     }
   }
 }
