@@ -33,8 +33,6 @@ $filterBackdrop: var(--filter-dracula-backdrop);
 /* Miscellaneous Variables */
 $gradientDegree: 135deg;
 
-// Settings related
-
 /* @mixin reference */
 @mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
   border: $width solid;
@@ -63,6 +61,7 @@ $gradientDegree: 135deg;
   box-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.32),
     0 0.3px 0.4px -1.1px hsl(var(--shadow-color) / 0.35),
     0 0.7px 0.8px -2.2px hsl(var(--shadow-color) / 0.38);
+
   text-shadow: 0 0.2px 0.2px hsl(var(--shadow-color) / 0.31),
     0 1.1px 1.3px -0.3px hsl(var(--shadow-color) / 0.32),
     0 2px 2.3px -0.6px hsl(var(--shadow-color) / 0.33),
@@ -73,8 +72,8 @@ $gradientDegree: 135deg;
     -0.2px 17.4px 20.4px -2.2px hsl(var(--shadow-color) / 0.39);
 }
 
-@mixin toolsShadow {
-  --shadow-color: 0deg 0% 48%;
+@mixin toolsShadow($shadow-color) {
+  --shadow-color: $shadow-color;
   box-shadow: 0 0.1px 0.2px hsl(var(--shadow-color) / 0),
     0 0 0.9px hsl(var(--shadow-color) / 0.08),
     0 0 1.7px hsl(var(--shadow-color) / 0.16),
@@ -109,13 +108,13 @@ $gradientDegree: 135deg;
 
 // For being lazy
 @mixin lightToDark($bg: $content) {
-  color: $textSecondary;
   background: $bg;
+  color: $textSecondary;
 }
 
 @mixin thinBorder($thinColor, $bg: inherit) {
+  background: $bg;
   border: 1px solid $thinColor;
   border-radius: 1px;
   border-width: 1px;
-  background: $bg;
 }

@@ -39,6 +39,7 @@
       background: $content;
       border: 1px solid $accent;
       border-radius: 2px;
+
       &__overflow,
       &__primary,
       &-overlord {
@@ -46,13 +47,16 @@
         border: 1px solid $accent;
         border-radius: 2px;
       }
+
     }
     &-button {
       background: $content;
       color: $text;
+
       &:hover:not(:disabled) {
         @include borderExpand($accent);
       }
+
       &--naked[disabled],
       &--secondary[disabled] {
         background: $inactive;
@@ -108,13 +112,17 @@
     }
 
     &-selectfield select {
+      margin: 2px;
+
       color: $textSecondary;
       background: $content;
+      
       border: 1px solid $accent;
       border-radius: 2px;
+
       box-shadow: none;
-      margin: 2px;
       transition: 0.3s ease-in-out all;
+
       &:active,
       &:hover,
       &:focus {
