@@ -6,7 +6,8 @@
   color: $textSecondary;
 }
 
-#requestsavingthrow .request-grid div, .monks-tokenbar .sheet .items-list .item-list .item {
+#requestsavingthrow .request-grid div,
+.monks-tokenbar .sheet .items-list .item-list .item {
   color: $textSecondary;
 }
 
@@ -20,12 +21,15 @@
   &.chat-card {
     .flexrow {
       color: $textSecondary;
-      font-family: "Signika", serif;
+      font-family: 'Signika', serif;
       font-weight: bold;
       font-size: 16px;
     }
 
-    .form-group.sheet.actor .items-list.inventory-list .item-list .item.flexrow {
+    .form-group.sheet.actor
+      .items-list.inventory-list
+      .item-list
+      .item.flexrow {
       border: none;
     }
   }
@@ -47,7 +51,7 @@
       color: $textSecondary;
       background: none;
       border: none;
-      font-family: "Signika", serif;
+      font-family: 'Signika', serif;
     }
   }
 
@@ -55,7 +59,7 @@
     color: $textSecondary;
     background: none;
     border: none;
-    font-family: "Signika", serif;
+    font-family: 'Signika', serif;
   }
 }
 
@@ -63,21 +67,27 @@
   color: $textSecondary;
   background: none;
   border: none;
-  font-family: "Signika", serif;
+  font-family: 'Signika', serif;
 }
 
 .monks-tokenbar {
   &.chat-card {
-    .form-group.sheet.actor .items-list.inventory-list .item-list .dice-roll .item-row .item-name {
+    .form-group.sheet.actor
+      .items-list.inventory-list
+      .item-list
+      .dice-roll
+      .item-row
+      .item-name {
       color: $textSecondary;
       background: none;
       border: none;
-      font-family: "Signika", serif;
+      font-family: 'Signika', serif;
     }
 
-    .card-header h3, .message-content .items-header .item-name {
+    .card-header h3,
+    .message-content .items-header .item-name {
       color: $textSecondary;
-      font-family: "Signika", serif;
+      font-family: 'Signika', serif;
       font-weight: bold;
       font-size: 14px;
 
@@ -97,14 +107,15 @@
 
   .sheet .items-list .items-header {
     color: $textSecondary;
-    font-family: "Signika", serif;
+    font-family: 'Signika', serif;
     background: none;
     border: none;
   }
 }
 
 #requestsavingthrow .request-grid > div {
-  &.selected, &:hover {
+  &.selected,
+  &:hover {
     color: $text;
     background: $content;
     border: $accent;

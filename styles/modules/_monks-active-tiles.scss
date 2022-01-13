@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 .monks-active-tiles.sheet .items-list {
   .items-header {
@@ -9,7 +9,7 @@
       color: $text;
     }
   }
-  div[data-tab="triggers"] .action-items {
+  div[data-tab='triggers'] .action-items {
     .action-style,
     .entity-style,
     .details-style {

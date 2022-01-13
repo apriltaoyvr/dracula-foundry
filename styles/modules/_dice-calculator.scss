@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 .dice-tray {
   button {
@@ -30,7 +30,7 @@
       background-color: $accent;
     }
 
-    input[type="text"] {
+    input[type='text'] {
       background: inherit;
       border: 1px solid transparent;
       box-shadow: 0 0 2px $accent;

@@ -35,32 +35,73 @@
         color: $textSecondary;
       }
     }
-}
+  }
 
-// There's an easier way but this is a fallback
-.cm-s-default {
-  .cm-header {color: $textHighlight;}
-  .cm-quote {color: #090;}
-  .cm-keyword {color: #ff79c6;}
-  .cm-atom {color: #bd93f9;}
-  .cm-number {color: #bd93f9;}
-  .cm-def {color: $textHighlight;}
-  .cm-variable,
-  .cm-punctuation,
-  .cm-property,
-  .cm-operator {color: $accent;}
-  .cm-variable-2 {color: $accentSecondary;}
-  .cm-variable-3,  .cm-type {color: #ffb86c;}
-  .cm-comment {color: $failureSecondary;}
-  .cm-string {color: failure;}
-  .cm-string-2 {color: $failure;}
-  .cm-meta {color: $textSecondary;}
-  .cm-qualifier {color: $textSecondary;}
-  .cm-builtin {color: $accent;}
-  .cm-bracket {color: $accentTertiary;}
-  .cm-tag {color: $success;}
-  .cm-attribute {color: $textHighlight;}
-  .cm-hr {color: $textSecondary;} 
-  .cm-link {color: $accentTertiary;}
-  } 
+  // There's an easier way but this is a fallback
+  .cm-s-default {
+    .cm-header {
+      color: $textHighlight;
+    }
+    .cm-quote {
+      color: #090;
+    }
+    .cm-keyword {
+      color: #ff79c6;
+    }
+    .cm-atom {
+      color: #bd93f9;
+    }
+    .cm-number {
+      color: #bd93f9;
+    }
+    .cm-def {
+      color: $textHighlight;
+    }
+    .cm-variable,
+    .cm-punctuation,
+    .cm-property,
+    .cm-operator {
+      color: $accent;
+    }
+    .cm-variable-2 {
+      color: $accentSecondary;
+    }
+    .cm-variable-3,
+    .cm-type {
+      color: #ffb86c;
+    }
+    .cm-comment {
+      color: $failureSecondary;
+    }
+    .cm-string {
+      color: failure;
+    }
+    .cm-string-2 {
+      color: $failure;
+    }
+    .cm-meta {
+      color: $textSecondary;
+    }
+    .cm-qualifier {
+      color: $textSecondary;
+    }
+    .cm-builtin {
+      color: $accent;
+    }
+    .cm-bracket {
+      color: $accentTertiary;
+    }
+    .cm-tag {
+      color: $success;
+    }
+    .cm-attribute {
+      color: $textHighlight;
+    }
+    .cm-hr {
+      color: $textSecondary;
+    }
+    .cm-link {
+      color: $accentTertiary;
+    }
+  }
 }

@@ -1,5 +1,4 @@
-@use "../variables" as *;
-
+@use '../variables' as *;
 
 aside {
   .block-torn-paper,
@@ -41,25 +40,24 @@ aside {
       // NOTE: Line 120 in DDBI's journal.css uses !important
       // NOTE: Let's use !important for now to be safe. Otherwise it may overwrite this.
     }
-
   }
-    blockquote {
-      .adventure-read-aloud-text {
-        // NOTE: Line 193 in DDBI's journal.css for this has 3 !important quotes.
-        // NOTE: Let's use !important for now to be safe. Otherwise it may overwrite this.
-        border-left: 1px solid $border;
-        border-right: 1px solid $border;
-        border-color: $borderSecondary !important;
-        color: $content !important;
+  blockquote {
+    .adventure-read-aloud-text {
+      // NOTE: Line 193 in DDBI's journal.css for this has 3 !important quotes.
+      // NOTE: Let's use !important for now to be safe. Otherwise it may overwrite this.
+      border-left: 1px solid $border;
+      border-right: 1px solid $border;
+      border-color: $borderSecondary !important;
+      color: $content !important;
 
-        ::before,
-        ::after {
-          // TODO: Examine this one closer
-          // This is where I replace the background image when I understand how it is used. Potentially un-nest if necessary.
-          color: $content !important;
-        }
+      ::before,
+      ::after {
+        // TODO: Examine this one closer
+        // This is where I replace the background image when I understand how it is used. Potentially un-nest if necessary.
+        color: $content !important;
       }
     }
+  }
 
   .Flowchart {
     // TODO: Examine this one closer

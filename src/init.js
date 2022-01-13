@@ -54,6 +54,10 @@ function modifyCSSVariables() {
    root.style.setProperty('--color-underline-active', 'var(--color-dracula-accent)');
 }
 
+/* Change stylesheet for TinyMCE
+   CONFIG.TinyMCE.content_css: "path/myfile.css";
+*/
+
 /**
  * Override box-shadow root and colour box-shadow with Minimal UI's box shadow setting
  * Courtesy of Jeansen himself
@@ -64,4 +68,5 @@ function modifyCSSVariables() {
          rootStyle.setProperty('--any2-color-property', game.settings.get('minimal-ui', 'borderColor'));
       }
 }
- */
+*/
+

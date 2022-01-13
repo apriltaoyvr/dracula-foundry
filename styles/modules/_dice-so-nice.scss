@@ -2,7 +2,9 @@
 
 /* Dice So Nice Settings Menu */
 .dice-so-nice {
-  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
     background: transparent;
     border: 1px solid $borderSecondary;
   }

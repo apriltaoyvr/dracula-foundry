@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 /* Tidy UI */
 #module-management {
@@ -6,15 +6,10 @@
     margin-left: 1px;
     margin-right: 1px;
   }
+
   .package-list {
     border-bottom: 1px solid transparent;
-
-}
-  /* Override default tidy-ui height (default: 100vh)
-  * NOTE: Debating if it's worth it
-  // height: auto;
-  // min-height: auto; 
-  */
+  }
 
   // The top two buttons in module management for TidyUI
   .disable-all-modules {
@@ -38,8 +33,8 @@
 
 #client-settings {
   .sheet-footer {
-    button[name="reset"],
-    button[name="submit"] {
+    button[name='reset'],
+    button[name='submit'] {
       @include thinBorder($accent);
       margin: 2px;
 
@@ -49,16 +44,14 @@
     }
   }
 
-  
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     border: 1px solid $border;
     &:active {
       border: 2px solid $accentSecondary;
     }
   }
 
-
-  #config-tabs div.tab[data-tab="modules"] #searchField #searchInput {
+  #config-tabs div.tab[data-tab='modules'] #searchField #searchInput {
     @include thinBorder($accent);
     margin: 2px;
 

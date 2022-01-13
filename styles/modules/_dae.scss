@@ -1,11 +1,7 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 .dnd5e.sheet {
   &.item {
-    .effect-header {
-      border: 3px solid transparent;
-    }
-
     .dae-effect-list {
       .effect {
         &-name,

@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 /* TODO: Change name hover background
 ** TODO: Refactor for cleanliness
@@ -7,7 +7,7 @@
 #combat-carousel {
   &.wrapper {
     position: fixed;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     min-width: 210px;
 
@@ -39,7 +39,7 @@
         border: 1px solid transparent;
         h3 {
           font-size: 14px;
-          text-shadow:rgba(0 0 0 / 90%);
+          text-shadow: rgba(0 0 0 / 90%);
         }
       }
     }
@@ -65,7 +65,7 @@
 
   .splide__slide:hover .fa-dice-d20 {
     color: $accentHighlight;
-    text-shadow:rgb(0 0 0 / 70%)
+    text-shadow: rgb(0 0 0 / 70%);
   }
 
   a.combatant-control {
@@ -276,7 +276,7 @@
     color: #f0f0f0;
     background: transparent;
     border: 1px solid transparent;
-    text-shadow:rgba(0 0 0 / 90%);
+    text-shadow: rgba(0 0 0 / 90%);
   }
 
   &:hover .initiative-control {
@@ -394,7 +394,7 @@
         text-shadow: 0 0 10px rgb(0 0 0 / 70%);
       }
 
-      &[type="text"]:disabled.fa-stack-1x {
+      &[type='text']:disabled.fa-stack-1x {
         pointer-events: none;
         background: none;
         border: none;
@@ -565,7 +565,7 @@
 
     meter::after {
       position: relative;
-      content: attr(value) "/" attr(max);
+      content: attr(value) '/' attr(max);
       padding: 1.2px;
 
       background: rgb(0 0 0 / 20%);
@@ -575,7 +575,6 @@
 
       text-align: center;
       text-shadow: 0 0 10px rgb(0 0 0 / 90%);
-
     }
   }
 
@@ -616,7 +615,7 @@
   }
 
   .scene-control {
-    &[data-control="combat-carousel"] {
+    &[data-control='combat-carousel'] {
       display: flex;
       height: 36px;
       width: 36px;
