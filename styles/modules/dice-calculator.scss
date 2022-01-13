@@ -1,63 +1,84 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 .dice-tray {
   button {
     border: 1px solid $border;
-    box-shadow: 0 0 4px $accent;
+    box-shadow: 0 0 2px $accent;
+    margin: 0 2px 2px 2px;
+
+    &:hover {
+      color: $accentSecondary;
+      border-color: $accentSecondary;
+      box-shadow: 0 0 6px $accentSecondary;
+    }
+
+    &.dice-tray {
+      &__advantage {
+        @include borderExpand($success);
+        color: $success;
+        border-color: $success;
+      }
+
+      &__disadvantage {
+        @include borderExpand($accentSecondary);
+        color: $accentSecondary;
+        border-color: $accentSecondary;
+      }
+    }
 
     .dice-tray__flag {
       background-color: $accent;
     }
 
-    &:hover {
-      color: $accent;
-      box-shadow: 0 0 12px $accent;
+    input[type="text"] {
+      background: inherit;
+      border: 1px solid transparent;
+      box-shadow: 0 0 2px $accent;
+
+      &:active,
+      &:hover {
+        @include borderExpand($accent);
+      }
     }
   }
 
-  input[type="text"] {
-    border: 1px solid transparent;
-    box-shadow: 0 0 4px $accent;
-  }
-}
+  .dice-calculator {
+    > button,
+    .dice-calculator--button {
+      border: 1px solid transparent;
 
-.dice-calculator {
-  > button,
-  .dice-calculator--button {
-    border: 1px solid transparent;
+      &:hover {
+        box-shadow: 0 0 4px $accent;
+      }
+    }
 
-    &:hover {
-      box-shadow: 0 0 4px $accent;
+    &__rolls {
+      &--hidden {
+        background: $content;
+        border: $borderTertiary;
+      }
+    }
+
+    &--op,
+    &--math,
+    &--stat,
+    &--custom {
+      background-color: $failure;
+      border-color: $border;
+    }
+
+    &--confirm {
+      background-color: $accentHighlight;
+      border-color: $border;
+    }
+
+    &--attr {
+      background-color: $accentSecondary;
+      border-color: $border;
     }
   }
 
-  &__rolls {
-    &--hidden {
-      background: $content;
-      border: $borderTertiary;
-    }
+  #chat-controls .dice-calculator-toggle:hover {
+    color: $accent;
   }
-
-  &--op,
-  &--math,
-  &--stat,
-  &--custom {
-    background-color: $failure;
-    border-color: $border;
-  }
-
-  &--confirm {
-    background-color: $accentHighlight;
-    border-color: $border;
-  }
-
-  &--attr {
-    background-color: $accentSecondary;
-    border-color: $border;
-  }
-}
-
-// This is safe to replace
-#chat-controls .dice-calculator-toggle:hover {
-  color: $accent;
 }

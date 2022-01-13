@@ -3,25 +3,34 @@
 .dnd5e {
   background-image: $content;
   input {
-    &[type="text"],
-    &[type="number"],
     select {
       background: transparent;
       border-color: $borderSecondary;
       color: $accent;
     }
 
-    &[type="text"]:hover,
-    &[type="number"]:hover,
-    &[type="checkbox"]:hover,
-    &[type="checkbox"]:focus {
-      border: 1px solid $borderSecondary;
-      box-shadow: 0 0 8px $accentTertiary;
+    &[type="text"],
+    &[type="number"] {
+      background: transparent;
+      border-color: $borderSecondary;
+      color: $accent;
+
+      &:hover {
+        border: 1px solid $borderSecondary;
+        box-shadow: 0 0 8px $accentTertiary;
+      }
+
+      &:focus {
+        @include borderExpand($accent);
+      }
     }
 
-    &[type="text"]:focus,
-    &[type="number"]:focus {
-      @include borderExpand($accent);
+    &[type="checkbox"] {
+      &:hover,
+      &:focus {
+        border: 1px solid $borderSecondary;
+        box-shadow: 0 0 8px $accentTertiary;
+      }
     }
 
     &:disabled {

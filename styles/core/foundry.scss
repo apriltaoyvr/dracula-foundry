@@ -251,7 +251,8 @@ form button {
 
 /* Colour Pickers */
 .layout_default {
-  .picker_editor &.picker_wrapper input,
+  .picker_editor,
+  &.picker_wrapper input,
   &.picker_wrapper button {
     @include thinBorder($accent);
     @include lightToDark($content);
@@ -844,7 +845,7 @@ form button {
   }
 
   &:focus {
-    @include borderExpand($accentHighlight);
+    @include borderExpand($accent);
     cursor: text;
   }
 }
@@ -1032,14 +1033,13 @@ nav.list-filters a.filter {
     box-shadow: none;
     transition: all 0.2s ease-in-out;
   }
-  
+
   &:hover {
     color: $text;
     border-bottom: 1px solid $inactive;
     box-shadow: none;
     transition: color 0.2s ease-in-out;
   }
-
 }
 
 /* Filepicker */

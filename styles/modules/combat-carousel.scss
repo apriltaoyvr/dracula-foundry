@@ -566,12 +566,16 @@
     meter::after {
       position: relative;
       content: attr(value) "/" attr(max);
-
       padding: 1.2px;
-      border: 1px solid rgba(68, 71, 90, 0.1);
-      border-radius: 2px;
+
+      background: rgb(0 0 0 / 20%);
+
+      border: 1px solid transparent;
+      border-radius: 6px;
+
       text-align: center;
-      text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+      text-shadow: 0 0 10px rgb(0 0 0 / 90%);
+
     }
   }
 
