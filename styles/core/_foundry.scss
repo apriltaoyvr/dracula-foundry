@@ -238,7 +238,7 @@ button,
 form button {
   @include thinBorder($accent);
   @include lightToDark($content);
-  @include heavyShadow;
+  @include heavyShadow();
 
   color: $text;
   border-radius: 1px;
@@ -276,13 +276,13 @@ form button {
 .dialog .dialog-buttons button {
   @include thinBorder($accent);
   @include lightToDark($content);
-  @include heavyShadow;
+  @include heavyShadow();
   font-size: 14px;
 
   &.default {
     @include thinBorder($accent);
     @include lightToDark($content);
-    @include heavyShadow;
+    @include heavyShadow();
     font-size: 14px;
   }
 
@@ -311,7 +311,7 @@ form button {
 
 /* Windows */
 .window-app {
-  @include heavyShadow;
+  @include heavyShadow();
   backdrop-filter: $filterBackdrop;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -380,25 +380,25 @@ form button {
 // Controls/Tools Sidebar (Left Sidebar)
 #controls {
   .control-tool {
-    @include heavyShadow;
+    @include heavyShadow();
   }
 
   ol {
     .scene-control {
-      @include heavyShadow;
+      @include heavyShadow();
       @include gradientBorder($accentSecondary, $accentTertiary);
       background: $content;
       filter: opacity(75%);
 
       &.active {
-        @include heavyShadow;
+        @include heavyShadow();
         @include gradientBorder($accentSecondary, $accentTertiary);
         border-radius: 1px;
         filter: none;
       }
 
       &:hover {
-        @include heavyShadow;
+        @include heavyShadow();
         @include gradientBorder($accentSecondary, $accentTertiary);
         border-radius: 1px;
         filter: none;
@@ -407,13 +407,13 @@ form button {
 
     &.sub-controls {
       .control-tool {
-        @include heavyShadow;
+        @include heavyShadow();
         @include gradientBorder($accentSecondary, $accentTertiary);
         filter: opacity(75%);
         background: $content;
 
         &.toggle {
-          @include heavyShadow;
+          @include heavyShadow();
           @include gradientBorder($accent, $accentHighlight);
 
           &.active {
@@ -442,13 +442,13 @@ form button {
         }
 
         &.active {
-          @include heavyShadow;
+          @include heavyShadow();
           @include gradientBorder($accentSecondary, $accentTertiary);
           filter: none;
         }
 
         &:hover {
-          @include heavyShadow;
+          @include heavyShadow();
           @include gradientBorder($accentSecondary, $accentTertiary);
           filter: none;
         }
@@ -521,7 +521,7 @@ form button {
     }
 
     .macro-key {
-      @include heavyShadow;
+      @include heavyShadow();
       color: $text;
       background: $border;
       border-radius: 90%;
@@ -697,7 +697,7 @@ form button {
     margin: 2px;
 
     .dice-formula {
-      @include heavyShadow;
+      @include heavyShadow();
       background: $border;
       border: 1px solid $accent;
       border-radius: 1px;
@@ -711,7 +711,7 @@ form button {
     // Dice total mini-boxes
     .dice-total {
       @include thinBorder($accent);
-      @include heavyShadow;
+      @include heavyShadow();
       background: $border;
       font-size: 14px;
 
@@ -778,7 +778,7 @@ form button {
 
         .roll {
           @include thinBorder($accent);
-          @include heavyShadow;
+          @include heavyShadow();
 
           color: $text;
           background: transparent;
