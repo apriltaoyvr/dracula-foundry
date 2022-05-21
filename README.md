@@ -1,9 +1,7 @@
 # Dracula Theme
-My take on the open theme [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui) for Foundry VTT.
+My take on the open theme [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui) for Foundry VTT. The module will likely remain relatively inactive.
 
-Will likely not play well with systems that use a lot of system specific theming. D&D 5e will have the most support/integration due to it being my main system.
-
-The module will likely remain relatively inactive.
+Does not play well with systems that use a lot of system specific theming. D&D 5e will have the most support/integration due to it being my main system.
 
 I'm also publishing this as a foundation / skeleton for anyone else who wants to dip into modifying Foundry into a darker UI or experimenting with the Foundry UI. TyphonJS, who helped me with a significant portion of this, is making his own theme with Dracula as a foundation with dynamic colour theming, palettes, and other colour-based additions.
 
