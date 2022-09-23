@@ -481,11 +481,11 @@ form button {
       );
 
       --shadow-color: 0deg 0% 48%;
-      text-shadow: 0 0.1px 0.2px var(--shadow-color),
-        0 0 0.3px --shadow-color,
-        0 0 0.6px --shadow-color,
-        0 0 1.2px --shadow-color,
-        0 0 2px --shadow-color;
+      text-shadow: 0 0.1px 0.2px var(--shadow-color) / 0,
+        0 0 0.3px var(--shadow-color) / 0.18,
+        0 0 0.6px var(--shadow-color) / 0.35,
+        0 0 1.2px var(--shadow-color) / 0.52,
+        0 0 2px var(--shadow-color) / 0.7;
     }
   }
 
@@ -534,11 +534,11 @@ form button {
     border-radius: 1px;
 
     --shadow-color: 0deg 0% 48%;
-    text-shadow: 0 0.1px 0.2px --shadow-color,
-      0 0 0.3px --shadow-color,
-      0 0 0.6px --shadow-color,
-      0 0 1.2px --shadow-color,
-      0 0 2px --shadow-color;
+    text-shadow: 0 0.1px 0.2px var(--shadow-color) / 0,
+      0 0 0.3px var(--shadow-color) / 0.18,
+      0 0 0.6px var(--shadow-color) / 0.35,
+      0 0 1.2px var(--shadow-color) / 0.52,
+      0 0 2px var(--shadow-color) / 0.7;
   }
 }
 

@@ -35,13 +35,13 @@ $gradientDegree: 135deg;
 /* Mixins */
 /* Gradient */
 @mixin gradientBorder($firstColor, $secondColor, $width: 1px) {
-  border: $width solid;
-  border-image-slice: 1;
+  border: $width solid !important;
+  border-image-slice: 1 !important;
   border-image-source: linear-gradient(
     $gradientDegree,
     $firstColor 0%,
     $secondColor 100%
-  );
+  ) !important;
 }
 
 @mixin gradientText($firstColor, $secondColor) {
