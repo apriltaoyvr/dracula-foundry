@@ -1,0 +1,79 @@
+@import '../helpers/variables';
+
+aside {
+  .block-torn-paper,
+  .epigraph,
+  .epigraph--with-author,
+  .rules-text,
+  .read-aloud-text {
+    // TODO: Examine this one closer
+    // Quotes with multiple linebreaks inherit the global p from my mod, making it difficult
+    p,
+    p * {
+      color: $content;
+    }
+  }
+  .vrgtr-flowchart {
+    &--1 {
+      // TODO: Examine this one closer
+    }
+  }
+}
+
+.editor,
+.sheet {
+  &-content,
+  &-content * {
+    div.journal-sheet div.ddbimporter-image-container {
+      a.ddbimporter-button {
+        @include lightToDark($content);
+      }
+    }
+    a {
+      ddbimporter.roll {
+        @include lightToDark($content);
+      }
+    }
+
+    .stat-block-background {
+      // TODO: Examine this one closer
+      // NOTE: Line 120 in DDBI's journal.css uses !important
+      // NOTE: Let's use !important for now to be safe. Otherwise it may overwrite this.
+    }
+  }
+  blockquote {
+    .adventure-read-aloud-text {
+      // NOTE: Line 193 in DDBI's journal.css for this has 3 !important quotes.
+      // NOTE: Let's use !important for now to be safe. Otherwise it may overwrite this.
+      border-left: 1px solid $border;
+      border-right: 1px solid $border;
+      border-color: $borderSecondary !important;
+      color: $content !important;
+
+      ::before,
+      ::after {
+        // TODO: Examine this one closer
+        // This is where I replace the background image when I understand how it is used. Potentially un-nest if necessary.
+        color: $content !important;
+      }
+    }
+  }
+
+  .Flowchart {
+    // TODO: Examine this one closer
+    // This is where I replace the background image when I understand how it is used
+  }
+
+  .Basic-Text-Frame {
+    box-shadow: 0 0 5px $shadow;
+    border: 1px solid $accent;
+    background: $contentWindow;
+  }
+
+  .stat-block {
+    &-ability-scores {
+      border-top: 2px solid $failure;
+      border-bottom: 2px solid $failure;
+    }
+  }
+}

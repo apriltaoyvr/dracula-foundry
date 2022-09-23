@@ -1,0 +1,79 @@
+@import '../helpers/variables';
+
+/* Advanced Macros Module */
+.macro-sheet .form-group.command .furnace-macro-command {
+  code,
+  textarea {
+    color: $text;
+    border: 1px solid $accent;
+  }
+}
+
+/* GitHub Gist Replacement for Advanced Macros Module */
+.hljs {
+  background: #282a36;
+  color: #f8f8f2;
+
+  &-comment,
+  &-meta {
+    color: #6272a4;
+  }
+
+  &-emphasis,
+  &-quote,
+  &-strong,
+  &-template-variable,
+  &-variable {
+    color: #ffa28003;
+  }
+
+  &-keyword,
+  &-selector-tag,
+  &-type {
+    color: $failureSecondary;
+  }
+
+  &-attribute,
+  &-bullet,
+  &-literal,
+  &-symbol {
+    color: #0086b3;
+  }
+
+  &-name,
+  &-section {
+    color: $successSecondary;
+  }
+
+  &-tag {
+    color: #333333;
+  }
+
+  &-attr,
+  &-selector-attr,
+  &-selector-class,
+  &-selector-id,
+  &-selector-pseudo,
+  &-title {
+    color: #bd93f9;
+  }
+
+  &-addition {
+    color: $successSecondary;
+    background-color: #282a36;
+  }
+
+  &-deletion {
+    color: $failureSecondary;
+    background-color: #282a36;
+  }
+
+  &-link {
+    text-decoration: underline;
+  }
+
+  &-number,
+  &-string {
+    color: #8be9fd;
+  }
+}
