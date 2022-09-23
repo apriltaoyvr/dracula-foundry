@@ -1,0 +1,140 @@
+@import "../helpers/variables";
+
+.app {
+  .mce {
+    &-btn,
+    &-ico {
+      color: $text;
+
+      &:hover {
+        color: $accentTertiary;
+        text-shadow: 0 0 10px $glow;
+      }
+    }
+  }
+}
+
+// Text editors + Oxide Override
+.editor {
+  &-content {
+    color: $text;
+  }
+
+  &-edit {
+    background: $accent;
+    color: $text;
+    border: 1px solid $border;
+
+    &:hover {
+      color: $text;
+      text-shadow: 0 0 3px $glow;
+    }
+  }
+}
+
+// Most of this courtesy of Arcanist
+.tox {
+  &.tox {
+    &-toolbar {
+      background: $content;
+      border: 1px solid $accent;
+      border-radius: 2px;
+
+      &__overflow,
+      &__primary,
+      &-overlord {
+        background: $content;
+        border: 1px solid $accent;
+        border-radius: 2px;
+      }
+
+    }
+    &-button {
+      background: $content;
+      color: $text;
+
+      &:hover:not(:disabled) {
+        @include borderExpand($accent);
+      }
+
+      &--naked[disabled],
+      &--secondary[disabled] {
+        background: $inactive;
+      }
+    }
+    &-listboxfield .tox-listbox--select,
+    &-textarea,
+    &-textfield,
+    &-toolbar-textfield,
+    &-tbtn,
+    &-dialog,
+    &-menu,
+    &-collection--list .tox-collection__item--active {
+      background: $content;
+      color: $text;
+      &:hover,
+      &:active {
+        @include borderExpand($accent);
+      }
+    }
+
+    &-dialog__body-content svg,
+    &-tbtn:focus:not(.tox-tbtn--disabled) svg,
+    &-collection__item-caret svg,
+    &-tbtn svg {
+      fill: $textSecondary;
+      &:hover svg,
+      &:active svg,
+      &:focus svg {
+        fill: $accent;
+      }
+    }
+
+    &-dialog__body,
+    &-collection__item-label,
+    &-dialog__header {
+      color: $textSecondary;
+    }
+
+    &-listboxfield .tox-listbox--select:focus,
+    &-textarea:focus,
+    &-textfield:focus {
+      background: var(--color-dracula-content);
+    }
+
+    &-dialog__header,
+    &-dialog__footer {
+      background: none;
+    }
+
+    &-dialog-wrap__backdrop {
+      background: $contentWindow;
+    }
+
+    &-selectfield select {
+      margin: 2px;
+
+      color: $textSecondary;
+      background: $content;
+      
+      border: 1px solid $accent;
+      border-radius: 2px;
+
+      box-shadow: none;
+      transition: 0.3s ease-in-out all;
+
+      &:active,
+      &:hover,
+      &:focus {
+        @include borderExpand($accent);
+      }
+    }
+
+    &-tinymce {
+      .tox-edit-area {
+        background: $inactive;
+        border-radius: 2px;
+      }
+    }
+  }
+}
