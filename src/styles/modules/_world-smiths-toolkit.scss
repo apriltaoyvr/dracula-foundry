@@ -1,0 +1,6 @@
+@import '../helpers/variables';
+
+// Courtesy of Arcanist
+.ws-block:not(.box):not(.sidebar):not(.note) p {
+  color: $text;
+}

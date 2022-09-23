@@ -1,0 +1,21 @@
+@import '../helpers/variables';
+
+:root {
+  --filepickerplus-text-color: #{$textSecondary};
+}
+
+.filepicker-plus-tooltip {
+  background: $content;
+  border: 1px solid $border;
+  animation: fadein 0.5s;
+}
+
+.filepicker {
+  .directory > li:last-child {
+    border-bottom: 1px solid $border;
+  }
+
+  input[type='text'] {
+    color: $textDark;
+  }
+}

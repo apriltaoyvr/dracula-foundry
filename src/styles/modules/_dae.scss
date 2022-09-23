@@ -1,0 +1,28 @@
+@import '../helpers/variables';
+
+.dnd5e.sheet {
+  &.item {
+    .dae-effect-list {
+      .effect {
+        &-name,
+        &-label {
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  .sheet-navigation {
+    &.item {
+      .dae-effect-list {
+        .effect-label,
+        .effect-name,
+        .effect-mode {
+          border-left: 1px solid $border;
+          border-right: 1px solid $border;
+        }
+      }
+    }
+  }
+}

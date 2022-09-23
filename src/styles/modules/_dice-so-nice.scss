@@ -1,0 +1,20 @@
+@import '../helpers/variables';
+
+/* Dice So Nice Settings Menu */
+.dice-so-nice {
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
+    background: transparent;
+    border: 1px solid $borderSecondary;
+  }
+
+  .dice-so-nice .sfxs-list .sfx {
+    border-bottom: 1px solid $borderSecondary;
+  }
+
+  .sfx-data .sfx-flex-5 select {
+    background: $contentWindow;
+    color: $text;
+  }
+}

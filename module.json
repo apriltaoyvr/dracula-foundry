@@ -2,33 +2,36 @@
     "name": "dracula-foundry",
     "title": "Dracula Theme",
     "description": "A Dracula and Argon inspired theme for Foundry menus",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "library": false,
     "manifestPlusVersion": "1.0.0",
-    "minimumCoreVersion": "0.8.6",
-    "compatibleCoreVersion": "9",
+    "minimumCoreVersion": "0.10.0",
+    "compatibleCoreVersion": "10",
     "authors": [
         {
             "name": "CasanovaSekova",
             "url": "https://github.com/CasanovaSekova/",
             "discord": "Casanova#0003"
+        },
+        {
+            "name": "L4D15",
+            "url": "https://github.com/L4D15/",
+            "discord": "L4D15#2706"
         }
     ],
-    "esmodules": [
-        "/src/init.js"
-    ],
-
+    "esmodules": [ "dracula-foundry.bundle.js"],
+    "styles": ["./dracula-foundry.css"],
     "languages": [
         {
             "lang": "en",
             "name": "English",
-            "path": "langs/en.json"
+            "path": "lang/en.json"
         }
     ],
-    "url": "https://github.com/CasanovaSekova/dracula-foundry",
-    "readme": "https://github.com/CasanovaSekova/dracula-foundry#readme",
-    "bugs": "https://github.com/CasanovaSekova/dracula-foundry/issues",
-    "changelog": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/",
-    "manifest": "https://github.com/CasanovaSekova/dracula-foundry/releases/latest/download/module.json",
-    "download": "https://github.com/CasanovaSekova/dracula-foundry/releases/download/0.1.1/module.zip"
+    "url": "https://github.com/L4D15/dracula-foundry",
+    "readme": "https://github.com/L4D15/dracula-foundry#readme",
+    "bugs": "https://github.com/L4D15/dracula-foundry/issues",
+    "changelog": "https://github.com/L4D15/dracula-foundry/releases/latest/",
+    "manifest": "https://github.com/L4D15/dracula-foundry/releases/latest/download/module.json",
+    "download": "https://github.com/L4D15/dracula-foundry/releases/download/1.0.0/dracula-theme.zip"
 }
