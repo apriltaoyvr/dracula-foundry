@@ -344,11 +344,11 @@
         .inventory {
           &-list {
             .item .item-name.rollable:hover .item-image {
-              background-image: url('../assets/icons/svg/dice-d20-solid-color.svg') !important;
+              background-image: url('assets/icons/svg/dice-d20-solid-color.svg') !important;
               border: inherit;
             }
             .item .item-name.rollable .item-image:hover {
-              background-image: url('../assets/icons/svg/dice-d20-solid-alt.svg') !important;
+              background-image: url('assets/icons/svg/dice-d20-solid-alt.svg') !important;
               border: inherit;
             }
 
