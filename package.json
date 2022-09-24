@@ -14,7 +14,8 @@
     "css-loader": "^6.7.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "zip-webpack-plugin": "^4.0.1"
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",

@@ -3,6 +3,7 @@ const fileSystem = require("fs-extra");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ZipPlugin = require("zip-webpack-plugin")
 
 /**
 * Retrieves info about the Foundry installed in the system in JSON format.
@@ -59,6 +60,10 @@ module.exports = (env, argv) => {
                     { from: "assets", to: "assets" },
                     { from: "lang", to: "lang" },
                 ],
+            }),
+            new ZipPlugin( {
+                path: "../",
+                filename: "dracula-foundry.zip"
             }),
         ],
         
