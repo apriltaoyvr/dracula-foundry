@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+$main-font: 'Roboto Mono', monospace;
+$title-font: 'Share Tech Mono', monospace;
+
+.chat-message {
+    font-family: $main-font !important;
+}
+
+.actor-sheet,
+.item-sheet {
+    font-family: $main-font;
+
+    .right-pane {
+        .right-tabs-section {
+            height: auto;
+            font-family: $title-font;
+        }
+    }
+
+    .bottom-pane {
+        .bottom-tabs-section {
+            height: auto;
+            font-family: $title-font;
+        }
+    }
+
+    .block-label {
+        font-family: $title-font;
+    }
+
+    .items-header {
+        font-family: $title-font;
+    }
+}
+
+.system-cyberpunk-red-core {
+    .sheet {
+        .navtabs-item {
+            font-family: $title-font;
+        }
+
+        .item-summary-section {
+            padding: 0.6rem 0rem;
+
+            .summary-name {
+                font-family: $title-font;
+            }
+        }
+
+        .item-description-section {
+            padding: 0rem 1rem;
+        }
+
+        .item-settings-tab {
+            ol {
+                &.items-list {
+                    li.item:nth-child(odd) {
+                        background-color: var(--color-dracula-border-secondary);
+                    }
+                }
+
+            }
+
+            .setting-name {
+                font-family: $title-font;
+            }
+        }
+
+        .tab {
+            background-color: var(--color-dracula-content) !important;
+
+            .item-effects-section {
+                background-color: var(--color-dracula-content) !important;
+
+                .effects-list {
+                    background: none !important;
+                }
+            }
+        }
+
+        .skills-tab {
+            .items-list {
+                .item {
+                    font-size: 0.7rem;
+
+                    &:nth-child(odd) {
+                        background-color: var(--color-dracula-border-secondary);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.system-cyberpunk-red-core .actor-sheet {
+	background-color: var(--color-dracula-content-window) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .left-pane,
+.system-cyberpunk-red-core .actor-sheet .left-pane .main-section {
+	background-color: var(--color-dracula-content-window) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .main-block {
+	background-color: var(--color-dracula-content) !important;
+	color: var(--color-dracula-text-primary) !important;
+	/*border: 1px solid var(--color-dracula-accent) !important;*/
+	margin: 0px 0px 10px 0px !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .stats-section {
+	background: none !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .deathsave-block .bg-white {
+	background-color: transparent !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .min-of-max-container .of,
+.system-cyberpunk-red-core .actor-sheet .min-of-max-container .of-stat{
+	background-color: transparent !important;
+	padding: none !important;
+	transform: none;
+	color: var(--color-dracula-text-tertiary) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .left-pane .image-block {
+	height: 150px;
+}
+
+.system-cyberpunk-red-core .actor-sheet .left-pane .image-block img {
+	display: flex;
+	margin: auto;
+	max-height: 100%;
+}
+
+.system-cyberpunk-red-core .actor-sheet .stat-block {
+	margin: 0px 0px 5px 0px !important;
+	width: auto !important;
+	background-color: var(--color-dracula-content) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .stat-block .block-label {
+	color: var(--color-dracula-accent) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .stat-block .block-data {
+	color: var(--color-dracula-text-primary) !important;	
+}
+
+.system-cyberpunk-red-core .dialog .dialog-content ol {
+	background-color: transparent !important;
+}
+
+.system-cyberpunk-red-core .item-sheet hr {
+	border-bottom: 1px groove var(--color-dracula-accent);
+}
+
+.system-cyberpunk-red-core .item-sheet .item-top-pane {
+	background: var(--color-dracula-accent) !important;
+}
+
+.system-cyberpunk-red-core .item-sheet .item-top-pane .item-image-section {
+	background: var(--color-dracula-accent-secondary) !important;
+}
+
+.system-cyberpunk-red-core .item-sheet .item-top-pane .item-header-section {
+	background-color: var(--color-dracula-content) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .right-content-section,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section {
+	border-color: var(--color-dracula-border) !important;
+	border-width: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.system-cyberpunk-red-core .actor-sheet .right-content-section .skills-tab{
+	background-color: var(--color-dracula-content) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab .items-list {
+	background-color: var(--color-dracula-content) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab .items-header, 
+.system-cyberpunk-red-core .actor-sheet .armor-content .fight-armor-list .item {
+	background-color: var(--color-dracula-accent) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .items-list li:nth-child(odd) {
+	background-color: var(--color-dracula-content);
+}
+
+.system-cyberpunk-red-core .actor-sheet .items-list li:nth-child(even) {
+	background-color: var(--color-dracula-content) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab .items-list li .text-bold {
+	color: var(--color-dracula-text-highlight) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab .items-header span {
+	background-color: transparent !important;
+}
+
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-description-tab {
+	background-color: transparent !important;
+}
+
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-description-grid,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-summary-section,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-description-section,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-settings-grid,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .item-settings-section,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .items-list,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .compatible-ammo,
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .compatible-ammo li:nth-child(odd),
+.system-cyberpunk-red-core .item-sheet .item-bottom-content-section .compatible-ammo li:nth-child(even){
+	background-color: var(--color-dracula-content) !important;	
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab-pink-underlay,
+.system-cyberpunk-red-core .item-sheet .item-bottom-tabs-section .tab-pink-underlay {
+	background-color: var(--color-dracula-accent-secondary) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab-pink-underlay .tab-label.tab-indent,
+.system-cyberpunk-red-core .item-sheet .item-bottom-tabs-section .tab-pink-underlay .tab-label.tab-indent {
+	background-color: var(--color-dracula-inactive) !important;
+}
+
+.system-cyberpunk-red-core .actor-sheet .tab-pink-underlay .tab-label.active,
+.system-cyberpunk-red-core .item-sheet .item-bottom-tabs-section .tab-pink-underlay .tab-label.active {
+	background-color: var(--color-dracula-accent) !important;
+}
+
+.system-cyberpunk-red-core .bottom-pane .bottom-content-section {
+	background-color: var(--color-dracula-content) !important;
+	border-color: var(--color-dracula-border) !important;
+	border: none;
+}
+
+.system-cyberpunk-red-core .bottom-pane .tab,
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab,
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .injuries-section,
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .armor-section,
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .weapon-section,
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .interface-abilities-section, 
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .cyberdeck-installed-section, 
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .cyberdeck-rezzed-section, 
+.system-cyberpunk-red-core .bottom-pane .bottom-content-section .tab .lifepath-tab {
+	background-color: var(--color-dracula-content) !important;
+}
+
+.system-cyberpunk-red-core .bottom-pane .tab .fight-tab .cyberdeck-rezzed-section .items-header div {
+	background-color: transparent;
+}
+
+.system-cyberpunk-red-core .actor-sheet .right-pane .tab,
+.system-cyberpunk-red-core .actor-sheet .right-pane .tab .gear-tab-data,
+.system-cyberpunk-red-core .actor-sheet .right-pane .tab .gear-tab-data .top-pane-gear,
+.system-cyberpunk-red-core .actor-sheet .right-pane .tab .gear-tab-data .bottom-pane-gear
+{
+	background-color: var(--color-dracula-content);
+
+    .effects-list {
+        background-color: var(--color-dracula-content);
+    }
+}
+
+.system-cyberpunk-red-core .actor-sheet .right-pane .tab .gear-tab-data .bottom-pane-gear {
+	border-width: 2px;
+	border-color: var(--color-dracula-border-secondary);
+	padding-top: 4px;
+}
+
+/* CHAT */
+
+.system-cyberpunk-red-core .chat-message {
+	background: var(--color-dracula-content) !important;
+	border-width: 2px;
+	border-style: solid;
+	border-image: linear-gradient(to right bottom, var(--color-dracula-accent), var(--color-dracula-accent-tertiary)) 1;
+}
+
+.system-cyberpunk-red-core .chat-message .cpr-block {
+	background-color: var(--color-dracula-content);
+	padding: 2px;
+	clip-path: none;
+	/*border: 1px solid var(--color-dracula-border-secondary);*/
+	border-width: 2px;
+	border-style: solid;
+	border-image: linear-gradient(to top, var(--color-dracula-border-secondary), var(--color-dracula-border)) 1;
+}
+
+.system-cyberpunk-red-core .chat-message .cpr-block::before {
+	background-color: var(--color-dracula-content);	
+}
