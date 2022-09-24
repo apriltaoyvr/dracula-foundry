@@ -655,9 +655,9 @@ form button {
 // Chat Cards (will restyle most aspects)
 .chat-message {
   @include gradientBorder($accent, $inactive);
-  background: $content;
-  color: $textSecondary;
-  margin-bottom: 5px;
+  background: $content !important;
+  color: $textSecondary !important;
+  margin-bottom: 5px !important;
 
   &.whisper {
     @include gradientBorder($accentHighlight, $accent);
