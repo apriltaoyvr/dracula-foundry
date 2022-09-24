@@ -1,11 +1,13 @@
 import ModuleSettings from './ModuleSettings.js';
 
 Hooks.once('init', () => {
-   appendStyles('modules/dracula-foundry/css/init.css');
+   appendStyles('modules/dracula-foundry/dracula-foundry.css');
    ModuleSettings.register();
    ModuleSettings.apply();
 
    modifyCSSVariables();
+
+   console.log("Dracula Theme CSS modifications applied.");
 });
 
 /**

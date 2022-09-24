@@ -1,0 +1,12 @@
+@import "../helpers/variables";
+
+.prosemirror {
+    .pm-dropdown {
+        background: var(--color-dracula-content) !important;
+        color: var(--color-dracula-text-primary) !important;
+
+        ul {
+            background: var(--color-dracula-content) !important;
+        }
+    }
+}

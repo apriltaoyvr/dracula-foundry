@@ -316,15 +316,19 @@ form button {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 
-  .window-content {
-    background: $content;
-    border-radius: 0 0 3px 3px;
-    color: $text;
+  .window-content, .journal-entry-content {
+    background: $content !important;
+    border-radius: 0 0 3px 3px !important;
+    color: $text !important;
 
     > * {
       background: transparent;
       color: $text;
     }
+  }
+
+  .journal-entry-content {
+    border-color: $border !important;
   }
 
   .window-header {
@@ -481,11 +485,11 @@ form button {
       );
 
       --shadow-color: 0deg 0% 48%;
-      text-shadow: 0 0.1px 0.2px var(--shadow-color),
-        0 0 0.3px --shadow-color,
-        0 0 0.6px --shadow-color,
-        0 0 1.2px --shadow-color,
-        0 0 2px --shadow-color;
+      text-shadow: 0 0.1px 0.2px var(--shadow-color) / 0,
+        0 0 0.3px var(--shadow-color) / 0.18,
+        0 0 0.6px var(--shadow-color) / 0.35,
+        0 0 1.2px var(--shadow-color) / 0.52,
+        0 0 2px var(--shadow-color) / 0.7;
     }
   }
 
@@ -534,11 +538,11 @@ form button {
     border-radius: 1px;
 
     --shadow-color: 0deg 0% 48%;
-    text-shadow: 0 0.1px 0.2px --shadow-color,
-      0 0 0.3px --shadow-color,
-      0 0 0.6px --shadow-color,
-      0 0 1.2px --shadow-color,
-      0 0 2px --shadow-color;
+    text-shadow: 0 0.1px 0.2px var(--shadow-color) / 0,
+      0 0 0.3px var(--shadow-color) / 0.18,
+      0 0 0.6px var(--shadow-color) / 0.35,
+      0 0 1.2px var(--shadow-color) / 0.52,
+      0 0 2px var(--shadow-color) / 0.7;
   }
 }
 
