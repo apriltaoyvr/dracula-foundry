@@ -24,6 +24,12 @@ Pictures of Dracula with mostly vanilla foundry:
 # Credits
 Substantial help by @typhonrt with advice, refactoring, and a whole list of things I would not be able to write down in a day
 
-Inspired heavily by [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/) by theripper93 and mouse0270 with some help by Ripper
+Inspired heavily by [Argon Combat Hud](https://github.com/theripper93/enhancedcombathud/) by theripper93 and mouse0270 with some help by Ripper.
+
+v10 and Cyberpunk RED support added by [L4D15](https://github.com/L4D15)
 
 Colour palette from [Dracula](https://draculatheme.com) and [Dracula UI](https://draculatheme.com/ui) by Zeno Rocha
+
+# Development
+
+This module uses a simple webpack setup to develop and test the module easily. Navigate to the repository folder and call `npm install` to install all required packages. Then you can call `npm run build` to generate the project into a `.zip` file to distribute it. If you would prefer to test changes as you work in the module, configure the abosulte path to your FoundryVTT data folder in `foundryconfig.json` and call `npm run build:dev`, this will automatically copy the generated module into your FoundryVTT modules folder everytime you modify any file in the project (remember to refresh Foundry to load the new changes).
